@@ -1,0 +1,148 @@
+/*
+ * Let’s Sort It Out shared brand layer
+ * Source of truth: homepage palette and typography.
+ * This file intentionally leaves tool-generated colour swatches untouched.
+ */
+:root {
+  --jj-dark-forest: #111813;
+  --jj-dark-nav: #142019;
+  --jj-dark-card: #1B231D;
+  --jj-olive: #2C3E2D;
+  --jj-sage: #6B7F5E;
+  --jj-rust: #D4712A;
+  --jj-rust-nav: #D4712A;
+  --jj-cream: #F5F0E6;
+  --jj-nav-cream: #F7F1E5;
+  --jj-warm-white: #FAF8F5;
+  --jj-charcoal: #2D3230;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.jj-site {
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body.jj-site h1,
+body.jj-site h2,
+body.jj-site h3,
+body.jj-site h4,
+body.jj-site .font-antonio {
+  font-family: "Antonio", "Roboto Condensed", Arial, sans-serif;
+  font-weight: 700;
+}
+
+body.jj-site > nav:first-of-type {
+  background: rgba(20, 32, 25, 0.95) !important;
+  color: var(--jj-nav-cream) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.jj-site > footer {
+  background: var(--jj-dark-nav) !important;
+  color: var(--jj-nav-cream) !important;
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.jj-site > nav:first-of-type a,
+body.jj-site > footer a,
+body.jj-site button,
+body.jj-site input,
+body.jj-site select,
+body.jj-site textarea {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+body.jj-site a,
+body.jj-site button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body.jj-site :focus-visible {
+  outline: 3px solid var(--jj-rust);
+  outline-offset: 3px;
+}
+
+body.jj-site input,
+body.jj-site select,
+body.jj-site textarea {
+  accent-color: var(--jj-rust);
+}
+
+body.jj-site ::selection {
+  color: var(--jj-warm-white);
+  background: var(--jj-rust);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--jj-dark-forest);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--jj-olive);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--jj-sage);
+}
+
+/* Keep the homepage's cream/rust treatment consistent on shared contact buttons. */
+body.jj-site > nav:first-of-type a[href*="#contact"] {
+  background: var(--jj-nav-cream) !important;
+  color: var(--jj-olive) !important;
+}
+
+body.jj-site > nav:first-of-type a[href*="#contact"]:hover {
+  background: var(--jj-rust-nav) !important;
+  color: #fff !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body.jj-site *,
+  body.jj-site *::before,
+  body.jj-site *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Shared shell for retained interactive tools. The tool logic stays page-local. */
+.jj-tool-nav {
+  min-height: 74px;
+  background: var(--jj-dark-forest);
+  color: var(--jj-warm-white);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  position: relative;
+  z-index: 50;
+}
+.jj-tool-nav__inner { width: min(1180px, calc(100% - 36px)); min-height: 74px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.jj-tool-nav__brand { color: var(--jj-warm-white); text-decoration: none; font-family: "Antonio", "Arial Narrow", sans-serif; font-size: 1.65rem; font-weight: 700; }
+.jj-tool-nav__links { display: flex; align-items: center; gap: 14px; }
+.jj-tool-nav__links a { color: rgba(250,248,245,.78); text-decoration: none; font-size: .74rem; font-weight: 700; text-transform: uppercase; }
+.jj-tool-nav__links a:hover { color: #fff; }
+.jj-tool-nav__cta { min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; background: var(--jj-rust); color: #fff !important; font-family: "Antonio", "Arial Narrow", sans-serif; font-size: 1rem !important; text-transform: uppercase; }
+.jj-tool-nav__menu { display: none; min-height: 44px; padding: 0 14px; border: 1px solid rgba(255,255,255,.55); border-radius: 5px; background: transparent; color: #fff; font-weight: 700; text-transform: uppercase; }
+body.jj-site button, body.jj-site a { min-height: 44px; }
+@media (max-width: 850px) {
+  .jj-tool-nav__menu { display: block; }
+  .jj-tool-nav__links { display: none; position: absolute; top: 74px; left: 0; right: 0; padding: 18px; background: var(--jj-dark-forest); flex-direction: column; align-items: stretch; }
+  .jj-tool-nav__links.open { display: flex; }
+  .jj-tool-nav__links a { padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .jj-tool-nav__cta { justify-content: center; margin-top: 8px; border-bottom: 0 !important; }
+}

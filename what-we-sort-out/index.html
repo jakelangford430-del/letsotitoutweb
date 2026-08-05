@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html lang="en-AU" class="auth-pending">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Practical help with people, processes, systems, software and online setup for Australian small businesses." name="description"/>
+<title>Small Business Systems &amp; Process Help | Let’s Sort It Out</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --forest:#111813;
+      --olive:#2c3e2d;
+      --sage:#6b7f5e;
+      --charcoal:#2d3230;
+      --white:#faf8f5;
+      --cream:#f5f0e6;
+      --rust:#d4712a;
+      --border:rgba(44,62,45,.22);
+      --radius:14px;
+      --container:1180px;
+    }
+
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      overflow-x:hidden;
+      background:var(--white);
+      color:var(--charcoal);
+      font-family:Inter,Arial,sans-serif;
+      line-height:1.55;
+    }
+
+    h1,h2,h3,.wordmark,.button { font-family:Antonio,"Arial Narrow",sans-serif; }
+    h1,h2,h3,p { margin-top:0; }
+    h1,h2,h3 { text-transform:uppercase; }
+    h2 {
+      margin-bottom:20px;
+      color:var(--forest);
+      font-size:clamp(2.15rem,4vw,3.45rem);
+      line-height:.98;
+    }
+    h3 {
+      color:var(--forest);
+      font-size:1.45rem;
+      line-height:1.05;
+    }
+    a { color:inherit; }
+
+    .container {
+      width:min(var(--container),calc(100% - 40px));
+      margin-inline:auto;
+    }
+    .section { padding:96px 0; }
+    .section-intro { max-width:710px; margin-bottom:34px; font-size:1.05rem; }
+    .skip-link {
+      position:fixed;
+      z-index:1000;
+      top:-80px;
+      left:16px;
+      padding:12px 18px;
+      background:var(--white);
+    }
+    .skip-link:focus { top:16px; }
+
+    .site-header {
+      position:relative;
+      z-index:20;
+      height:78px;
+      border-bottom:1px solid rgba(255,255,255,.12);
+      background:var(--forest);
+      color:var(--white);
+    }
+    .header-inner {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:100%;
+    }
+    .wordmark {
+      font-size:1.8rem;
+      font-weight:700;
+      line-height:1;
+      text-decoration:none;
+    }
+    .site-nav {
+      display:flex;
+      align-items:center;
+      gap:30px;
+    }
+    .site-nav>a:not(.button) {
+      color:rgba(250,248,245,.82);
+      font-size:.84rem;
+      text-decoration:none;
+    }
+    .site-nav>a:hover { color:#fff; }
+    .menu-button { display:none; }
+
+    .button {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:0 30px;
+      border:2px solid transparent;
+      border-radius:2px;
+      font-size:1.05rem;
+      font-weight:700;
+      text-decoration:none;
+      text-transform:uppercase;
+    }
+    .button-primary { background:var(--rust); color:var(--white); }
+    .button-primary:hover { background:#b85c20; }
+    .nav-cta { min-height:44px; padding-inline:24px; }
+
+    .hero {
+      display:flex;
+      align-items:center;
+      min-height:560px;
+      background:var(--forest);
+      color:var(--white);
+    }
+    .hero-inner { padding-block:78px; }
+    .hero h1 {
+      max-width:1000px;
+      margin-bottom:28px;
+      font-size:clamp(3.8rem,7.5vw,7.15rem);
+      line-height:.9;
+      letter-spacing:-.025em;
+    }
+    .hero h1 span { color:var(--rust); }
+    .hero-copy {
+      max-width:690px;
+      margin-bottom:28px;
+      color:rgba(250,248,245,.86);
+      font-size:1.15rem;
+    }
+    .hero-note {
+      margin:18px 0 0;
+      color:rgba(250,248,245,.64);
+      font-size:.82rem;
+    }
+
+    .intro-band { background:var(--cream); }
+    .intro-grid {
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      align-items:start;
+      gap:80px;
+    }
+    .intro-grid h2 { margin:0; }
+    .intro-copy { max-width:700px; font-size:1.08rem; }
+    .intro-copy p:last-child { margin-bottom:0; }
+
+    .pillars-wrap { padding-top:0; }
+    .pillars {
+      padding:44px;
+      border-radius:var(--radius);
+      background:var(--olive);
+    }
+    .pillars h2 { color:var(--white); }
+    .pillar-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .pillar-grid article {
+      padding:28px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:var(--white);
+    }
+    .pillar-grid h3 { margin-bottom:13px; }
+    .pillar-grid b,
+    .familiar-card b,
+    .split-card b {
+      display:block;
+      width:18px;
+      height:3px;
+      margin-bottom:18px;
+      background:var(--rust);
+    }
+    .pillar-grid p { margin-bottom:0; font-size:.94rem; }
+
+    .familiar { background:var(--white); }
+    .familiar-grid {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+    .familiar-card {
+      display:grid;
+      grid-template-columns:42px 1fr;
+      gap:8px;
+      align-items:start;
+      min-height:112px;
+      padding:24px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:var(--cream);
+    }
+    .familiar-card .number {
+      color:var(--sage);
+      font-family:Antonio,sans-serif;
+      font-size:1.7rem;
+      line-height:1;
+    }
+    .familiar-card p { margin:0; font-size:.94rem; }
+
+    .split-section { padding-top:0; }
+    .split-grid {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+    .split-card {
+      min-height:325px;
+      padding:36px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:var(--cream);
+    }
+    .split-card.alt {
+      background:var(--olive);
+      color:var(--white);
+    }
+    .split-card.alt h2 { color:var(--white); }
+    .split-card.alt p { color:rgba(250,248,245,.82); }
+    .split-card p:last-child { margin-bottom:0; }
+
+    .process { background:var(--cream); }
+    .process ol {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:28px;
+      margin:35px 0 0;
+      padding:0;
+      list-style:none;
+    }
+    .process li {
+      position:relative;
+      display:flex;
+      gap:16px;
+    }
+    .process li:not(:last-child)::after {
+      position:absolute;
+      top:15px;
+      right:-18px;
+      content:'→';
+    }
+    .process li>span {
+      min-width:54px;
+      color:var(--sage);
+      font-family:Antonio,sans-serif;
+      font-size:4rem;
+      line-height:.9;
+    }
+    .process h3 { margin-bottom:10px; font-size:1.2rem; }
+    .process p { margin:0; font-size:.86rem; }
+
+    .promise-grid {
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      align-items:start;
+      gap:80px;
+    }
+    .promise-grid h2 { margin:0; }
+    .promise-list { margin:0; padding:0; list-style:none; }
+    .promise-list li {
+      padding:14px 14px;
+      border-bottom:1px solid var(--border);
+      border-left:3px solid var(--rust);
+    }
+
+    .final-cta {
+      padding:58px 0;
+      border-bottom:1px solid rgba(255,255,255,.12);
+      background:var(--forest);
+      color:var(--white);
+    }
+    .final-inner {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+    .final-cta h2 { margin-bottom:7px; color:var(--white); }
+    .final-cta p { max-width:720px; margin:0; color:rgba(250,248,245,.72); }
+
+    footer { padding:40px 0 24px; background:var(--forest); color:var(--white); }
+    .footer-links {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:28px;
+      margin-bottom:22px;
+      padding:0 0 28px;
+      border-bottom:1px solid rgba(250,248,245,.14);
+    }
+    .footer-link-group { display:grid; align-content:start; gap:9px; }
+    .footer-link-group h3 {
+      margin:0 0 4px;
+      color:var(--rust);
+      font-family:Inter,sans-serif;
+      font-size:.68rem;
+      line-height:1.2;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .footer-link-group a {
+      color:rgba(250,248,245,.72);
+      font-size:.78rem;
+      text-decoration:none;
+    }
+    .footer-link-group a:hover { color:var(--white); }
+    .footer-inner {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      color:rgba(250,248,245,.72);
+      font-size:.76rem;
+    }
+    footer .wordmark { color:#fff; font-size:1.35rem; }
+
+    @media(max-width:900px) {
+      .site-nav {
+        position:absolute;
+        top:78px;
+        right:0;
+        left:0;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:20px;
+        border-top:1px solid rgba(255,255,255,.12);
+        background:var(--forest);
+      }
+      .site-nav.open { display:flex; }
+      .site-nav>a:not(.button) { padding:13px 0; border-bottom:1px solid rgba(255,255,255,.08); }
+      .nav-cta { margin-top:18px; }
+      .menu-button {
+        display:flex;
+        align-items:center;
+        gap:10px;
+        padding:12px;
+        border:0;
+        background:none;
+        color:#fff;
+        font:600 .8rem Inter;
+        text-transform:uppercase;
+      }
+      .menu-button i,
+      .menu-button i::before,
+      .menu-button i::after {
+        position:relative;
+        display:block;
+        width:22px;
+        height:2px;
+        background:#fff;
+      }
+      .menu-button i::before,
+      .menu-button i::after { position:absolute; left:0; content:''; }
+      .menu-button i::before { top:-7px; }
+      .menu-button i::after { top:7px; }
+      .intro-grid,
+      .promise-grid { grid-template-columns:1fr; gap:32px; }
+      .pillar-grid { grid-template-columns:1fr; }
+      .process ol { grid-template-columns:repeat(2,1fr); }
+      .process li:nth-child(2)::after { display:none; }
+    }
+
+    @media(max-width:650px) {
+      .container { width:min(100% - 32px,var(--container)); }
+      .section { padding:68px 0; }
+      .hero { min-height:auto; }
+      .hero-inner { padding:64px 0 70px; }
+      .hero h1 { font-size:clamp(3.2rem,15vw,4.6rem); line-height:.92; }
+      .hero-copy { font-size:1rem; }
+      .hero .button { width:100%; }
+      .familiar-grid,
+      .split-grid,
+      .process ol { grid-template-columns:1fr; }
+      .process li:not(:last-child)::after { display:none; }
+      .pillars-wrap .container { width:100%; }
+      .pillars { padding:48px 16px; border-radius:0; }
+      .split-card { min-height:auto; padding:28px; }
+      .final-inner { flex-direction:column; align-items:stretch; }
+      .final-inner .button { width:100%; }
+      .footer-links { grid-template-columns:repeat(2,1fr); gap:26px 20px; }
+      .footer-link-group:last-child { grid-column:1/-1; }
+      .footer-inner { flex-wrap:wrap; gap:18px; }
+      .footer-inner .wordmark { width:100%; }
+    }
+  </style>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/what-we-sort-out/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="Small Business Systems &amp; Process Help | Let’s Sort It Out" property="og:title"/><meta content="Practical help with people, processes, systems, software and online setup for Australian small businesses." property="og:description"/><meta content="https://letsortitout.com.au/what-we-sort-out/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Small Business Systems &amp; Process Help | Let’s Sort It Out" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Small Business Systems &amp; Process Help | Let’s Sort It Out" name="twitter:title"/><meta content="Practical help with people, processes, systems, software and online setup for Australian small businesses." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview.jpg" name="twitter:image"/><meta content="Small Business Systems &amp; Process Help | Let’s Sort It Out" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/what-we-sort-out/#webpage","url":"https://letsortitout.com.au/what-we-sort-out/","name":"Small Business Systems & Process Help | Let’s Sort It Out","description":"Practical help with people, processes, systems, software and online setup for Australian small businesses.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/what-we-sort-out/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"What We Sort Out","item":"https://letsortitout.com.au/what-we-sort-out/"}]}]}</script><link href="/assets/auth.css" rel="stylesheet"/></head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="Let’s Sort It Out home" class="wordmark" href="https://letsortitout.com.au/">LET’S SORT IT OUT</a>
+<button aria-controls="site-nav" aria-expanded="false" class="menu-button" type="button"><span>Menu</span><i></i></button>
+<nav aria-label="Main navigation" class="site-nav" id="site-nav">
+<a href="https://letsortitout.com.au/what-we-sort-out/">What We Sort Out</a>
+<a href="https://letsortitout.com.au/free-tools/">Free Tools</a>
+<a href="https://letsortitout.com.au/learning-hub/">Learning Hub</a>
+<a href="https://letsortitout.com.au/people-hub/">People Hub</a>
+<a href="https://letsortitout.com.au/implementation-support/">Implementation Support</a>
+<a class="button button-primary nav-cta" href="https://tally.so/r/Bz5xN7">Review My Business</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero">
+<div class="container hero-inner">
+<h1>What’s doing your <span>head in?</span></h1>
+<p class="hero-copy">You don’t need to diagnose the service, software or solution first. Tell me what keeps wasting time, confusing customers or making the business harder to run than it should be.</p>
+<a class="button button-primary" href="https://tally.so/r/Bz5xN7">Review My Business</a>
+<p class="hero-note">A practical outside view, with the smallest useful next step made clear.</p>
+</div>
+</section>
+<section class="section intro-band">
+<div class="container intro-grid">
+<h2>You don’t need another complicated solution</h2>
+<div class="intro-copy">
+<p>Sometimes the issue is the software. Sometimes it’s the process. Sometimes nobody has been properly shown what to do.</p>
+<p>I help identify what is actually getting in the way, explain the options plainly and put a practical improvement within reach.</p>
+</div>
+</div>
+</section>
+<section class="section pillars-wrap">
+<div class="container pillars">
+<h2>People + Process + Systems</h2>
+<div class="pillar-grid">
+<article>
+<h3>People</h3><b></b>
+<p>Role clarity, simple training, useful one-on-ones, internal transitions and clearer responsibilities.</p>
+</article>
+<article>
+<h3>Process</h3><b></b>
+<p>Checklists, standard operating procedures, customer journeys, follow-up processes and removing unnecessary work.</p>
+</article>
+<article>
+<h3>Systems</h3><b></b>
+<p>Software selection, CRM setup, forms, bookings, integrations and simple automation that works in the real world.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section familiar">
+<div class="container">
+<h2>This might sound familiar</h2>
+<p class="section-intro">The warning signs are usually ordinary. Left alone, they become missed follow-ups, rework and avoidable cost.</p>
+<div class="familiar-grid">
+<article class="familiar-card"><span class="number">01</span><p>The same information gets entered into three places.</p></article>
+<article class="familiar-card"><span class="number">02</span><p>Tasks depend on someone remembering them.</p></article>
+<article class="familiar-card"><span class="number">03</span><p>You pay for software nobody fully understands.</p></article>
+<article class="familiar-card"><span class="number">04</span><p>Different people complete the same work differently.</p></article>
+<article class="familiar-card"><span class="number">05</span><p>Customer follow-ups get missed.</p></article>
+<article class="familiar-card"><span class="number">06</span><p>Training means watching someone do it once.</p></article>
+<article class="familiar-card"><span class="number">07</span><p>Everything falls back onto the owner.</p></article>
+<article class="familiar-card"><span class="number">08</span><p>The online setup doesn’t represent the business.</p></article>
+<article class="familiar-card"><span class="number">09</span><p>The team grew but the process didn’t.</p></article>
+<article class="familiar-card"><span class="number">10</span><p>Useful information lives in someone’s head.</p></article>
+</div>
+</div>
+</section>
+<section class="section split-section">
+<div class="container split-grid">
+<article class="split-card">
+<h2>The practical online stuff</h2><b></b>
+<p>I can help with website setup and cleanup, Google Business Profile, Shopify, online forms, booking tools, lead capture and connecting enquiries to the systems you already use.</p>
+<p>The goal is not something enormous. It is making it easier for customers to find you, understand you, trust you and take the next step.</p>
+</article>
+<article class="split-card alt">
+<h2>You probably don’t need to replace everything</h2><b></b>
+<p>Before recommending another system, I’ll look at what you already use.</p>
+<p>The answer may be cleaning it up, removing something unnecessary, connecting two tools or showing people how to use it properly.</p>
+</article>
+</div>
+</section>
+<section class="section process">
+<div class="container">
+<h2>Start with a free business review</h2>
+<ol>
+<li><span>01</span><div><h3>Tell me what’s happening</h3><p>Explain the frustrating part in plain English.</p></div></li>
+<li><span>02</span><div><h3>I review the setup</h3><p>I separate the real cause from the loudest symptom.</p></div></li>
+<li><span>03</span><div><h3>See the sensible options</h3><p>Advice, cleanup, build, training, automation or ongoing support.</p></div></li>
+<li><span>04</span><div><h3>Choose how to move forward</h3><p>Use the guidance yourself, or bring me in to help implement it with you.</p></div></li>
+</ol>
+</div>
+</section>
+<section class="section">
+<div class="container promise-grid">
+<h2>No overcomplicated fixes</h2>
+<ul class="promise-list">
+<li>I won’t recommend software for the sake of it.</li>
+<li>I won’t replace a working system unnecessarily.</li>
+<li>I won’t automate a broken process.</li>
+<li>I won’t create documents nobody will use.</li>
+<li>I won’t make simple work sound technical.</li>
+</ul>
+</div>
+</section>
+<section class="final-cta">
+<div class="container final-inner">
+<div>
+<h2>Want a practical outside view?</h2>
+<p>You don’t need to diagnose it first. Share what is happening and I’ll identify the clearest place to start without turning it into a large project.</p>
+</div>
+<a class="button button-primary" href="https://tally.so/r/Bz5xN7">Review My Business</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<nav aria-label="Site links" class="footer-links">
+<div class="footer-link-group">
+<h3>Explore</h3>
+<a href="https://letsortitout.com.au/free-tools/">Free tools</a>
+<a href="https://letsortitout.com.au/people-hub/">People Hub</a>
+<a href="https://letsortitout.com.au/what-we-sort-out/">What We Sort Out</a>
+</div>
+<div class="footer-link-group">
+<h3>Start here</h3>
+<a href="https://letsortitout.com.au/stop-doing-it-twice/">Stop Doing It Twice</a>
+<a href="https://letsortitout.com.au/implementation-support/">Implementation support</a>
+<a href="https://letsortitout.com.au/website-setup/">Website + online setup</a>
+<a href="https://letsortitout.com.au/business-in-a-box/">Business in a Box</a>
+<a href="https://letsortitout.com.au/customer-journey-check/">Online Presence Audit</a>
+<a href="https://letsortitout.com.au/ai-guide/">No-BS AI Guide</a>
+</div>
+<div class="footer-link-group">
+<h3>More</h3>
+<a href="https://letsortitout.com.au/#jake">Meet Jake</a>
+<a href="https://letsortitout.com.au/#faqs">FAQs</a>
+<a href="https://tally.so/r/Bz5xN7">Review My Business</a>
+<a href="https://wa.me/61472544399?text=Hi%20Jake%2C%20I%20found%20Let%27s%20Sort%20It%20Out%20and%20would%20like%20to%20have%20a%20quick%20chat.">Message Jake on WhatsApp</a>
+</div>
+</nav>
+<div class="footer-inner">
+<a class="wordmark" href="#top">LET’S SORT IT OUT</a>
+<span>© 2026 Let’s Sort It Out</span>
+</div>
+</div>
+</footer>
+<script>
+    const menuButton = document.querySelector('.menu-button');
+    const nav = document.querySelector('.site-nav');
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open', !open);
+    });
+    nav.addEventListener('click', event => {
+      if (event.target.closest('a')) {
+        nav.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+<script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
+</html>

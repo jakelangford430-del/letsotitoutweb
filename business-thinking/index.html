@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html lang="en-AU" class="auth-pending">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Use practical business thinking models including SWOT, PESTEL, Five Whys and Three Horizons for Australian small teams." name="description"/>
+<title>Free Business Planning Tools: SWOT, PESTEL &amp; Five Whys</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/core.css" rel="stylesheet"/>
+<style>
+      .eyebrow,
+      .step-label {
+        color: var(--rust);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .page-hero .eyebrow {
+        color: #f0ad79;
+        margin-bottom: 16px;
+      }
+      .page-hero h1 {
+        max-width: 760px;
+      }
+      .page-hero p {
+        max-width: 740px;
+      }
+      .boundary-note {
+        border-left: 3px solid var(--rust);
+        background: rgba(212, 113, 42, 0.08);
+        padding: 18px 20px;
+        margin: 24px 0 34px;
+        max-width: 820px;
+      }
+      .boundary-note strong {
+        display: block;
+        color: var(--rust);
+        margin-bottom: 5px;
+      }
+      .boundary-note p {
+        margin: 0;
+        color: #59615d;
+        font-size: 0.94rem;
+      }
+      .model-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+        margin: 26px 0 34px;
+      }
+      .model-choice {
+        min-height: 128px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--white);
+        padding: 18px 16px;
+        text-align: left;
+        cursor: pointer;
+        color: var(--forest);
+        transition: border-color 160ms ease, background 160ms ease;
+      }
+      .model-choice:hover,
+      .model-choice[aria-selected="true"] {
+        border-color: var(--rust);
+        background: rgba(212, 113, 42, 0.08);
+      }
+      .model-choice span {
+        display: block;
+        color: var(--rust);
+        font: 700 1.55rem/1 Antonio, sans-serif;
+        margin-bottom: 14px;
+      }
+      .model-choice strong {
+        display: block;
+        font-size: 0.9rem;
+        line-height: 1.25;
+      }
+      .model-choice small {
+        display: block;
+        color: #646b67;
+        font-size: 0.76rem;
+        line-height: 1.4;
+        margin-top: 7px;
+      }
+      .model-panel {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: clamp(22px, 4vw, 38px);
+        background: var(--white);
+      }
+      .model-panel[hidden] {
+        display: none;
+      }
+      .model-panel h3 {
+        margin-bottom: 12px;
+      }
+      .panel-intro {
+        max-width: 720px;
+        color: #59615d;
+        margin-bottom: 28px;
+      }
+      .question-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+      .question-grid.one {
+        grid-template-columns: 1fr;
+      }
+      .field label {
+        display: block;
+        color: var(--forest);
+        font-weight: 700;
+        margin-bottom: 7px;
+      }
+      .field label span {
+        display: block;
+        color: #646b67;
+        font-size: 0.82rem;
+        font-weight: 400;
+        margin-top: 3px;
+      }
+      .field input,
+      .field textarea {
+        width: 100%;
+        border: 1px solid rgba(44, 62, 45, 0.35);
+        border-radius: 8px;
+        padding: 12px 13px;
+        color: var(--charcoal);
+        background: #fff;
+        font: inherit;
+        font-size: 0.95rem;
+      }
+      .field textarea {
+        min-height: 112px;
+        resize: vertical;
+      }
+      .field input:focus,
+      .field textarea:focus {
+        border-color: var(--rust);
+        outline: 3px solid rgba(212, 113, 42, 0.2);
+      }
+      .form-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+        margin-top: 26px;
+      }
+      .save-button {
+        border: 0;
+        background: none;
+        color: var(--olive);
+        cursor: pointer;
+        font: 700 0.8rem Inter, sans-serif;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .save-status {
+        color: #646b67;
+        font-size: 0.8rem;
+      }
+      .model-result,
+      .why-result {
+        margin-top: 28px;
+        padding: 24px;
+        border-left: 3px solid var(--rust);
+        background: var(--cream);
+      }
+      .model-result[hidden],
+      .why-result[hidden] {
+        display: none;
+      }
+      .model-result h4,
+      .why-result h3 {
+        margin-bottom: 10px;
+      }
+      .result-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin: 18px 0;
+      }
+      .result-item {
+        border-top: 1px solid rgba(44, 62, 45, 0.17);
+        padding-top: 12px;
+      }
+      .result-item strong {
+        display: block;
+        color: var(--rust);
+        font-size: 0.74rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .result-item p {
+        margin: 0;
+        font-size: 0.92rem;
+        white-space: pre-wrap;
+      }
+      .result-note {
+        color: #59615d;
+        font-size: 0.86rem;
+        margin: 16px 0 20px;
+      }
+      .result-cta {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        background: var(--rust);
+        color: #fff;
+        border-radius: 3px;
+        font: 700 0.95rem Antonio, sans-serif;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .result-cta:hover {
+        background: #b85c20;
+      }
+      .five-whys {
+        background: var(--cream);
+      }
+      .why-list {
+        display: grid;
+        gap: 14px;
+        margin-top: 18px;
+      }
+      .why-item {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 14px;
+        align-items: start;
+      }
+      .why-item > span {
+        padding-top: 12px;
+        color: var(--rust);
+        font: 700 1.35rem/1 Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .five-whys .field textarea {
+        background: var(--white);
+      }
+      .drivers-note {
+        margin-top: 18px;
+        font-size: 0.84rem;
+        color: #59615d;
+      }
+      .closing-copy {
+        max-width: 730px;
+      }
+      @media (max-width: 1000px) {
+        .model-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 700px) {
+        .model-grid,
+        .question-grid,
+        .result-grid {
+          grid-template-columns: 1fr;
+        }
+        .model-choice {
+          min-height: auto;
+        }
+        .why-item {
+          grid-template-columns: 1fr;
+          gap: 6px;
+        }
+        .why-item > span {
+          padding-top: 0;
+        }
+        .form-actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+        .form-actions .button {
+          width: 100%;
+        }
+      }
+    </style>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/business-thinking/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="Free Business Planning Tools: SWOT, PESTEL &amp; Five Whys" property="og:title"/><meta content="Use practical business thinking models including SWOT, PESTEL, Five Whys and Three Horizons for Australian small teams." property="og:description"/><meta content="https://letsortitout.com.au/business-thinking/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Free Business Planning Tools: SWOT, PESTEL &amp; Five Whys" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Free Business Planning Tools: SWOT, PESTEL &amp; Five Whys" name="twitter:title"/><meta content="Use practical business thinking models including SWOT, PESTEL, Five Whys and Three Horizons for Australian small teams." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" name="twitter:image"/><meta content="Free Business Planning Tools: SWOT, PESTEL &amp; Five Whys" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/business-thinking/#webpage","url":"https://letsortitout.com.au/business-thinking/","name":"Free Business Planning Tools: SWOT, PESTEL & Five Whys","description":"Use practical business thinking models including SWOT, PESTEL, Five Whys and Three Horizons for Australian small teams.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/business-thinking/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"Business Thinking Tools","item":"https://letsortitout.com.au/business-thinking/"}]},{"@type":"SoftwareApplication","name":"Free Business Planning Tools: SWOT, PESTEL & Five Whys","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://letsortitout.com.au/business-thinking/","description":"Use practical business thinking models including SWOT, PESTEL, Five Whys and Three Horizons for Australian small teams.","offers":{"@type":"Offer","price":"0","priceCurrency":"AUD"}}]}</script><link href="/assets/auth.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container header-inner">
+<a class="wordmark" href="../">LET’S SORT IT OUT</a>
+<button aria-controls="site-nav" aria-expanded="false" class="menu-button" type="button">Menu</button>
+<nav class="site-nav" id="site-nav">
+<a href="../what-we-sort-out/">What We Sort Out</a>
+<a href="../free-tools/">Free Tools</a>
+<a href="../learning-hub/">Learning Hub</a>
+<a href="../people-hub/">People Hub</a>
+<a href="../implementation-support/">Implementation Support</a>
+<a class="button" href="https://tally.so/r/Bz5xN7">Review My Business</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="container">
+<p class="eyebrow">Business thinking, without the jargon</p>
+<h1>Use the thinking models you already know.</h1>
+<p>
+            You have probably come across SWOT, PESTEL, Three Horizons or Why–How–What somewhere along your business journey. This is a useful reminder that they are still there when you need to get your head straight and choose a direction.
+          </p>
+<a class="button" href="#models">Choose a model ↓</a>
+</div>
+</section>
+<section class="section" id="models">
+<div class="container">
+<div class="boundary-note">
+<strong>Useful thinking is not the same as a finished strategy.</strong>
+<p>These short versions help you see the next sensible move. They do not replace financial, legal, safety or specialist advice. If you want help turning the thinking into working systems, submit a business review and I can help sort the implementation with you.</p>
+</div>
+<h2>What are you trying to work out?</h2>
+<div aria-label="Business thinking models" class="model-grid" role="tablist">
+<button aria-controls="model-horizons" aria-selected="true" class="model-choice" data-model="horizons" role="tab" type="button"><span>01</span><strong>Three Horizons</strong><small>See now, near future and longer-term direction.</small></button>
+<button aria-controls="model-swot" aria-selected="false" class="model-choice" data-model="swot" role="tab" type="button"><span>02</span><strong>SWOT</strong><small>Work out what to protect, fix, test and watch.</small></button>
+<button aria-controls="model-why-how-what" aria-selected="false" class="model-choice" data-model="why-how-what" role="tab" type="button"><span>03</span><strong>Why · How · What</strong><small>Make the point of the business easier to explain.</small></button>
+<button aria-controls="model-pestel" aria-selected="false" class="model-choice" data-model="pestel" role="tab" type="button"><span>04</span><strong>PESTEL</strong><small>Look outside the business before the outside world surprises you.</small></button>
+<button aria-controls="model-drivers" aria-selected="false" class="model-choice" data-model="drivers" role="tab" type="button"><span>05</span><strong>Drivers &amp; restraints</strong><small>Find what will move you forward and what is holding you back.</small></button>
+</div>
+<section class="model-panel" data-model-panel="horizons" id="model-horizons" role="tabpanel">
+<p class="step-label">Direction check</p>
+<h3>Three Horizons</h3>
+<p class="panel-intro">Start with the current reality, describe the near future you are aiming for, then name the longer-term future you actually want. Add what is changing around you so the plan is grounded in the real world.</p>
+<form data-model-form="horizons">
+<div class="question-grid">
+<div class="field"><label for="h-now">Horizon 1 · Current reality<span>What is true right now? What is working, stuck or taking too much of your time?</span></label><textarea id="h-now" name="now" required=""></textarea></div>
+<div class="field"><label for="h-near">Horizon 2 · Near future<span>Where would you like the business to be in the next 6–24 months?</span></label><textarea id="h-near" name="near" required=""></textarea></div>
+<div class="field"><label for="h-long">Horizon 3 · Longer-term goal<span>What would the business look like if it was heading in the right direction?</span></label><textarea id="h-long" name="long" required=""></textarea></div>
+<div class="field"><label for="h-environment">Operating environment<span>What changes in customers, costs, technology, people or rules might affect the route?</span></label><textarea id="h-environment" name="environment"></textarea></div>
+</div>
+<div class="form-actions"><button class="button" type="submit">Show my direction</button><button class="save-button" data-save="horizons" type="button">Save on this device</button><span class="save-status" data-status="horizons" role="status"></span></div>
+</form>
+<div class="model-result" data-result="horizons" hidden=""></div>
+</section>
+<section class="model-panel" data-model-panel="swot" hidden="" id="model-swot" role="tabpanel">
+<p class="step-label">Reality check</p>
+<h3>SWOT, made practical</h3>
+<p class="panel-intro">This is not a presentation slide. Use it to make a call: protect the strengths, fix the weaknesses, test the opportunities and keep an eye on the threats.</p>
+<form data-model-form="swot">
+<div class="question-grid">
+<div class="field"><label for="s-strengths">Strengths<span>What do customers already value? What do you do reliably?</span></label><textarea id="s-strengths" name="strengths" required=""></textarea></div>
+<div class="field"><label for="s-weaknesses">Weaknesses<span>Where do mistakes, delays or owner-dependence keep showing up?</span></label><textarea id="s-weaknesses" name="weaknesses" required=""></textarea></div>
+<div class="field"><label for="s-opportunities">Opportunities<span>What could improve the offer, reach or customer experience?</span></label><textarea id="s-opportunities" name="opportunities" required=""></textarea></div>
+<div class="field"><label for="s-threats">Threats<span>What outside change could make the current way harder or less profitable?</span></label><textarea id="s-threats" name="threats" required=""></textarea></div>
+</div>
+<div class="form-actions"><button class="button" type="submit">Turn this into a next move</button><button class="save-button" data-save="swot" type="button">Save on this device</button><span class="save-status" data-status="swot" role="status"></span></div>
+</form>
+<div class="model-result" data-result="swot" hidden=""></div>
+</section>
+<section class="model-panel" data-model-panel="why-how-what" hidden="" id="model-why-how-what" role="tabpanel">
+<p class="step-label">Make it clear</p>
+<h3>Why · How · What</h3>
+<p class="panel-intro">A simple way to explain the point of the business without hiding behind jargon. It can help with a website, a team conversation, a proposal or a decision about what not to offer.</p>
+<form data-model-form="why-how-what">
+<div class="question-grid one">
+<div class="field"><label for="w-why">Why<span>Why does this business or piece of work matter to the customer?</span></label><textarea id="w-why" name="why" required=""></textarea></div>
+<div class="field"><label for="w-how">How<span>What is your practical way of making that difference?</span></label><textarea id="w-how" name="how" required=""></textarea></div>
+<div class="field"><label for="w-what">What<span>What do you actually provide, fix or make easier?</span></label><textarea id="w-what" name="what" required=""></textarea></div>
+</div>
+<div class="form-actions"><button class="button" type="submit">Build the clear version</button><button class="save-button" data-save="why-how-what" type="button">Save on this device</button><span class="save-status" data-status="why-how-what" role="status"></span></div>
+</form>
+<div class="model-result" data-result="why-how-what" hidden=""></div>
+</section>
+<section class="model-panel" data-model-panel="pestel" hidden="" id="model-pestel" role="tabpanel">
+<p class="step-label">Outside forces</p>
+<h3>PESTEL, without the lecture</h3>
+<p class="panel-intro">PESTEL looks at political, economic, social, technological, environmental and legal factors. You do not need an essay. A few honest notes can show what deserves a closer look before you spend money or change direction.</p>
+<form data-model-form="pestel">
+<div class="question-grid">
+<div class="field"><label for="p-political">Political<span>Government decisions, funding, local rules or public priorities.</span></label><textarea id="p-political" name="political"></textarea></div>
+<div class="field"><label for="p-economic">Economic<span>Costs, interest rates, demand, wages or customer budgets.</span></label><textarea id="p-economic" name="economic"></textarea></div>
+<div class="field"><label for="p-social">Social<span>Customer expectations, habits, demographics or trust.</span></label><textarea id="p-social" name="social"></textarea></div>
+<div class="field"><label for="p-technology">Technological<span>New tools, AI, platforms, integrations or security expectations.</span></label><textarea id="p-technology" name="technology"></textarea></div>
+<div class="field"><label for="p-environmental">Environmental<span>Weather, resources, waste, energy or local conditions.</span></label><textarea id="p-environmental" name="environmental"></textarea></div>
+<div class="field"><label for="p-legal">Legal<span>Licences, contracts, privacy, employment or industry obligations.</span></label><textarea id="p-legal" name="legal"></textarea></div>
+</div>
+<div class="form-actions"><button class="button" type="submit">Make a watch list</button><button class="save-button" data-save="pestel" type="button">Save on this device</button><span class="save-status" data-status="pestel" role="status"></span></div>
+</form>
+<div class="model-result" data-result="pestel" hidden=""></div>
+</section>
+<section class="model-panel" data-model-panel="drivers" hidden="" id="model-drivers" role="tabpanel">
+<p class="step-label">Move towards the goal</p>
+<h3>Drivers &amp; restraints</h3>
+<p class="panel-intro">Put the goal in plain English, then separate what will move you towards it from what will slow you down. This free version keeps the thinking to now and future state. The deeper third step is the work of turning the gap into a plan.</p>
+<form data-model-form="drivers">
+<div class="question-grid">
+<div class="field"><label for="d-goal">Future state<span>What would be noticeably better when this is working?</span></label><textarea id="d-goal" name="goal" required=""></textarea></div>
+<div class="field"><label for="d-now">Now<span>What is the current situation you are starting from?</span></label><textarea id="d-now" name="now" required=""></textarea></div>
+<div class="field"><label for="d-drivers">Drivers<span>What people, assets, reasons or opportunities can pull you forward?</span></label><textarea id="d-drivers" name="drivers" required=""></textarea></div>
+<div class="field"><label for="d-restraints">Restraints<span>What is creating friction, risk, cost or delay?</span></label><textarea id="d-restraints" name="restraints" required=""></textarea></div>
+</div>
+<div class="form-actions"><button class="button" type="submit">Find the first move</button><button class="save-button" data-save="drivers" type="button">Save on this device</button><span class="save-status" data-status="drivers" role="status"></span></div>
+</form>
+<div class="model-result" data-result="drivers" hidden=""></div>
+</section>
+</div>
+</section>
+<section class="section five-whys" id="five-whys">
+<div class="container">
+<p class="eyebrow">Root-cause check</p>
+<h2>Stop patching the symptom.</h2>
+<p class="section-intro">The Five Whys is a straightforward way to get past the top-line issue or opportunity. Write the answer, ask why again, and keep going until you reach a cause you can actually influence. Five is usually enough—but ask again if the answer is still a symptom.</p>
+<form class="card" id="why-form">
+<div class="field"><label for="why-issue">Step 1 · Issue or opportunity<span>What is happening, or what are you trying to improve?</span></label><textarea id="why-issue" name="issue" required=""></textarea></div>
+<div class="why-list">
+<div class="why-item"><span>Why 1</span><div class="field"><label class="sr-only" for="why-1">Why 1 answer</label><textarea id="why-1" name="why1" required=""></textarea></div></div>
+<div class="why-item"><span>Why 2</span><div class="field"><label class="sr-only" for="why-2">Why 2 answer</label><textarea id="why-2" name="why2"></textarea></div></div>
+<div class="why-item"><span>Why 3</span><div class="field"><label class="sr-only" for="why-3">Why 3 answer</label><textarea id="why-3" name="why3"></textarea></div></div>
+<div class="why-item"><span>Why 4</span><div class="field"><label class="sr-only" for="why-4">Why 4 answer</label><textarea id="why-4" name="why4"></textarea></div></div>
+<div class="why-item"><span>Why 5</span><div class="field"><label class="sr-only" for="why-5">Why 5 answer</label><textarea id="why-5" name="why5"></textarea></div></div>
+</div>
+<div class="question-grid" style="margin-top:18px">
+<div class="field"><label for="why-meaning">What does this mean?<span>What is the useful learning from the chain?</span></label><textarea id="why-meaning" name="meaning" required=""></textarea></div>
+<div class="field"><label for="why-action">What needs to happen now?<span>Name the next practical action, not the whole project.</span></label><textarea id="why-action" name="action" required=""></textarea></div>
+</div>
+<div class="form-actions"><button class="button" type="submit">Show the root-cause draft</button><button class="save-button" id="save-whys" type="button">Save on this device</button><span class="save-status" id="why-save-status" role="status"></span></div>
+</form>
+<div class="why-result" hidden="" id="why-result"></div>
+</div>
+</section>
+<section class="section">
+<div class="container closing-copy">
+<h2>Good thinking still needs a bit of doing.</h2>
+<p>These models help you name the problem and choose a sensible next move. They deliberately stop short of doing the full implementation for you. Complete the one that fits, then use its implementation link if you want help turning your notes into a working process, system, online setup or team habit.</p>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer-inner"><a class="wordmark" href="../">LET’S SORT IT OUT</a><span>© 2026 Let’s Sort It Out</span></div>
+</footer>
+<script src="../assets/core.js"></script>
+<script>
+      const TALLY = "../implementation-support/";
+      const esc = (value) => String(value || "").replace(/[&<>\"]/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'\"':"&quot;"}[char]));
+      const formData = (form) => Object.fromEntries(new FormData(form).entries());
+      const resultLink = "<a class=\"result-cta\" href=\"" + TALLY + "\">See support options →</a>";
+
+      const renderers = {
+        horizons: (data) => `<h4>Your direction draft</h4><p>Keep the useful parts of today running while you build towards the future you described.</p><div class="result-grid"><div class="result-item"><strong>Keep steady</strong><p>${esc(data.now)}</p></div><div class="result-item"><strong>Build next</strong><p>${esc(data.near)}</p></div><div class="result-item"><strong>Head towards</strong><p>${esc(data.long)}</p></div><div class="result-item"><strong>Watch the outside world</strong><p>${esc(data.environment) || "Name one change in customers, costs, technology, people or rules to keep checking."}</p></div></div><p class="result-note">The sensible next question is: which near-future change will make the biggest difference without putting the current business at risk?</p>${resultLink}`,
+        swot: (data) => `<h4>Your practical SWOT read</h4><div class="result-grid"><div class="result-item"><strong>Protect</strong><p>${esc(data.strengths)}</p></div><div class="result-item"><strong>Fix first</strong><p>${esc(data.weaknesses)}</p></div><div class="result-item"><strong>Test</strong><p>${esc(data.opportunities)}</p></div><div class="result-item"><strong>Watch</strong><p>${esc(data.threats)}</p></div></div><p class="result-note">Pick one weakness to reduce and one opportunity to test. That is enough for the next conversation—do not turn this into a 40-page strategy document.</p>${resultLink}`,
+        "why-how-what": (data) => `<h4>Your clear version</h4><div class="result-grid"><div class="result-item"><strong>Why</strong><p>${esc(data.why)}</p></div><div class="result-item"><strong>How</strong><p>${esc(data.how)}</p></div><div class="result-item"><strong>What</strong><p>${esc(data.what)}</p></div></div><p class="result-note">Use this as a working draft for your homepage, a team explanation or a customer conversation. Read it out loud—if it sounds like a brochure, simplify it.</p>${resultLink}`,
+        pestel: (data) => { const labels = [["Political",data.political],["Economic",data.economic],["Social",data.social],["Technological",data.technology],["Environmental",data.environmental],["Legal",data.legal]].filter((item) => item[1].trim()); return `<h4>Your outside-world watch list</h4><div class="result-grid">${labels.length ? labels.map(([label,value]) => `<div class="result-item"><strong>${label}</strong><p>${esc(value)}</p></div>`).join("") : "<p>Add a couple of notes first—blank watch lists do not tell you much."}</div><p class="result-note">Choose one factor to check this quarter. For legal, employment, safety or regulated questions, use the right Australian professional advice before acting.</p>${resultLink}`; },
+        drivers: (data) => `<h4>Your first move</h4><div class="result-grid"><div class="result-item"><strong>Future state</strong><p>${esc(data.goal)}</p></div><div class="result-item"><strong>Starting point</strong><p>${esc(data.now)}</p></div><div class="result-item"><strong>Use this driver</strong><p>${esc(data.drivers)}</p></div><div class="result-item"><strong>Remove this restraint</strong><p>${esc(data.restraints)}</p></div></div><p class="result-note">Start with the restraint you can influence and the driver most likely to make the future state easier. Recheck the gap after a short, realistic test.</p>${resultLink}`
+      };
+
+      const showModel = (name) => {
+        document.querySelectorAll(".model-choice").forEach((button) => {
+          const selected = button.dataset.model === name;
+          button.setAttribute("aria-selected", String(selected));
+        });
+        document.querySelectorAll("[data-model-panel]").forEach((panel) => {
+          panel.hidden = panel.dataset.modelPanel !== name;
+        });
+      };
+      document.querySelectorAll(".model-choice").forEach((button) => button.addEventListener("click", () => showModel(button.dataset.model)));
+      document.querySelectorAll("[data-model-form]").forEach((form) => form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = form.dataset.modelForm;
+        const data = formData(form);
+        const output = document.querySelector(`[data-result="${name}"]`);
+        output.innerHTML = renderers[name](data);
+        output.hidden = false;
+        output.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }));
+      document.querySelectorAll("[data-save]").forEach((button) => button.addEventListener("click", () => {
+        const name = button.dataset.save;
+        const form = document.querySelector(`[data-model-form="${name}"]`);
+        localStorage.setItem(`lets-sort-it-out-${name}`, JSON.stringify(formData(form)));
+        document.querySelector(`[data-status="${name}"]`).textContent = "Saved on this device.";
+      }));
+      document.querySelectorAll("[data-model-form]").forEach((form) => {
+        const name = form.dataset.modelForm;
+        const saved = localStorage.getItem(`lets-sort-it-out-${name}`);
+        if (!saved) return;
+        try { Object.entries(JSON.parse(saved)).forEach(([key, value]) => { if (form.elements[key]) form.elements[key].value = value; }); document.querySelector(`[data-status="${name}"]`).textContent = "Saved answers restored."; } catch (error) { /* Ignore an old or malformed local save. */ }
+      });
+
+      const whyForm = document.getElementById("why-form");
+      whyForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = formData(whyForm);
+        const whys = [data.why1, data.why2, data.why3, data.why4, data.why5].filter((value) => value.trim());
+        const lastWhy = whys[whys.length - 1] || data.issue;
+        const result = document.getElementById("why-result");
+        result.innerHTML = `<h3>Your root-cause draft</h3><p><strong>Top line:</strong> ${esc(data.issue)}</p><p><strong>Cause to work with:</strong> ${esc(lastWhy)}</p><div class="result-grid"><div class="result-item"><strong>What this means</strong><p>${esc(data.meaning)}</p></div><div class="result-item"><strong>What needs to happen now</strong><p>${esc(data.action)}</p></div></div><p class="result-note">You do not need a perfect answer. You need a cause you can influence, one action, an owner and a check-in date. If the cause is still a symptom, ask why again.</p>${resultLink}`;
+        result.hidden = false;
+        result.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+      document.getElementById("save-whys").addEventListener("click", () => {
+        localStorage.setItem("lets-sort-it-out-five-whys", JSON.stringify(formData(whyForm)));
+        document.getElementById("why-save-status").textContent = "Saved on this device.";
+      });
+      const savedWhys = localStorage.getItem("lets-sort-it-out-five-whys");
+      if (savedWhys) { try { Object.entries(JSON.parse(savedWhys)).forEach(([key, value]) => { if (whyForm.elements[key]) whyForm.elements[key].value = value; }); document.getElementById("why-save-status").textContent = "Saved answers restored."; } catch (error) { /* Ignore an old or malformed local save. */ } }
+    </script>
+<script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
+</html>

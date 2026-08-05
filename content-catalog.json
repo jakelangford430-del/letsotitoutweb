@@ -1,0 +1,218 @@
+[
+  {
+    "slug": "learning-hub",
+    "title": "Small Business Learning Hub",
+    "description": "Plain-English learning paths for AI, people, process, systems and practical implementation.",
+    "href": "/learning-hub/",
+    "category": "Learning",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "free-tools",
+    "title": "Free Tool Library",
+    "description": "Browse the practical tools for wasted time, workflow order, AI, people, systems and online setup.",
+    "href": "/free-tools/",
+    "category": "Tools",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "implementation-support",
+    "title": "Implementation Support",
+    "description": "Practical help turning tool results, AI prompts, people processes, workflows and online setup into usable business assets.",
+    "href": "/implementation-support/",
+    "category": "Get help",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "what-we-sort-out",
+    "title": "What We Sort Out",
+    "description": "See the people, process, systems, software and online setup problems Jake can help untangle.",
+    "href": "/what-we-sort-out/",
+    "category": "Start here",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "ai-guide",
+    "title": "No-BS AI Guide",
+    "description": "Build useful prompts, choose a platform, set a business voice and use AI safely in Australian small-business work.",
+    "href": "/ai-guide/",
+    "category": "AI",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "people-hub",
+    "title": "People Hub",
+    "description": "Practical workplace tools for one-on-ones, feedback, hiring, onboarding, role changes and performance conversations.",
+    "href": "/people-hub/",
+    "category": "People",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "business-sort-out-map",
+    "title": "Business Sort-Out Map",
+    "description": "Find the real bottleneck across customers, admin, people, systems, money, risk and training.",
+    "href": "/business-sort-out-map/",
+    "category": "Process",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "automation-opportunity-finder",
+    "title": "Automation Opportunity Finder",
+    "description": "Check whether a repeated admin task should be automated, simplified, supported by AI or kept human.",
+    "href": "/automation-opportunity-finder/",
+    "category": "Automation",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "workflow-order",
+    "title": "Workflow Order",
+    "description": "Turn a messy list of problems into a sensible order of attack.",
+    "href": "/workflow-order/",
+    "category": "Process",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "stop-doing-it-twice",
+    "title": "Stop Doing It Twice",
+    "description": "Estimate the time and cost of repeated admin, then name the first task worth simplifying.",
+    "href": "/stop-doing-it-twice/",
+    "category": "Time saving",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "software-stack",
+    "title": "No-BS Software Stack",
+    "description": "Choose practical software and avoid creating a mess of disconnected tools.",
+    "href": "/software-stack/",
+    "category": "Systems",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "google-workspace-for-sales",
+    "title": "Google Workspace & Sheets for Sales Teams",
+    "description": "A five-level guided walkthrough for BDR, appointment setting and sales roles, with ready-to-use Gemini prompts.",
+    "href": "/google-workspace-for-sales/",
+    "category": "AI",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "business-thinking",
+    "title": "Business Thinking Tools",
+    "description": "Use SWOT, PESTEL, Five Whys and other simple models to think through a business problem.",
+    "href": "/business-thinking/",
+    "category": "Decision making",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "customer-journey-check",
+    "title": "Online Presence Audit",
+    "description": "Check the customer journey from search result to first enquiry.",
+    "href": "/customer-journey-check/",
+    "category": "Online setup",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "website-setup",
+    "title": "Website & Online Setup",
+    "description": "Learn what customers need to see online before they enquire, book, buy or trust the business.",
+    "href": "/website-setup/",
+    "category": "Online setup",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "brand-colour-picker",
+    "title": "Brand Colour Picker",
+    "description": "Build a simple colour palette for a website, documents and social posts without overthinking the brand.",
+    "href": "/brand-colour-picker/",
+    "category": "Brand",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "business-in-a-box",
+    "title": "Business in a Box",
+    "description": "Work through the foundations in a sensible order before adding more moving parts.",
+    "href": "/business-in-a-box/",
+    "category": "Get help",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "people-hub/one-on-one",
+    "title": "Prepare for a One-on-One",
+    "description": "Build an agenda, talking points, questions and follow-up actions for a useful check-in.",
+    "href": "/people-hub/one-on-one/",
+    "category": "People",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "people-hub/constructive-feedback",
+    "title": "Constructive Feedback Planner",
+    "description": "Prepare feedback that is specific, fair and easier for the other person to act on.",
+    "href": "/people-hub/constructive-feedback/",
+    "category": "People",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "people-hub/difficult-conversation",
+    "title": "Difficult Conversation Planner",
+    "description": "Separate facts from frustration and prepare what to say before a hard workplace conversation.",
+    "href": "/people-hub/difficult-conversation/",
+    "category": "People",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "people-hub/hiring-interview-prep",
+    "title": "Hiring & Interview Prep Builder",
+    "description": "Build a sensible interview question set, plus a heads-up on what you legally cannot ask.",
+    "href": "/people-hub/hiring-interview-prep/",
+    "category": "People",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "people-hub/onboarding-plan",
+    "title": "New Starter Onboarding Plan",
+    "description": "A practical 30/60/90-day plan so nothing gets forgotten in week one.",
+    "href": "/people-hub/onboarding-plan/",
+    "category": "People",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "people-hub/performance-conversation",
+    "title": "Performance Conversation Builder",
+    "description": "Structure an ongoing performance conversation with expectations, evidence and follow-up.",
+    "href": "/people-hub/performance-conversation/",
+    "category": "People",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "people-hub/toolbox-talk",
+    "title": "Toolbox Talk & Meeting Agenda Builder",
+    "description": "A quick, practical agenda sized to the time you have actually got.",
+    "href": "/people-hub/toolbox-talk/",
+    "category": "People",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "people-hub/career-development",
+    "title": "Career Development Conversation Planner",
+    "description": "Prepare a practical workplace conversation about learning, growth and next steps.",
+    "href": "/people-hub/career-development/",
+    "category": "People",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "people-hub/internal-role",
+    "title": "Internal Role Change Planner",
+    "description": "Prepare a practical conversation about changing responsibilities or expressing interest in an internal role.",
+    "href": "/people-hub/internal-role/",
+    "category": "People",
+    "publishedAt": "2026-07-31"
+  },
+  {
+    "slug": "people-hub/workplace-resources",
+    "title": "Australian Workplace Resources",
+    "description": "Find proper Australian links for Fair Work, safety, discrimination, wellbeing and career support.",
+    "href": "/people-hub/workplace-resources/",
+    "category": "People",
+    "publishedAt": "2026-07-31"
+  }
+]

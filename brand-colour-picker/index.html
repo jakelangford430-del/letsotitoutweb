@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en-AU" class="auth-pending">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#111813" name="theme-color"/>
+<meta content="Build a practical brand colour palette for your website, social media, invoices and everyday customer touchpoints." name="description"/>
+<title>Free Brand Colour Palette Builder for Small Business</title>
+<!-- Tailwind CSS CDN -->
+<!-- Shared homepage brand theme -->
+<!-- Lucide Icons CDN -->
+<script src="../assets/lucide.min.js" type="text/javascript"></script>
+<!-- Google Fonts: Antonio & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Stylesheet -->
+<style>
+    :root { 
+      --olive: #2C3E2D; 
+      --sage: #6B7F5E; 
+      --charcoal: #2D3230; 
+      --warm-white: #FAF8F5; 
+      --cream: #F5F0E6; 
+    }
+    body { 
+      font-family: 'Inter', sans-serif; 
+      scroll-behavior: smooth;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Antonio', sans-serif !important;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    
+    /* Vibe Card Hover Animation */
+    .vibe-card { 
+      border-radius: 16px; 
+      border: 2px solid #e8e4dc; 
+      transition: all 0.3s ease; 
+      cursor: pointer; 
+    }
+    .vibe-card:hover { 
+      transform: translateY(-3px); 
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08); 
+      border-color: var(--sage); 
+    }
+    
+    /* Custom Scrollbar for better UI experience */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgb(245, 240, 230);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD6CD;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6B7F5E;
+    }
+
+    /* Keep the small colour actions comfortable to tap on phones. */
+    .palette-copy {
+      min-height: 44px;
+      padding-inline: 12px;
+    }
+  </style>
+<link href="../assets/tailwind.css" rel="stylesheet"/>
+<link href="../assets/brand.css" rel="stylesheet"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/brand-colour-picker/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="Free Brand Colour Palette Builder for Small Business" property="og:title"/><meta content="Build a practical brand colour palette for your website, social media, invoices and everyday customer touchpoints." property="og:description"/><meta content="https://letsortitout.com.au/brand-colour-picker/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Free Brand Colour Palette Builder for Small Business" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Free Brand Colour Palette Builder for Small Business" name="twitter:title"/><meta content="Build a practical brand colour palette for your website, social media, invoices and everyday customer touchpoints." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" name="twitter:image"/><meta content="Free Brand Colour Palette Builder for Small Business" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/brand-colour-picker/#webpage","url":"https://letsortitout.com.au/brand-colour-picker/","name":"Free Brand Colour Palette Builder for Small Business","description":"Build a practical brand colour palette for your website, social media, invoices and everyday customer touchpoints.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/brand-colour-picker/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"Brand Colour Picker","item":"https://letsortitout.com.au/brand-colour-picker/"}]},{"@type":"SoftwareApplication","name":"Free Brand Colour Palette Builder for Small Business","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://letsortitout.com.au/brand-colour-picker/","description":"Build a practical brand colour palette for your website, social media, invoices and everyday customer touchpoints.","offers":{"@type":"Offer","price":"0","priceCurrency":"AUD"}}]}</script><link href="/assets/auth.css" rel="stylesheet"/></head>
+<body class="w-full min-h-screen flex flex-col antialiased jj-site" style="background: rgb(245, 240, 230);">
+<!-- Standalone Header Navigation -->
+<nav class="sticky top-0 z-50 w-full bg-[#142019]/95 text-[#F7F1E5] backdrop-blur-md border-b border-white/10">
+<div class="max-w-[1180px] mx-auto px-6 h-16 flex items-center justify-between gap-4">
+<a class="font-bold text-xl sm:text-2xl tracking-widest uppercase whitespace-nowrap hover:text-[#D4712A] transition-colors" href="../">
+      LET’S SORT IT OUT<span class="text-[#D4712A]">.</span>
+</a>
+<div class="hidden lg:flex items-center gap-1">
+<a class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="../what-we-sort-out/">What We Sort Out</a>
+<a class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="../free-tools/">Free Tools</a>
+<a class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="../learning-hub/">Learning Hub</a>
+<a class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="../people-hub/">People Hub</a>
+<a class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="../implementation-support/">Implementation Support</a>
+</div>
+<a class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-[#F7F1E5] text-[#2C3E2D] text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:bg-[#D4712A] hover:text-white transition-colors whitespace-nowrap" href="https://tally.so/r/Bz5xN7">
+      Review My Business
+    </a>
+</div>
+<div class="lg:hidden border-t border-white/10 overflow-x-auto">
+<div class="max-w-[1180px] mx-auto px-4 py-2 flex items-center gap-1 min-w-max">
+<a class="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-white/70 hover:text-white" href="../free-tools/">Free Tools</a>
+<a class="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-white/70 hover:text-white" href="../what-we-sort-out/">What We Sort Out</a>
+<a class="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-white/70 hover:text-white" href="../people-hub/">People Hub</a>
+<a class="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-white/70 hover:text-white" href="../free-tools/">Free Tools</a>
+<a class="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-white/70 hover:text-white" href="https://tally.so/r/Bz5xN7">Review My Business</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Container -->
+<main class="flex-grow w-full max-w-4xl mx-auto px-5 py-12 md:py-20">
+<!-- Header -->
+<header class="text-center mb-12">
+<p class="text-sm font-semibold tracking-widest uppercase mb-4" style="color: rgb(45, 50, 48);">Brand colour tool</p>
+<h1 class="text-4xl md:text-6xl font-bold mb-5 leading-tight" style="color: rgb(45, 50, 48);">Build a brand palette that makes sense</h1>
+<p class="text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed" style="color: rgb(45, 50, 48);">
+        Start with a practical palette, then adjust it to suit your business. Use the colours across your logo, website, social media, invoices and everyday customer touchpoints.
+      </p>
+</header>
+<!-- Vibe Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16" id="vibe-grid"></div>
+<!-- Palette Detail -->
+<div class="hidden mb-16 p-8 rounded-2xl bg-white border border-gray-200 shadow-sm transition-all duration-300" id="palette-detail">
+<button class="flex items-center gap-2 mb-6 text-sm font-medium hover:opacity-70 transition" id="back-btn" style="color: var(--sage);">
+<i data-lucide="arrow-left" style="width:16px;height:16px;"></i> 
+        Back to all vibes 
+      </button>
+<div id="detail-content"></div>
+</div>
+<!-- Jake's Tip -->
+<section class="rounded-2xl p-6 md:p-8 mb-16" style="background: var(--cream); border: 1px solid #e0dbd3;">
+<h2 class="text-2xl md:text-3xl font-bold mb-3" style="color: rgb(45, 50, 48);">Colour Palette Tips</h2>
+<p class="text-base leading-relaxed font-light" style="color: rgb(45, 50, 48);">
+        Keep it simple: one main colour, one accent, one or two background colours and a readable text colour. The goal is not to collect colours. It is to make your business look like the same business everywhere.
+      </p>
+<p class="text-sm leading-relaxed font-light mt-4" style="color: rgba(45, 50, 48, .75);">
+        General design guidance only. Check contrast, readability and accessibility before using a palette on customer-facing material, especially websites, forms and invoices.
+      </p>
+</section>
+<!-- CTA & Color Mixer -->
+<section class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: rgb(45, 50, 48);">Create Your Own Palette</h2>
+<p class="text-base mb-8 max-w-xl mx-auto font-light" style="color: rgb(45, 50, 48);">
+        Mix and match colours to create a custom palette. Adjust each colour and see how the combination works in a website header, button, social post and invoice.
+      </p>
+<!-- Color Mixer Box -->
+<div class="hidden p-6 md:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm mb-8 transition-all duration-300" id="color-mixer">
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-4 mb-8 max-w-2xl mx-auto">
+<div class="text-center">
+<label class="text-xs font-semibold mb-3 block" style="color: var(--charcoal);">Main</label>
+<input aria-label="Main colour" class="w-full h-12 rounded-lg cursor-pointer border border-gray-200" id="mixer-main" type="color" value="#2C3E2D"/>
+<p class="text-[10px] mt-2 font-mono" id="mixer-main-hex" style="color: var(--sage);">#2C3E2D</p>
+</div>
+<div class="text-center">
+<label class="text-xs font-semibold mb-3 block" style="color: var(--charcoal);">Accent</label>
+<input aria-label="Accent colour" class="w-full h-12 rounded-lg cursor-pointer border border-gray-200" id="mixer-accent" type="color" value="#D4712A"/>
+<p class="text-[10px] mt-2 font-mono" id="mixer-accent-hex" style="color: var(--sage);">#D4712A</p>
+</div>
+<div class="text-center">
+<label class="text-xs font-semibold mb-3 block" style="color: var(--charcoal);">BG</label>
+<input aria-label="Background colour" class="w-full h-12 rounded-lg cursor-pointer border border-gray-200" id="mixer-bg" type="color" value="#F5F0E6"/>
+<p class="text-[10px] mt-2 font-mono" id="mixer-bg-hex" style="color: var(--sage);">#F5F0E6</p>
+</div>
+<div class="text-center">
+<label class="text-xs font-semibold mb-3 block" style="color: var(--charcoal);">Text</label>
+<input aria-label="Text colour" class="w-full h-12 rounded-lg cursor-pointer border border-gray-200" id="mixer-text" type="color" value="#2D3230"/>
+<p class="text-[10px] mt-2 font-mono" id="mixer-text-hex" style="color: var(--sage);">#2D3230</p>
+</div>
+<div class="text-center">
+<label class="text-xs font-semibold mb-3 block" style="color: var(--charcoal);">Light</label>
+<input aria-label="Light colour" class="w-full h-12 rounded-lg cursor-pointer border border-gray-200" id="mixer-light" type="color" value="#FFFFFF"/>
+<p class="text-[10px] mt-2 font-mono" id="mixer-light-hex" style="color: var(--sage);">#FFFFFF</p>
+</div>
+</div>
+<!-- Live Mockups Preview -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-8">
+<div class="rounded-xl overflow-hidden border border-gray-200">
+<div class="p-4" id="mixer-preview-main">
+<p class="text-sm font-semibold" style="color:#fff;">Website Header</p>
+</div>
+<div class="p-4" id="mixer-preview-bg">
+<div class="h-3 w-2/3 rounded" id="mixer-preview-line" style="opacity:0.2;"></div>
+</div>
+</div>
+<div class="rounded-xl p-5 flex flex-col items-center justify-center border border-gray-200" id="mixer-preview-button">
+<p class="text-xs mb-2 font-medium">Button</p>
+<div class="px-5 py-2 rounded-full text-sm font-semibold" style="color:#fff;">
+              Get a Quote
+            </div>
+</div>
+</div>
+<div class="flex justify-center mt-6">
+<button class="px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition hover:opacity-70" id="reset-mixer-btn" style="background: #e8e4dc; color: var(--charcoal);">
+            Reset to Default
+          </button>
+</div>
+</div>
+<button class="px-8 py-4 rounded-full text-lg font-semibold transition-transform hover:scale-105" id="toggle-mixer-btn" style="background: rgb(44, 62, 45); color: rgb(255, 255, 255);">
+        Create Your Own
+      </button>
+</section>
+<section class="rounded-2xl p-6 md:p-8 mb-16 text-center" style="background: rgba(212,113,42,0.08); border: 1px solid rgba(212,113,42,0.35);">
+<p class="text-xs font-bold uppercase tracking-widest mb-3" style="color: var(--rust);">Need the next step?</p>
+<h2 class="text-2xl md:text-3xl font-bold mb-3" style="color: var(--charcoal);">A palette is the start — not the whole brand.</h2>
+<p class="text-sm leading-relaxed max-w-2xl mx-auto mb-5" style="color: var(--charcoal);">If you want help turning these colours into a usable logo, Canva kit, website or set of business documents, tell me what you’re building.</p>
+<a class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold uppercase tracking-wider" href="https://tally.so/r/Bz5xN7" style="background: var(--rust); color: var(--warm-white);">Review My Business →</a>
+</section>
+</main>
+<!-- Standalone Matching Footer -->
+<footer class="bg-[#142019] text-[#F7F1E5] border-t border-white/10">
+<div class="max-w-[1180px] mx-auto px-6 py-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="space-y-4">
+<a class="inline-block font-bold text-2xl tracking-widest uppercase hover:text-[#D4712A] transition-colors" href="../">
+          LET’S SORT IT OUT<span class="text-[#D4712A]">.</span>
+</a>
+<p class="text-sm text-white/65 leading-relaxed max-w-sm">
+          Practical tools, plain-English guidance and straightforward support for small businesses.
+        </p>
+</div>
+<div>
+<h2 class="text-xs font-bold uppercase tracking-widest text-[#D4712A] mb-4">Explore</h2>
+<ul class="space-y-3 text-sm text-white/70">
+<li><a class="hover:text-white transition-colors" href="../free-tools/">Free Tools</a></li>
+<li><a class="hover:text-white transition-colors" href="../what-we-sort-out/">What We Sort Out</a></li>
+<li><a class="hover:text-white transition-colors" href="../people-hub/">People Hub</a></li>
+<li><a class="hover:text-white transition-colors" href="../#jake">About</a></li>
+<li><a class="hover:text-white transition-colors" href="../#faqs">FAQs</a></li>
+</ul>
+</div>
+<div>
+<h2 class="text-xs font-bold uppercase tracking-widest text-[#D4712A] mb-4">More</h2>
+<ul class="space-y-3 text-sm text-white/70">
+<li><a class="hover:text-white transition-colors" href="../more-resources/">More free tools</a></li>
+<li><a class="hover:text-white transition-colors" href="../implementation-support/">Implementation support</a></li>
+<li><a class="hover:text-white transition-colors" href="https://tally.so/r/Bz5xN7">Review My Business</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-white/10 text-xs text-white/40">
+      © 2026 Let’s Sort It Out. All rights reserved.
+    </div>
+</div>
+</footer>
+<!-- Application logic scripts -->
+<script>
+    const vibes = [
+      { name: "Clean & Professional", desc: "Best for: consultants, admin services, property businesses, mobile service businesses", colors: [{name:"Navy",hex:"#1F2A44"},{name:"Soft Blue",hex:"#8BA6C9"},{name:"Cool Grey",hex:"#E8ECF1"},{name:"White",hex:"#FFFFFF"},{name:"Charcoal",hex:"#2D3230"}] },
+      { name: "Earthy & Reliable", desc: "Best for: tradies, landscapers, garden businesses, outdoor services", colors: [{name:"Deep Olive",hex:"#2C3E2D"},{name:"Sage",hex:"#6B7F5E"},{name:"Sand",hex:"#D9C7A3"},{name:"Cream",hex:"#F5F0E6"},{name:"Charcoal",hex:"#2D3230"}] },
+      { name: "Bold & Modern", desc: "Best for: startups, tech services, creative businesses, younger brands", colors: [{name:"Black",hex:"#111111"},{name:"Electric Blue",hex:"#2563EB"},{name:"Soft Grey",hex:"#F3F4F6"},{name:"White",hex:"#FFFFFF"},{name:"Lime Accent",hex:"#A3E635"}] },
+      { name: "Warm & Friendly", desc: "Best for: cleaners, care services, family businesses, local service providers", colors: [{name:"Terracotta",hex:"#B85C38"},{name:"Peach",hex:"#F4B183"},{name:"Warm Cream",hex:"#F5F0E6"},{name:"Soft Brown",hex:"#6B4F3F"},{name:"White",hex:"#FFFFFF"}] },
+      { name: "Premium & Calm", desc: "Best for: real estate, consulting, coaching, higher-end services", colors: [{name:"Forest Green",hex:"#12372A"},{name:"Champagne",hex:"#D8C3A5"},{name:"Stone",hex:"#EAE3D9"},{name:"Charcoal",hex:"#2D3230"},{name:"White",hex:"#FFFFFF"}] },
+      { name: "Bright & Approachable", desc: "Best for: kids services, community businesses, casual brands, mobile operators", colors: [{name:"Teal",hex:"#1BA6A6"},{name:"Yellow",hex:"#F7C948"},{name:"Coral",hex:"#FF6B6B"},{name:"Soft Cream",hex:"#FFF8E7"},{name:"Dark Grey",hex:"#333333"}] },
+      { name: "Luxury & Sophisticated", desc: "Best for: premium brands, high-end services, luxury goods, exclusive clubs", colors: [{name:"Deep Plum",hex:"#3D2E5F"},{name:"Gold",hex:"#D4AF37"},{name:"Ivory",hex:"#FFFFF0"},{name:"Charcoal",hex:"#1A1A1A"},{name:"Rose Gold",hex:"#B76E79"}] },
+      { name: "Vibrant & Energetic", desc: "Best for: fitness brands, youth products, entertainment, event services", colors: [{name:"Hot Pink",hex:"#FF006E"},{name:"Electric Purple",hex:"#8338EC"},{name:"Neon Orange",hex:"#FF006E"},{name:"White",hex:"#FFFFFF"},{name:"Dark Navy",hex:"#0A0E27"}] },
+      { name: "Natural & Organic", desc: "Best for: eco-friendly brands, health services, natural products, wellness", colors: [{name:"Moss Green",hex:"#3D5D3D"},{name:"Sage",hex:"#9CAF88"},{name:"Natural Beige",hex:"#E8DCC8"},{name:"Soft White",hex:"#FAF9F6"},{name:"Deep Brown",hex:"#4A3728"}] },
+      { name: "Tech & Minimal", desc: "Best for: software, digital services, modern design, minimalist brands", colors: [{name:"Dark Slate",hex:"#1E3A5F"},{name:"Cyan",hex:"#00D9FF"},{name:"White",hex:"#FFFFFF"},{name:"Light Grey",hex:"#F0F2F5"},{name:"Black",hex:"#000000"}] },
+      { name: "Playful & Creative", desc: "Best for: design agencies, media companies, creative studios, fun brands", colors: [{name:"Sunset Orange",hex:"#FF6B35"},{name:"Sky Blue",hex:"#004E89"},{name:"Soft Yellow",hex:"#FFC857"},{name:"Cream",hex:"#F8F7F3"},{name:"Purple",hex:"#7209B7"}] },
+      { name: "Corporate & Traditional", desc: "Best for: law firms, finance, government, established institutions", colors: [{name:"Dark Blue",hex:"#003366"},{name:"Burgundy",hex:"#8B3A3A"},{name:"Silver",hex:"#C0C0C0"},{name:"Off White",hex:"#F5F5F5"},{name:"Black",hex:"#1A1A1A"}] }
+    ];
+
+    const usageRoles = ["Main brand colour","Accent colour","Background colour","Button colour","Text colour"];
+    const grid = document.getElementById('vibe-grid');
+    const detail = document.getElementById('palette-detail');
+
+    function renderGrid() {
+      grid.innerHTML = '';
+      vibes.forEach((v, i) => {
+        const card = document.createElement('div');
+        card.className = 'vibe-card p-5';
+        card.style.background = '#fff';
+        card.innerHTML = `
+          <h3 class="font-bold text-lg mb-1" style="color:#2D3230;">${v.name}</h3>
+          <p class="text-xs mb-4" style="color:#6B7F5E;">${v.desc}</p>
+          <div class="flex gap-2">${v.colors.map(c => `<div class="w-8 h-8 rounded-full border border-gray-200" style="background:${c.hex};"></div>`).join('')}</div>
+        `;
+        card.addEventListener('click', () => showDetail(i));
+        grid.appendChild(card);
+      });
+    }
+
+    function showDetail(i) {
+      const v = vibes[i];
+      grid.classList.add('hidden');
+      detail.classList.remove('hidden');
+
+      const previewMain = v.colors[0].hex;
+      const previewAccent = v.colors[1].hex;
+      const previewBg = v.colors[2].hex;
+      const previewText = v.colors[4].hex;
+
+      document.getElementById('detail-content').innerHTML = `
+        <h2 class="text-3xl md:text-4xl font-bold mb-2 text-charcoal">${v.name}</h2>
+        <p class="text-sm mb-8" style="color:#6B7F5E;">${v.desc}</p>
+
+        <div class="grid grid-cols-5 gap-3 mb-10">
+          ${v.colors.map((c,ci) => `
+            <div class="text-center">
+              <div class="w-full aspect-square rounded-xl border border-gray-200 mb-2" style="background:${c.hex};"></div>
+              <p class="text-xs font-semibold" style="color:#2D3230;">${c.name}</p>
+              <p class="text-[10px] mb-1 font-mono" style="color:#6B7F5E;">${c.hex}</p>
+              <button onclick="copyHex('${c.hex}',this)" class="palette-copy text-[10px] px-2.5 py-1 rounded-full font-semibold transition hover:opacity-75" style="background:#F5F0E6;color:#2D3230;">Copy</button>
+            </div>
+          `).join('')}
+        </div>
+
+        <h3 class="text-xl font-bold mb-3 text-charcoal">Best used for</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 mb-10">
+          ${v.colors.map((c,ci) => `
+            <div class="flex items-center gap-2 p-3 rounded-xl" style="background:#fff;border:1px solid #e8e4dc;">
+              <div class="w-4 h-4 rounded-full flex-shrink-0 border border-gray-200" style="background:${c.hex};"></div>
+              <span class="text-xs font-medium" style="color:#2D3230;">${usageRoles[ci]}</span>
+            </div>
+          `).join('')}
+        </div>
+
+        <h3 class="text-xl font-bold mb-4 text-charcoal">Preview Mockup</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="rounded-xl overflow-hidden border border-gray-200">
+            <div class="p-4" style="background:${previewMain};"><p class="text-sm font-semibold" style="color:#fff;">Website Header</p></div>
+            <div class="p-4" style="background:${previewBg};"><div class="h-3 w-2/3 rounded" style="background:${previewText};opacity:0.2;"></div></div>
+          </div>
+          <div class="rounded-xl p-5 flex flex-col items-center justify-center border border-gray-200" style="background:${previewBg};">
+            <p class="text-xs mb-2 font-medium" style="color:${previewText};">Button</p>
+            <div class="px-5 py-2 rounded-full text-sm font-semibold" style="background:${previewMain};color:#fff;">Get a Quote</div>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-gray-200" style="background:${previewMain};">
+            <div class="p-5 text-center">
+              <p class="text-lg font-bold mb-1" style="color:#fff;">Social Post</p>
+              <p class="text-xs" style="color:${previewAccent};">Your business name here</p>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-gray-200">
+            <div class="p-4" style="background:${previewMain};"><p class="text-xs font-bold" style="color:#fff;">INVOICE</p></div>
+            <div class="p-4" style="background:#fff;">
+              <div class="space-y-1"><div class="h-2 w-full rounded" style="background:${previewBg};"></div><div class="h-2 w-3/4 rounded" style="background:${previewBg};"></div></div>
+            </div>
+          </div>
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    function copyHex(hex, btn) {
+      navigator.clipboard.writeText(hex).then(() => {
+        const orig = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = orig; }, 1200);
+      });
+    }
+
+    document.getElementById('back-btn').addEventListener('click', () => {
+      detail.classList.add('hidden');
+      grid.classList.remove('hidden');
+    });
+
+    // Color mixer functionality
+    const mixer = document.getElementById('color-mixer');
+    const toggleBtn = document.getElementById('toggle-mixer-btn');
+    const resetBtn = document.getElementById('reset-mixer-btn');
+    const mainInput = document.getElementById('mixer-main');
+    const accentInput = document.getElementById('mixer-accent');
+    const bgInput = document.getElementById('mixer-bg');
+    const textInput = document.getElementById('mixer-text');
+    const lightInput = document.getElementById('mixer-light');
+
+    function updateMixerPreview() {
+      const main = mainInput.value;
+      const accent = accentInput.value;
+      const bg = bgInput.value;
+      const text = textInput.value;
+      const light = lightInput.value;
+
+      document.getElementById('mixer-main-hex').textContent = main;
+      document.getElementById('mixer-accent-hex').textContent = accent;
+      document.getElementById('mixer-bg-hex').textContent = bg;
+      document.getElementById('mixer-text-hex').textContent = text;
+      document.getElementById('mixer-light-hex').textContent = light;
+
+      document.getElementById('mixer-preview-main').style.background = main;
+      document.getElementById('mixer-preview-bg').style.background = bg;
+      document.getElementById('mixer-preview-line').style.background = text;
+      document.getElementById('mixer-preview-button').style.background = light;
+      document.querySelector('#mixer-preview-button .px-5').style.background = main;
+      document.querySelector('#mixer-preview-button .text-xs').style.color = text;
+    }
+
+    mainInput.addEventListener('change', updateMixerPreview);
+    accentInput.addEventListener('change', updateMixerPreview);
+    bgInput.addEventListener('change', updateMixerPreview);
+    textInput.addEventListener('change', updateMixerPreview);
+    lightInput.addEventListener('change', updateMixerPreview);
+
+    toggleBtn.addEventListener('click', () => {
+      mixer.classList.toggle('hidden');
+      updateMixerPreview();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      mainInput.value = '#2C3E2D';
+      accentInput.value = '#D4712A';
+      bgInput.value = '#F5F0E6';
+      textInput.value = '#2D3230';
+      lightInput.value = '#FFFFFF';
+      updateMixerPreview();
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderGrid();
+      // Hydrate Lucide icons
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
+<script src="../assets/tool-shell.js?v=20260801-nav"></script><script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
+</html>

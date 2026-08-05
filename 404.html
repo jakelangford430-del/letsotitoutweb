@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="This page could not be found. Head back to the Let’s Sort It Out homepage and we will get you sorted." />
+    <title>Oops. Sorry. | Let’s Sort It Out</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      /* Brand tokens lifted from the homepage so this page cannot drift out of step. */
+      :root {
+        --forest: #111813;
+        --nav: #142019;
+        --olive: #2c3e2d;
+        --sage: #6b7f5e;
+        --white: #faf8f5;
+        --cream: #f5f0e6;
+        --rust: #d4712a;
+        --radius: 14px;
+        --container: 1180px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--forest);
+        color: var(--white);
+        font-family: Inter, Arial, sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, .wordmark, .button, .code { font-family: Antonio, "Arial Narrow", sans-serif; font-weight: 700; }
+      a { color: inherit; }
+      .container { width: min(var(--container), calc(100% - 40px)); margin-inline: auto; }
+
+      .skip-link { position: fixed; z-index: 1000; left: 16px; top: -80px; background: var(--white); color: var(--forest); padding: 12px 18px; }
+      .skip-link:focus { top: 16px; }
+
+      /* Header mirrors the site header: forest bar, wordmark left, links right. */
+      .site-header { height: 78px; background: var(--nav); border-bottom: 1px solid rgba(255, 255, 255, 0.12); position: relative; z-index: 20; }
+      .header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+      .wordmark { font-size: 1.8rem; line-height: 1; text-decoration: none; }
+      .site-nav { display: flex; align-items: center; gap: 18px; }
+      .site-nav a { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; text-decoration: none; color: rgba(250, 248, 245, 0.82); }
+      .site-nav a:hover { color: #fff; }
+
+      /* Atmosphere: an off-centre olive glow plus a fixed grain sheet for depth. */
+      .glow { position: fixed; inset: 0; pointer-events: none; z-index: 0;
+        background:
+          radial-gradient(58vw 58vw at 78% 12%, rgba(44, 62, 45, 0.85), transparent 62%),
+          radial-gradient(42vw 42vw at 8% 96%, rgba(212, 113, 42, 0.16), transparent 68%);
+      }
+      .grain { position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.055; mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+
+      main { position: relative; z-index: 2; flex: 1; display: flex; align-items: center; padding: 92px 0 104px; }
+      /* Deliberately asymmetric: copy leads, the status code sits low and off-axis. */
+      .oops { display: grid; grid-template-columns: minmax(0, 1.32fr) minmax(0, 0.68fr); gap: clamp(28px, 6vw, 88px); align-items: end; }
+
+      .eyebrow { display: inline-flex; align-items: center; gap: 12px; margin: 0 0 22px;
+        font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rust); }
+      .eyebrow::before { content: ""; width: 34px; height: 3px; background: var(--rust); }
+
+      h1 { margin: 0 0 26px; font-size: clamp(4rem, 13vw, 10.5rem); line-height: 0.84; letter-spacing: -0.03em; text-transform: uppercase; }
+      h1 em { font-style: normal; color: var(--rust); }
+
+      .lead { max-width: 30ch; margin: 0 0 18px; font-size: clamp(1.3rem, 2.6vw, 2rem); font-weight: 600; line-height: 1.18; }
+      .lead b { color: var(--rust); font-weight: 600; }
+      .support { max-width: 54ch; margin: 0; font-size: 1.02rem; color: rgba(250, 248, 245, 0.74); }
+
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+      .button { display: inline-flex; min-height: 52px; padding: 0 30px; align-items: center; justify-content: center;
+        border: 2px solid transparent; border-radius: 2px; font-size: 1.05rem; text-transform: uppercase;
+        text-decoration: none; cursor: pointer; background: none; color: var(--white);
+        transition: background-color 0.18s ease, transform 0.18s ease, border-color 0.18s ease; }
+      .button-primary { background: var(--rust); }
+      .button-primary:hover { background: #b85c20; transform: translateY(-2px); }
+      .button-outline { border-color: rgba(250, 248, 245, 0.55); }
+      .button-outline:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--white); transform: translateY(-2px); }
+      .button:active { transform: translateY(0); }
+      .button:focus-visible, a:focus-visible, .skip-link:focus-visible { outline: 3px solid #f3b27e; outline-offset: 4px; }
+
+      /* The status code as a typographic slab rather than decoration. */
+      .code-block { justify-self: end; text-align: right; }
+      .code { display: block; font-size: clamp(7rem, 20vw, 17rem); line-height: 0.74; color: rgba(107, 127, 94, 0.9); }
+      /* Outlined where supported, solid sage where it is not, so it never renders blank. */
+      @supports (-webkit-text-stroke: 2px currentColor) {
+        .code { color: transparent; -webkit-text-stroke: 2px rgba(107, 127, 94, 0.85); }
+      }
+      .code-label { display: block; margin-top: 16px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em;
+        text-transform: uppercase; color: rgba(250, 248, 245, 0.5); }
+
+      .help { position: relative; z-index: 2; border-top: 1px solid rgba(255, 255, 255, 0.12); background: rgba(20, 32, 25, 0.6); }
+      .help-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; padding: 20px 0; font-size: 0.84rem; color: rgba(250, 248, 245, 0.7); }
+      .help-inner strong { color: var(--white); font-weight: 600; }
+      .help-inner a { color: var(--rust); font-weight: 600; text-decoration: none; }
+      .help-inner a:hover { text-decoration: underline; }
+
+      footer { position: relative; z-index: 2; background: var(--nav); border-top: 1px solid rgba(255, 255, 255, 0.12); padding: 24px 0; }
+      .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px;
+        font-size: 0.76rem; color: rgba(250, 248, 245, 0.72); }
+      footer .wordmark { font-size: 1.35rem; color: #fff; }
+      footer a { color: rgba(250, 248, 245, 0.72); }
+
+      /* One staggered entrance, rather than scattered micro-animations. */
+      .reveal { opacity: 0; transform: translateY(18px); animation: rise 0.62s cubic-bezier(0.22, 0.8, 0.3, 1) forwards; }
+      .reveal:nth-child(1) { animation-delay: 0.04s; }
+      .reveal:nth-child(2) { animation-delay: 0.12s; }
+      .reveal:nth-child(3) { animation-delay: 0.2s; }
+      .reveal:nth-child(4) { animation-delay: 0.28s; }
+      .reveal:nth-child(5) { animation-delay: 0.36s; }
+      .code-block { opacity: 0; animation: fade 0.9s ease 0.3s forwards; }
+      @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+      @keyframes fade { to { opacity: 1; } }
+
+      @media (max-width: 900px) {
+        .site-nav { display: none; }
+        .oops { grid-template-columns: 1fr; align-items: start; gap: 34px; }
+        .code-block { order: -1; justify-self: start; text-align: left; }
+        .code { font-size: clamp(5.5rem, 30vw, 9rem); }
+      }
+      @media (max-width: 600px) {
+        .container { width: min(100% - 32px, var(--container)); }
+        main { padding: 58px 0 68px; }
+        h1 { font-size: clamp(3.1rem, 16vw, 4.6rem); }
+        .lead { font-size: 1.22rem; }
+        .actions .button { width: 100%; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .reveal, .code-block { opacity: 1; transform: none; animation: none; }
+        .button { transition: none; }
+        .button:hover { transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="glow" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="/" aria-label="Let’s Sort It Out home">LET’S SORT IT OUT</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="/what-we-sort-out/">What We Sort Out</a>
+          <a href="/free-tools/">Free Tools</a>
+          <a href="/learning-hub/">Learning Hub</a>
+          <a href="/people-hub/">People Hub</a>
+          <a href="/implementation-support/">Implementation Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="container oops">
+        <div class="copy">
+          <p class="eyebrow reveal" data-error-eyebrow>Error 404 — page not found</p>
+          <h1 class="reveal">Oops.<br /><em>Sorry.</em></h1>
+          <p class="lead reveal">We keep things practical. This page has not done its job.</p>
+          <p class="support reveal">
+            The page you were after is missing, has moved, or never existed in the first place. Nothing you did wrong.
+            Click the button below and we will redirect you straight back to the homepage.
+          </p>
+          <div class="actions reveal">
+            <a class="button button-primary" href="/" data-home-button>Take me to the homepage</a>
+            <a class="button button-outline" href="/free-tools/">Browse the free tools</a>
+          </div>
+        </div>
+
+        <div class="code-block" aria-hidden="true">
+          <span class="code" data-error-code>404</span>
+          <span class="code-label" data-error-label>Page not found</span>
+        </div>
+      </div>
+    </main>
+
+    <section class="help" aria-label="Still stuck?">
+      <div class="container help-inner">
+        <strong>Still stuck?</strong>
+        <span>Tell Jake what you were looking for and it will get sorted.</span>
+        <a href="/connect/">Get in touch</a>
+        <a href="https://wa.me/61472544399?text=Hi%20Jake%2C%20I%20hit%20an%20error%20page%20on%20your%20site." rel="noopener noreferrer" target="_blank">Message Jake on WhatsApp</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-inner">
+        <a class="wordmark" href="/">LET’S SORT IT OUT</a>
+        <span>© 2026 Let’s Sort It Out · <a href="/privacy/">Privacy Policy</a></span>
+      </div>
+    </footer>
+
+    <script>
+      // The same page covers every error, not just 404s. Anything that routes here can
+      // pass ?code=500 (or ?code=503, etc.) and the framing adapts to match.
+      (function () {
+        var labels = {
+          400: 'Bad request',
+          401: 'Not logged in',
+          403: 'No access',
+          404: 'Page not found',
+          408: 'Request timed out',
+          429: 'Too many requests',
+          500: 'Something broke',
+          502: 'Bad gateway',
+          503: 'Temporarily down',
+          504: 'Timed out',
+        };
+        var raw = new URLSearchParams(window.location.search).get('code') || '';
+        var code = /^[1-5][0-9]{2}$/.test(raw) ? raw : '404';
+        if (code === '404') return;
+
+        var label = labels[code] || 'Something broke';
+        document.querySelector('[data-error-code]').textContent = code;
+        document.querySelector('[data-error-label]').textContent = label;
+        document.querySelector('[data-error-eyebrow]').textContent = 'Error ' + code + ' — ' + label.toLowerCase();
+        document.title = 'Oops. Sorry. | Let’s Sort It Out';
+      })();
+    </script>
+    <script type="module" src="/assets/auth.js?v=20260801-auth2"></script>
+  </body>
+</html>

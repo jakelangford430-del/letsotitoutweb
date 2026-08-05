@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+
+<html lang="en-AU" class="auth-pending">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Free practical tools for small businesses to choose what to fix first, reduce admin, improve online presence, plan team conversations and use AI properly." name="description"/>
+<title>Free Small Business Tools Australia | Let’s Sort It Out</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/core.css" rel="stylesheet"/>
+<style>
+      .tools-page {
+        background: var(--white);
+      }
+      .finder-hero {
+        background: var(--forest);
+        color: var(--white);
+        padding: 84px 0 0;
+      }
+      .finder-hero__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(380px, 480px);
+        gap: 68px;
+        align-items: center;
+        padding-bottom: 72px;
+      }
+      .finder-copy h1 {
+        max-width: 640px;
+        margin-bottom: 24px;
+        color: var(--white);
+        font-size: clamp(4.8rem, 7vw, 7.2rem);
+        line-height: 0.9;
+      }
+      .finder-copy p {
+        max-width: 600px;
+        color: rgba(250, 248, 245, 0.82);
+        font-size: 1.12rem;
+      }
+      .hero-proof {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin: 42px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .hero-proof li {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 12px;
+        align-items: center;
+        min-width: 0;
+      }
+      .proof-mark,
+      .tool-card__icon,
+      .recommendation-icon {
+        display: grid;
+        place-items: center;
+        background: #0d140f;
+        color: var(--rust);
+        font: 700 1.1rem Antonio, sans-serif;
+        box-shadow: inset 0 0 0 1px rgba(212, 113, 42, 0.52);
+      }
+      .proof-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+      }
+      .hero-proof strong {
+        display: block;
+        color: var(--white);
+        font: 700 0.78rem/1.1 Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .hero-proof span {
+        color: rgba(250, 248, 245, 0.68);
+        font-size: 0.78rem;
+      }
+      .start-panel {
+        overflow: hidden;
+        border: 1px solid rgba(250, 248, 245, 0.18);
+        border-radius: 8px;
+        background: var(--white);
+        color: var(--charcoal);
+        box-shadow: 0 24px 70px rgba(3, 7, 4, 0.32);
+      }
+      .panel-bar {
+        padding: 14px 18px;
+        background: var(--rust);
+        color: var(--white);
+        font: 700 1rem Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .panel-body {
+        padding: 22px;
+      }
+      .panel-body h2 {
+        margin-bottom: 8px;
+        font-size: 2rem;
+      }
+      .panel-body > p {
+        margin-bottom: 16px;
+        color: #59615d;
+        font-size: 0.92rem;
+      }
+      .problem-choices {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .choice {
+        min-height: 56px;
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        padding: 10px 12px;
+        background: var(--white);
+        color: var(--charcoal);
+        font-weight: 700;
+        line-height: 1.2;
+        cursor: pointer;
+      }
+      .choice:hover,
+      .choice:focus-visible {
+        border-color: var(--rust);
+      }
+      .choice.selected {
+        border-color: var(--rust);
+        background: var(--rust);
+        color: var(--white);
+      }
+      .recommendation {
+        display: grid;
+        grid-template-columns: 56px 1fr auto;
+        gap: 14px;
+        align-items: center;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+      }
+      .recommendation-label {
+        grid-column: 1 / -1;
+        margin: 0;
+        color: var(--rust);
+        font: 700 0.78rem Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .recommendation-icon,
+      .tool-card__icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 7px;
+      }
+      .recommendation strong {
+        display: block;
+        color: var(--forest);
+        font: 700 1.2rem/1 Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .recommendation p {
+        margin: 5px 0 0;
+        color: #59615d;
+        font-size: 0.86rem;
+      }
+      .recommendation a,
+      .browse-all,
+      .quiet-link {
+        color: var(--rust);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .recommendation-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .recommendation a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 16px;
+        border-radius: 2px;
+        background: var(--rust);
+        color: var(--white);
+        font: 700 0.88rem Antonio, sans-serif;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .recommendation-scroll {
+        display: none;
+        min-height: 42px;
+        border: 1px solid var(--rust);
+        border-radius: 2px;
+        padding: 0 14px;
+        background: transparent;
+        color: var(--rust);
+        font: 700 0.88rem Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .browse-all {
+        display: inline-block;
+        margin-top: 18px;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+      .tool-library {
+        padding: 0 0 88px;
+      }
+      .library-band {
+        background: var(--white);
+        border-top: 1px solid rgba(44, 62, 45, 0.14);
+      }
+      .library-shell {
+        display: grid;
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 34px;
+        padding-top: 36px;
+      }
+      .library-controls {
+        position: sticky;
+        top: 106px;
+        align-self: start;
+      }
+      .search-label,
+      .filter-heading,
+      .tool-meta dt {
+        display: block;
+        color: var(--forest);
+        font: 700 0.72rem Antonio, sans-serif;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+      .search-wrap {
+        position: relative;
+        margin-bottom: 26px;
+      }
+      .search-wrap svg {
+        position: absolute;
+        left: 13px;
+        top: 50%;
+        width: 18px;
+        height: 18px;
+        transform: translateY(-50%);
+        color: var(--sage);
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2;
+      }
+      .search-wrap input {
+        width: 100%;
+        min-height: 48px;
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        padding: 0 14px 0 42px;
+        background: var(--white);
+        color: var(--charcoal);
+        font: 500 0.92rem Inter, sans-serif;
+      }
+      .filters {
+        display: grid;
+        gap: 7px;
+        margin-top: 10px;
+      }
+      .filter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 42px;
+        border: 1px solid transparent;
+        border-left: 3px solid transparent;
+        border-radius: 4px;
+        padding: 0 10px;
+        background: rgba(245, 240, 230, 0.72);
+        color: var(--charcoal);
+        font-weight: 700;
+        text-align: left;
+        cursor: pointer;
+      }
+      .filter span {
+        color: #667169;
+        font-size: 0.78rem;
+      }
+      .filter.active {
+        border-left-color: var(--rust);
+        background: var(--cream);
+        color: var(--forest);
+      }
+      .library-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 18px;
+      }
+      .library-head h2 {
+        margin-bottom: 6px;
+      }
+      .result-copy {
+        margin: 0;
+        color: #59615d;
+        font-weight: 700;
+      }
+      .tool-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .tool-card {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 300px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--white);
+        overflow: hidden;
+        box-shadow: 0 16px 42px rgba(17, 24, 19, 0.05);
+      }
+      .tool-card--featured {
+        border: 2px solid var(--rust);
+        box-shadow: 0 16px 42px rgba(212, 113, 42, 0.18);
+      }
+      .tool-card__body {
+        padding: 18px;
+      }
+      .tool-card h3 {
+        margin: 16px 0 10px;
+        font-size: 1.45rem;
+      }
+      .tool-card p {
+        margin-bottom: 16px;
+        color: #525c56;
+        font-size: 0.88rem;
+      }
+      .tool-meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 0;
+        padding-top: 14px;
+        border-top: 1px solid var(--border);
+      }
+      .tool-meta div {
+        min-width: 0;
+      }
+      .tool-meta dt {
+        margin-bottom: 3px;
+        color: var(--sage);
+        font-size: 0.66rem;
+      }
+      .tool-meta dd {
+        margin: 0;
+        color: var(--charcoal);
+        font-size: 0.78rem;
+      }
+      .tool-card__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 50px;
+        padding: 0 18px;
+        background: var(--rust) !important;
+        color: var(--white) !important;
+        font: 700 0.86rem Antonio, sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .tool-card__preview {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 46px;
+        border: 0;
+        border-top: 1px solid var(--border);
+        padding: 0 18px;
+        background: var(--white);
+        color: var(--olive);
+        font: 700 0.82rem Antonio, sans-serif;
+        text-align: left;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .tool-card__preview:hover,
+      .tool-card__preview[aria-expanded="true"] {
+        background: var(--cream);
+        color: var(--rust);
+      }
+      .tool-card > .tool-card__link {
+        color: var(--white) !important;
+      }
+      .tool-preview-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+        gap: 24px;
+        margin: 18px 0 0;
+        border: 1px solid rgba(250, 248, 245, 0.16);
+        border-radius: 8px;
+        padding: 22px;
+        background: var(--forest);
+        color: var(--white);
+        box-shadow: 0 24px 70px rgba(17, 24, 19, 0.18);
+      }
+      .tool-preview-panel h3 {
+        margin: 7px 0 10px;
+        color: var(--white);
+        font-size: clamp(1.7rem, 4vw, 2.4rem);
+      }
+      .tool-preview-panel p {
+        color: rgba(250, 248, 245, 0.76);
+        font-size: 0.92rem;
+      }
+      .tool-preview-eyebrow {
+        color: var(--rust);
+        font: 700 0.72rem Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .tool-preview-list {
+        display: grid;
+        gap: 9px;
+        margin: 16px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .tool-preview-list li {
+        border-left: 3px solid var(--rust);
+        padding: 9px 12px;
+        background: rgba(250, 248, 245, 0.08);
+        color: rgba(250, 248, 245, 0.86);
+        font-size: 0.86rem;
+      }
+      .tool-preview-side {
+        display: grid;
+        gap: 12px;
+        align-content: start;
+      }
+      .tool-preview-seo,
+      .tool-preview-example {
+        border-radius: 8px;
+        padding: 15px;
+        background: var(--white);
+        color: var(--charcoal);
+      }
+      .tool-preview-seo strong,
+      .tool-preview-example strong {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--olive);
+        font: 700 0.76rem Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .tool-preview-seo span,
+      .tool-preview-example span {
+        display: block;
+        color: #59615d;
+        font-size: 0.8rem;
+        line-height: 1.5;
+      }
+      .tool-preview-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .tool-preview-actions a,
+      .tool-preview-close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        border-radius: 3px;
+        padding: 0 15px;
+        font: 700 0.82rem Antonio, sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .tool-preview-actions a {
+        background: var(--rust);
+        color: var(--white);
+      }
+      .tool-preview-close {
+        border: 1px solid rgba(250, 248, 245, 0.3);
+        background: transparent;
+        color: var(--white);
+        cursor: pointer;
+      }
+      .empty-results {
+        margin-top: 18px;
+        padding: 24px;
+        border: 1px dashed var(--rust);
+        border-radius: 8px;
+        background: rgba(212, 113, 42, 0.07);
+      }
+      .empty-results strong {
+        display: block;
+        color: var(--rust);
+        font: 700 1.2rem Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .empty-results p {
+        margin: 6px 0 0;
+      }
+      @media (max-width: 1100px) {
+        .finder-hero__grid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .tool-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 850px) {
+        .finder-hero {
+          padding: 24px 0 0;
+        }
+        .finder-hero__grid {
+          gap: 16px;
+          padding-bottom: 24px;
+        }
+        .finder-copy h1 {
+          margin-bottom: 10px;
+          font-size: clamp(2.55rem, 11.6vw, 3.05rem);
+          line-height: 0.92;
+        }
+        .finder-copy p {
+          font-size: 0.94rem;
+          line-height: 1.46;
+        }
+        .desktop-copy-extra {
+          display: none;
+        }
+        .hero-proof {
+          display: none;
+        }
+        .panel-bar {
+          padding: 11px 15px;
+          font-size: 0.92rem;
+        }
+        .panel-body {
+          padding: 13px 14px 14px;
+        }
+        .panel-body h2 {
+          margin-bottom: 6px;
+          font-size: 1.3rem;
+        }
+        .panel-body > p {
+          margin-bottom: 10px;
+          font-size: 0.82rem;
+          line-height: 1.42;
+        }
+        .problem-choices {
+          grid-template-columns: 1fr 1fr;
+          gap: 7px;
+        }
+        .choice {
+          min-height: 50px;
+          border-radius: 8px;
+          padding: 8px;
+          font-size: 0.76rem;
+        }
+        .recommendation {
+          grid-template-columns: 42px 1fr;
+          gap: 10px;
+          margin-top: 14px;
+          padding-top: 14px;
+        }
+        .recommendation-label {
+          font-size: 0.68rem;
+        }
+        .recommendation-icon {
+          width: 42px;
+          height: 42px;
+          font-size: 0.9rem;
+        }
+        .recommendation strong {
+          font-size: 1rem;
+        }
+        .recommendation p {
+          font-size: 0.78rem;
+          line-height: 1.35;
+        }
+        .recommendation .rec-reason {
+          margin-top: 3px;
+        }
+        .recommendation .rec-next {
+          display: none;
+        }
+        .recommendation-actions {
+          grid-column: 1 / -1;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+        .recommendation a,
+        .recommendation-scroll {
+          min-height: 42px;
+          width: 100%;
+          padding: 0 10px;
+          border-radius: 4px;
+          font-size: 0.8rem;
+        }
+        .recommendation-scroll {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .browse-all {
+          display: none;
+        }
+        .library-shell {
+          display: block;
+          padding-top: 0;
+        }
+        .library-controls {
+          position: sticky;
+          top: 60px;
+          z-index: 35;
+          margin: 0 -16px 22px;
+          padding: 12px 16px 10px;
+          background: rgba(250, 248, 245, 0.96);
+          border-bottom: 1px solid rgba(44, 62, 45, 0.16);
+          box-shadow: 0 16px 32px rgba(17, 24, 19, 0.08);
+          backdrop-filter: blur(14px);
+        }
+        .search-label,
+        .filter-heading {
+          font-size: 0.64rem;
+        }
+        .search-wrap {
+          margin-bottom: 10px;
+        }
+        .search-wrap input {
+          min-height: 44px;
+          border-radius: 8px;
+          background: var(--white);
+        }
+        .filters {
+          display: flex;
+          gap: 8px;
+          overflow-x: auto;
+          margin: 8px -16px 0;
+          padding: 0 16px 4px;
+          scroll-snap-type: x proximity;
+          scrollbar-width: none;
+        }
+        .filters::-webkit-scrollbar {
+          display: none;
+        }
+        .filter {
+          flex: 0 0 auto;
+          min-height: 38px;
+          border: 1px solid var(--border);
+          border-radius: 8px;
+          padding: 0 11px;
+          background: var(--white);
+          scroll-snap-align: start;
+        }
+        .filter.active {
+          background: var(--forest);
+          border-color: var(--forest);
+          color: var(--white);
+        }
+        .filter.active span {
+          color: rgba(250, 248, 245, 0.72);
+        }
+        .library-head {
+          display: block;
+        }
+        .quiet-link {
+          display: inline-block;
+          margin-top: 6px;
+        }
+        .tool-list {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+        .tool-card {
+          min-height: 0;
+          border-radius: 8px;
+          box-shadow: 0 12px 30px rgba(17, 24, 19, 0.06);
+        }
+        .tool-card__body {
+          display: grid;
+          grid-template-columns: 44px 1fr;
+          gap: 0 12px;
+          padding: 14px;
+        }
+        .tool-card__icon {
+          width: 44px;
+          height: 44px;
+          grid-row: 1 / 3;
+          font-size: 0.92rem;
+        }
+        .tool-card h3 {
+          margin: 0 0 6px;
+          font-size: 1.2rem;
+        }
+        .tool-card p {
+          margin: 0 0 10px;
+          font-size: 0.84rem;
+          line-height: 1.42;
+        }
+        .tool-meta {
+          grid-column: 1 / -1;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px 12px;
+          margin-top: 8px;
+          padding-top: 10px;
+        }
+        .tool-meta dt {
+          font-size: 0.6rem;
+        }
+        .tool-meta dd {
+          font-size: 0.72rem;
+        }
+        .tool-card__link {
+          min-height: 44px;
+          padding: 0 14px;
+          font-size: 0.8rem;
+        }
+        .tool-card__preview {
+          min-height: 42px;
+          padding: 0 14px;
+          font-size: 0.78rem;
+        }
+        .tool-preview-panel {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          margin-top: 12px;
+          padding: 18px;
+        }
+      }
+      @media (max-width: 420px) {
+        .finder-copy h1 {
+          font-size: clamp(2.55rem, 14vw, 3rem);
+        }
+        .problem-choices,
+        .filters {
+          grid-template-columns: 1fr 1fr;
+        }
+        .tool-meta {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/free-tools/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" property="og:title"/><meta content="Free practical tools for small businesses to choose what to fix first, reduce admin, improve online presence, plan team conversations and use AI properly." property="og:description"/><meta content="https://letsortitout.com.au/free-tools/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" name="twitter:title"/><meta content="Free practical tools for small businesses to choose what to fix first, reduce admin, improve online presence, plan team conversations and use AI properly." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" name="twitter:image"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/free-tools/#webpage","url":"https://letsortitout.com.au/free-tools/","name":"Free Small Business Tools Australia | Let’s Sort It Out","description":"Free practical tools for small businesses to choose what to fix first, reduce admin, improve online presence, plan team conversations and use AI properly.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/free-tools/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"Free Tools","item":"https://letsortitout.com.au/free-tools/"}]}]}</script><link href="/assets/auth.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container header-inner">
+<a class="wordmark" href="../">LET’S SORT IT OUT</a><button aria-controls="site-nav" aria-expanded="false" class="menu-button" type="button">
+          Menu
+        </button>
+<nav class="site-nav" id="site-nav">
+<a href="../what-we-sort-out/">What We Sort Out</a><a href="./">Free Tools</a><a href="../learning-hub/">Learning Hub</a><a href="../people-hub/">People Hub</a><a href="../implementation-support/">Implementation Support</a><a class="button" href="https://tally.so/r/Bz5xN7">Review My Business</a>
+</nav>
+</div>
+</header>
+<main class="tools-page" id="main">
+<section class="finder-hero">
+<div class="container finder-hero__grid">
+<div class="finder-copy">
+<h1>Free tools that actually help</h1>
+<p>Pick the problem, get the right free tool and leave with a practical next action. <span class="desktop-copy-extra">No email wall, no fake funnel, no pretending you need a large change program.</span></p>
+<ul class="hero-proof" aria-label="Tool benefits">
+<li><span aria-hidden="true" class="proof-mark">$</span><div><strong>100% free</strong><span>No catches or login wall</span></div></li>
+<li><span aria-hidden="true" class="proof-mark">15</span><div><strong>Quick to use</strong><span>Built for short windows</span></div></li>
+<li><span aria-hidden="true" class="proof-mark">✓</span><div><strong>Small business first</strong><span>Practical, not corporate</span></div></li>
+</ul>
+</div>
+<aside aria-labelledby="finder-title" class="start-panel" id="tool-finder">
+<div class="panel-bar">Start here</div>
+<div class="panel-body">
+<h2 id="finder-title">What’s doing your head in?</h2>
+<p>Pick the closest problem and I’ll point you to the best first tool.</p>
+<div class="problem-choices" role="group" aria-label="Choose a problem">
+<button class="choice selected" data-rec="time" type="button">Doing things twice</button>
+<button class="choice" data-rec="thinking" type="button">No clear process</button>
+<button class="choice" data-rec="build" type="button">Not sure what to fix</button>
+<button class="choice" data-rec="online" type="button">Hard to get found online</button>
+<button class="choice" data-rec="people" type="button">People or team issue</button>
+<button class="choice" data-rec="ai" type="button">Need AI to be useful</button>
+</div>
+<div aria-live="polite" class="recommendation" id="recommendation" role="status"></div>
+<a class="browse-all" href="#tool-library">Browse all tools →</a>
+</div>
+</aside>
+</div>
+</section>
+<section class="tool-library library-band" id="tool-library">
+<div class="container library-shell">
+<aside aria-label="Tool filters" class="library-controls">
+<label class="search-label" for="tool-search">Search tools</label>
+<div class="search-wrap">
+<svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+<input autocomplete="off" id="tool-search" placeholder="Search tools..." type="search"/>
+</div>
+<span class="filter-heading">Filter by category</span>
+<div aria-label="Filter tools" class="filters" role="group">
+<button class="filter active" data-filter="all" type="button">All tools <span>13</span></button>
+<button class="filter" data-filter="time" type="button">Save time <span>5</span></button>
+<button class="filter" data-filter="online" type="button">Online presence <span>1</span></button>
+<button class="filter" data-filter="build" type="button">Build the business <span>4</span></button>
+<button class="filter" data-filter="people" type="button">People &amp; teams <span>2</span></button>
+<button class="filter" data-filter="ai" type="button">AI properly <span>2</span></button>
+<button class="filter" data-filter="thinking" type="button">Think clearly <span>3</span></button>
+</div>
+</aside>
+<div class="library-main">
+<div class="library-head">
+<div>
+<h2>Tool library</h2>
+<p class="result-copy" id="result-copy">13 tools found</p>
+</div>
+<a class="quiet-link" href="../what-we-sort-out/">See what we sort out →</a>
+</div>
+<div class="tool-list" id="tool-list">
+<article class="tool-card tool-card--featured" data-categories="time build thinking" data-title="Business Sort-Out Map" data-keywords="business bottleneck diagnostic map priority customer admin people systems money risk action plan start here">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">MAP</span><h3>Business Sort-Out Map <span style="color:var(--rust);text-transform:uppercase;font-size:.7rem;letter-spacing:.06em;">— Start here</span></h3><p>Not sure what's actually wrong? Find the real bottleneck across customers, admin, people, systems, money and risk.</p><dl class="tool-meta"><div><dt>Time</dt><dd>8-12 min</dd></div><div><dt>Output</dt><dd>Priority map</dd></div><div><dt>Best for</dt><dd>Not sure where to start</dd></div><div><dt>Next step</dt><dd>Fix the constraint</dd></div></dl></div><a class="tool-card__link" href="../business-sort-out-map/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="time" data-title="Stop Doing It Twice" data-keywords="repeat admin duplicate work time cost simplify owner overload">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">✓</span><h3>Stop Doing It Twice</h3><p>Find repetitive work, estimate the cost and name the first task worth simplifying.</p><dl class="tool-meta"><div><dt>Time</dt><dd>5-10 min</dd></div><div><dt>Output</dt><dd>Time and cost summary</dd></div><div><dt>Best for</dt><dd>Repeat admin</dd></div><div><dt>Next step</dt><dd>Simplify first</dd></div></dl></div><a class="tool-card__link" href="../stop-doing-it-twice/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="time build thinking" data-title="Workflow Order Tool" data-keywords="priority workflow process order what to fix first messy list">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">01</span><h3>Workflow Order Tool</h3><p>Turn a messy list of issues into a practical order of attack.</p><dl class="tool-meta"><div><dt>Time</dt><dd>3-8 min</dd></div><div><dt>Output</dt><dd>First priority</dd></div><div><dt>Best for</dt><dd>Too many issues</dd></div><div><dt>Next step</dt><dd>Fix in order</dd></div></dl></div><a class="tool-card__link" href="../workflow-order/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="online" data-title="Online Presence Audit" data-keywords="website google business profile shopify trust contact customer journey online">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">⌕</span><h3>Online Presence Audit</h3><p>Find missing trust signals, contact paths and customer friction points.</p><dl class="tool-meta"><div><dt>Time</dt><dd>10 min</dd></div><div><dt>Output</dt><dd>Action list</dd></div><div><dt>Best for</dt><dd>Getting found</dd></div><div><dt>Next step</dt><dd>Tidy the path</dd></div></dl></div><a class="tool-card__link" href="../customer-journey-check/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="time" data-title="Automation Opportunity Finder" data-keywords="automation automate simplify manual task repeat systems ai workflow">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">↻</span><h3>Automation Opportunity Finder</h3><p>Check whether a real task should be automated, simplified or kept human.</p><dl class="tool-meta"><div><dt>Time</dt><dd>8-12 min</dd></div><div><dt>Output</dt><dd>Automation call</dd></div><div><dt>Best for</dt><dd>Manual workflows</dd></div><div><dt>Next step</dt><dd>Pilot small</dd></div></dl></div><a class="tool-card__link" href="../automation-opportunity-finder/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="time" data-title="No-BS Software Stack" data-keywords="software stack tools systems integrations crm apps choose software">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">▦</span><h3>No-BS Software Stack</h3><p>Choose practical software without creating a messy tool stack.</p><dl class="tool-meta"><div><dt>Time</dt><dd>10-15 min</dd></div><div><dt>Output</dt><dd>Tool shortlist</dd></div><div><dt>Best for</dt><dd>Disconnected apps</dd></div><div><dt>Next step</dt><dd>Use what fits</dd></div></dl></div><a class="tool-card__link" href="../software-stack/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="build" data-title="Business in a Box" data-keywords="business setup foundations growth offer planning start business">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">□</span><h3>Business in a Box</h3><p>Work through the foundations in a sensible order before adding more moving parts.</p><dl class="tool-meta"><div><dt>Time</dt><dd>15-25 min</dd></div><div><dt>Output</dt><dd>Foundation plan</dd></div><div><dt>Best for</dt><dd>New ideas</dd></div><div><dt>Next step</dt><dd>Build basics</dd></div></dl></div><a class="tool-card__link" href="../business-in-a-box/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="build" data-title="Brand Colour Picker" data-keywords="brand colour palette website design visual identity">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">◆</span><h3>Brand Colour Picker</h3><p>Build a simple colour palette that looks intentional and can be used across the business.</p><dl class="tool-meta"><div><dt>Time</dt><dd>5-10 min</dd></div><div><dt>Output</dt><dd>Colour palette</dd></div><div><dt>Best for</dt><dd>Brand basics</dd></div><div><dt>Next step</dt><dd>Apply consistently</dd></div></dl></div><a class="tool-card__link" href="../brand-colour-picker/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="thinking" data-title="Business Thinking Tools" data-keywords="swot pestel five whys three horizons strategy direction thinking">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">?</span><h3>Business Thinking Tools</h3><p>Use simple models to separate symptoms, options and trade-offs.</p><dl class="tool-meta"><div><dt>Time</dt><dd>10-20 min</dd></div><div><dt>Output</dt><dd>Clearer direction</dd></div><div><dt>Best for</dt><dd>Decision making</dd></div><div><dt>Next step</dt><dd>Pick the work</dd></div></dl></div><a class="tool-card__link" href="../business-thinking/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="people" data-title="People Hub" data-keywords="people team manager employee workplace one on one feedback conversation">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">P</span><h3>People Hub</h3><p>Interactive workplace tools for people managing a team and people working in one.</p><dl class="tool-meta"><div><dt>Time</dt><dd>5-15 min</dd></div><div><dt>Output</dt><dd>Conversation plan</dd></div><div><dt>Best for</dt><dd>Team friction</dd></div><div><dt>Next step</dt><dd>Talk clearly</dd></div></dl></div><a class="tool-card__link" href="../people-hub/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="people" data-title="Prepare for a One-on-One" data-keywords="one on one manager employee agenda talking points follow up workplace conversation">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">1:1</span><h3>Prepare for a One-on-One</h3><p>Build an agenda, talking points, questions and follow-up actions.</p><dl class="tool-meta"><div><dt>Time</dt><dd>8-12 min</dd></div><div><dt>Output</dt><dd>Meeting plan</dd></div><div><dt>Best for</dt><dd>Regular check-ins</dd></div><div><dt>Next step</dt><dd>Run the chat</dd></div></dl></div><a class="tool-card__link" href="../people-hub/one-on-one/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="ai" data-title="The No-BS AI Guide" data-keywords="ai chatgpt prompt builder prompts use ai properly">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">AI</span><h3>The No-BS AI Guide</h3><p>Turn a real business task into a useful prompt with enough context to work.</p><dl class="tool-meta"><div><dt>Time</dt><dd>5-15 min</dd></div><div><dt>Output</dt><dd>Copyable prompt</dd></div><div><dt>Best for</dt><dd>Better AI output</dd></div><div><dt>Next step</dt><dd>Test the prompt</dd></div></dl></div><a class="tool-card__link" href="../ai-guide/">Open tool <span>→</span></a>
+</article>
+<article class="tool-card" data-categories="ai" data-title="Google Workspace for Sales" data-keywords="google workspace sheets sales bdr appointment setting crm gemini prompt sales admin">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">G</span><h3>Google Workspace for Sales</h3><p>Learn how to use Gmail, Sheets, Docs and Gemini for cleaner sales work.</p><dl class="tool-meta"><div><dt>Time</dt><dd>10-20 min</dd></div><div><dt>Output</dt><dd>Sales workflow</dd></div><div><dt>Best for</dt><dd>Sales teams</dd></div><div><dt>Next step</dt><dd>Use daily</dd></div></dl></div><a class="tool-card__link" href="../google-workspace-for-sales/">Open tool <span>→</span></a>
+</article>
+</div>
+<section aria-live="polite" class="tool-preview-panel" hidden id="tool-preview-panel">
+<div>
+<span class="tool-preview-eyebrow">Tool preview</span>
+<h3 id="preview-title">Preview</h3>
+<p id="preview-copy"></p>
+<ul class="tool-preview-list" id="preview-list"></ul>
+<div class="tool-preview-actions"><a href="./" id="preview-link">Open tool →</a><button class="tool-preview-close" type="button">Close preview</button></div>
+</div>
+<aside class="tool-preview-side" aria-label="Preview details">
+<div class="tool-preview-example"><strong>Sample outcome</strong><span id="preview-sample"></span></div>
+<div class="tool-preview-seo"><strong>Search focus</strong><span id="preview-seo"></span></div>
+</aside>
+</section>
+<div class="empty-results" hidden="" id="empty-results"><strong>No matching tools.</strong><p>Clear the search or choose another category. If the problem is bigger than a tool, start with the business review.</p></div>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="container cta-inner">
+<div>
+<h2>A free tool is the starting point</h2>
+<p>Use the tool first, then send me the result or the problem behind it. I can help turn the next action into cleaner process, better setup, automation or hands-on implementation.</p>
+</div>
+<a class="button" href="../implementation-support/">See implementation support</a>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer-inner">
+<strong>LET’S SORT IT OUT</strong><span>© 2026 Let’s Sort It Out</span>
+</div>
+</footer>
+<script src="../assets/core.js"></script>
+<script>
+      const recommendations = {
+        time: {
+          name: "Stop Doing It Twice",
+          url: "../stop-doing-it-twice/",
+          icon: "✓",
+          filter: "time",
+          reason: "It turns the vague feeling of being busy into hours, cost and a first task worth simplifying.",
+          next: "Best when the problem is repeat admin, chasing, copying, checking or owner overload."
+        },
+        online: {
+          name: "Online Presence Audit",
+          url: "../customer-journey-check/",
+          icon: "⌕",
+          filter: "online",
+          reason: "It checks the trust signals, contact paths and missing details that stop customers taking the next step.",
+          next: "Best before spending money on ads, a new website or more social content."
+        },
+        build: {
+          name: "Business Sort-Out Map",
+          url: "../business-sort-out-map/",
+          icon: "MAP",
+          filter: "build",
+          reason: "It looks across customers, admin, people, systems, money and risk, then names the real bottleneck.",
+          next: "Best when the business feels messy and you are not sure which problem deserves the next hour."
+        },
+        people: {
+          name: "People Hub",
+          url: "../people-hub/",
+          icon: "P",
+          filter: "people",
+          reason: "It gives practical conversation plans for one-on-ones, feedback, role changes and workplace issues.",
+          next: "Best when the next improvement depends on a clearer conversation, not another system."
+        },
+        ai: {
+          name: "The No-BS AI Guide",
+          url: "../ai-guide/",
+          icon: "AI",
+          filter: "ai",
+          reason: "It turns a real business task into a usable prompt, with enough context for AI to produce something useful.",
+          next: "Best when you know AI could help but the outputs still feel generic or hard to trust."
+        },
+        thinking: {
+          name: "Workflow Order Tool",
+          url: "../workflow-order/",
+          icon: "01",
+          filter: "thinking",
+          reason: "It turns a messy list of issues into a practical order of attack.",
+          next: "Best when everything feels important and you need to stop fixing the wrong thing first."
+        },
+      };
+      const toolPreviews = {
+        "Stop Doing It Twice": {
+          helps: "Shows where repeat admin is quietly eating hours and money.",
+          output: ["A rough time and cost estimate", "The first repeat task worth simplifying", "A plain-English next action"],
+          sample: "You are losing about 4.5 hours a week to duplicate quote follow-up. Fix the customer update template before buying new software.",
+          seo: "Free duplicate work calculator for Australian small business."
+        },
+        "Workflow Order Tool": {
+          helps: "Turns a messy list into a sensible order of attack.",
+          output: ["Your first priority", "What to leave alone for now", "A cleaner next-step sequence"],
+          sample: "Fix intake first, then handover, then reporting. Reporting is not the root problem yet.",
+          seo: "Free workflow prioritisation tool for Australian small business."
+        },
+        "Business Sort-Out Map": {
+          helps: "Checks the whole business before you pick another random improvement job.",
+          output: ["Top bottleneck", "Second and third priorities", "48-hour action list and 30-day plan"],
+          sample: "Your bottleneck is admin handover, not lead generation. Tighten the intake-to-delivery path before adding more enquiries.",
+          seo: "Business bottleneck diagnostic tool for Australian small business."
+        },
+        "Online Presence Audit": {
+          helps: "Checks whether customers can trust you, understand you and contact you without friction.",
+          output: ["Trust gaps", "Contact path fixes", "A short customer-journey action list"],
+          sample: "Your Google profile looks fine, but your website hides pricing cues and the enquiry path is too slow on mobile.",
+          seo: "Free online presence audit for Australian small business."
+        },
+        "Automation Opportunity Finder": {
+          helps: "Decides whether a task should be automated, simplified or kept human.",
+          output: ["Automation call", "Risk flags", "Small pilot idea"],
+          sample: "Automate appointment reminders, simplify quote approvals and keep complaint handling human with better templates.",
+          seo: "Free automation opportunity finder for Australian small business."
+        },
+        "No-BS Software Stack": {
+          helps: "Stops the business adding more tools when the current stack is already messy.",
+          output: ["Shortlist of useful tools", "What to avoid", "Where integration matters"],
+          sample: "Use one CRM, one booking path and one source of truth before adding another project management app.",
+          seo: "Small business software stack guide Australia."
+        },
+        "Business in a Box": {
+          helps: "Gets the business foundations into a practical build order.",
+          output: ["Foundation checklist", "Offer and customer basics", "Setup order"],
+          sample: "Sort the offer, payment path and service delivery checklist before spending time on brand extras.",
+          seo: "Business setup checklist for Australian small business."
+        },
+        "Brand Colour Picker": {
+          helps: "Builds a usable colour palette for websites, documents and social posts.",
+          output: ["Brand colour palette", "Where each colour should be used", "Simple consistency rules"],
+          sample: "Use forest for headings, cream for backgrounds, rust for action buttons and white space to keep it clean.",
+          seo: "Free brand colour palette generator for small business."
+        },
+        "Business Thinking Tools": {
+          helps: "Uses simple models to separate symptoms from causes.",
+          output: ["Clearer diagnosis", "Decision prompts", "Trade-offs worth discussing"],
+          sample: "The symptom is slow delivery. The cause looks like unclear ownership and late customer information.",
+          seo: "Free business thinking tools and decision templates."
+        },
+        "People Hub": {
+          helps: "Keeps workplace conversations practical, separate from the general business tools.",
+          output: ["Recommended people tool", "Conversation structure", "Follow-up prompts"],
+          sample: "Use a one-on-one plan for regular check-ins, or a performance plan if expectations are already slipping.",
+          seo: "Free people management tools for Australian small business."
+        },
+        "Prepare for a One-on-One": {
+          helps: "Creates a clearer meeting so the chat does not drift.",
+          output: ["Agenda", "Talking points", "Follow-up actions"],
+          sample: "Start with workload, blockers and support needed. Finish with owner, action and date.",
+          seo: "Free one-on-one meeting template for managers Australia."
+        },
+        "The No-BS AI Guide": {
+          helps: "Builds useful prompts, platform guidance and a repeatable business voice.",
+          output: ["Copyable prompts", "Business voice setup", "AI safety and follow-up guidance"],
+          sample: "Act as a practical Australian customer service coach. Rewrite this reply so it is clear, direct and still respectful.",
+          seo: "AI prompt builder for Australian small business."
+        },
+        "Google Workspace for Sales": {
+          helps: "Shows sales teams how to use Gmail, Sheets, Docs and Gemini without creating more admin.",
+          output: ["Level-by-level workflow", "Gemini prompts", "Daily sales admin habits"],
+          sample: "Use Sheets as the daily call list, Docs for call notes and Gemini to draft clean follow-up emails.",
+          seo: "Google Workspace sales training for Australian sales teams."
+        }
+      };
+      const filters = [...document.querySelectorAll(".filter")],
+        choices = [...document.querySelectorAll(".choice")],
+        cards = [...document.querySelectorAll(".tool-card")],
+        search = document.getElementById("tool-search"),
+        resultCopy = document.getElementById("result-copy"),
+        empty = document.getElementById("empty-results"),
+        recommendation = document.getElementById("recommendation"),
+        previewPanel = document.getElementById("tool-preview-panel"),
+        previewTitle = document.getElementById("preview-title"),
+        previewCopy = document.getElementById("preview-copy"),
+        previewList = document.getElementById("preview-list"),
+        previewSample = document.getElementById("preview-sample"),
+        previewSeo = document.getElementById("preview-seo"),
+        previewLink = document.getElementById("preview-link"),
+        previewClose = document.querySelector(".tool-preview-close");
+      let activeFilter = "all";
+
+      function keepActiveFilterInView() {
+        if (!window.matchMedia("(max-width: 850px)").matches) return;
+        const active = filters.find((button) => button.dataset.filter === activeFilter),
+          tray = active && active.closest(".filters");
+        if (!active || !tray) return;
+        const trayRect = tray.getBoundingClientRect(),
+          activeRect = active.getBoundingClientRect(),
+          reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        tray.scrollTo({
+          left: tray.scrollLeft + activeRect.left - trayRect.left - (trayRect.width - activeRect.width) / 2,
+          behavior: reduceMotion ? "auto" : "smooth",
+        });
+      }
+
+      function renderRecommendation(key) {
+        const rec = recommendations[key] || recommendations.time;
+        choices.forEach((button) => {
+          const selected = button.dataset.rec === key;
+          button.classList.toggle("selected", selected);
+          button.setAttribute("aria-pressed", String(selected));
+        });
+        recommendation.innerHTML = `<p class="recommendation-label">Recommended first</p><span aria-hidden="true" class="recommendation-icon">${rec.icon}</span><div><strong>${rec.name}</strong><p class="rec-reason">${rec.reason}</p><p class="rec-next">${rec.next}</p></div><div class="recommendation-actions"><a href="${rec.url}">Open tool →</a><button class="recommendation-scroll" data-scroll-tools type="button">Show matches ↓</button></div>`;
+      }
+
+      function renderToolPreview(card, button) {
+        const title = card.dataset.title,
+          data = toolPreviews[title],
+          link = card.querySelector(".tool-card__link");
+        if (!data || !link) return;
+        document.querySelectorAll(".tool-card__preview").forEach((previewButton) => {
+          previewButton.setAttribute("aria-expanded", String(previewButton === button));
+        });
+        previewTitle.textContent = title;
+        previewCopy.textContent = data.helps;
+        previewList.innerHTML = data.output.map((item) => `<li>${item}</li>`).join("");
+        previewSample.textContent = data.sample;
+        previewSeo.textContent = data.seo;
+        previewLink.href = link.href;
+        previewPanel.hidden = false;
+        previewPanel.scrollIntoView({
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+          block: "nearest",
+        });
+      }
+
+      function applyFilters() {
+        const query = search.value.trim().toLowerCase();
+        let visible = 0;
+        filters.forEach((button) => {
+          const selected = button.dataset.filter === activeFilter;
+          button.classList.toggle("active", selected);
+          button.setAttribute("aria-pressed", String(selected));
+        });
+        cards.forEach((card) => {
+          const categories = card.dataset.categories.split(" ");
+          const haystack = `${card.dataset.title} ${card.dataset.keywords} ${card.textContent}`.toLowerCase();
+          const categoryMatch = activeFilter === "all" || categories.includes(activeFilter);
+          const searchMatch = !query || haystack.includes(query);
+          const show = categoryMatch && searchMatch;
+          card.hidden = !show;
+          if (show) visible += 1;
+        });
+        resultCopy.textContent = `${visible} ${visible === 1 ? "tool" : "tools"} found`;
+        empty.hidden = visible !== 0;
+        keepActiveFilterInView();
+      }
+
+      filters.forEach((button) =>
+        button.addEventListener("click", () => {
+          activeFilter = button.dataset.filter;
+          applyFilters();
+        }),
+      );
+      choices.forEach((button) =>
+        button.addEventListener("click", () => {
+          const key = button.dataset.rec;
+          if (window.matchMedia("(max-width: 850px)").matches) search.value = "";
+          activeFilter = recommendations[key].filter;
+          renderRecommendation(key);
+          applyFilters();
+        }),
+      );
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest("[data-scroll-tools]")) return;
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        document.getElementById("tool-library").scrollIntoView({
+          behavior: reduceMotion ? "auto" : "smooth",
+          block: "start",
+        });
+      });
+      cards.forEach((card) => {
+        const data = toolPreviews[card.dataset.title];
+        const link = card.querySelector(".tool-card__link");
+        if (!data || !link) return;
+        const button = document.createElement("button");
+        button.className = "tool-card__preview";
+        button.type = "button";
+        button.setAttribute("aria-expanded", "false");
+        button.innerHTML = "Preview output <span>↓</span>";
+        button.addEventListener("click", () => renderToolPreview(card, button));
+        link.before(button);
+      });
+      previewClose.addEventListener("click", () => {
+        previewPanel.hidden = true;
+        document.querySelectorAll(".tool-card__preview").forEach((button) => button.setAttribute("aria-expanded", "false"));
+      });
+      search.addEventListener("input", applyFilters);
+      renderRecommendation("time");
+      applyFilters();
+    </script>
+<script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
+</html>

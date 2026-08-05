@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+
+<html lang="en-AU" class="auth-pending">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Practical workplace tools for Australian small teams covering one-on-ones, feedback, hiring, onboarding, performance, development and role changes." name="description"/>
+<title>Free People Management Tools for Small Business Australia</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/brand.css" rel="stylesheet"/>
+<style>
+      :root {
+        --forest: #111813;
+        --olive: #2c3e2d;
+        --sage: #6b7f5e;
+        --charcoal: #2d3230;
+        --white: #faf8f5;
+        --cream: #f5f0e6;
+        --rust: #d4712a;
+        --line: rgba(44, 62, 45, 0.22);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        overflow-x: clip;
+        background: var(--white);
+        color: var(--charcoal);
+        font-family: Inter, sans-serif;
+        line-height: 1.5;
+      }
+      .header {
+        height: 72px;
+        background: var(--forest);
+        color: #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .header-inner {
+        width: min(1120px, calc(100% - 36px));
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand {
+        font: 700 1.55rem Antonio;
+        text-decoration: none;
+        color: #fff;
+      }
+      .brand span {
+        font-size: 0.9rem;
+        color: var(--sage);
+        margin-left: 8px;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+      }
+      .nav a {
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.8rem;
+        text-decoration: none;
+      }
+      .nav a:hover {
+        color: #fff;
+      }
+      .menu {
+        display: none;
+        background: none;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 5px;
+        color: #fff;
+        min-height: 44px;
+        padding: 0 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .hero {
+        background: var(--forest);
+        color: #fff;
+        padding: 64px 0 70px;
+      }
+      .container {
+        width: min(760px, calc(100% - 36px));
+        margin: auto;
+      }
+      .hero h1,
+      h2,
+      h3,
+      .guide-title,
+      .button {
+        font-family: Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .hero h1 {
+        font-size: clamp(2.9rem, 11.5vw, 6.5rem);
+        line-height: 0.92;
+        margin: 0 0 24px;
+      }
+      .hero p {
+        max-width: 620px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 1.03rem;
+      }
+      .hero p:last-child {
+        margin-bottom: 0;
+      }
+      .finder {
+        background: var(--white);
+      }
+      .finder-lede {
+        max-width: 620px;
+        margin: -12px 0 22px;
+        color: #626965;
+        font-size: 0.94rem;
+      }
+      .situation-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .situation {
+        min-height: 98px;
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        align-items: center;
+        gap: 12px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 14px;
+        background: var(--white);
+        color: var(--charcoal);
+        text-align: left;
+        cursor: pointer;
+      }
+      .situation:hover,
+      .situation:focus-visible {
+        border-color: var(--rust);
+      }
+      .situation.is-active {
+        border-color: var(--rust);
+        background: rgba(212, 113, 42, 0.08);
+        box-shadow: inset 0 0 0 1px var(--rust);
+      }
+      .situation-icon,
+      .recommendation-icon {
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        background: var(--forest);
+        color: var(--rust);
+        font: 700 0.95rem Antonio, sans-serif;
+      }
+      .situation-icon {
+        width: 42px;
+        height: 42px;
+      }
+      .situation strong {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--forest);
+        font: 700 1.02rem/1 Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .situation small {
+        display: block;
+        color: #626965;
+        font-size: 0.74rem;
+        line-height: 1.32;
+      }
+      .recommendation-panel {
+        display: grid;
+        grid-template-columns: 56px minmax(0, 1fr) auto;
+        gap: 14px;
+        align-items: center;
+        margin: 18px 0 26px;
+        border: 1px solid rgba(44, 62, 45, 0.18);
+        border-radius: 10px;
+        padding: 16px;
+        background: var(--cream);
+        box-shadow: 0 16px 40px rgba(17, 24, 19, 0.06);
+      }
+      .recommendation-panel.is-guardrail {
+        border-color: rgba(212, 113, 42, 0.45);
+        background: rgba(212, 113, 42, 0.1);
+      }
+      .recommendation-icon {
+        width: 56px;
+        height: 56px;
+      }
+      .recommendation-label,
+      .role-label,
+      .guide-output {
+        display: block;
+        color: var(--rust);
+        font: 700 0.68rem Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .recommendation-panel strong {
+        display: block;
+        color: var(--forest);
+        font: 700 1.22rem/1 Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .recommendation-panel p {
+        margin: 5px 0 0;
+        color: #59615d;
+        font-size: 0.84rem;
+      }
+      .recommendation-actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .recommendation-actions a,
+      .recommendation-actions button {
+        min-height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        padding: 0 14px;
+        font: 700 0.78rem Antonio, sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .recommendation-actions a {
+        border: 1px solid var(--rust);
+        background: var(--rust);
+        color: #fff;
+      }
+      .recommendation-actions button {
+        border: 1px solid var(--rust);
+        background: transparent;
+        color: var(--rust);
+        cursor: pointer;
+      }
+      .role-browser {
+        border-top: 1px solid var(--line);
+        padding-top: 22px;
+      }
+      .role-browser h3 {
+        margin: 6px 0 12px;
+        color: var(--forest);
+        font-size: 1.55rem;
+        line-height: 1;
+      }
+      .chooser {
+        padding: 46px 0 60px;
+      }
+      .chooser,
+      .finder,
+      .guide-view {
+        scroll-margin-top: 96px;
+      }
+      .chooser h2,
+      .guide-view h2 {
+        font-size: clamp(2.2rem, 8vw, 3.4rem);
+        line-height: 1;
+        margin: 0 0 24px;
+        color: var(--forest);
+      }
+      .path-list {
+        display: grid;
+        gap: 14px;
+      }
+      .path {
+        width: 100%;
+        min-height: 126px;
+        display: grid;
+        grid-template-columns: 58px 1fr 22px;
+        align-items: center;
+        gap: 16px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px;
+        color: var(--charcoal);
+        text-align: left;
+        cursor: pointer;
+      }
+      .path:hover,
+      .path:focus-visible {
+        border-color: var(--rust);
+      }
+      .path.is-active {
+        border-color: var(--rust);
+        box-shadow: inset 0 0 0 1px var(--rust);
+      }
+      .path-icon {
+        font: 700 1.6rem Antonio;
+        color: var(--olive);
+        border: 1px solid var(--sage);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+      .path strong {
+        display: block;
+        font: 700 1.5rem/1 Antonio;
+        text-transform: uppercase;
+        color: var(--forest);
+        margin-bottom: 8px;
+      }
+      .path small {
+        font-size: 0.82rem;
+      }
+      .path-arrow {
+        font-size: 1.6rem;
+      }
+      .reassure {
+        text-align: center;
+        color: #6b716d;
+        font-size: 0.84rem;
+        margin-top: 22px;
+      }
+      .guide-view {
+        padding: 40px 0 70px;
+      }
+      .path-summary {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
+        background: var(--forest);
+        color: #fff;
+        padding: 14px 16px;
+        border-radius: 8px;
+        margin-bottom: 34px;
+      }
+      .summary-label {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--rust);
+        font: 700 0.68rem Antonio, sans-serif;
+        text-transform: uppercase;
+      }
+      .path-summary strong {
+        display: block;
+        font: 700 1.05rem Antonio;
+        text-transform: uppercase;
+      }
+      .path-switcher {
+        display: flex;
+        gap: 6px;
+      }
+      .switch {
+        min-height: 38px;
+        border: 1px solid rgba(250, 248, 245, 0.22);
+        border-radius: 4px;
+        padding: 0 12px;
+        background: transparent;
+        color: rgba(250, 248, 245, 0.82);
+        font: 700 0.74rem Antonio, sans-serif;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .switch.is-active {
+        border-color: var(--rust);
+        background: var(--rust);
+        color: #fff;
+      }
+      .guide-list {
+        display: grid;
+        gap: 13px;
+      }
+      .guide-card {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 16px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px;
+        text-decoration: none;
+        color: var(--charcoal);
+        min-height: 105px;
+      }
+      .guide-card:hover {
+        border-color: var(--rust);
+      }
+      .guide-card.is-recommended {
+        border-color: var(--rust);
+        box-shadow: inset 0 0 0 1px var(--rust), 0 16px 40px rgba(17, 24, 19, 0.08);
+      }
+      .guide-card.resource-card {
+        background: var(--cream);
+      }
+      .guide-title {
+        display: block;
+        font-size: 1.35rem;
+        color: var(--forest);
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+      .guide-card p {
+        font-size: 0.82rem;
+        margin: 0;
+        color: #626965;
+      }
+      .guide-output {
+        margin-top: 10px;
+        color: var(--sage);
+        font-size: 0.64rem;
+      }
+      .guide-card em {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        font-style: normal;
+        color: var(--rust);
+        font-size: 1.6rem;
+      }
+      .guide-card.soon {
+        opacity: 0.6;
+        cursor: default;
+      }
+      .accordion-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: transparent;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        padding: 17px;
+        margin-top: 12px;
+        font: 700 1rem Antonio;
+        text-transform: uppercase;
+        color: var(--forest);
+        cursor: pointer;
+      }
+      .extra {
+        border: 1px solid var(--line);
+        border-top: 0;
+        padding: 18px;
+        border-radius: 0 0 9px 9px;
+        font-size: 0.85rem;
+      }
+      .note {
+        background: var(--cream);
+        border-left: 3px solid var(--rust);
+        padding: 16px 18px;
+        margin-top: 24px;
+        font-size: 0.82rem;
+      }
+      .cta {
+        background: var(--forest);
+        color: #fff;
+        padding: 48px 0;
+      }
+      .cta h2 {
+        color: #fff;
+        font-size: 2.4rem;
+        line-height: 1;
+        margin-bottom: 12px;
+      }
+      .cta .button {
+        display: inline-flex;
+        background: var(--rust);
+        color: #fff;
+        min-height: 50px;
+        align-items: center;
+        padding: 0 26px;
+        text-decoration: none;
+        margin-top: 14px;
+      }
+      .hidden {
+        display: none;
+      }
+      .footer {
+        background: var(--forest);
+        color: rgba(255, 255, 255, 0.65);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 22px 0;
+        font-size: 0.75rem;
+      }
+      .footer .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      button:focus-visible,
+      a:focus-visible {
+        outline: 3px solid #efac78;
+        outline-offset: 3px;
+      }
+      @media (min-width: 720px) {
+        .path-list {
+          grid-template-columns: 1fr 1fr;
+        }
+        .guide-card {
+          padding: 24px;
+        }
+        .cta .container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .cta .button {
+          margin: 0;
+        }
+      }
+      @media (max-width: 719px) {
+        .header {
+          position: relative;
+        }
+        .nav {
+          display: none;
+          position: absolute;
+          top: 72px;
+          left: 0;
+          right: 0;
+          padding: 15px 18px;
+          background: var(--forest);
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          z-index: 10;
+        }
+        .nav.open {
+          display: flex;
+        }
+        .nav a {
+          padding: 12px 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .menu {
+          display: block;
+        }
+        .container {
+          width: min(100% - 32px, 760px);
+        }
+        .hero {
+          padding: 30px 0 28px;
+        }
+        .hero h1 {
+          margin-bottom: 14px;
+          font-size: clamp(2.65rem, 13.6vw, 3.25rem);
+          line-height: 0.92;
+        }
+        .hero p {
+          font-size: 0.95rem;
+          line-height: 1.48;
+        }
+        .hero-extra {
+          display: none;
+        }
+        .chooser,
+        .finder,
+        .guide-view {
+          scroll-margin-top: 60px;
+        }
+        .chooser {
+          padding: 28px 0 64px;
+        }
+        .finder-lede {
+          margin: -6px 0 16px;
+          font-size: 0.84rem;
+          line-height: 1.42;
+        }
+        .situation-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+        .situation {
+          min-height: 92px;
+          grid-template-columns: 36px 1fr;
+          gap: 9px;
+          border-radius: 8px;
+          padding: 10px;
+        }
+        .situation-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 7px;
+          font-size: 0.78rem;
+        }
+        .situation strong {
+          margin-bottom: 3px;
+          font-size: 0.9rem;
+        }
+        .situation small {
+          font-size: 0.68rem;
+          line-height: 1.28;
+        }
+        .recommendation-panel {
+          grid-template-columns: 42px 1fr;
+          gap: 10px;
+          margin: 14px 0 22px;
+          border-radius: 8px;
+          padding: 13px;
+        }
+        .recommendation-icon {
+          width: 42px;
+          height: 42px;
+          border-radius: 7px;
+          font-size: 0.8rem;
+        }
+        .recommendation-label,
+        .role-label,
+        .guide-output {
+          font-size: 0.6rem;
+        }
+        .recommendation-panel strong {
+          font-size: 1.02rem;
+        }
+        .recommendation-panel p {
+          font-size: 0.76rem;
+          line-height: 1.34;
+        }
+        .recommendation-actions {
+          grid-column: 1 / -1;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        .recommendation-actions a,
+        .recommendation-actions button {
+          min-height: 42px;
+          padding: 0 9px;
+          font-size: 0.76rem;
+        }
+        .role-browser {
+          padding-top: 18px;
+        }
+        .role-browser h3 {
+          margin-bottom: 10px;
+          font-size: 1.32rem;
+        }
+        .chooser h2,
+        .guide-view h2 {
+          margin-bottom: 16px;
+          font-size: clamp(2rem, 10vw, 2.55rem);
+        }
+        .path-list {
+          gap: 10px;
+        }
+        .path {
+          min-height: 92px;
+          grid-template-columns: 44px 1fr 18px;
+          gap: 12px;
+          border-radius: 8px;
+          padding: 14px;
+        }
+        .path-icon {
+          width: 42px;
+          height: 42px;
+          font-size: 1.25rem;
+        }
+        .path strong {
+          margin-bottom: 5px;
+          font-size: 1.18rem;
+        }
+        .path small {
+          display: block;
+          font-size: 0.76rem;
+          line-height: 1.34;
+        }
+        .path-arrow {
+          font-size: 1.2rem;
+        }
+        .reassure {
+          margin-top: 14px;
+          font-size: 0.78rem;
+        }
+        .guide-view {
+          padding: 0 0 56px;
+        }
+        .path-summary {
+          position: sticky;
+          top: 60px;
+          z-index: 30;
+          grid-template-columns: 1fr;
+          margin: 0 -16px 20px;
+          border-radius: 0;
+          padding: 12px 16px;
+          box-shadow: 0 16px 28px rgba(17, 24, 19, 0.16);
+        }
+        .summary-label {
+          margin-bottom: 2px;
+          font-size: 0.62rem;
+        }
+        .path-summary strong {
+          font-size: 0.98rem;
+        }
+        .path-switcher {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+        .switch {
+          min-height: 40px;
+          justify-content: center;
+          padding: 0 10px;
+          border-radius: 6px;
+          font-size: 0.78rem;
+        }
+        .guide-list {
+          gap: 10px;
+        }
+        .guide-card {
+          min-height: 86px;
+          grid-template-columns: 1fr 34px;
+          gap: 12px;
+          border-radius: 8px;
+          padding: 14px 15px;
+          box-shadow: 0 12px 30px rgba(17, 24, 19, 0.05);
+        }
+        .guide-title {
+          margin-bottom: 5px;
+          font-size: 1.12rem;
+        }
+        .guide-card p {
+          font-size: 0.76rem;
+          line-height: 1.38;
+        }
+        .guide-card em {
+          width: 34px;
+          height: 34px;
+          font-size: 1.25rem;
+        }
+        .accordion-row {
+          min-height: 48px;
+          margin-top: 10px;
+          border-radius: 8px;
+          padding: 13px 14px;
+          font-size: 0.9rem;
+        }
+        .extra {
+          padding: 14px;
+          font-size: 0.8rem;
+        }
+        .note {
+          margin-top: 16px;
+          padding: 14px;
+          font-size: 0.78rem;
+        }
+        .cta {
+          padding: 40px 0;
+        }
+        .cta h2 {
+          font-size: 2rem;
+        }
+        .cta .button {
+          width: 100%;
+          justify-content: center;
+        }
+        .footer .container {
+          flex-direction: column;
+          gap: 6px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/people-hub/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="Free People Management Tools for Small Business Australia" property="og:title"/><meta content="Practical workplace tools for Australian small teams covering one-on-ones, feedback, hiring, onboarding, performance, development and role changes." property="og:description"/><meta content="https://letsortitout.com.au/people-hub/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview-people.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Free People Management Tools for Small Business Australia" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Free People Management Tools for Small Business Australia" name="twitter:title"/><meta content="Practical workplace tools for Australian small teams covering one-on-ones, feedback, hiring, onboarding, performance, development and role changes." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview-people.jpg" name="twitter:image"/><meta content="Free People Management Tools for Small Business Australia" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/people-hub/#webpage","url":"https://letsortitout.com.au/people-hub/","name":"Free People Management Tools for Small Business Australia","description":"Practical workplace tools for Australian small teams covering one-on-ones, feedback, hiring, onboarding, performance, development and role changes.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/people-hub/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"People Hub","item":"https://letsortitout.com.au/people-hub/"}]}]}</script><link href="/assets/auth.css" rel="stylesheet"/></head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a class="brand" href="../">LET’S SORT IT OUT <span>PEOPLE HUB</span></a>
+<button aria-controls="nav" aria-expanded="false" class="menu" id="menu" type="button">
+          Menu
+        </button>
+<nav aria-label="Main navigation" class="nav" id="nav">
+<a href="../what-we-sort-out/">What We Sort Out</a>
+<a href="../free-tools/">Free Tools</a>
+<a href="./">People Hub</a>
+<a href="../#jake">About</a>
+<a href="../#faqs">FAQs</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="container">
+<h1>Workplace stuff is hard enough</h1>
+<p>
+            Practical tools for small teams that need clearer one-on-ones,
+            feedback, hiring, onboarding, performance and workplace conversations.
+          </p>
+<p class="hero-extra">
+            No HR waffle. Answer a few questions, then copy a plan you can
+            actually use.
+          </p>
+</div>
+</section>
+<section class="chooser finder" id="chooser">
+<div class="container">
+<h2>What’s happening?</h2>
+<p class="finder-lede">Start with the situation, not the job title. Pick the closest issue and the hub will point you to the right workplace tool.</p>
+<div aria-label="Choose a workplace situation" class="situation-grid" role="group">
+<button aria-pressed="false" class="situation" data-situation="one-on-one" type="button">
+<span aria-hidden="true" class="situation-icon">1:1</span><span><strong>One-on-one coming up</strong><small>Agenda, useful questions and follow-up actions.</small></span>
+</button>
+<button aria-pressed="false" class="situation" data-situation="feedback" type="button">
+<span aria-hidden="true" class="situation-icon">FB</span><span><strong>Need to give feedback</strong><small>Make it specific, fair and easier to act on.</small></span>
+</button>
+<button aria-pressed="false" class="situation" data-situation="hiring" type="button">
+<span aria-hidden="true" class="situation-icon">Hire</span><span><strong>Hiring someone</strong><small>Questions, interview plan and what not to ask.</small></span>
+</button>
+<button aria-pressed="false" class="situation" data-situation="onboarding" type="button">
+<span aria-hidden="true" class="situation-icon">Start</span><span><strong>New starter joining</strong><small>Simple 30/60/90-day plan and week-one checks.</small></span>
+</button>
+<button aria-pressed="false" class="situation" data-situation="performance" type="button">
+<span aria-hidden="true" class="situation-icon">Perf</span><span><strong>Performance slipping</strong><small>Set expectations, evidence and follow-up clearly.</small></span>
+</button>
+<button aria-pressed="false" class="situation" data-situation="toolbox" type="button">
+<span aria-hidden="true" class="situation-icon">Meet</span><span><strong>Team meeting needed</strong><small>Build a short toolbox talk or team agenda.</small></span>
+</button>
+<button aria-pressed="false" class="situation" data-situation="difficult" type="button">
+<span aria-hidden="true" class="situation-icon">Talk</span><span><strong>Hard conversation</strong><small>Separate facts from frustration before you speak.</small></span>
+</button>
+<button aria-pressed="false" class="situation" data-situation="development" type="button">
+<span aria-hidden="true" class="situation-icon">Grow</span><span><strong>Want to grow</strong><small>Plan a practical career development conversation.</small></span>
+</button>
+<button aria-pressed="false" class="situation" data-situation="internal-role" type="button">
+<span aria-hidden="true" class="situation-icon">Role</span><span><strong>Interested in a role</strong><small>Connect your experience to the internal move.</small></span>
+</button>
+<button aria-pressed="false" class="situation" data-situation="serious" type="button">
+<span aria-hidden="true" class="situation-icon">!</span><span><strong>Serious workplace issue</strong><small>Pay, safety, discrimination, bullying or dismissal.</small></span>
+</button>
+</div>
+<div aria-live="polite" class="recommendation-panel" id="situation-result" role="status"></div>
+<div class="role-browser">
+<span class="role-label">Or browse by role</span>
+<h3>Which side are you on?</h3>
+<div class="path-list">
+<button aria-pressed="false" class="path" data-path="manager" type="button">
+<span class="path-icon">M</span><span><strong>I employ or manage people</strong><small>I own the business, lead a team or support other people at
+                  work.</small></span><span class="path-arrow">›</span></button><button aria-pressed="false" class="path" data-path="employee" type="button">
+<span class="path-icon">E</span><span><strong>I’m employed by someone</strong><small>I want help with my role, development or a workplace
+                  conversation.</small></span><span class="path-arrow">›</span>
+</button>
+</div>
+<p class="reassure">Pick one. You can switch whenever you need.</p>
+</div>
+</div>
+</section>
+<section class="guide-view hidden" id="guide-view">
+<div class="container">
+<div class="path-summary">
+<div>
+<span class="summary-label">Selected path</span>
+<strong id="path-name"></strong>
+</div>
+<div aria-label="Switch path" class="path-switcher" role="group">
+<button aria-pressed="false" class="switch" data-switch-path="manager" type="button">Manager</button>
+<button aria-pressed="false" class="switch" data-switch-path="employee" type="button">Employee</button>
+</div>
+</div>
+<h2>What do you need help with?</h2>
+<div class="guide-list hidden" id="manager-guides">
+<a class="guide-card" data-guide="one-on-one" href="one-on-one/"><span><strong class="guide-title">Prepare for a One-on-One</strong>
+<p>
+                  Build an agenda, talking points, questions and follow-up
+                  actions.
+                </p><span class="guide-output">You’ll get: agenda + follow-up actions</span></span><em>›</em></a>
+<a class="guide-card" data-guide="difficult" href="difficult-conversation/">
+<span><strong class="guide-title">Plan a Difficult Conversation</strong>
+<p>
+                  Separate the facts from the frustration and prepare what to
+                  say.
+                </p><span class="guide-output">You’ll get: talking points + next steps</span></span><em>›</em>
+</a>
+<a class="guide-card" data-guide="feedback" href="constructive-feedback/">
+<span><strong class="guide-title">Give Constructive Feedback</strong>
+<p>Create feedback that is specific, fair and useful.</p><span class="guide-output">You’ll get: feedback script + action check</span></span><em>›</em>
+</a>
+<a class="guide-card" data-guide="hiring" href="hiring-interview-prep/">
+<span><strong class="guide-title">Hiring &amp; Interview Prep</strong>
+<p>Build a fair interview plan with questions that match the role.</p><span class="guide-output">You’ll get: interview questions + legal guardrails</span></span><em>›</em>
+</a>
+<a class="guide-card" data-guide="onboarding" href="onboarding-plan/">
+<span><strong class="guide-title">New Starter Onboarding Plan</strong>
+<p>Plan the first 30, 60 and 90 days without overloading the person.</p><span class="guide-output">You’ll get: onboarding plan + week-one checks</span></span><em>›</em>
+</a>
+<a class="guide-card" data-guide="performance" href="performance-conversation/">
+<span><strong class="guide-title">Performance Conversation Builder</strong>
+<p>Prepare a clear conversation when expectations are not being met.</p><span class="guide-output">You’ll get: conversation structure + follow-up trail</span></span><em>›</em>
+</a>
+<a class="guide-card" data-guide="toolbox" href="toolbox-talk/">
+<span><strong class="guide-title">Toolbox Talk &amp; Meeting Agenda</strong>
+<p>Build a short practical agenda for a team update, safety chat or shift huddle.</p><span class="guide-output">You’ll get: agenda + action list</span></span><em>›</em>
+</a>
+</div>
+<div class="guide-list hidden" id="employee-guides">
+<a class="guide-card" data-guide="internal-role" href="internal-role/">
+<span><strong class="guide-title">Move Into a New Role Internally</strong>
+<p>
+                  Prepare to express interest and connect your experience.
+                </p><span class="guide-output">You’ll get: role pitch + evidence list</span></span><em>›</em>
+</a>
+<a class="guide-card" data-guide="development" href="career-development/">
+<span><strong class="guide-title">Ask for Career Development</strong>
+<p>
+                  Plan a useful conversation about where you want to grow.
+                </p><span class="guide-output">You’ll get: growth request + talking points</span></span><em>›</em>
+</a>
+</div>
+<a class="guide-card resource-card" data-guide="serious" href="workplace-resources/">
+<span><strong class="guide-title">Australian Workplace Resources</strong><p>Find the proper Australian links for Fair Work, safety, discrimination, wellbeing and career support.</p><span class="guide-output">You’ll get: proper external support links</span></span><em>›</em>
+</a>
+<button aria-expanded="false" class="accordion-row" data-toggle="more" type="button">
+            More workplace guides <span>+</span>
+</button>
+<div class="extra hidden" id="more">
+            Use the guides above for the common people moments: check-ins,
+            feedback, hiring, onboarding, performance, role moves and quick team
+            meetings. Start small and keep a clear follow-up trail.
+          </div>
+<button aria-expanded="false" class="accordion-row" data-toggle="how" type="button">
+            How these guides work <span>+</span>
+</button>
+<div class="extra hidden" id="how">
+            Answer one question at a time, get practical guidance as you go,
+            then edit and copy a plan you can actually use. No login, email wall
+            or PDF download.
+          </div>
+<div class="note">
+<strong>Useful support. Not legal advice.</strong><br/>These tools
+            help you prepare and communicate clearly. They aren’t legal, HR or
+            industrial-relations advice.
+          </div>
+</div>
+</section>
+<section class="cta">
+<div class="container">
+<div>
+<h2>Need help turning this into a proper people process?</h2>
+<p>
+              These guides are practical starting points. If the same people issue keeps
+              coming back, I can help turn it into clearer roles, cleaner conversations and
+              simple follow-up habits.
+            </p>
+</div>
+<a class="button" href="../implementation-support/">See people process support</a>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<strong>LET’S SORT IT OUT</strong><span>© 2026 Let’s Sort It Out</span>
+</div>
+</footer>
+<script>
+      const menu = document.getElementById("menu"),
+        nav = document.getElementById("nav"),
+        chooser = document.getElementById("chooser"),
+        view = document.getElementById("guide-view"),
+        manager = document.getElementById("manager-guides"),
+        employee = document.getElementById("employee-guides"),
+        pathName = document.getElementById("path-name"),
+        pathButtons = [...document.querySelectorAll("[data-path]")],
+        switchButtons = [...document.querySelectorAll("[data-switch-path]")],
+        situationButtons = [...document.querySelectorAll("[data-situation]")],
+        recommendation = document.getElementById("situation-result"),
+        guideCards = [...document.querySelectorAll("[data-guide]")];
+      const situations = {
+        "one-on-one": {
+          path: "manager",
+          guide: "one-on-one",
+          icon: "1:1",
+          label: "Recommended first",
+          name: "Prepare for a One-on-One",
+          url: "one-on-one/",
+          reason: "Best when you need a cleaner check-in, agenda, questions and follow-up actions.",
+          output: "You’ll leave with a practical one-on-one plan."
+        },
+        feedback: {
+          path: "manager",
+          guide: "feedback",
+          icon: "FB",
+          label: "Recommended first",
+          name: "Give Constructive Feedback",
+          url: "constructive-feedback/",
+          reason: "Best when the message needs to be specific, fair and useful without turning into a lecture.",
+          output: "You’ll leave with a feedback script and action check."
+        },
+        hiring: {
+          path: "manager",
+          guide: "hiring",
+          icon: "Hire",
+          label: "Recommended first",
+          name: "Hiring & Interview Prep",
+          url: "hiring-interview-prep/",
+          reason: "Best when you need practical interview questions and a clearer way to compare candidates.",
+          output: "You’ll leave with an interview plan and a reminder on what not to ask."
+        },
+        onboarding: {
+          path: "manager",
+          guide: "onboarding",
+          icon: "Start",
+          label: "Recommended first",
+          name: "New Starter Onboarding Plan",
+          url: "onboarding-plan/",
+          reason: "Best when a new starter needs clear support without dumping everything on them in week one.",
+          output: "You’ll leave with a simple 30/60/90-day onboarding plan."
+        },
+        performance: {
+          path: "manager",
+          guide: "performance",
+          icon: "Perf",
+          label: "Recommended first",
+          name: "Performance Conversation Builder",
+          url: "performance-conversation/",
+          reason: "Best when expectations are slipping and the conversation needs facts, actions and follow-up.",
+          output: "You’ll leave with a clear conversation structure and documentation trail."
+        },
+        toolbox: {
+          path: "manager",
+          guide: "toolbox",
+          icon: "Meet",
+          label: "Recommended first",
+          name: "Toolbox Talk & Meeting Agenda",
+          url: "toolbox-talk/",
+          reason: "Best when the team needs a short, useful meeting instead of a ramble.",
+          output: "You’ll leave with an agenda, talking points and actions."
+        },
+        difficult: {
+          path: "manager",
+          guide: "difficult",
+          icon: "Talk",
+          label: "Recommended first",
+          name: "Plan a Difficult Conversation",
+          url: "difficult-conversation/",
+          reason: "Best when emotion, assumptions or repeated friction are making the conversation harder.",
+          output: "You’ll leave with talking points and a clearer next step."
+        },
+        development: {
+          path: "employee",
+          guide: "development",
+          icon: "Grow",
+          label: "Recommended first",
+          name: "Ask for Career Development",
+          url: "career-development/",
+          reason: "Best when you want to talk about growth without making it vague or awkward.",
+          output: "You’ll leave with a clear development request and talking points."
+        },
+        "internal-role": {
+          path: "employee",
+          guide: "internal-role",
+          icon: "Role",
+          label: "Recommended first",
+          name: "Move Into a New Role Internally",
+          url: "internal-role/",
+          reason: "Best when you need to connect your experience to a role you already understand.",
+          output: "You’ll leave with a role pitch and evidence list."
+        },
+        serious: {
+          guardrail: true,
+          guide: "serious",
+          icon: "!",
+          label: "Use proper advice first",
+          name: "Australian Workplace Resources",
+          url: "workplace-resources/",
+          reason: "Pay, safety, discrimination, bullying, dismissal and formal performance matters need proper workplace guidance.",
+          output: "Start with official resources before using a general preparation guide."
+        }
+      };
+      const scrollBehavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth";
+      function loadPath() {
+        try {
+          return sessionStorage.getItem("jj_people_path");
+        } catch (_) {
+          return null;
+        }
+      }
+      function savePath(path) {
+        try {
+          sessionStorage.setItem("jj_people_path", path);
+        } catch (_) {}
+      }
+      menu.addEventListener("click", () => {
+        const open = menu.getAttribute("aria-expanded") === "true";
+        menu.setAttribute("aria-expanded", String(!open));
+        nav.classList.toggle("open", !open);
+      });
+      nav.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          nav.classList.remove("open");
+          menu.setAttribute("aria-expanded", "false");
+        }
+      });
+      function setSelectedPath(path) {
+        pathButtons.forEach((button) => {
+          const selected = button.dataset.path === path;
+          button.classList.toggle("is-active", selected);
+          button.setAttribute("aria-pressed", String(selected));
+        });
+        switchButtons.forEach((button) => {
+          const selected = button.dataset.switchPath === path;
+          button.classList.toggle("is-active", selected);
+          button.setAttribute("aria-pressed", String(selected));
+        });
+      }
+      function setSelectedSituation(key) {
+        situationButtons.forEach((button) => {
+          const selected = button.dataset.situation === key;
+          button.classList.toggle("is-active", selected);
+          button.setAttribute("aria-pressed", String(selected));
+        });
+      }
+      function highlightGuide(guide) {
+        guideCards.forEach((card) =>
+          card.classList.toggle("is-recommended", Boolean(guide) && card.dataset.guide === guide),
+        );
+      }
+      function choose(path, options = {}) {
+        view.classList.remove("hidden");
+        manager.classList.toggle("hidden", path !== "manager");
+        employee.classList.toggle("hidden", path !== "employee");
+        setSelectedPath(path);
+        highlightGuide(options.guide);
+        pathName.textContent =
+          path === "manager"
+            ? "I employ or manage people"
+            : "I’m employed by someone";
+        savePath(path);
+        if (options.scroll !== false) {
+          view.scrollIntoView({ behavior: scrollBehavior, block: "start" });
+        }
+      }
+      function renderRecommendation(item) {
+        const primaryText = item.guardrail ? "Open resources →" : "Start guide →",
+          secondary = item.guardrail
+            ? `<button data-scroll-role type="button">Browse roles ↓</button>`
+            : `<button data-scroll-guides type="button">Show guides ↓</button>`;
+        recommendation.classList.toggle("is-guardrail", Boolean(item.guardrail));
+        recommendation.innerHTML = `<span aria-hidden="true" class="recommendation-icon">${item.icon}</span><div><span class="recommendation-label">${item.label}</span><strong>${item.name}</strong><p>${item.reason}</p><p>${item.output}</p></div><div class="recommendation-actions"><a href="${item.url}">${primaryText}</a>${secondary}</div>`;
+      }
+      function renderSituation(key) {
+        const item = situations[key] || situations["one-on-one"];
+        setSelectedSituation(key);
+        renderRecommendation(item);
+        if (item.guardrail) {
+          view.classList.add("hidden");
+          setSelectedPath("");
+          highlightGuide(item.guide);
+          if (window.matchMedia("(max-width: 719px)").matches) {
+            recommendation.scrollIntoView({ behavior: scrollBehavior, block: "center" });
+          }
+          return;
+        }
+        choose(item.path, { scroll: false, guide: item.guide });
+        if (window.matchMedia("(max-width: 719px)").matches) {
+          recommendation.scrollIntoView({ behavior: scrollBehavior, block: "center" });
+        }
+      }
+      function renderRoleBrowse(path) {
+        const item =
+          path === "manager"
+            ? {
+                icon: "M",
+                label: "Browsing by role",
+                name: "Manager guides",
+                url: "one-on-one/",
+                reason: "Use these when you need one-on-ones, feedback, hiring, onboarding, performance or team meeting support.",
+                output: "You’ll see the manager tools first."
+              }
+            : {
+                icon: "E",
+                label: "Browsing by role",
+                name: "Employee guides",
+                url: "career-development/",
+                reason: "Use these when you want to discuss growth, role moves or your next workplace conversation.",
+                output: "You’ll see the employee tools first."
+              };
+        setSelectedSituation("");
+        recommendation.classList.remove("is-guardrail");
+        recommendation.innerHTML = `<span aria-hidden="true" class="recommendation-icon">${item.icon}</span><div><span class="recommendation-label">${item.label}</span><strong>${item.name}</strong><p>${item.reason}</p><p>${item.output}</p></div><div class="recommendation-actions"><button data-scroll-guides type="button">Show guides ↓</button><a href="${item.url}">Open first →</a></div>`;
+      }
+      function renderPrompt(path) {
+        const roleText = path === "employee" ? "Employee" : path === "manager" ? "Manager" : "a role";
+        recommendation.classList.remove("is-guardrail");
+        recommendation.innerHTML = `<span aria-hidden="true" class="recommendation-icon">Start</span><div><span class="recommendation-label">Best next step</span><strong>Pick the closest situation</strong><p>The hub will recommend a guide, show what you’ll leave with and keep serious matters pointed to proper workplace resources.</p><p>${path ? `You last browsed ${roleText} guides.` : "You can also browse by role below."}</p></div><div class="recommendation-actions"><button data-scroll-role type="button">Browse roles ↓</button><a href="workplace-resources/">Resources →</a></div>`;
+      }
+      pathButtons.forEach(
+        (button) =>
+          (button.onclick = () => {
+            renderRoleBrowse(button.dataset.path);
+            choose(button.dataset.path);
+          }),
+      );
+      switchButtons.forEach(
+        (button) =>
+          (button.onclick = () => {
+            renderRoleBrowse(button.dataset.switchPath);
+            choose(button.dataset.switchPath, { scroll: false });
+          }),
+      );
+      situationButtons.forEach(
+        (button) => (button.onclick = () => renderSituation(button.dataset.situation)),
+      );
+      document.addEventListener("click", (event) => {
+        if (event.target.closest("[data-scroll-guides]")) {
+          if (view.classList.contains("hidden")) choose(loadPath() || "manager", { scroll: false });
+          view.scrollIntoView({ behavior: scrollBehavior, block: "start" });
+        }
+        if (event.target.closest("[data-scroll-role]")) {
+          document.querySelector(".role-browser").scrollIntoView({
+            behavior: scrollBehavior,
+            block: "start",
+          });
+        }
+      });
+      document.querySelectorAll("[data-toggle]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            const x = document.getElementById(b.dataset.toggle),
+              open = !x.classList.contains("hidden");
+            x.classList.toggle("hidden", open);
+            b.setAttribute("aria-expanded", String(!open));
+            b.querySelector("span").textContent = open ? "+" : "−";
+          }),
+      );
+      const saved = loadPath();
+      if (saved) setSelectedPath(saved);
+      renderPrompt(saved);
+    </script>
+<script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
+</html>

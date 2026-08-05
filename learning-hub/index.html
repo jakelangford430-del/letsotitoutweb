@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="auth-pending">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="A plain-English small business learning hub for Australian owners, managers and teams covering AI, people, process, systems and practical implementation." name="description"/>
+<title>Small Business Learning Hub Australia | Let’s Sort It Out</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/core.css" rel="stylesheet"/>
+<style>
+  .learning-hero { min-height: 520px; }
+  .learning-hero .button.secondary { border-color: var(--rust); color: var(--rust); }
+  .path-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .path-card { display: grid; min-height: 330px; padding: 26px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); color: inherit; text-decoration: none; transition: transform .16s ease, border-color .16s ease; }
+  .path-card:hover { transform: translateY(-3px); border-color: rgba(212,113,42,.55); }
+  .path-card span { color: var(--rust); font: 700 .78rem/1 Antonio, sans-serif; text-transform: uppercase; }
+  .path-card h3 { margin: 12px 0; }
+  .path-card p { color: #59615d; font-size: .9rem; }
+  .path-card ul { display: grid; gap: 8px; align-self: end; margin: 16px 0 0; padding: 0; list-style: none; }
+  .path-card li { position: relative; padding-left: 18px; color: #59615d; font-size: .82rem; line-height: 1.4; }
+  .path-card li::before { content: "✓"; position: absolute; left: 0; color: var(--rust); font-weight: 800; }
+  .trainer-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 44px; align-items: start; }
+  .trainer-panel { padding: 30px; border-radius: var(--radius); background: var(--forest); color: var(--white); }
+  .trainer-panel h2 { color: var(--white); }
+  .trainer-panel p { color: rgba(250,248,245,.78); }
+  .training-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+  .training-list li { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 16px; padding: 22px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); }
+  .training-list span { color: var(--rust); font: 700 2rem/.9 Antonio, sans-serif; }
+  .training-list h3 { margin: 0 0 7px; font-size: 1.25rem; }
+  .training-list p { margin: 0; color: #59615d; font-size: .9rem; }
+  .outcome-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .outcome-card { padding: 26px; border-left: 4px solid var(--rust); background: var(--cream); }
+  .outcome-card h3 { margin-bottom: 10px; }
+  .outcome-card p { margin: 0; color: #59615d; font-size: .92rem; }
+  .decision-band { background: var(--olive); color: var(--white); }
+  .decision-band h2 { color: var(--white); }
+  .decision-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .decision-card { padding: 24px; border: 1px solid rgba(250,248,245,.18); border-radius: var(--radius); background: rgba(255,255,255,.06); }
+  .decision-card h3 { color: var(--white); }
+  .decision-card p { margin: 0; color: rgba(250,248,245,.76); font-size: .9rem; }
+  .learning-cta .button.secondary { border-color: var(--white); color: var(--white); }
+  @media(max-width:900px){.path-grid,.outcome-grid,.decision-grid{grid-template-columns:1fr 1fr}.trainer-grid{grid-template-columns:1fr}}
+  @media(max-width:560px){.path-grid,.outcome-grid,.decision-grid{grid-template-columns:1fr}.training-list li{grid-template-columns:1fr}.learning-hero{min-height:0}.learning-hero .button{width:100%;margin-right:0;margin-bottom:10px}}
+</style>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/learning-hub/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="Small Business Learning Hub Australia | Let’s Sort It Out" property="og:title"/><meta content="A plain-English small business learning hub for Australian owners, managers and teams covering AI, people, process, systems and practical implementation." property="og:description"/><meta content="https://letsortitout.com.au/learning-hub/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Small Business Learning Hub Australia | Let’s Sort It Out" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Small Business Learning Hub Australia | Let’s Sort It Out" name="twitter:title"/><meta content="A plain-English small business learning hub for Australian owners, managers and teams covering AI, people, process, systems and practical implementation." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" name="twitter:image"/><meta content="Small Business Learning Hub Australia | Let’s Sort It Out" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/learning-hub/#webpage","url":"https://letsortitout.com.au/learning-hub/","name":"Small Business Learning Hub Australia","description":"A plain-English small business learning hub for Australian owners, managers and teams covering AI, people, process, systems and practical implementation.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/learning-hub/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"Learning Hub","item":"https://letsortitout.com.au/learning-hub/"}]}]}</script><link href="/assets/auth.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="Let’s Sort It Out home" class="wordmark" href="../">LET’S SORT IT OUT</a>
+<button aria-controls="site-nav" aria-expanded="false" class="menu-button" type="button">Menu</button>
+<nav aria-label="Main navigation" class="site-nav" id="site-nav">
+<a href="../what-we-sort-out/">What We Sort Out</a><a href="../free-tools/">Free Tools</a><a href="./">Learning Hub</a><a href="../people-hub/">People Hub</a><a href="../implementation-support/">Implementation Support</a>
+<a class="button nav-cta" href="https://tally.so/r/Bz5xN7">Review My Business</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="page-hero learning-hero">
+<div class="container">
+<h1>Learn the work. Then sort it properly.</h1>
+<p>This hub pulls the learning paths together: AI, people, process, systems and online setup. Use it to teach yourself, train a team or work out where you need hands-on help.</p>
+<a class="button" href="#paths">Choose a learning path</a>
+<a class="button secondary" href="../implementation-support/">See implementation help</a>
+</div>
+</section>
+<section class="section band" id="paths">
+<div class="container">
+<h2>Pick the outcome, not the buzzword.</h2>
+<p class="section-intro">Each path is built for Australian small businesses and normal teams. No jargon marathon. Learn enough to make a sensible call, then use the tool or book help if the build needs a second pair of hands.</p>
+<div class="path-grid">
+<a class="path-card" href="../ai-guide/"><span>AI learning</span><h3>Use AI properly</h3><p>Learn how AI works, pick a platform, lock in a business voice and build prompts that do useful work.</p><ul><li>Prompt builder</li><li>Business voice setup</li><li>Safe AI habits</li></ul></a>
+<a class="path-card" href="../people-hub/"><span>People Hub</span><h3>Run clearer team conversations</h3><p>Use practical HR-side tools for managers, employees and small teams without pretending every chat is a legal drama.</p><ul><li>One-on-ones</li><li>Feedback</li><li>Hiring and onboarding</li></ul></a>
+<a class="path-card" href="../business-sort-out-map/"><span>Business systems</span><h3>Find what to fix first</h3><p>Map the customer, admin, people and systems bottlenecks before buying software or automating the wrong thing.</p><ul><li>Business bottlenecks</li><li>Workflow order</li><li>Automation calls</li></ul></a>
+<a class="path-card" href="../website-setup/"><span>Online setup</span><h3>Make it easier to trust you</h3><p>Learn what a customer needs to see online before they enquire, book, buy or trust that you are worth calling.</p><ul><li>Website basics</li><li>Google profile</li><li>Customer path</li></ul></a>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container trainer-grid">
+<div class="trainer-panel">
+<h2>Built for different skill levels.</h2>
+<p>Use it with a brand-new admin person, a supervisor who hates training decks, an owner who wants the short version or a team that needs a shared way of doing the work.</p>
+<p>The language stays direct because people learn faster when they are not translating corporate filler first.</p>
+</div>
+<ol class="training-list">
+<li><span>01</span><div><h3>Pick one real job</h3><p>Choose the task, conversation or workflow people actually need to do this week.</p></div></li>
+<li><span>02</span><div><h3>Use the guide live</h3><p>Run the tool with a real example, not a fake training scenario nobody cares about.</p></div></li>
+<li><span>03</span><div><h3>Turn it into a habit</h3><p>Save the output as a checklist, prompt, meeting flow or simple process note.</p></div></li>
+<li><span>04</span><div><h3>Get help when it sticks</h3><p>If the same issue keeps coming back, book Jake to help build the process properly.</p></div></li>
+</ol>
+</div>
+</section>
+<section class="section band">
+<div class="container">
+<h2>What people should leave with.</h2>
+<div class="outcome-grid">
+<article class="outcome-card"><h3>A next step</h3><p>Not a vague idea. A clear first action, owner, output or decision.</p></article>
+<article class="outcome-card"><h3>A reusable asset</h3><p>A prompt, checklist, agenda, process note or tool result that can be used again.</p></article>
+<article class="outcome-card"><h3>A support line</h3><p>When the work needs setup, training or implementation, the review path is clear.</p></article>
+</div>
+</div>
+</section>
+<section class="section decision-band">
+<div class="container">
+<h2>When to stop learning and get it built.</h2>
+<p class="section-intro">Learning is useful. Spinning in circles is not. Book help when the answer is clear but the implementation keeps getting pushed back.</p>
+<div class="decision-grid">
+<article class="decision-card"><h3>The same problem keeps returning</h3><p>That usually means the process, handoff or system setup is not strong enough yet.</p></article>
+<article class="decision-card"><h3>The team needs a shared way</h3><p>If everyone does it differently, turn the learning into a simple standard.</p></article>
+<article class="decision-card"><h3>The tool output is useful but unfinished</h3><p>Send it through and Jake can help turn it into a working setup or implementation plan.</p></article>
+</div>
+</div>
+</section>
+<section class="cta learning-cta">
+<div class="container cta-inner">
+<div><h2>Want the learning turned into action?</h2><p>Send the problem, tool result or training gap. Jake can help shape the process, build the setup, write the prompts or explain the system in plain English.</p></div>
+<a class="button" href="../implementation-support/">See support options</a>
+</div>
+</section>
+</main>
+<footer class="footer"><div class="container footer-inner"><strong>LET’S SORT IT OUT</strong><span><a href="../free-tools/">Free Tools</a> · <a href="../people-hub/">People Hub</a> · <a href="../ai-guide/">AI Guide</a> · <a href="../implementation-support/">Implementation Support</a> · <a href="https://tally.so/r/Bz5xN7">Review My Business</a></span></div></footer>
+<script src="../assets/core.js"></script><script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
+</html>

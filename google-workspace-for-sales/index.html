@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en-AU" class="auth-pending">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="A five-level walkthrough of Google Sheets and Workspace skills for sales teams, appointment setters and business development roles." name="description"/>
+<title>Google Workspace &amp; Sheets for Sales Teams | Let’s Sort It Out</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../people-hub/one-on-one/guide.css" rel="stylesheet"/>
+<style>
+  .gemini-box{background:var(--cream);border-left:3px solid #4285F4;border-radius:0 8px 8px 0;padding:16px 18px;margin-top:18px}
+  .gemini-box .label{display:flex;align-items:center;gap:8px;font-family:Antonio,sans-serif;text-transform:uppercase;font-size:.72rem;color:#1a56c4;margin-bottom:8px;font-weight:700}
+  .gemini-box p{margin:0 0 10px;font-size:.88rem;font-style:italic;color:var(--charcoal)}
+  .level-tag{display:inline-block;background:var(--forest);color:#fff;font-family:Antonio,sans-serif;text-transform:uppercase;font-size:.7rem;font-weight:700;padding:4px 11px;border-radius:20px;margin-bottom:12px}
+  .all-prompts{background:var(--cream);border-radius:var(--radius);padding:20px;margin-top:16px}
+  .all-prompts h3{font-size:.95rem;margin:0 0 12px}
+  .all-prompts .prompt-item{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--light-line)}
+  .all-prompts .prompt-item:last-child{border:0;margin:0;padding:0}
+  .all-prompts .prompt-item strong{display:block;font-size:.78rem;color:var(--rust);text-transform:uppercase;margin-bottom:3px}
+  .all-prompts .prompt-item p{font-size:.85rem;font-style:italic;margin:0}
+</style>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/google-workspace-for-sales/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="Google Workspace &amp; Sheets for Sales Teams" property="og:title"/><meta content="A five-level walkthrough of Google Sheets and Workspace skills for sales teams, appointment setters and business development roles." property="og:description"/><meta content="https://letsortitout.com.au/google-workspace-for-sales/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Google Workspace &amp; Sheets for Sales Teams" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Google Workspace &amp; Sheets for Sales Teams" name="twitter:title"/><meta content="A five-level walkthrough of Google Sheets and Workspace skills for sales teams, appointment setters and business development roles." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview.jpg" name="twitter:image"/><meta content="Google Workspace &amp; Sheets for Sales Teams" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/google-workspace-for-sales/#webpage","url":"https://letsortitout.com.au/google-workspace-for-sales/","name":"Google Workspace & Sheets for Sales Teams","description":"A five-level walkthrough of Google Sheets and Workspace skills for sales teams, appointment setters and business development roles.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/google-workspace-for-sales/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"Free Tools","item":"https://letsortitout.com.au/free-tools/"},{"@type":"ListItem","position":3,"name":"Google Workspace for Sales","item":"https://letsortitout.com.au/google-workspace-for-sales/"}]}]}</script><script src="../assets/analytics.js"></script><script src="../assets/launch-banner.js?v=20260801-copy"></script><link href="/assets/auth.css?v=20260801-auth" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#guide">Skip to guide</a>
+<header class="app-header">
+<a class="brand" href="../free-tools/"><strong>LET’S SORT IT OUT</strong><span>FREE TOOLS</span></a>
+<button class="quiet-action" id="save-exit" type="button">Save &amp; Exit</button>
+</header>
+<main class="guide-shell" id="guide">
+<section class="panel intro-panel" id="intro">
+<p class="step-label">Interactive guide · 5 levels</p>
+<h1>Google Workspace &amp; Sheets for sales</h1>
+<p>A guided walkthrough built for business development, appointment setting and sales/marketing roles who live in a spreadsheet and a shared inbox all day. Five levels, each with a ready-to-use Gemini prompt.</p>
+<div class="boundary-note"><strong>Built for you if</strong><p>You're tracking leads, chasing follow-ups, booking appointments, reporting on pipeline, or sending outreach—and Sheets, Gmail or Calendar is where most of that happens.</p></div>
+<button class="button primary" id="start-guide" type="button">Start the guide</button>
+<button class="button secondary hidden" id="resume-guide" type="button">Continue saved guide</button>
+</section>
+<section aria-live="polite" class="panel hidden" id="question-view">
+<div class="progress-row"><span id="progress-label">Question 1 of 1</span><span id="saved-label">Saved on this device</span></div>
+<div aria-hidden="true" class="progress-track"><span id="progress-bar"></span></div>
+<p class="step-label" id="question-kicker">Before we start</p>
+<h2 id="question-title"></h2>
+<p class="question-help" id="question-help"></p>
+<div class="answer-list" id="answer-list"></div>
+<div class="nav-actions"><button class="button secondary" id="back-button" type="button">Back</button><button class="button primary hidden" id="continue-button" type="button">Continue</button></div>
+</section>
+<section aria-live="polite" class="panel hidden" id="level-view">
+<div class="progress-row"><span id="level-progress-label">Level 1 of 5</span><span id="level-saved-label">Saved on this device</span></div>
+<div aria-hidden="true" class="progress-track"><span id="level-progress-bar"></span></div>
+<span class="level-tag" id="level-tag"></span>
+<h2 id="level-title"></h2>
+<p class="question-help" id="level-subtitle"></p>
+<h4 style="font-family:Antonio,sans-serif;text-transform:uppercase;font-size:.8rem;color:var(--rust);margin:22px 0 8px;">What to learn</h4>
+<ul id="level-learn" style="padding-left:20px;font-size:.92rem;"></ul>
+<h4 style="font-family:Antonio,sans-serif;text-transform:uppercase;font-size:.8rem;color:var(--rust);margin:18px 0 8px;">Why it matters</h4>
+<p id="level-why" style="font-size:.9rem;color:rgba(45,50,48,.78);"></p>
+<div class="gemini-box"><div class="label">✦ Try this in Gemini</div><p id="level-prompt"></p><button class="copy-button" data-copy="level-prompt" type="button">Copy prompt</button></div>
+<div class="nav-actions"><button class="button secondary" id="level-back-button" type="button">Back</button><button class="button primary" id="level-continue-button" type="button">Continue</button></div>
+</section>
+<section class="panel result-panel hidden" id="result-view">
+<div class="result-heading"><div><p class="step-label">Guide complete</p><h2>You&#8217;ve done the walkthrough</h2></div><button class="quiet-action dark" id="edit-answers" type="button">Start over</button></div>
+<p class="result-summary" id="result-summary"></p>
+<article class="opening-card"><span>Well done</span><blockquote>Five levels, five practical skills, five prompts ready to use. Bookmark this page—it&#8217;s worth coming back to as you get more comfortable.</blockquote></article>
+<div class="all-prompts" id="all-prompts">
+<h3>All five Gemini prompts, in one place</h3>
+</div>
+<div class="result-actions"><button class="button primary" id="copy-plan" type="button">Copy all prompts</button><button class="button secondary" id="restart-guide" type="button">Start again</button></div>
+<div class="result-connect"><strong>Want this built into a proper working sheet for your team?</strong><p>This gives you the skills. If you want it set up properly for your actual pipeline, tell me what you're dealing with.</p><a href="../implementation-support/">See support options →</a></div>
+<p class="saved-foot">Saved on this device. Practical general guidance only.</p>
+</section>
+</main>
+<dialog id="clear-dialog"><h2>Clear your progress?</h2><p>This removes the saved guide from this device.</p><div><button class="button primary" id="confirm-clear" type="button">Clear progress</button><button class="button secondary" id="cancel-clear" type="button">Keep it</button></div></dialog>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<footer class="mini-footer"><span>© 2026 Let&#8217;s Sort It Out</span><div class="links"><a href="../people-hub/">People Hub</a><a href="../free-tools/">Free Tools</a><a href="../privacy/">Privacy Policy</a></div></footer>
+<script src="guide.js"></script>
+<script src="/assets/auth.js?v=20260801-auth2" type="module"></script></body>
+</html>

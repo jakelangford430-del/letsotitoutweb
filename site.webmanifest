@@ -1,0 +1,16 @@
+{
+  "name": "Let's Sort It Out",
+  "short_name": "Sort It Out",
+  "description": "Free practical tools for Australian small and medium businesses.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f1e5",
+  "theme_color": "#142019",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

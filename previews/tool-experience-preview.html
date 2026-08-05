@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Preview concept for the Let's Sort It Out tool discovery experience, written for Australian businesses in plain English.">
+  <title>Tool Experience Preview | Let's Sort It Out</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #111813;
+      --olive: #2c3e2d;
+      --sage: #6b7f5e;
+      --charcoal: #2d3230;
+      --white: #faf8f5;
+      --cream: #f5f0e6;
+      --rust: #d4712a;
+      --blue: #315d68;
+      --border: rgba(44, 62, 45, 0.18);
+      --soft: rgba(107, 127, 94, 0.13);
+      --container: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--charcoal);
+      font-family: Inter, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    h1, h2, h3, .brand, .button, .label {
+      font-family: Antonio, "Arial Narrow", sans-serif;
+      text-transform: uppercase;
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 720px; margin-bottom: 18px; color: var(--forest); font-size: clamp(3.2rem, 7vw, 6.8rem); }
+    h2 { margin-bottom: 14px; color: var(--forest); font-size: clamp(2rem, 4vw, 3.4rem); }
+    h3 { margin-bottom: 8px; color: var(--forest); font-size: 1.45rem; }
+    a { color: inherit; }
+    button { font: inherit; }
+    .container { width: min(var(--container), calc(100% - 40px)); margin-inline: auto; }
+    .site-header {
+      background: var(--forest);
+      color: var(--white);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .header-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .brand {
+      color: var(--white);
+      font-size: 1.65rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: rgba(250, 248, 245, 0.76);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+    .nav a { text-decoration: none; }
+    .hero {
+      padding: 64px 0 34px;
+      background:
+        linear-gradient(90deg, var(--white) 0%, var(--white) 58%, rgba(49, 93, 104, 0.1) 58%, rgba(49, 93, 104, 0.1) 100%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(330px, 430px);
+      gap: 46px;
+      align-items: center;
+    }
+    .hero p {
+      max-width: 650px;
+      color: #5b645f;
+      font-size: 1.08rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid transparent;
+      border-radius: 3px;
+      padding: 0 22px;
+      background: var(--rust);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .button.secondary {
+      background: transparent;
+      color: var(--olive);
+      border-color: var(--olive);
+    }
+    .visual-panel {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 20px 58px rgba(17, 24, 19, 0.16);
+    }
+    .visual-panel img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+    .visual-body {
+      padding: 22px;
+    }
+    .visual-body strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--forest);
+      font: 700 1.45rem Antonio, "Arial Narrow", sans-serif;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .visual-body p {
+      margin: 0;
+      color: #5b645f;
+      font-size: 0.92rem;
+    }
+    .filter-bar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      border-block: 1px solid var(--border);
+      background: rgba(250, 248, 245, 0.94);
+      backdrop-filter: blur(12px);
+    }
+    .filters {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+    .filter {
+      min-height: 42px;
+      flex: 0 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0 14px;
+      background: #fff;
+      color: var(--olive);
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .filter.active {
+      background: var(--olive);
+      color: #fff;
+      border-color: var(--olive);
+    }
+    .tool-section {
+      padding: 58px 0 70px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+    .section-head p {
+      max-width: 570px;
+      margin-bottom: 0;
+      color: #5b645f;
+    }
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .tool-card {
+      display: flex;
+      min-height: 100%;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+    .tool-card[data-theme="people"] { border-top: 5px solid var(--blue); }
+    .tool-card[data-theme="ai"] { border-top: 5px solid var(--sage); }
+    .tool-card[data-theme="ops"] { border-top: 5px solid var(--rust); }
+    .tool-main {
+      padding: 22px;
+      flex: 1;
+    }
+    .tool-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .tool-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border-radius: 3px;
+      padding: 0 8px;
+      background: var(--soft);
+      color: var(--olive);
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+    .tool-card p {
+      color: #5d6660;
+      font-size: 0.92rem;
+    }
+    .sample {
+      margin-top: 18px;
+      padding: 14px;
+      border-left: 3px solid var(--rust);
+      background: #f7f5ef;
+      color: #39413d;
+      font-size: 0.86rem;
+    }
+    .tool-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--border);
+    }
+    .tool-actions button,
+    .tool-actions a {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      background: #fff;
+      color: var(--olive);
+      font-weight: 900;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .tool-actions a {
+      background: var(--forest);
+      color: #fff;
+    }
+    .preview-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 26px;
+      margin-top: 22px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      background: var(--forest);
+      color: var(--white);
+    }
+    .preview-panel[hidden] { display: none; }
+    .preview-panel h3 { color: #fff; }
+    .preview-panel p { color: rgba(250, 248, 245, 0.76); }
+    .preview-list {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .preview-list li {
+      padding: 11px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(250, 248, 245, 0.86);
+    }
+    .seo-box {
+      border-radius: 6px;
+      padding: 18px;
+      background: #fff;
+      color: var(--charcoal);
+    }
+    .seo-box span {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--rust);
+      font: 700 0.78rem Antonio, "Arial Narrow", sans-serif;
+      text-transform: uppercase;
+    }
+    .seo-box strong {
+      display: block;
+      color: var(--forest);
+      line-height: 1.2;
+    }
+    .seo-box p {
+      margin: 10px 0 0;
+      color: #5d6660;
+      font-size: 0.88rem;
+    }
+    .advanced {
+      padding: 70px 0;
+      background: var(--cream);
+    }
+    .advanced-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .complex-tool {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+    .complex-top {
+      padding: 20px;
+      background: var(--forest);
+      color: var(--white);
+    }
+    .complex-top h3 {
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .complex-top p {
+      margin: 0;
+      color: rgba(250, 248, 245, 0.72);
+      font-size: 0.9rem;
+    }
+    .question-row {
+      display: grid;
+      gap: 12px;
+      padding: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .question-row strong {
+      color: var(--forest);
+      font-weight: 800;
+    }
+    .choice-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .mini-choice {
+      min-height: 46px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: #fff;
+      color: var(--charcoal);
+      font-size: 0.85rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .mini-choice.selected {
+      background: var(--rust);
+      color: #fff;
+      border-color: var(--rust);
+    }
+    .result-card {
+      margin: 20px;
+      padding: 18px;
+      border-radius: 6px;
+      background: #f7f5ef;
+    }
+    .result-card strong {
+      display: block;
+      color: var(--forest);
+      font: 700 1.55rem Antonio, "Arial Narrow", sans-serif;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .result-card ol {
+      margin: 14px 0 0;
+      padding-left: 18px;
+    }
+    .side-notes {
+      display: grid;
+      gap: 14px;
+    }
+    .note {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      background: #fff;
+    }
+    .note strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--forest);
+      font: 700 1.25rem Antonio, "Arial Narrow", sans-serif;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .note p {
+      margin: 0;
+      color: #5d6660;
+      font-size: 0.92rem;
+    }
+    .footer {
+      padding: 28px 0;
+      background: var(--forest);
+      color: rgba(250, 248, 245, 0.68);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 940px) {
+      .hero { background: var(--white); }
+      .hero-grid,
+      .advanced-grid,
+      .preview-panel {
+        grid-template-columns: 1fr;
+      }
+      .tool-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .section-head {
+        display: block;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(var(--container), calc(100% - 28px)); }
+      .nav { display: none; }
+      .hero { padding-top: 44px; }
+      h1 { font-size: 3.4rem; }
+      .tool-grid,
+      .choice-row {
+        grid-template-columns: 1fr;
+      }
+      .tool-actions {
+        grid-template-columns: 1fr;
+      }
+      .visual-panel img {
+        height: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">LET'S SORT IT OUT</a>
+      <nav class="nav" aria-label="Preview navigation">
+        <a href="#tools">Tool previews</a>
+        <a href="#advanced">Business Sort-Out Map</a>
+        <a href="../IMPLEMENTATION_PLAN.md">Implementation plan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Choose the right tool without guessing.</h1>
+          <p>Plain-English previews for Australian businesses. See what each tool does, what you get, how long it takes and whether it suits the problem in front of you.</p>
+          <div class="hero-actions">
+            <a class="button" href="#tools">Preview the tools</a>
+            <a class="button secondary" href="#advanced">See the advanced tool</a>
+          </div>
+        </div>
+        <aside class="visual-panel" aria-label="Preview summary">
+          <img src="../assets/social-preview-tools.jpg" alt="Let's Sort It Out tool preview artwork">
+          <div class="visual-body">
+            <strong>Low clicks. Clear outcomes.</strong>
+            <p>Each preview shows the real result style before someone opens the tool. No jargon. No mystery workflow.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="filter-bar">
+      <div class="container filters" aria-label="Outcome filters">
+        <button class="filter active" type="button" data-filter="all">Show all</button>
+        <button class="filter" type="button" data-filter="ops">Save time</button>
+        <button class="filter" type="button" data-filter="customer">Customer journey</button>
+        <button class="filter" type="button" data-filter="people">People Hub</button>
+        <button class="filter" type="button" data-filter="ai">AI</button>
+      </div>
+    </div>
+
+    <section class="tool-section" id="tools">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Tool previews</h2>
+            <p>Short cards, real sample outputs and a direct start button. Users can scan quickly or open a preview before committing.</p>
+          </div>
+        </div>
+
+        <div class="tool-grid" id="tool-grid">
+          <article class="tool-card" data-theme="ops" data-category="ops">
+            <div class="tool-main">
+              <div class="tool-meta"><span>5-8 minutes</span><span>Admin</span><span>Australian business</span></div>
+              <h3>Automation Opportunity Finder</h3>
+              <p>Best for a repeat task that might be worth automating, simplifying or keeping human.</p>
+              <div class="sample">Sample: Worth a small controlled test. Map the trigger, owner, exception path and human check before building anything.</div>
+            </div>
+            <div class="tool-actions">
+              <button type="button" data-preview="automation">Preview</button>
+              <a href="../automation-opportunity-finder/">Start tool</a>
+            </div>
+          </article>
+
+          <article class="tool-card" data-theme="ops" data-category="customer">
+            <div class="tool-main">
+              <div class="tool-meta"><span>10 minutes</span><span>Customer journey</span><span>Lead leakage</span></div>
+              <h3>Online Presence Audit</h3>
+              <p>Best for checking whether customers can find, trust and contact the business without friction.</p>
+              <div class="sample">Sample: Fix the enquiry path first. Your Google profile and website need one clear action and a faster response habit.</div>
+            </div>
+            <div class="tool-actions">
+              <button type="button" data-preview="journey">Preview</button>
+              <a href="../customer-journey-check/">Start tool</a>
+            </div>
+          </article>
+
+          <article class="tool-card" data-theme="ai" data-category="ai">
+            <div class="tool-main">
+              <div class="tool-meta"><span>5-12 minutes</span><span>AI</span><span>Voice setup</span></div>
+              <h3>AI Prompt Builder</h3>
+              <p>Best for choosing a sensible AI platform, building prompts and locking in the business voice.</p>
+              <div class="sample">Sample: Use this business voice. Sound direct, useful and human. Use Australian English. Avoid hype and vague claims.</div>
+            </div>
+            <div class="tool-actions">
+              <button type="button" data-preview="ai">Preview</button>
+              <a href="../ai-guide/">Start tool</a>
+            </div>
+          </article>
+
+          <article class="tool-card" data-theme="people" data-category="people">
+            <div class="tool-main">
+              <div class="tool-meta"><span>7-10 minutes</span><span>People Hub</span><span>HR prep</span></div>
+              <h3>Performance Conversation Builder</h3>
+              <p>Best for a workplace issue that needs a fair conversation, clear actions and a simple record.</p>
+              <div class="sample">Sample: Use facts, not a character assessment. Agree what changes, who owns it and when you will check back.</div>
+            </div>
+            <div class="tool-actions">
+              <button type="button" data-preview="people">Preview</button>
+              <a href="../people-hub/difficult-conversation/">Start guide</a>
+            </div>
+          </article>
+
+          <article class="tool-card" data-theme="ops" data-category="ops">
+            <div class="tool-main">
+              <div class="tool-meta"><span>6-9 minutes</span><span>Priority</span><span>Process</span></div>
+              <h3>Workflow Order</h3>
+              <p>Best for working out which broken process deserves attention first.</p>
+              <div class="sample">Sample: Fix customer follow-up first. Do not replace software until the process and owner are clear.</div>
+            </div>
+            <div class="tool-actions">
+              <button type="button" data-preview="workflow">Preview</button>
+              <a href="../workflow-order/">Start tool</a>
+            </div>
+          </article>
+
+          <article class="tool-card" data-theme="ops" data-category="ops">
+            <div class="tool-main">
+              <div class="tool-meta"><span>8-12 minutes</span><span>Advanced</span><span>Business map</span></div>
+              <h3>Business Sort-Out Map</h3>
+              <p>Best for a business that has too many problems and needs a realistic order of attack.</p>
+              <div class="sample">Sample: Your biggest bottleneck is enquiry ownership. Fix the customer handoff before touching anything else.</div>
+            </div>
+            <div class="tool-actions">
+              <button type="button" data-preview="sortout">Preview</button>
+              <a href="#advanced">View concept</a>
+            </div>
+          </article>
+        </div>
+
+        <section class="preview-panel" id="preview-panel" hidden aria-live="polite">
+          <div>
+            <h3 id="preview-title">Automation Opportunity Finder</h3>
+            <p id="preview-copy">This tool checks one real task and tells the user whether to automate, simplify, assist or leave it alone.</p>
+            <ul class="preview-list" id="preview-list"></ul>
+          </div>
+          <aside class="seo-box">
+            <span>SEO preview</span>
+            <strong id="seo-title">Automation Opportunity Finder For Australian Small Business</strong>
+            <p id="seo-copy">Check whether a repeated admin task should be automated, simplified, kept human or left alone.</p>
+          </aside>
+        </section>
+      </div>
+    </section>
+
+    <section class="advanced" id="advanced">
+      <div class="container advanced-grid">
+        <div>
+          <h2>Business Sort-Out Map</h2>
+          <p>A more advanced business tool that still feels simple. It asks guided questions across customers, admin, people, systems, money and risk, then gives one realistic order of attack.</p>
+          <div class="side-notes">
+            <div class="note">
+              <strong>Built for real businesses</strong>
+              <p>Uses Australian examples, plain English and practical limits. It gives a starting point, not fake certainty.</p>
+            </div>
+            <div class="note">
+              <strong>Useful for learning</strong>
+              <p>Different confidence levels can use it. Fast users can skip detail. Newer users get examples as they go.</p>
+            </div>
+            <div class="note">
+              <strong>Good business value</strong>
+              <p>It becomes the front door when someone knows the business feels messy but does not know which tool to open first.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="complex-tool">
+          <div class="complex-top">
+            <h3>What is making the business harder?</h3>
+            <p>Choose the closest answer. You can add detail later if it helps.</p>
+          </div>
+          <div class="question-row">
+            <strong>Where is the biggest pain right now?</strong>
+            <div class="choice-row">
+              <button class="mini-choice selected" type="button">Customers chase us</button>
+              <button class="mini-choice" type="button">Admin is doubled up</button>
+              <button class="mini-choice" type="button">People do it differently</button>
+              <button class="mini-choice" type="button">Software is messy</button>
+            </div>
+          </div>
+          <div class="question-row">
+            <strong>What would make the next 30 days better?</strong>
+            <div class="choice-row">
+              <button class="mini-choice selected" type="button">Fewer missed enquiries</button>
+              <button class="mini-choice" type="button">Less manual copying</button>
+              <button class="mini-choice" type="button">Clearer handovers</button>
+              <button class="mini-choice" type="button">Better visibility</button>
+            </div>
+          </div>
+          <div class="result-card">
+            <strong>Fix customer follow-up first.</strong>
+            <p>Your answers point to lost enquiries and unclear ownership as the biggest leak. Do not start by replacing software.</p>
+            <ol>
+              <li>Write down every enquiry source.</li>
+              <li>Choose one place where new enquiries are recorded.</li>
+              <li>Set a same-day follow-up rule.</li>
+              <li>Check whether a current tool can send the reminder.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Preview concept only. Final build should reuse the live site code, SEO rules and member-save layer.</div>
+  </footer>
+
+  <script>
+    const previews = {
+      automation: {
+        title: 'Automation Opportunity Finder',
+        copy: 'Checks one repeatable task and gives a realistic call: automate, pilot, simplify, assist or leave it alone.',
+        seoTitle: 'Automation Opportunity Finder For Australian Small Business',
+        seoCopy: 'Check whether a repeated admin task should be automated, simplified, kept human or left alone.',
+        bullets: ['Best for repeat admin work', 'Shows risk and human-check points', 'Ends with a first action plan']
+      },
+      journey: {
+        title: 'Online Presence Audit',
+        copy: 'Checks whether customers can find, understand and contact a business without hitting avoidable friction.',
+        seoTitle: 'Online Presence Audit For Australian Small Business',
+        seoCopy: 'Find practical gaps that stop customers from enquiring, calling or trusting your business online.',
+        bullets: ['Best for local service businesses', 'Shows lead leakage risk', 'Ends with a 48-hour fix list']
+      },
+      ai: {
+        title: 'AI Prompt Builder',
+        copy: 'Helps users choose a sensible AI platform, build prompts and lock in the business tone of voice.',
+        seoTitle: 'AI Prompt Builder For Australian Small Business',
+        seoCopy: 'Build useful AI prompts, choose the right platform and create a reusable business voice in Australian English.',
+        bullets: ['Best for low-risk repeat tasks', 'Includes platform guidance', 'Creates a reusable business voice']
+      },
+      people: {
+        title: 'People Hub Guide',
+        copy: 'Keeps workplace conversations calm, practical and separate from the operations tools.',
+        seoTitle: 'Workplace Conversation Tools For Australian Small Business',
+        seoCopy: 'Prepare practical one-on-one, feedback and performance conversations with clear follow-up notes.',
+        bullets: ['Best for managers and employees', 'Includes documentation prompts', 'Escalates serious HR risks']
+      },
+      workflow: {
+        title: 'Workflow Order',
+        copy: 'Helps a business stop trying to fix everything at once and choose the right first process.',
+        seoTitle: 'Workflow Prioritisation Tool For Australian Small Business',
+        seoCopy: 'Work out which broken workflow to fix first based on time, customer impact, risk and effort.',
+        bullets: ['Best for messy operations', 'Ranks top three priorities', 'Shows what not to touch yet']
+      },
+      sortout: {
+        title: 'Business Sort-Out Map',
+        copy: 'A more advanced tool that maps customer, admin, people, systems, money and risk issues into one order of attack.',
+        seoTitle: 'Business Bottleneck Mapper For Australian Small Business',
+        seoCopy: 'Find the biggest business bottleneck and get a realistic first action plan across customers, admin, people and systems.',
+        bullets: ['Best for unsure users', 'Works as the front door to all tools', 'Creates a 30-day order of attack']
+      }
+    };
+
+    const panel = document.getElementById('preview-panel');
+    const previewTitle = document.getElementById('preview-title');
+    const previewCopy = document.getElementById('preview-copy');
+    const previewList = document.getElementById('preview-list');
+    const seoTitle = document.getElementById('seo-title');
+    const seoCopy = document.getElementById('seo-copy');
+
+    document.querySelectorAll('[data-preview]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const preview = previews[button.dataset.preview];
+        previewTitle.textContent = preview.title;
+        previewCopy.textContent = preview.copy;
+        seoTitle.textContent = preview.seoTitle;
+        seoCopy.textContent = preview.seoCopy;
+        previewList.innerHTML = preview.bullets.map((item) => `<li>${item}</li>`).join('');
+        panel.hidden = false;
+        panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+
+    document.querySelectorAll('.filter').forEach((button) => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.filter').forEach((item) => item.classList.toggle('active', item === button));
+        const filter = button.dataset.filter;
+        document.querySelectorAll('.tool-card').forEach((card) => {
+          card.hidden = filter !== 'all' && card.dataset.category !== filter;
+        });
+      });
+    });
+
+    document.querySelectorAll('.mini-choice').forEach((button) => {
+      button.addEventListener('click', () => {
+        button.parentElement.querySelectorAll('.mini-choice').forEach((item) => item.classList.toggle('selected', item === button));
+      });
+    });
+  </script>
+</body>
+</html>

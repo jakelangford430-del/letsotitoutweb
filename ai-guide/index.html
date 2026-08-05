@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+
+<html lang="en-AU" class="auth-pending"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Use two free AI tools for Australian small business: build a practical prompt in four questions or create a reusable business voice in three." name="description"/>
+<meta content="#F5F0E6" name="theme-color"/>
+<title>AI Prompt Builder &amp; Business Voice Guide | Let’s Sort It Out</title>
+<!-- Shared homepage brand theme -->
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{--olive:#2C3E2D;--sage:#6B7F5E;--charcoal:#2D3230;--warm-white:#FAF8F5;--warm-cream:#F5F0E6;--sage-light:#e8ede4;}
+    body{font-family:'Inter',sans-serif;color:var(--charcoal);}
+    .font-antonio{font-family:'Antonio',sans-serif;font-weight:700;}
+    .card-option{transition:all 0.2s ease;border:2px solid transparent;}
+    .card-option:hover{border-color:var(--sage);transform:translateY(-2px);}
+    .card-option.selected{border-color:var(--sage);background:var(--warm-cream);}
+    .copy-btn.copied{background:var(--olive)!important;}
+    .fade-in{animation:fadeIn 0.4s ease forwards;opacity:0;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+    .stagger-1{animation-delay:0.05s;}.stagger-2{animation-delay:0.1s;}.stagger-3{animation-delay:0.15s;}.stagger-4{animation-delay:0.2s;}.stagger-5{animation-delay:0.25s;}.stagger-6{animation-delay:0.3s;}.stagger-7{animation-delay:0.35s;}
+    .pulse-once{animation:pulse 0.6s ease 0.3s 1;}
+    @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.03);}}
+    @media(max-width:640px){.card-option{min-height:56px;}}
+    .ai-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0 42px;}
+    .ai-level{padding:22px;border:1px solid rgba(45,50,48,.12);border-radius:18px;background:var(--warm-cream);}
+    .ai-level span{display:block;color:var(--olive);font:700 .72rem Antonio,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+    .ai-level h3{color:var(--charcoal);font-size:1.35rem;margin:0 0 10px;}
+    .ai-level p{color:var(--muted);font-size:.9rem;line-height:1.6;margin:0 0 12px;}
+    .ai-level ul{padding-left:18px;margin:0;color:var(--muted);font-size:.82rem;line-height:1.65;}
+    .ai-boundary{margin:0 0 34px;padding:18px 20px;border-left:3px solid var(--olive);border-radius:0 14px 14px 0;background:rgba(212,113,42,.08);color:var(--charcoal);}
+    .ai-boundary strong{display:block;color:var(--olive);margin-bottom:5px;}
+    @media(max-width:820px){.ai-levels{grid-template-columns:1fr;}}
+  </style>
+<link href="styles.css" rel="stylesheet"/>
+<link href="../assets/tailwind.css" rel="stylesheet"/>
+<link href="../assets/brand.css" rel="stylesheet"/>
+<link href="workspace-v2.css?v=20260801-ai-tools" rel="stylesheet"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/ai-guide/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="AI Prompt Builder &amp; Business Voice Guide | Let’s Sort It Out" property="og:title"/><meta content="Use two free AI tools for Australian small business: build a practical prompt in four questions or create a reusable business voice in three." property="og:description"/><meta content="https://letsortitout.com.au/ai-guide/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="AI Prompt Builder &amp; Business Voice Guide | Let’s Sort It Out" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="AI Prompt Builder &amp; Business Voice Guide | Let’s Sort It Out" name="twitter:title"/><meta content="Use two free AI tools for Australian small business: build a practical prompt in four questions or create a reusable business voice in three." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" name="twitter:image"/><meta content="AI Prompt Builder &amp; Business Voice Guide | Let’s Sort It Out" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/ai-guide/#webpage","url":"https://letsortitout.com.au/ai-guide/","name":"AI Prompt Builder & Business Voice Guide","description":"Build a practical AI prompt in four questions or create a reusable business voice in three for Australian small-business work.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/ai-guide/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"AI Guide","item":"https://letsortitout.com.au/ai-guide/"}]},{"@type":"SoftwareApplication","name":"AI Prompt Builder & Business Voice Guide","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://letsortitout.com.au/ai-guide/","description":"A free AI Prompt Builder and Business Voice tool for Australian small businesses.","offers":{"@type":"Offer","price":"0","priceCurrency":"AUD"}}]}</script><script src="../assets/analytics.js"></script><script src="../assets/launch-banner.js?v=20260801-copy"></script><link href="/assets/auth.css?v=20260801-auth" rel="stylesheet"/></head>
+<body class="min-h-screen jj-site" data-template-id="__page-root">
+<nav class="sticky top-0 z-50 w-full bg-[#142019]/95 text-[#F7F1E5] backdrop-blur-md border-b border-white/10">
+<div class="max-w-[1180px] mx-auto px-6 h-16 flex items-center justify-between gap-4">
+<a class="font-bold text-xl sm:text-2xl tracking-widest uppercase whitespace-nowrap hover:text-[#D4712A] transition-colors" href="../">
+      LET’S SORT IT OUT<span class="text-[#D4712A]">.</span>
+</a>
+<div class="hidden lg:flex items-center gap-1">
+<a class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="../what-we-sort-out/">What We Sort Out</a>
+<a class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="../free-tools/">Free Tools</a>
+<a class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="../learning-hub/">Learning Hub</a>
+<a class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="../people-hub/">People Hub</a>
+<a class="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="../implementation-support/">Implementation Support</a>
+</div>
+<a class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-[#F7F1E5] text-[#2C3E2D] text-[10px] sm:text-xs font-bold uppercase tracking-wider hover:bg-[#D4712A] hover:text-white transition-colors whitespace-nowrap" href="https://tally.so/r/Bz5xN7">
+      Review My Business
+    </a>
+</div>
+<div class="lg:hidden border-t border-white/10 overflow-x-auto">
+<div class="max-w-[1180px] mx-auto px-4 py-2 flex items-center gap-1 min-w-max">
+<a class="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-white/70 hover:text-white" href="../what-we-sort-out/">What We Sort Out</a>
+<a class="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-white/70 hover:text-white" href="../free-tools/">Free Tools</a>
+<a class="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-white/70 hover:text-white" href="../learning-hub/">Learning Hub</a>
+<a class="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-white/70 hover:text-white" href="../people-hub/">People Hub</a>
+<a class="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-white/70 hover:text-white" href="../implementation-support/">Implementation Support</a>
+</div>
+</div>
+</nav>
+<header class="ai-tools-home" id="welcome-section">
+<div class="ai-tools-home__grid">
+<section class="ai-tools-home__choices" aria-labelledby="ai-tools-title">
+<h1 data-template-id="hero-title" id="ai-tools-title">Make AI useful at work.</h1>
+<p class="ai-tools-home__intro" data-template-id="hero-subtitle">Choose one tool. Get a result you can use today.</p>
+<div class="ai-tool-choice-list">
+<article class="ai-tool-choice ai-tool-choice--active">
+<div class="ai-tool-choice__icon" aria-hidden="true"><i data-lucide="file-text"></i></div>
+<div class="ai-tool-choice__copy"><h2>Build a prompt</h2><p>Answer four short questions. Get three prompts ready to paste into your AI tool.</p></div>
+<button class="ai-action-button" data-template-id="start-btn" onclick="startGuide()" type="button">Build my prompt <i aria-hidden="true" data-lucide="arrow-right"></i></button>
+</article>
+<article class="ai-tool-choice">
+<div class="ai-tool-choice__icon ai-tool-choice__icon--sage" aria-hidden="true"><i data-lucide="messages-square"></i></div>
+<div class="ai-tool-choice__copy"><h2>Set my business voice</h2><p>Lock in how your business should sound. Save it and use it in every prompt.</p></div>
+<button class="ai-action-button" onclick="startVoiceBuilder()" type="button">Build my voice <i aria-hidden="true" data-lucide="arrow-right"></i></button>
+</article>
+</div>
+<button class="ai-guide-link" onclick="switchTab('kb')" type="button">Need the basics first? Read the AI guide</button>
+</section>
+<aside aria-label="Example of a finished prompt" class="ai-result-preview">
+<div class="ai-result-preview__head"><span>Your result</span><div><button aria-label="Copy example prompt" onclick="copyPreviewPrompt(this)" type="button"><i aria-hidden="true" data-lucide="copy"></i> Copy</button><button aria-label="Save example prompt on this device" onclick="savePreviewPrompt(this)" type="button"><i aria-hidden="true" data-lucide="bookmark"></i> Save</button></div></div>
+<h2>Ready-to-use prompt</h2>
+<pre id="example-prompt">Act as a practical operations adviser for a small Australian business.
+
+Goal:
+Help me improve our onboarding process so new starters get up to speed faster.
+
+Keep it plain, practical and suitable for people with mixed experience. Give me clear steps, owners and a sensible first action.</pre>
+<p class="ai-result-preview__note">Example only. Your result will match your work, audience and voice.</p>
+</aside>
+</div>
+<div class="ai-tools-steps" aria-label="How the tools work">
+<strong>Three simple steps</strong>
+<span><b>1</b> Choose a tool</span><span><b>2</b> Answer a few questions</span><span><b>3</b> Copy and use the result</span>
+</div>
+</header>
+<main aria-live="polite" class="hidden" id="main-container">
+<div class="workspace-mode-switch" aria-label="Choose AI tool">
+<button class="active" onclick="startGuide()" type="button"><i aria-hidden="true" data-lucide="file-text"></i> Prompt Builder</button>
+<button onclick="startVoiceBuilder()" type="button"><i aria-hidden="true" data-lucide="messages-square"></i> Business Voice</button>
+</div>
+<nav aria-label="Guide navigation" class="progress-shell mini-nav">
+<button class="mini-nav-action" id="back-btn" onclick="goBack()" type="button">← Back</button>
+<div aria-live="polite" class="mini-progress">
+<span id="step-summary">Question 1 of 4</span>
+<ol class="progress-list">
+<li class="progress-item active" data-progress="1"><span>1</span><b>Platform</b></li>
+<li class="progress-item" data-progress="2"><span>2</span><b>Voice</b></li>
+<li class="progress-item" data-progress="3"><span>3</span><b>Work</b></li>
+<li class="progress-item" data-progress="4"><span>4</span><b>Task</b></li>
+</ol>
+</div>
+<button class="mini-nav-action" onclick="resetAll()" type="button">Restart</button>
+</nav>
+<!-- Platform -->
+<section class="fade-in mb-12" id="platform-section">
+<h2 class="canva-text font-antonio text-2xl mb-6" data-template-id="platform-title" style="color: var(--olive); font-weight: 700; font-style: normal; font-size: 24px;">Which AI tool do you use?</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4" id="platform-grid">
+<button class="card-option rounded-xl p-5 text-left stagger-1 fade-in" data-value="chatgpt" onclick="selectPlatform(this)" style="background:white;"><span class="font-medium">ChatGPT</span><small>Good all-rounder for drafts, planning, summaries and reusable prompts.</small></button>
+<button class="card-option rounded-xl p-5 text-left stagger-2 fade-in" data-value="claude" onclick="selectPlatform(this)" style="background:white;"><span class="font-medium">Claude</span><small>Strong for longer documents, policies, training material and careful rewrites.</small></button>
+<button class="card-option rounded-xl p-5 text-left stagger-3 fade-in" data-value="gemini" onclick="selectPlatform(this)" style="background:white;"><span class="font-medium">Gemini</span><small>Useful if your work sits in Google Workspace, Gmail, Docs or Sheets.</small></button>
+<button class="card-option rounded-xl p-5 text-left stagger-4 fade-in" data-value="copilot" onclick="selectPlatform(this)" style="background:white;"><span class="font-medium">Copilot</span><small>Useful if your team works in Microsoft 365, Outlook, Word, Excel or Teams.</small></button>
+<button class="card-option rounded-xl p-5 text-left sm:col-span-2 stagger-5 fade-in" data-value="other" onclick="selectPlatform(this)" style="background:white;"><span class="font-medium">Not sure yet / something else</span><small>Still works. Use the prompts, then test which tool gives the cleanest result.</small></button>
+</div>
+<div class="platform-guidance"><strong>Platform tip</strong><p>Pick the AI tool your team is most likely to use. The best platform is usually the one already closest to your daily work, not the fanciest one on a list.</p></div>
+</section><!-- Experience -->
+<section class="hidden fade-in mb-12" id="experience-section">
+<h2 class="canva-text font-antonio text-2xl mb-6" data-template-id="exp-title" id="exp-title" style="color: var(--olive); font-weight: 700; font-style: normal; font-size: 24px;">Have you used ChatGPT before?</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4" id="exp-grid">
+<button class="card-option rounded-xl p-5 text-left stagger-1 fade-in" data-value="never" onclick="selectExperience(this)" style="background:white;"><span class="font-medium">No, never</span></button>
+<button class="card-option rounded-xl p-5 text-left stagger-2 fade-in" data-value="sometimes" onclick="selectExperience(this)" style="background:white;"><span class="font-medium">Yes, a little</span></button>
+<button class="card-option rounded-xl p-5 text-left stagger-3 fade-in" data-value="regular" onclick="selectExperience(this)" style="background:white;"><span class="font-medium">Yes, regularly</span></button>
+</div>
+</section><!-- Beginner -->
+<section class="hidden fade-in mb-12" id="beginner-section">
+<span class="section-kicker">Quick beginner setup</span>
+<h2 class="canva-text font-antonio text-2xl mb-4" data-template-id="beginner-title" id="beginner-title" style="color: var(--olive); font-weight: 700; font-style: normal; font-size: 24px;">Do you have a ChatGPT account?</h2>
+<div class="yes-no-grid">
+<button class="answer-button" onclick="answerAccountQuestion(true)" type="button">Yes</button>
+<button class="answer-button answer-button-outline" onclick="answerAccountQuestion(false)" type="button">No</button>
+</div>
+<details class="reveal-panel setup-reveal" id="account-setup">
+<summary>Show the two-minute setup</summary>
+<ol>
+<li id="account-setup-step1">Open ChatGPT and create a free account.</li>
+<li>Keep this guide open in another tab.</li>
+</ol>
+<div class="flex flex-col sm:flex-row gap-3">
+<a class="inline-block font-medium px-5 py-2 rounded-lg text-sm" id="open-tool-link" href="https://chatgpt.com" rel="noopener noreferrer" style="background:var(--sage);color:#ffffff;" target="_blank">Open ChatGPT</a>
+<button class="font-medium px-5 py-2 rounded-lg text-sm" onclick="showToneSelector()" style="background:var(--olive);color:#ffffff;" type="button">Done - choose my voice</button>
+</div>
+</details>
+</section><!-- Tone -->
+<section class="hidden fade-in mb-12" id="tone-section">
+<h2 class="canva-text font-antonio text-2xl mb-4" data-template-id="tone-title" style="color: var(--olive); font-weight: 700; font-style: normal; font-size: 24px;">Lock in your business voice</h2>
+<p class="text-sm mb-5" style="color:var(--muted);">Choose a quick voice for these prompts, or use the full business voice you have already saved.</p>
+<div class="saved-voice-option hidden" id="saved-voice-option">
+<div><strong>Use my saved business voice</strong><p id="saved-voice-summary">Your saved voice is ready.</p></div>
+<button onclick="useSavedBusinessVoice()" type="button">Use saved voice</button>
+</div>
+<p class="quick-choice-label">Or choose a quick voice</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6" id="tone-grid">
+<button class="card-option rounded-xl p-5 text-left" data-value="friendly and professional" onclick="selectTone(this)" style="background:white;"><span class="font-medium">Friendly and professional</span></button>
+<button class="card-option rounded-xl p-5 text-left" data-value="casual and local" onclick="selectTone(this)" style="background:white;"><span class="font-medium">Casual and local</span></button>
+<button class="card-option rounded-xl p-5 text-left sm:col-span-2" data-value="direct and no-fuss" onclick="selectTone(this)" style="background:white;"><span class="font-medium">Direct and no-fuss</span></button>
+<details class="reveal-panel choice-reveal sm:col-span-2">
+<summary>More voice choices</summary>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+<button class="card-option rounded-xl p-5 text-left" data-value="warm and helpful" onclick="selectTone(this)" style="background:white;"><span class="font-medium">Warm and helpful</span></button>
+<button class="card-option rounded-xl p-5 text-left" data-value="confident and sales-focused" onclick="selectTone(this)" style="background:white;"><span class="font-medium">Confident and sales-focused</span></button>
+</div>
+</details>
+</div>
+<div class="hidden" id="tone-prompt-box">
+<button class="font-medium px-5 py-3 rounded-lg text-sm" onclick="showPromptPicker()" style="background:var(--olive);color:#ffffff;">Continue to type of work →</button>
+<details class="reveal-panel mt-4">
+<summary>Preview or copy my voice setup</summary>
+<div class="p-4 rounded-lg my-3" style="background:var(--warm-cream);"><code class="text-sm whitespace-pre-wrap block" id="tone-prompt-text"></code></div>
+<button class="copy-btn font-medium px-5 py-2 rounded-lg text-sm" id="copy-tone-btn" onclick="copyTonePrompt(this)" style="background:var(--sage);color:#ffffff;">Copy voice setup</button>
+</details>
+</div>
+</section><!-- Prompt Picker -->
+<div class="hidden" id="prompt-picker">
+<!-- Industry -->
+<section class="fade-in mb-12" id="step-industry">
+<h2 class="canva-text font-antonio text-2xl mb-2" data-template-id="step1-title" style="color: var(--olive); font-weight: 700; font-style: normal; font-size: 24px;">What kind of work is this for?</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4" id="industry-grid">
+<button class="card-option rounded-xl p-5 text-left stagger-1 fade-in" data-value="Tradie" onclick="selectIndustry(this)" style="background:white;"><span class="font-medium block">Tradie (Plumbing, Electrical, etc.)</span></button>
+<button class="card-option rounded-xl p-5 text-left stagger-2 fade-in" data-value="Landscaping &amp; Lawn Care" onclick="selectIndustry(this)" style="background:white;"><span class="font-medium block">Landscaping &amp; Lawn Care</span></button>
+<button class="card-option rounded-xl p-5 text-left stagger-3 fade-in" data-value="Construction &amp; Building" onclick="selectIndustry(this)" style="background:white;"><span class="font-medium block">Construction &amp; Building</span></button>
+<button class="card-option rounded-xl p-5 text-left stagger-4 fade-in" data-value="Home Cleaning" onclick="selectIndustry(this)" style="background:white;"><span class="font-medium block">Home Cleaning &amp; Domestic</span></button>
+<button class="card-option rounded-xl p-5 text-left stagger-5 fade-in" data-value="Handyman &amp; Maintenance" onclick="selectIndustry(this)" style="background:white;"><span class="font-medium block">Handyman &amp; Maintenance</span></button>
+<button class="card-option rounded-xl p-5 text-left stagger-6 fade-in" data-value="Office Admin" onclick="selectIndustry(this)" style="background:white;"><span class="font-medium block">Office Admin &amp; Virtual Assistant</span></button>
+<button class="card-option rounded-xl p-5 text-left stagger-7 fade-in" data-value="Hospitality" onclick="selectIndustry(this)" style="background:white;"><span class="font-medium block">Hospitality (Cafes &amp; Dining)</span></button>
+<button class="card-option rounded-xl p-5 text-left stagger-8 fade-in" data-value="Payroll &amp; Accounting" onclick="selectIndustry(this)" style="background:white;"><span class="font-medium block">Payroll &amp; Accounting</span></button>
+<button class="card-option rounded-xl p-5 text-left sm:col-span-3 stagger-9 fade-in" data-value="Business in General" onclick="selectIndustry(this)" style="background:white;"><span class="font-medium block">Business in General</span></button>
+</div>
+<details class="reveal-panel mt-4"><summary>Not sure which one to choose?</summary><p>Pick the closest match. The prompt can still be edited before you use it.</p></details>
+</section><!-- Task -->
+<section class="hidden fade-in mb-12" id="step-task">
+<h2 class="canva-text font-antonio text-2xl mb-6" data-template-id="step2-title" style="color: var(--olive); font-weight: 700; font-style: normal; font-size: 24px;">What do you need help with?</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4" id="task-grid"></div>
+</section><!-- Results -->
+<section class="hidden fade-in mb-12" id="results-section">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+<h2 class="canva-text font-antonio text-2xl" data-template-id="results-title" id="results-title" style="color: var(--olive); font-weight: 700; font-style: normal; font-size: 24px;">Your AI prompts</h2>
+</div>
+<p class="canva-text text-sm mb-6 p-3 rounded-lg" data-template-id="results-tip" id="results-tip" style="background: var(--warm-cream); color: var(--charcoal); font-weight: 400; font-style: normal; font-size: 16px;">Replace anything inside [brackets] with your details before pasting a prompt into your AI tool.</p>
+<details class="reveal-panel result-help mb-6">
+<summary>How do I use these prompts?</summary>
+<ol class="implementation-plan">
+<li><strong>Pick one.</strong> Start with the most useful task.</li>
+<li><strong>Add context.</strong> Replace the bracketed fields. Do not paste sensitive data.</li>
+<li><strong>Refine it.</strong> Ask it to make the result shorter or clearer.</li>
+</ol>
+</details>
+<div class="space-y-5" id="prompts-container"></div>
+</section><!-- CTA -->
+<section class="feedback-section hidden fade-in text-center py-10 px-5 sm:px-8 rounded-2xl mb-12" id="cta-section" style="background:var(--warm-cream);">
+<span class="feedback-kicker">Prompts ready?</span>
+<h2 class="canva-text font-antonio text-2xl md:text-3xl mb-4" data-template-id="cta-title" style="color: var(--charcoal); font-weight: 700; font-style: normal; font-size: 24px;">Now make AI useful at work.</h2>
+<p class="canva-text mb-8" data-template-id="cta-text" style="color: var(--muted); font-weight: 400; font-style: normal; font-size: 16px;">This guide covers the foundations. I can also help you set up custom instructions, reusable prompts, inbox triage, content workflows and automations that connect AI with the systems you already use. In plain English: turning AI from a chat box into a proper work tool.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="canva-button font-antonio px-7 py-4 rounded-lg text-base sm:text-lg inline-block" data-template-id="feedback-btn" href="../implementation-support/" style="background: var(--charcoal); color: var(--warm-white); font-weight: 700; font-style: normal; font-size: 18px;">See AI implementation help →</a>
+<button class="feedback-secondary font-antonio px-7 py-4 rounded-lg text-base sm:text-lg" onclick="resetAll()" type="button">Build another prompt</button>
+</div>
+<small class="feedback-note">Have a real systems problem? Use the support page first, then book it in if it needs building.</small>
+</section>
+</div>
+</main>
+<main aria-live="polite" class="hidden" id="voice-container">
+<div class="workspace-mode-switch" aria-label="Choose AI tool">
+<button onclick="startGuide()" type="button"><i aria-hidden="true" data-lucide="file-text"></i> Prompt Builder</button>
+<button class="active" onclick="startVoiceBuilder()" type="button"><i aria-hidden="true" data-lucide="messages-square"></i> Business Voice</button>
+</div>
+<section class="voice-workspace">
+<div class="voice-builder-panel">
+<div class="voice-builder-heading">
+<div><h1>Build your business voice</h1><p>Answer three short questions. We will turn them into one voice guide you can reuse.</p></div>
+<button class="text-action" onclick="resetVoiceBuilder()" type="button">Start again</button>
+</div>
+<div class="voice-progress" aria-live="polite"><span id="voice-progress-label">Question 1 of 3</span><div aria-hidden="true"><i id="voice-progress-bar"></i></div></div>
+
+<section class="voice-step" id="voice-step-1" aria-labelledby="voice-question-1">
+<h2 id="voice-question-1">Who do you usually write for?</h2>
+<p>Pick the group that sees most of your emails, updates, instructions or website copy.</p>
+<div class="voice-choice-list" id="voice-audience-options">
+<button data-value="customers" onclick="selectVoiceAudience(this)" type="button"><span>Customers</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="staff" onclick="selectVoiceAudience(this)" type="button"><span>Staff</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="customers and staff" onclick="selectVoiceAudience(this)" type="button"><span>Customers and staff</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="customers, staff and business partners" onclick="selectVoiceAudience(this)" type="button"><span>A mix of people</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+</div>
+</section>
+
+<section class="voice-step hidden" id="voice-step-2" aria-labelledby="voice-question-2">
+<h2 id="voice-question-2">How should the business sound?</h2>
+<p>Choose the closest fit. The final guide will still keep the writing clear and natural.</p>
+<div class="voice-choice-list" id="voice-style-options">
+<button data-value="direct, clear and no-fuss" onclick="selectVoiceStyle(this)" type="button"><span>Direct and no-fuss</span><small>Short, straight and useful.</small><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="friendly, professional and down to earth" onclick="selectVoiceStyle(this)" type="button"><span>Friendly and professional</span><small>Human without becoming casual.</small><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="warm, patient and helpful" onclick="selectVoiceStyle(this)" type="button"><span>Warm and helpful</span><small>Supportive without overdoing it.</small><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="calm, confident and reassuring" onclick="selectVoiceStyle(this)" type="button"><span>Calm and confident</span><small>Steady, clear and credible.</small><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+</div>
+<button class="voice-back" onclick="setVoiceStep(1)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button>
+</section>
+
+<section class="voice-step hidden" id="voice-step-3" aria-labelledby="voice-question-3">
+<h2 id="voice-question-3">What should AI leave out?</h2>
+<p>The common troublemakers are already selected. Turn off anything that does not suit your business.</p>
+<div class="voice-rule-grid" id="voice-avoid-options">
+<button aria-pressed="true" class="selected" data-value="corporate jargon and complicated words" onclick="toggleVoiceRule(this)" type="button"><i aria-hidden="true" data-lucide="check"></i> Corporate jargon</button>
+<button aria-pressed="true" class="selected" data-value="fake excitement, hype and vague claims" onclick="toggleVoiceRule(this)" type="button"><i aria-hidden="true" data-lucide="check"></i> Hype and vague claims</button>
+<button aria-pressed="true" class="selected" data-value="pushy sales language or pressure" onclick="toggleVoiceRule(this)" type="button"><i aria-hidden="true" data-lucide="check"></i> Pushy sales talk</button>
+<button aria-pressed="true" class="selected" data-value="long introductions that delay the useful answer" onclick="toggleVoiceRule(this)" type="button"><i aria-hidden="true" data-lucide="check"></i> Long introductions</button>
+</div>
+<div class="voice-step-actions"><button class="voice-back" onclick="setVoiceStep(2)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button><button class="ai-action-button" onclick="finishVoiceBuilder()" type="button">Build my voice <i aria-hidden="true" data-lucide="arrow-right"></i></button></div>
+</section>
+</div>
+
+<aside class="voice-result-panel" aria-labelledby="voice-result-title">
+<div class="voice-result-panel__head"><span>What you will get</span><p>Updates as you answer.</p></div>
+<div class="voice-result-sheet">
+<h2 id="voice-result-title">Your business voice</h2>
+<div class="voice-result-row"><i aria-hidden="true" data-lucide="volume-2"></i><div><strong>Sound like</strong><p id="voice-preview-style">Friendly, clear and down to earth.</p></div></div>
+<div class="voice-result-row"><i aria-hidden="true" data-lucide="check"></i><div><strong>Always do</strong><p>Use Australian English. Keep sentences clear. Make the next action obvious.</p></div></div>
+<div class="voice-result-row"><i aria-hidden="true" data-lucide="x"></i><div><strong>Avoid</strong><p id="voice-preview-avoid">Jargon, hype, hard-sell language and long introductions.</p></div></div>
+<div class="voice-result-row"><i aria-hidden="true" data-lucide="users"></i><div><strong>Write for</strong><p id="voice-preview-audience">Your customers, staff or business partners.</p></div></div>
+<div class="voice-result-actions"><button onclick="copyBusinessVoice(this)" type="button"><i aria-hidden="true" data-lucide="copy"></i> Copy voice</button><button onclick="saveBusinessVoice(this)" type="button"><i aria-hidden="true" data-lucide="bookmark"></i> Save voice</button></div>
+</div>
+<p class="voice-result-note" id="voice-save-status">Saved voices stay on this device. Check any legal, workplace, safety, tax or compliance content against a current Australian source.</p>
+<pre class="sr-only" id="business-voice-output"></pre>
+</aside>
+</section>
+</main>
+<main aria-live="polite" class="hidden" id="kb-container">
+<div class="kb-header">
+<span class="section-kicker">Business + AI Guide</span>
+<h2 class="canva-text font-antonio text-4xl mb-4" style="color: var(--olive); font-weight: 700; text-transform: uppercase;">The Small Business AI Knowledge Base</h2>
+<p>Prompting is only the starting point. Use these guides to get better answers, protect sensitive information and build useful habits. Projects, custom workflows and automation are the next layer when you are ready to go deeper.</p>
+</div>
+<section aria-labelledby="ai-understanding-title">
+<h3 class="canva-text font-antonio text-3xl mb-3" id="ai-understanding-title" style="color: var(--olive);">Understand AI before you rely on it</h3>
+<p class="max-w-3xl" style="color:var(--muted);">You do not need a computer science degree. You do need to know what AI is good at, where it makes things up and where a person still needs to make the call.</p>
+<div class="ai-levels">
+<article class="ai-level">
+<span>Level 1 · New to AI</span>
+<h3>What AI actually is</h3>
+<p>AI generates a likely response from patterns in its training and the instructions you give it. It does not know your business like a human does.</p>
+<ul><li>Useful for drafts, summaries and ideas</li><li>Can sound confident and still be wrong</li><li>Needs a human to check important answers</li></ul>
+</article>
+<article class="ai-level">
+<span>Level 2 · Using it well</span>
+<h3>How to get better results</h3>
+<p>Clear context, a specific outcome and a requested format give the tool less guesswork to do.</p>
+<ul><li>Give it a role and business context</li><li>Say who the audience is</li><li>Ask for a format, tone and limits</li><li>Improve the draft through follow-up prompts</li></ul>
+</article>
+<article class="ai-level">
+<span>Level 3 · Using it at work</span>
+<h3>Where it fits in a real business</h3>
+<p>Use AI to support repeatable work, not to quietly make high-consequence decisions without review.</p>
+<ul><li>Draft customer replies, checklists and SOPs</li><li>Prepare information for a person to approve</li><li>Keep privacy, access and version control clear</li><li>Keep people in charge of safety, legal and workplace decisions</li></ul>
+</article>
+</div>
+<div class="ai-boundary"><strong>What this free guide does not do</strong><span>It gives you a safe starting point and useful prompts. It does not build your complete AI workflow, connect your systems or decide what should be automated. That is the part we can work through together. <a href="../implementation-support/">See what AI implementation support can cover.</a></span></div>
+</section>
+<!-- Interactive Articles Grid -->
+<div class="kb-grid">
+<!-- Card 1: Golden Rules -->
+<div class="kb-card">
+<span class="kb-badge">Strategy</span>
+<h3>1. The Golden Rules of Prompting</h3>
+<p>How you talk to AI dictates what you get back. Follow these four basic rules to turn average answers into exceptional outputs:</p>
+<ul class="kb-steps">
+<li><strong>Give it a role:</strong> Tell the AI what kind of expert or helper it should act as (for example, "Act as a practical Australian customer service coach").</li>
+<li><strong>Add context:</strong> Explain your business size, location, customer and the situation it needs to understand.</li>
+<li><strong>Choose the format:</strong> Tell it how to present the response (for example, a checklist, short SMS or table).</li>
+<li><strong>Refine it:</strong> Do not assume the first answer is final. Ask for changes such as "Make it shorter", "Sound more local" or "Add more warmth".</li>
+</ul>
+</div>
+<!-- Card 2: AI Safety & Privacy -->
+<div class="kb-card">
+<span class="kb-badge">Best Practice</span>
+<h3>2. Safe AI &amp; Privacy Rules</h3>
+<p>Never put private, sensitive, or client-identifying data into any AI tool. Keep your small business secure:</p>
+<ul class="kb-steps">
+<li><strong>Anonymise:</strong> Replace real client names and numbers with placeholders like <code>[Customer Name]</code>.</li>
+<li><strong>Financials:</strong> Do not upload full profit/loss spreadsheets or bank accounts to public models.</li>
+<li><strong>Check the answer:</strong> AI can confidently make things up. Always verify tax, workplace, compliance and financial information against a reliable source.</li>
+<li><strong>Aussie Regulations:</strong> Verify regulatory statements against Australian government sources (ATO, Fair Work).</li>
+</ul>
+</div>
+<!-- Card 3: 5 AI Habits -->
+<div class="kb-card">
+<span class="kb-badge">Growth</span>
+<h3>3. 5 AI habits that can save time</h3>
+<p>Use AI for small, repeatable parts of the working day. These habits show where it can assist without pretending every task should be automated:</p>
+<ul class="kb-steps">
+<li><strong>Inbox triage:</strong> Remove names and sensitive details, then ask your AI tool to sort the issue, identify the action needed and draft a clear reply.</li>
+<li><strong>Toolbox Talks:</strong> Ask: "Create a 3-bullet safety brief for my landscaping crew working in high winds today."</li>
+<li><strong>Drafting SOPs:</strong> Write down your rough work steps and ask: "Turn this into a formal standard procedure."</li>
+<li><strong>Content Ideas:</strong> Ask: "Give me 3 seasonal social media topics for my business in my local area."</li>
+</ul>
+</div>
+</div>
+<!-- Cheat Sheet Section -->
+<div class="cheat-section">
+<span class="section-kicker">⚡ Quick Reference</span>
+<h2>AI Copy-Paste Cheat Sheet</h2>
+<p class="mb-6">Need a quick result? Copy these general business command prompts directly into your AI tool of choice. They work for almost any new small business.</p>
+<div class="cheat-grid">
+<div class="cheat-item">
+<div class="cheat-info">
+<strong>Rewrite to sound professional</strong>
+<span>Turn a rushed, frustrated draft into a polite, professional reply.</span>
+</div>
+<div class="cheat-action-group">
+<code class="cheat-cmd">Act as a customer service expert. Rewrite this message to be polite and clear: [Your draft]</code>
+<button class="cheat-copy-btn" onclick="copyCheatCode(this)">Copy Prompt</button>
+</div>
+</div>
+<div class="cheat-item">
+<div class="cheat-info">
+<strong>Summarise long meeting notes</strong>
+<span>Condense notes or ideas into action items with owners.</span>
+</div>
+<div class="cheat-action-group">
+<code class="cheat-cmd">Summarise these meeting notes into key decisions and a checklist of actions: [Notes]</code>
+<button class="cheat-copy-btn" onclick="copyCheatCode(this)">Copy Prompt</button>
+</div>
+</div>
+<div class="cheat-item">
+<div class="cheat-info">
+<strong>Generate social media ideas</strong>
+<span>Get ideas for local Instagram or Facebook promotion.</span>
+</div>
+<div class="cheat-action-group">
+<code class="cheat-cmd">Give me 5 Facebook post ideas for a local business in Australia. Include captions and hashtags: [Describe business]</code>
+<button class="cheat-copy-btn" onclick="copyCheatCode(this)">Copy Prompt</button>
+</div>
+</div>
+<div class="cheat-item">
+<div class="cheat-info">
+<strong>Simplify jargon for clients</strong>
+<span>Translate technical trade, admin, or accounting jargon.</span>
+</div>
+<div class="cheat-action-group">
+<code class="cheat-cmd">Rewrite the following text so that it is simple, plain English and easy for a client to understand: [Your text]</code>
+<button class="cheat-copy-btn" onclick="copyCheatCode(this)">Copy Prompt</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-[#142019] text-[#F7F1E5] border-t border-white/10">
+<div class="max-w-[1180px] mx-auto px-6 py-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="space-y-4">
+<a class="inline-block font-bold text-2xl tracking-widest uppercase hover:text-[#D4712A] transition-colors" href="../">
+          LET’S SORT IT OUT<span class="text-[#D4712A]">.</span>
+</a>
+<p class="text-sm text-white/65 leading-relaxed max-w-sm">
+          Practical tools, plain-English guidance and straightforward support for small businesses.
+        </p>
+</div>
+<div>
+<h2 class="text-xs font-bold uppercase tracking-widest text-[#D4712A] mb-4">Explore</h2>
+<ul class="space-y-3 text-sm text-white/70">
+<li><a class="hover:text-white transition-colors" href="../free-tools/">Free Tools</a></li>
+<li><a class="hover:text-white transition-colors" href="../learning-hub/">Learning Hub</a></li>
+<li><a class="hover:text-white transition-colors" href="../what-we-sort-out/">What We Sort Out</a></li>
+<li><a class="hover:text-white transition-colors" href="../people-hub/">People Hub</a></li>
+<li><a class="hover:text-white transition-colors" href="../#jake">About</a></li>
+<li><a class="hover:text-white transition-colors" href="../#faqs">FAQs</a></li>
+</ul>
+</div>
+<div>
+<h2 class="text-xs font-bold uppercase tracking-widest text-[#D4712A] mb-4">More</h2>
+<ul class="space-y-3 text-sm text-white/70">
+<li><a class="hover:text-white transition-colors" href="../implementation-support/">Implementation support</a></li>
+<li><a class="hover:text-white transition-colors" href="https://tally.so/r/Bz5xN7">Review My Business</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-white/10 text-xs text-white/40">
+      © 2026 Let’s Sort It Out. All rights reserved. <a href="../privacy/" style="color:inherit;text-decoration:underline;">Privacy Policy</a>
+    </div>
+</div>
+</footer>
+<script src="../assets/lucide.min.js"></script>
+<script>
+    let selectedIndustry='';let selectedTask='';let selectedTone='';let selectedExperience='sometimes';let selectedPlatform='';let currentStep=1;
+    const scrollBehavior=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+    let builderStarted=false;
+    let activeBusinessVoice='';
+    let voiceAudience='';
+    let voiceStyle='friendly, professional and down to earth';
+    let voiceStep=1;
+
+    const aiTools={
+      chatgpt:{name:'ChatGPT',url:'https://chatgpt.com',signup:'Open ChatGPT and create a free account.'},
+      claude:{name:'Claude',url:'https://claude.ai',signup:'Open Claude and create a free account.'},
+      gemini:{name:'Gemini',url:'https://gemini.google.com',signup:'Open Gemini and sign in with your Google account.'},
+      copilot:{name:'Copilot',url:'https://copilot.microsoft.com',signup:'Open Copilot and sign in with your Microsoft account.'},
+      other:{name:'your AI tool',url:'',signup:'Open your AI tool of choice and sign in or create a free account.'}
+    };
+    const platformGuidance={
+      chatgpt:'Best for a flexible everyday assistant: drafts, planning, summaries, training notes and reusable prompt workflows.',
+      claude:'Best when the work is longer or more sensitive to wording: guides, policies, process docs and careful rewrites.',
+      gemini:'Best when the work lives in Google Workspace: Gmail, Docs, Sheets, Drive and quick research-style support.',
+      copilot:'Best when the work lives in Microsoft 365: Outlook, Word, Excel, Teams notes and internal admin.',
+      other:'Use the prompt structure anyway. The clearer your context, outcome and voice, the better most AI tools perform.'
+    };
+
+    function getExperienceGuidance(level,toolName){
+      const map={
+        'never':`Assume I am completely new to AI. Use plain English, explain what to do one step at a time, and avoid technical terms unless you define them.`,
+        'once-twice':`Assume I am an AI beginner. Give clear numbered steps, include a short example, and explain any unfamiliar feature.`,
+        'sometimes':`Assume I have a working knowledge of ${toolName}. Keep instructions practical, explain only the less obvious parts, and include ways to improve the first result.`,
+        'regular':`Assume I use ${toolName} regularly. Skip the basics, be concise, and focus on stronger structure, reusable workflows and higher-quality output.`
+      };
+      return map[level]||map['once-twice'];
+    }
+
+    const experienceLabels={
+      'never':'new to AI',
+      'once-twice':'an AI beginner',
+      'sometimes':'a regular AI user',
+      'regular':'an experienced AI user'
+    };
+
+    const industryTasks = {
+      "Tradie": [
+        {label: "Customer Follow-Up"},
+        {label: "Job Checklist & Safety"},
+        {label: "Invoice Follow-up"}
+      ],
+      "Landscaping & Lawn Care": [
+        {label: "Seasonal Care Guide"},
+        {label: "Project Proposal"},
+        {label: "Winter Retention Offer"}
+      ],
+      "Construction & Building": [
+        {label: "SWMS Outline Plan"},
+        {label: "Materials Estimator"},
+        {label: "Client Handover Pack"}
+      ],
+      "Home Cleaning": [
+        {label: "Client Intake Sheet"},
+        {label: "Booking Confirmation"},
+        {label: "Deep Clean Schedule"}
+      ],
+      "Handyman & Maintenance": [
+        {label: "Job Scope Estimate"},
+        {label: "Preventative Maintenance Checklist"},
+        {label: "Supplier Bunnings List"}
+      ],
+      "Office Admin": [
+        {label: "SOP Operations Writer"},
+        {label: "Meeting Minutes Actions"},
+        {label: "Email Inbox Triage"}
+      ],
+      "Hospitality": [
+        {label: "Specials & Social Post"},
+        {label: "Staff Onboarding"},
+        {label: "Customer Review Responder"}
+      ],
+      "Payroll & Accounting": [
+        {label: "EOFY Prep Checklist"},
+        {label: "Superannuation Compliance"},
+        {label: "Cash Flow Framework"}
+      ],
+      "Business in General": [
+        {label: "Customer Persona"},
+        {label: "30-Day Social Calendar"},
+        {label: "Sales Pitch & Outreach"}
+      ]
+    };
+
+    const promptsDb = {
+      "Tradie": {
+        "Customer Follow-Up": [
+          {
+            title: "Quote Follow-Up SMS",
+            when: "Sent 5 days after a quote with no reply",
+            prompt: "Write a short, friendly SMS following up a customer who requested a quote for trade services. Keep it casual, direct, and non-pushy. Ask if they have any questions or need to make adjustments.\n\nCustomer Name: [Name]\nJob Type: [e.g., Hot Water System Install]\nQuote Date: [Date]",
+            followUps: [
+              { label: "Handle price objections", text: "Act as a customer who says the quote is too expensive, and draft a response highlighting our quality and guarantees." },
+              { label: "Request a phone call", text: "Draft a follow-up asking if they prefer a brief phone call to run through the quote details." }
+            ]
+          },
+          {
+            title: "Post-Job Satisfaction Check-in",
+            when: "Sent 1 day after completing a job",
+            prompt: "Write a brief, polite email or SMS check-in to send to a customer after completing trade work. Ask if everything is operating perfectly, thank them for their business, and invite any immediate feedback.\n\nCustomer Name: [Name]\nJob Completed: [e.g., Switchboard Upgrade]",
+            followUps: [
+              { label: "Transition to Google review request", text: "Rewrite this check-in to transition directly into a Google review request if the customer replies positively." },
+              { label: "Ask for reference photos", text: "Write a quick request asking if we can share the before/after photos of their job on our local social media page." }
+            ]
+          },
+          {
+            title: "Quiet Lead Re-engagement",
+            when: "Re-contacting a client whose project went cold weeks ago",
+            prompt: "Write a re-engagement email for a past enquiry that went quiet. Keep it helpful rather than salesy. Suggest that we are scheduling jobs for the upcoming month and want to see if they still need assistance.\n\nCustomer Name: [Name]\nOriginal Enquiry: [e.g., Backyard Drainage Excavation]",
+            followUps: [
+              { label: "Add a limited-time incentive", text: "Add a friendly P.S. offering a 5% discount on labour if booked before the end of this week." },
+              { label: "Offer staged approach", text: "Rewrite this to ask if they want to split the work into smaller, more budget-friendly stages." }
+            ]
+          }
+        ],
+        "Job Checklist & Safety": [
+          {
+            title: "Pre-Start Hazard Assessment",
+            when: "Before starting work on a new residential site",
+            prompt: "Generate a pre-work safety hazard checklist for a standard residential trade job in Australia. Highlight common electrical, heights, slips, and structural risks, and outline basic control measures.\n\nJob Type: [e.g., Roof Repair]\nSite Condition: [e.g., Double Storey Brick]",
+            followUps: [
+              { label: "Draft a Toolbox Talk outline", text: "Create a 5-minute safety discussion script for my team before we start this specific job." },
+              { label: "Create a client safety brief", text: "Write a short warning note to send to the homeowner explaining what areas they and their pets should avoid while we work." }
+            ]
+          },
+          {
+            title: "Tool & Material Packing Checklist",
+            when: "Packing the vehicle the evening before a job",
+            prompt: "Create a comprehensive tool, equipment, and safety gear checklist for a trade installation. Organise it by categories (Hand Tools, Power Tools, Materials, PPE, Clean-up).\n\nJob Type: [e.g., Split System AC Install]\nRequired Materials: [List materials]",
+            followUps: [
+              { label: "Add prep checklist", text: "Add a section for vehicle checks (fuel, tie-downs, ladder rack security) before departure." },
+              { label: "Apprentice instructions", text: "Add a brief explanation next to each key tool showing an apprentice how to double-check its calibration or charge level." }
+            ]
+          },
+          {
+            title: "Step-by-Step Quality Check",
+            when: "Standardising quality control for finished work",
+            prompt: "Draft a quality assurance and compliance checklist for a completed trade installation. Focus on testing, visual check, safety standards, and tidiness.\n\nInstallation Type: [e.g., Switchboard Upgrade]\nRegulatory Standard: [e.g., AS/NZS 3000]",
+            followUps: [
+              { label: "Draft compliance certificate email", text: "Write a friendly email to the client enclosing their compliance certificate and explaining what it covers." },
+              { label: "Add client walk-through questions", text: "Draft 3 questions to ask the client during the final hand-over walk-through to ensure they are 100% happy." }
+            ]
+          }
+        ],
+        "Invoice Follow-up": [
+          {
+            title: "Friendly Due-Date Invoice Reminder",
+            when: "Send on the due date or 1 day after",
+            prompt: "Write a friendly, polite email reminding a customer that their trade invoice is due or just past due. Include options for payment and offer help if they have questions.\n\nCustomer Name: [Name]\nInvoice Number: [Invoice Number]\nAmount: [Amount]\nDue Date: [Date]",
+            followUps: [
+              { label: "Create SMS reminder version", text: "Condense this email into a polite 2-sentence SMS reminder with a link to pay." },
+              { label: "Highlight payment methods", text: "Modify this email to highlight credit card or bank transfer details clearly in a bulleted list." }
+            ]
+          },
+          {
+            title: "Polite Overdue Notice",
+            when: "7 days past due date",
+            prompt: "Write a professional, slightly firmer email follow-up for an invoice that is now 7 days overdue. Request payment as soon as possible and ask for a status update on the transfer.\n\nCustomer Name: [Name]\nInvoice Number: [Invoice Number]\nAmount: [Amount]\nDays Overdue: [7 Days]",
+            followUps: [
+              { label: "Draft phone call script", text: "Create a phone script for a 1-minute follow-up call about this overdue invoice, keeping it friendly but firm." },
+              { label: "Late fee notification", text: "Write a gentle notification warning that late fees may apply after 14 days overdue as per terms." }
+            ]
+          },
+          {
+            title: "Payment Plan Proposal",
+            when: "For a client struggling to pay a large invoice",
+            prompt: "Write a compassionate and professional email offering a payment plan solution to a client who has indicated they are experiencing temporary cash flow issues. Suggest dividing the total balance into smaller installments.\n\nCustomer Name: [Name]\nTotal Invoice Amount: [Amount]\nProposed Installments: [e.g., 4 weekly payments of $X]",
+            followUps: [
+              { label: "Draft formal agreement text", text: "Write a simple, 1-paragraph formal confirmation that the customer can sign to agree to this payment plan." },
+              { label: "Add automated payment instructions", text: "Add instructions on how they can set up direct debit or automatic transfers to make it hassle-free." }
+            ]
+          }
+        ]
+      },
+      "Landscaping & Lawn Care": {
+        "Seasonal Care Guide": [
+          {
+            title: "Spring Lawn Prep Guide",
+            when: "End of winter / early spring client newsletter",
+            prompt: "Write a helpful, educational guide for local homeowners on preparing their lawn and garden bed for the spring growth burst. Focus on aeration, weed prevention, fertilising, and watering schedules. Keep it practical and friendly.\n\nKey Services: [e.g., Core Aeration, Slow-release Fertiliser]",
+            followUps: [
+              { label: "Draft email subject lines", text: "Suggest 3 catchy email subject lines for this spring guide newsletter." },
+              { label: "Create a call-to-action block", text: "Write a call-to-action paragraph offering a 10% discount on lawn prep bookings done this month." }
+            ]
+          },
+          {
+            title: "Summer Watering & Mowing Schedule",
+            when: "Mid-summer client update regarding extreme heat",
+            prompt: "Write a short guide advising clients on proper lawn care during hot Australian summer conditions. Cover early morning watering, mowing heights to protect roots, and soil wetters.\n\nTarget Region: [e.g., Adelaide / Dry Climate]",
+            followUps: [
+              { label: "Turn into an SMS alert", text: "Condense the main summer watering tip into a quick SMS broadcast to send on days exceeding 35 degrees." },
+              { label: "Suggest drought-tolerant tips", text: "Add a paragraph suggesting 3 ways to transition lawns to drought-tolerant turf types over time." }
+            ]
+          },
+          {
+            title: "Autumn Mulch & Soil Treatment",
+            when: "Prep guide for winter dormant months",
+            prompt: "Write a seasonal guide outlining essential garden bed mulching and soil conditioning tasks before winter. Explain how mulch retains warmth, suppresses weeds, and improves soil structure.\n\nRecommended Mulch Type: [e.g., Organic Forest Bark]",
+            followUps: [
+              { label: "Write a social media teaser", text: "Draft a short Facebook post summarizing the top 3 benefits of autumn mulching." },
+              { label: "Draft a quote enquiry link text", text: "Write a friendly sentence inviting clients to get a free mulch delivery and spreading quote." }
+            ]
+          }
+        ],
+        "Project Proposal": [
+          {
+            title: "Detailed Landscape Design Proposal",
+            when: "Presenting a garden renovation design plan to client",
+            prompt: "Write a formal landscape design proposal outlining project phases (demolition, hardscaping, softscaping, planting). Detail material selections, estimated timeline, and next steps for approval.\n\nClient Name: [Name]\nProject Scope: [e.g., Paving, New Lawn turf, Garden bed planting]\nEstimated Cost: [Amount]",
+            followUps: [
+              { label: "Outline warranty terms", text: "Add a section explaining our 12-month structural warranty on retaining walls and paving." },
+              { label: "Draft payment stage breakdown", text: "Create a percentage-based payment schedule based on project milestones (deposit, progress, final)." }
+            ]
+          },
+          {
+            title: "Lawn Restoration Scope of Work",
+            when: "Proposing a lawn overhaul (weed spray, topdress, fertilise)",
+            prompt: "Write a clear, simple scope of work proposal for a complete lawn restoration project. Detail the steps from chemical treatment of weeds to topdressing and sowing seeds.\n\nLawn Size: [e.g., 150 sqm]\nClient Location: [e.g., Brisbane]",
+            followUps: [
+              { label: "Add client care instructions", text: "Write a post-care watering and traffic sheet to give to the client immediately after we finish sowing." },
+              { label: "Create regular mowing proposal", text: "Draft a recurring maintenance proposal for fortnightly mowing starting 6 weeks post-restoration." }
+            ]
+          },
+          {
+            title: "Garden Bed Retaining Wall Scope",
+            when: "Quoting a timber or block retaining wall construction",
+            prompt: "Write a project proposal scope for constructing a garden retaining wall. Cover drainage (geo-textile, slotted ag-pipe), footing prep, post installation, and backfilling.\n\nWall Height & Length: [e.g., 0.6m high, 12m long]\nMaterial: [e.g., Treated Pine Sleepers]",
+            followUps: [
+              { label: "Identify engineering compliance", text: "Add a note explaining local height compliance rules where retaining walls under 1m do not require engineering certification." },
+              { label: "Draft a site access requirement note", text: "Write a brief warning asking the client to ensure the side gate access is clear of obstacles for micro-excavator access." }
+            ]
+          }
+        ],
+        "Winter Retention Offer": [
+          {
+            title: "Winter Garden Clean-up Email",
+            when: "Sent in June/July to drum up off-season work",
+            prompt: "Write an email offer targeting existing clients for a comprehensive Winter Garden Clean-up service. Highlight pruning deciduous plants, clearing fallen leaves, winter weed spray, and soil conditioning.\n\nPromo Offer: [e.g., Free green waste disposal or 10% off]",
+            followUps: [
+              { label: "Create a booking link CTA", text: "Draft a compelling CTA sentence asking them to reply to this email with their preferred date." },
+              { label: "Explain why winter care matters", text: "Add a brief paragraph explaining how cleaning up garden beds in winter prevents pest breeding cycles in spring." }
+            ]
+          },
+          {
+            title: "Off-Season Maintenance Plan",
+            when: "Upselling regular lawn clients to a reduced winter schedule",
+            prompt: "Write a letter to current regular lawn clients proposing a winter care plan. Explain that while grass growth slows, winter is crucial for broadleaf weed spraying, winter fertilising, and equipment servicing. Propose monthly visits instead of fortnightly.\n\nMonthly Rate: [Amount]",
+            followUps: [
+              { label: "Draft a payment option", text: "Suggest a payment option where winter maintenance is split into a smoothed flat-rate monthly subscription." },
+              { label: "Add winter weed explanation", text: "Add a short bullet list explaining what winter weeds (like Bindii) are best treated in July before prickles appear." }
+            ]
+          },
+          {
+            title: "Gutter Clean & Drainage Promo",
+            when: "Pre-winter storm marketing email",
+            prompt: "Write a marketing email promoting gutter cleaning and storm drainage inspections ahead of winter rains. Emphasise fire safety (removing dry leaf build-up) and water damage prevention.\n\nPricing: [e.g., Starting from $150]",
+            followUps: [
+              { label: "Create a client liability disclaimer", text: "Draft a safety disclaimer stating we inspect up to a certain height and recommend specialized roofers for steep slopes." },
+              { label: "Add booking checklist", text: "Create a 3-question checklist for the client to answer about roof access and height before we arrive." }
+            ]
+          }
+        ]
+      },
+      "Construction & Building": {
+        "SWMS Outline Plan": [
+          {
+            title: "Heights SWMS Outline",
+            when: "Preparing safety documentation for working at heights",
+            prompt: "Draft an outline for a Safe Work Method Statement (SWMS) specifically for working at heights on a residential building site. Include key steps, potential hazards, and control measures compliant with Safe Work Australia standards.\n\nJob Task: [e.g., Installing Truss Rafters]\nMax Height: [e.g., 4.5 metres]",
+            followUps: [
+              { label: "Draft PPE Requirement List", text: "List the essential safety harnesses, anchors, and helmets required for this task." },
+              { label: "Write emergency rescue plan", text: "Draft a simple emergency rescue procedure in case a worker is suspended in a harness." }
+            ]
+          },
+          {
+            title: "Excavation Safe Work Outline",
+            when: "Safety planning before trenching or digging footings",
+            prompt: "Generate a safety checklist and SWMS hazard control summary for deep excavation or trenching works. Include underground service locating (Dial Before You Dig), shoring, and access safety.\n\nTrench Depth: [e.g., 1.5 metres]\nEquipment: [e.g., 5-Tonne Excavator]",
+            followUps: [
+              { label: "Service strike response", text: "Draft an emergency action script for the crew if an unidentified pipe or cable is struck." },
+              { label: "Shoring decision matrix", text: "Create a quick guide on when shoring or battering is required based on soil types." }
+            ]
+          },
+          {
+            title: "Power Tools Safety Checklist",
+            when: "Daily site induction or apprentice briefing",
+            prompt: "Create a safety inspection checklist for high-risk portable construction power tools (e.g., demolition saws, grinders, nail guns). Focus on tag verification, guard checks, and safety controls.\n\nTool List: [List tools]",
+            followUps: [
+              { label: "Create injury first-aid card", text: "Write a quick reference guide for first-aid response for common power tool injuries." },
+              { label: "Apprentice tool agreement", text: "Write a simple sign-off declaration for an apprentice stating they've been trained on these tools." }
+            ]
+          }
+        ],
+        "Materials Estimator": [
+          {
+            title: "Framing Lumber Estimator Sheet",
+            when: "Calculating timber orders for wall framing",
+            prompt: "Help me calculate a framing timber material estimate template. Ask me for the wall dimensions, stud spacing, and window counts, then provide a structured table template for ordering studs, plates, and noggings.\n\nTimber Specification: [e.g., MGP10 Treated Pine]",
+            followUps: [
+              { label: "Add wastage multiplier", text: "Explain how to calculate and apply a standard 10% wastage margin to the timber order." },
+              { label: "Write RFQ email to supplier", text: "Write a professional Request for Quote email to send to my local timber merchant enclosing this sheet." }
+            ]
+          },
+          {
+            title: "Concrete & Footings Calculator",
+            when: "Calculating concrete volume in cubic metres",
+            prompt: "Create a structural concrete volume calculator template. Give me formulas and standard conversion tables to convert trench length, width, and depth into cubic metres, adding a safety margin.\n\nJob Area: [e.g., Strip Footings for Extension]",
+            followUps: [
+              { label: "Draft concrete pump order checklist", text: "Create a checklist for booking a concrete pump truck, including hose length and site parking access questions." },
+              { label: "Add curing care sheet", text: "Write a simple instruction sheet for the homeowner explaining how to water-cure the concrete over the next 7 days." }
+            ]
+          },
+          {
+            title: "Decking Material Order Sheet",
+            when: "Estimating timber decking boards and fasteners",
+            prompt: "Generate an estimator layout for a timber deck. Cover deck dimensions, board width, gap spacing, and joist spacing to calculate total lineal meters of decking and required screws.\n\nDeck Size: [e.g., 6m x 4m]\nTimber Type: [e.g., Spotted Gum 90mm]",
+            followUps: [
+              { label: "Determine fastener specification", text: "Recommend the correct stainless steel screw grades and lengths based on timber thickness and proximity to pool/coastal air." },
+              { label: "Create timber delivery delivery instructions", text: "Draft delivery notes for the driver explaining how to stack and cover the hardwood boards to prevent cupping." }
+            ]
+          }
+        ],
+        "Client Handover Pack": [
+          {
+            title: "Post-Build Handover Document",
+            when: "Final handover meeting with homeowner",
+            prompt: "Write a warm, professional client handover letter for a completed building project. Congratulate them, summarize key certificates enclosed (occupancy, waterproofing, electrical compliance), and outline the defect reporting process.\n\nClient Name: [Name]\nProject: [e.g., Kitchen & Living Renovation]",
+            followUps: [
+              { label: "Draft feedback survey link text", text: "Write a friendly paragraph requesting they fill out a 3-question survey about their building experience." },
+              { label: "Create a gift box card script", text: "Write a short card note to accompany a handover gift box (e.g. key ring, local wine)." }
+            ]
+          },
+          {
+            title: "Maintenance & Care Guide for New Build",
+            when: "Educating client on looking after their new building materials",
+            prompt: "Create a practical maintenance guide for a client to look after their new extension. Cover timber deck oiling schedules, stone benchtop sealing, and paint touch-ups.\n\nMaterials Used: [e.g., Engineered Stone, Blackbutt Deck, Acrylic Render]",
+            followUps: [
+              { label: "Add seasonal checklist", text: "Structure this guide into a seasonal checklist (Autumn gutter clearing, Spring deck check)." },
+              { label: "Write supplier warranty contacts", text: "Create a clean contact template for warranty claims on major appliances and fixtures installed." }
+            ]
+          },
+          {
+            title: "Defect Liability Period Guide",
+            when: "Explaining the 13-week or 6-month defect review window",
+            prompt: "Write a clear, non-defensive guide explaining the Defect Liability Period to a residential client. Explain what constitutes a structural defect vs normal building settlement, and outline how they should log items.\n\nCompany Name: [Company Name]\nDefect Period: [e.g., 13 Weeks]",
+            followUps: [
+              { label: "Create logging template", text: "Draft a simple table layout they can use to record the description, location, and date of any spotted defects." },
+              { label: "Write a reminder email template", text: "Write a polite email template to send to the client 2 weeks before the defect period expires." }
+            ]
+          }
+        ]
+      },
+      "Home Cleaning": {
+        "Client Intake Sheet": [
+          {
+            title: "New Client Questionnaire",
+            when: "First phone call or website inquiry",
+            prompt: "Create a detailed intake questionnaire for residential cleaning services. Ask about pets, flooring types, allergies, priority areas, and access rules.\n\nService Type: [e.g., Regular Fortnightly Clean]",
+            followUps: [
+              { label: "Formulate pricing estimate", text: "Add a pricing formula guidance explaining how we estimate hours based on bedroom/bathroom count." },
+              { label: "Draft intake confirmation email", text: "Write a welcoming onboarding email to send to the client once they submit this information." }
+            ]
+          },
+          {
+            title: "Commercial Office Intake Assessment",
+            when: "Quoting a commercial or retail space clean",
+            prompt: "Draft a commercial cleaning audit template. Cover desk counts, high-touch areas, kitchenettes, waste disposal protocols, security alarm access, and insurance requirements.\n\nBusiness Client: [e.g., Local Medical Clinic]",
+            followUps: [
+              { label: "Safety hazard review", text: "Add a section addressing safe chemical storage and Material Safety Data Sheets (MSDS) on site." },
+              { label: "Write commercial proposal intro", text: "Write a compelling, professional cover letter to attach to our commercial cleaning quote." }
+            ]
+          },
+          {
+            title: "Special Request / One-Off Intake",
+            when: "Booking a specialized deep clean or spring clean",
+            prompt: "Write an intake prompt for one-off deep cleans. Clarify focus areas (appliances, windows, inside cupboards, walls) and establish clear parameters of what is possible in the time window.\n\nClean Focus: [e.g., Post-Renovation Clean]",
+            followUps: [
+              { label: "Add heavy build-up warning", text: "Draft a polite clause explaining that heavy mould or grout staining may require specialized restoration rather than standard cleaning." },
+              { label: "Create pricing add-on checklist", text: "Create an itemised pricing sheet for extras like oven cleaning, fridge interior, or window tracks." }
+            ]
+          }
+        ],
+        "Booking Confirmation": [
+          {
+            title: "Booking Confirmation Email",
+            when: "Sent after securing the booking date",
+            prompt: "Write a friendly booking confirmation. Detail the date, arrival window, cleaner's name, services included, and how to prepare (picking up toys, securing pets).\n\nClient Name: [Name]\nService Date: [Date]\nArrival Window: [e.g., 9:00 AM - 11:30 AM]",
+            followUps: [
+              { label: "Draft SMS summary", text: "Condense this booking confirmation into a short, polite SMS reminder to send the day before." },
+              { label: "Add key entry reminder", text: "Add clear instructions on where the key-lockbox is located or how they can leave gate codes." }
+            ]
+          },
+          {
+            title: "Access & Lockbox Instructions",
+            when: "For clients who will not be home during the clean",
+            prompt: "Write a secure, polite email request asking the client for entry codes, gate instructions, and lockbox locations. Outline our strict key security policy to reassure them.\n\nCompany: [Clean Co.]",
+            followUps: [
+              { label: "Draft key receipt log", text: "Create a simple internal template for cleaners to sign when checking keys in and out of the office." },
+              { label: "Write gate failure SMS", text: "Write a quick template to send if the cleaner arrives but the entry code fails or the gate is locked." }
+            ]
+          },
+          {
+            title: "Cancellation & Reschedule Policy",
+            when: "Onboarding a client or resolving a last-minute cancellation",
+            prompt: "Write a polite but firm cancellation policy. Explain the 24-hour notice requirement and the associated late cancellation fee, explaining that it protects the cleaners' stable income.\n\nCancellation Fee: [e.g., 50% of booking fee]",
+            followUps: [
+              { label: "Write late cancellation notification", text: "Write a gentle email to send to a client who canceled 2 hours before their booking, charging the fee but offering a waiver for emergency cases." },
+              { label: "Create lock-out response", text: "Write a template for when the cleaner is locked out on arrival, notifying the client that full payment is required." }
+            ]
+          }
+        ],
+        "Deep Clean Schedule": [
+          {
+            title: "Spring Clean Task Checklist",
+            when: "Instructing cleaners on a comprehensive deep clean",
+            prompt: "Create a thorough room-by-room deep cleaning checklist. Focus on skirting boards, light switches, ceiling fans, range hoods, window tracks, and door frames.\n\nProperty Size: [e.g., 3 Bedroom, 2 Bathroom]",
+            followUps: [
+              { label: "Estimate time allocation", text: "Help me estimate the hours needed for each section (Kitchen, Bathrooms, Bedrooms) based on high vs average build-up." },
+              { label: "Write client report card", text: "Write a friendly 'checklist card' to leave on the kitchen bench showing what was deep cleaned and signed off by the team." }
+            ]
+          },
+          {
+            title: "End-of-Lease Bond Clean Checklist",
+            when: "Preparing for a move-out clean with bond guarantee",
+            prompt: "Create a bond-back cleaning checklist aligned with standard real estate exit requirements. Highlight oven degreasing, wall mark removal, sliding track cleans, exhaust fan dust extraction, and blind dusting.\n\nState/Territory: [e.g., Victoria]",
+            followUps: [
+              { label: "Draft bond return disclaimer", text: "Write a disclaimer explaining that structural damage, carpet stains, or exterior windows are excluded from standard bond clean packages." },
+              { label: "Write agent review reply", text: "Write a quick response template for if the property manager flags a missed spot, booking a priority return touch-up." }
+            ]
+          },
+          {
+            title: "Carpet & Upholstery Deep Clean Scope",
+            when: "Specialised steam or dry clean add-on service",
+            prompt: "Draft a scope of work and technician prep sheet for hot water extraction carpet cleaning. Detail pre-vacuuming, spot stain pre-treatment, steam cleaning, and drying fans setup.\n\nRooms to Clean: [e.g., Lounge Room and 3 Bedrooms]",
+            followUps: [
+              { label: "Add drying safety instructions", text: "Write a short warning print-out for the client regarding wet carpet slip hazards when walking onto tiled areas, and when furniture can be replaced." },
+              { label: "Create pet stain deodorizer pitch", text: "Draft a brief text pitch offering an organic deodorizer add-on for households with indoor pets." }
+            ]
+          }
+        ]
+      },
+      "Handyman & Maintenance": {
+        "Job Scope Estimate": [
+          {
+            title: "Drywall Repair Estimate",
+            when: "Drafting a quote for repairing damaged plasterboard",
+            prompt: "Write a clear job scope estimate for repairing plasterboard damage (e.g. wall holes, door handle dents). Detail the process: square-cutting, backing timber, patching plaster, sanding, and prime/paint matching.\n\nNumber of Patches: [e.g., 2 wall holes]\nPaint Matching: [e.g., Client providing leftover paint]",
+            followUps: [
+              { label: "Add dust control warning", text: "Add a paragraph explaining our dust containment practices (plastic drop sheets, HEPA vacuuming) to reassure the client." },
+              { label: "Create drying time timeline note", text: "Write a brief timeline explanation showing that multiple visits are needed due to joint compound drying times." }
+            ]
+          },
+          {
+            title: "Timber Fence Repair Quote",
+            when: "Repairing broken palings and replacing posts",
+            prompt: "Generate a detailed scope quote for timber paling fence repairs. Detail post-digging, concrete footings, structural rails replacement, and paling alignment.\n\nLength of Repair: [e.g., 3 Panels / 2 Posts]\nFence Type: [e.g., 1.8m Treated Pine Palings]",
+            followUps: [
+              { label: "Draft neighbor sharing note", text: "Write a polite letter the client can give to their neighbor explaining the repair scope and requesting split payment under the local Fences Act." },
+              { label: "Add post alignment warranty", text: "Draft a clause explaining our warranty regarding structural post alignment." }
+            ]
+          },
+          {
+            title: "Door & Lock Repair Scope",
+            when: "Fixing sticky doors or replacing locks",
+            prompt: "Write a repair scope for repairing dragging doors and replacing entry locks. Detail shaving door tops, adjusting hinges, and mortising a new entry lock set.\n\nDoors Affected: [e.g., 2 Internal Doors, 1 Front Door Lock]",
+            followUps: [
+              { label: "Recommend lock brands", text: "Suggest 3 reputable lockset brands in Australia and specify if they meet home insurance security requirements." },
+              { label: "Create key handover note", text: "Write a quick receipt note showing the number of new keys handed over to the client on completion." }
+            ]
+          }
+        ],
+        "Preventative Maintenance Checklist": [
+          {
+            title: "Rental Pre-Inspection Checklist",
+            when: "Checking a rental property before a new tenant moves in",
+            prompt: "Create a comprehensive home maintenance audit checklist for a rental property. Focus on tap washer drips, cabinet hinge tightness, light bulb function, smoke alarm expiry, and gate latch security.\n\nProperty Type: [e.g., 3-Bedroom Villa]",
+            followUps: [
+              { label: "Create repair priority report", text: "Draft a template that structures identified repairs into Priority 1 (Safety/Urgent), Priority 2 (Medium/Preventative), and Priority 3 (Aesthetic)." },
+              { label: "Write landlord email pitch", text: "Write an email to the property manager or landlord pitching this preventative audit to save them emergency call-out fees." }
+            ]
+          },
+          {
+            title: "Pre-Winter Home Checklist",
+            when: "Preparing a residential home for winter conditions",
+            prompt: "Write a preventative checklist for home maintenance prior to winter. Cover gutter cleaning, downpipe inspections, window seal checks, deck weatherproofing checks, and heating filters cleaning.\n\nLocation: [e.g., Hobart / Cold Wet Climate]",
+            followUps: [
+              { label: "Draft gutter leaf warning", text: "Write a note explaining the fire risk of dry gum leaves in gutters during summer and the rust risk in winter." },
+              { label: "Suggest insulation check", text: "Add a section on how to audit door and window drafts using simple seals." }
+            ]
+          },
+          {
+            title: "Smoke Alarm & Safety Audit",
+            when: "Annual safety check for a residential property",
+            prompt: "Generate a safety check list covering smoke alarm testing, expiry date checks, battery replacement, fire blanket verification, safety switch (RCD) testing, and key-lock window compliance.\n\nState: [e.g., New South Wales]",
+            followUps: [
+              { label: "Draft compliance certificate note", text: "Write a statement verifying that smoke alarms were tested and satisfy state regulations on the inspection date." },
+              { label: "Create warning message about non-compliance", text: "Write a professional notification to the homeowner explaining the severe liability of non-compliant smoke alarms." }
+            ]
+          }
+        ],
+        "Supplier Bunnings List": [
+          {
+            title: "Deck Painting Material Checklist",
+            when: "Getting supplies for cleaning and staining a deck",
+            prompt: "Generate a detailed shopping list for staining a deck. Organise it into: Preparation (Deck clean solution, scrubbing brush, pressure washer fittings), Sanding (sandpaper grits), Staining (oil/water-based stain, applicator, tray, tape), and PPE.\n\nDeck Size: [e.g., 25 sqm]\nTimber Type: [e.g., Merbau]",
+            followUps: [
+              { label: "Suggest stain type", text: "Provide a quick comparison of oil-based vs water-based deck stains for harsh Australian sun exposure." },
+              { label: "Write a material cost sheet template", text: "Create a simple pricing template to list materials purchased and apply a standard markup." }
+            ]
+          },
+          {
+            title: "Tiling Repair Hardware List",
+            when: "Shopping for a bathroom tile repair job",
+            prompt: "Create a shopping checklist for repairing loose or cracked tiles in a shower. Include grout scraper, tile adhesive, matching grout, waterproof membrane sealant, grout sealer, and tiling sponges.\n\nArea: [e.g., Shower Base / 3 Cracked Tiles]",
+            followUps: [
+              { label: "Add drying time notes", text: "Create a note detailing adhesive and grout curing times, warning the client not to use the shower for 48 hours." },
+              { label: "Fastener advice", text: "Recommend adhesive types suitable for wet areas vs dry splashbacks." }
+            ]
+          },
+          {
+            title: "Wall Mounting & Anchoring Guide",
+            when: "Shopping for plasterboard wall hanging hardware",
+            prompt: "Create a reference hardware list for mounting heavy objects (TVs, large mirrors, floating shelves) on plasterboard walls. Specify hollow wall anchors, toggle bolts, stud finder recommendations, and weight rating guide.\n\nItem to Mount: [e.g., 65-inch Flat Screen TV]",
+            followUps: [
+              { label: "Draft stud-mounting checklist", text: "Add a step-by-step warning checklist explaining why heavy brackets must be anchored directly into timber studs, not plasterboard alone." },
+              { label: "Safety check list", text: "Write a short safety statement verifying TV mounting security post-install." }
+            ]
+          }
+        ]
+      },
+      "Office Admin": {
+        "SOP Operations Writer": [
+          {
+            title: "Invoicing & Payment SOP",
+            when: "Documenting how to process invoices and track receipts",
+            prompt: "Write a Standard Operating Procedure (SOP) for small business invoicing. Detail steps for invoice generation, record-keeping, email dispatch, daily payment reconciliation, and follow-ups on unpaid accounts.\n\nInvoicing Software: [e.g., Xero / MYOB]\nPayment Terms: [e.g., 7 Days]",
+            followUps: [
+              { label: "Create weekly reconciliation checklist", text: "Create a 5-step checklist for Friday afternoon invoice reconciliation." },
+              { label: "Write dispute email template", text: "Write a polite template for notifying a customer that a credit card charge was declined." }
+            ]
+          },
+          {
+            title: "Customer Enquiry SOP",
+            when: "Training a virtual assistant or staff member on emails",
+            prompt: "Draft an SOP for managing customer enquiries via email. Outline response timeframes, greetings, booking calendar integration, and handling out-of-scope requests.\n\nTarget Response Time: [e.g., Within 4 Hours]\nTone Preference: [e.g., Professional and prompt]",
+            followUps: [
+              { label: "Create FAQ template list", text: "Draft 3 quick snippets for common questions (Pricing, Travel radius, Services offered)." },
+              { label: "Write escalation procedure", text: "Outline steps to follow when a customer request needs to be escalated to the business owner." }
+            ]
+          },
+          {
+            title: "Digital File Structure SOP",
+            when: "Setting up a clean shared filing system",
+            prompt: "Generate an SOP for file storage and folder naming conventions. Provide a clear hierarchy for Client folders, Financials, Marketing, and Operations. Specify exact naming rules.\n\nPlatform: [e.g., Google Drive]\nNaming Example: [e.g., YYYY-MM-DD_DocumentName]",
+            followUps: [
+              { label: "Add archiving instructions", text: "Detail steps for moving inactive clients into an 'Archive' folder at the end of each financial year." },
+              { label: "Create client file setup list", text: "Draft a checklist of 4 mandatory files that must exist inside every new client folder." }
+            ]
+          }
+        ],
+        "Meeting Minutes Actions": [
+          {
+            title: "Action-Item Meeting Minutes",
+            when: "Following a team or project review meeting",
+            prompt: "Turn my rough meeting notes into a clean, professional summary. Extract: 1. Main decisions made. 2. Clear action list with assigned owners and due dates. 3. Items tabled for next meeting.\n\nRough Notes: [Paste notes]",
+            followUps: [
+              { label: "Draft team email update", text: "Write a concise follow-up email to send to the team enclosing these minutes and highlighting action deadlines." },
+              { label: "Add project milestones progress tracker", text: "Create a simple visual status table to track current tasks against milestones." }
+            ]
+          },
+          {
+            title: "Quick Decision Log Builder",
+            when: "Creating a running record of key company decisions",
+            prompt: "Draft a simple Decision Log template for recording major business pivots, expenditure approvals, and policy updates. Include Date, Decision Maker, Description, Reason, and Impact.\n\nCompany Type: [e.g., Growing Service Business]",
+            followUps: [
+              { label: "Add log update procedure", text: "Write a short instruction on where this log resides and when it should be updated." },
+              { label: "Write board announcement email", text: "Write an email draft sharing the latest log updates with business partners." }
+            ]
+          },
+          {
+            title: "Weekly Huddle Summary",
+            when: "Documenting a quick 15-minute Monday huddle",
+            prompt: "Format these huddle notes. Focus on individual priorities for the week, blockers identified, and calendar availability updates.\n\nHuddle Notes: [Paste huddle notes]",
+            followUps: [
+              { label: "Write locker blocker reminder", text: "Write a prompt to follow up on a blocker with another team member." },
+              { label: "Create calendar invite update text", text: "Draft a calendar update message to send to all staff about scheduled team absences." }
+            ]
+          }
+        ],
+        "Email Inbox Triage": [
+          {
+            title: "Customer Complaint Response Draft",
+            when: "Replying to a customer unhappy with a service delay",
+            prompt: "Draft a professional email reply to a customer complaining about a service delay. Acknowledge the delay, explain the cause transparently, apologize, and offer a concrete resolution.\n\nCustomer: [Name]\nDelay Reason: [e.g., Supply chain shortage of parts]\nResolution: [e.g., Priority delivery next Tuesday]",
+            followUps: [
+              { label: "Draft phone call backup script", text: "Write a phone script to call the client before sending the email, aiming to resolve the issue warmly." },
+              { label: "Add compensation offer template", text: "Draft a revised version that includes a 10% credit discount voucher on their next order as a good-will gesture." }
+            ]
+          },
+          {
+            title: "Booking Availability Draft",
+            when: "Responding to a request for service calendar openings",
+            prompt: "Write a clear email presenting upcoming booking slots to a client. Keep it friendly and encourage them to reply quickly to lock in the time, explaining that slots fill up fast.\n\nClient Name: [Name]\nAvailable Slots: [List dates and times]\nBooking Link: [Link]",
+            followUps: [
+              { label: "Create SMS booking version", text: "Condense this availability email into a quick, conversational SMS text." },
+              { label: "Add calendar holds warning", text: "Add a polite note explaining that calendar slots cannot be held for more than 24 hours without confirmation." }
+            ]
+          },
+          {
+            title: "Supplier Partnership Enquiry Reply",
+            when: "Responding to a sales pitch email from a local supplier",
+            prompt: "Write a professional response to a sales pitch email from a local supplier. Keep it polite, state if we have current needs, and ask for a price catalog and credit application terms.\n\nSupplier Name: [Name]\nProduct Type: [e.g., Commercial Eco-friendly Cleaning Supplies]",
+            followUps: [
+              { label: "Write polite rejection draft", text: "Draft a polite rejection email stating we are happy with our current suppliers but will keep their info on file." },
+              { label: "Draft meeting scheduling note", text: "Write a message booking a 10-minute phone call to discuss wholesale account discounts." }
+            ]
+          }
+        ]
+      },
+      "Hospitality": {
+        "Specials & Social Post": [
+          {
+            title: "Weekly Dinner Specials Promo",
+            when: "Posting on Facebook/Instagram on Wednesday evening",
+            prompt: "Write an engaging social media post promoting our upcoming weekend dinner specials. Focus on local ingredients, flavour, and building excitement. Include emojis and a strong call-to-action to book a table.\n\nSpecials Menu: [e.g., Wood-fired Barramundi with Lemon Myrtle Butter]\nBooking Link: [Link]",
+            followUps: [
+              { label: "Generate 5 hashtag options", text: "Suggest 5 local hashtags targeting foodies in our specific suburb and city." },
+              { label: "Create SMS broadcast to VIP list", text: "Condense this special into a short SMS broadcast offering priority booking to loyalty program members." }
+            ]
+          },
+          {
+            title: "Brunch & Coffee Social Copy",
+            when: "Promoting morning cafe trade on Saturday morning",
+            prompt: "Write a casual, inviting Instagram caption for a Saturday morning coffee and brunch photo. Keep it warm, fun, and relevant to weekend relaxation.\n\nFeatured Menu: [e.g., Smashed Avocado on Sourdough, Single-Origin Flat White]",
+            followUps: [
+              { label: "Add opening hours note", text: "Add a line showing our weekend operating hours and kitchen close time." },
+              { label: "Write comment responder prompts", text: "Draft 3 quick, friendly reply scripts to comments left by followers on this post." }
+            ]
+          },
+          {
+            title: "Local Event or Function Booking Promo",
+            when: "Promoting private room functions or party bookings",
+            prompt: "Write a marketing email promoting our hospitality venue for private functions (birthdays, corporate parties, family events). Highlight custom menu packages, venue capacity, and premium service.\n\nVenue Capacity: [e.g., Up to 80 guests]\nSpecial Feature: [e.g., Private courtyard bar]",
+            followUps: [
+              { label: "Draft packages outline", text: "Create a simple bulleted overview of 2 function packages (Canape & Drink package, 3-Course Sit-down package)." },
+              { label: "Write brochure request form confirmation", text: "Write a quick email template to send to clients who request our function package brochure." }
+            ]
+          }
+        ],
+        "Staff Onboarding": [
+          {
+            title: "Front of House Opening Checklist",
+            when: "Training guide for morning FOH staff",
+            prompt: "Create a step-by-step opening checklist for Front of House (FOH) restaurant or cafe staff. Cover floor sweeps, table setup, coffee machine prep, menu chalkboard updates, and cash drawer counts.\n\nOpening Time: [e.g., 7:00 AM]\nStaff Arrival: [e.g., 6:30 AM]",
+            followUps: [
+              { label: "Add POS check instructions", text: "Add instructions on booting up the Point of Sale system and checking receipt paper rolls." },
+              { label: "Create music playlist guidelines", text: "Draft guidelines on volume levels and appropriate music styles based on the time of day." }
+            ]
+          },
+          {
+            title: "Kitchen Handover & Cleaning Guide",
+            when: "Closing shift cleaning checklist",
+            prompt: "Generate a kitchen close and cleaning checklist. Focus on food safety hygiene (wash downs, sanitizing stations, cooler temp logs, grease trap cleaning, oil disposal, and waste locking).\n\nStandards: [e.g., Food Standards Australia Code]",
+            followUps: [
+              { label: "Draft oil disposal safety SOP", text: "Write a detailed procedure explaining how to safely cool and discard commercial fryer oil." },
+              { label: "Create temperature log table template", text: "Create a simple table layout for recording morning and evening fridge/freezer temperatures." }
+            ]
+          },
+          {
+            title: "Point of Sale (POS) Operating SOP",
+            when: "Quick training reference sheet for FOH staff",
+            prompt: "Write a quick-reference procedure explaining how to process orders, apply discounts, run splits on bills, process gift cards, and handle refund requests on the cash register.\n\nPOS Software: [e.g., Lightspeed / Square]",
+            followUps: [
+              { label: "Write customer split-bill script", text: "Draft a polite script showing staff how to explain bill-splitting rules to large tables." },
+              { label: "Cash discrepancy reporting procedure", text: "Detail steps to follow if the end-of-shift cash drawer does not match the POS sales report." }
+            ]
+          }
+        ],
+        "Customer Review Responder": [
+          {
+            title: "5-Star Rave Review Responder",
+            when: "Replying to a customer praising FOH service and food",
+            prompt: "Write a warm, appreciative reply to a positive 5-star review. Personalise it by thanking them, mentioning their favorite dish, and welcoming them back soon.\n\nReview Details: [Paste positive review]",
+            followUps: [
+              { label: "Add staff acknowledgment note", text: "Draft an internal Slack/email note to the kitchen and floor team sharing this review and congratulating them." },
+              { label: "Write Google SEO optimization advice", text: "Suggest how to naturally integrate local keywords (e.g., restaurant name, suburb location) into the review response." }
+            ]
+          },
+          {
+            title: "1-Star Complaint Responder",
+            when: "Replying to a bad review about wait times or cold food",
+            prompt: "Write a professional, calm, and non-defensive response to a negative 1-star review. Apologise for the experience, explain how we maintain high standards, and invite them to contact the manager directly to resolve the issue offline.\n\nManager Name: [Name]\nReview Details: [Paste negative review]",
+            followUps: [
+              { label: "Create manager phone script", text: "Draft a phone script for the manager calling this customer to offer a refund or complimentary dining invitation." },
+              { label: "Internal service incident log", text: "Create a template for staff to log the kitchen/service errors that led to this complaint." }
+            ]
+          },
+          {
+            title: "3-Star Neutral Feedback Reply",
+            when: "Responding to a review highlighting good food but slow service",
+            prompt: "Write a polite reply to a neutral 3-star review. Thank them for the constructive criticism, highlight the positive points they mentioned, and explain the steps we are taking to improve wait times.\n\nReview Details: [Paste review]",
+            followUps: [
+              { label: "Write service speed review plan", text: "Draft a quick checklist for the floor manager to review table rotations during peak hours." },
+              { label: "Customer recovery follow-up text", text: "Write a short template offering a complimentary dessert on their next visit." }
+            ]
+          }
+        ]
+      },
+      "Payroll & Accounting": {
+        "EOFY Prep Checklist": [
+          {
+            title: "EOFY Small Business Prep Checklist",
+            when: "June preparation ahead of June 30 tax deadlines",
+            prompt: "Create a detailed EOFY preparation checklist for a small business operating in Australia. Cover bank reconciliation, outstanding invoice receipts, asset write-off tracking, expense categorisation, and super contribution deadlines.\n\nBusiness Entity: [e.g., Sole Trader / Pty Ltd]",
+            followUps: [
+              { label: "Asset write-off rules explainer", text: "Ask AI to explain the current instant asset write-off rules for Australian small businesses." },
+              { label: "Draft email to accountant", text: "Write a polite email to my accountant enclosing our EOFY folders and requesting a tax planning meeting." }
+            ]
+          },
+          {
+            title: "Superannuation Guarantee EOFY Checklist",
+            when: "Checking super payment timelines before June 30",
+            prompt: "Write a guide explaining the Superannuation Guarantee (SG) deadlines for the June quarter. Highlight that super must be received by the employee's fund by June 30 to claim a tax deduction in the current financial year.\n\nPay Cycle: [e.g., Monthly / Quarterly]",
+            followUps: [
+              { label: "Create late payment action guide", text: "Outline steps for filing a Superannuation Guarantee Charge (SGC) statement if a payment deadline is missed." },
+              { label: "Draft clearing house guide", text: "Draft a quick guide explaining how long clearing houses typically take to clear payments." }
+            ]
+          },
+          {
+            title: "Expense Deduction Guide",
+            when: "Checking what business expenses can be claimed",
+            prompt: "Generate an expense logging guide template for a small business. Categorize common tax-deductible business expenses (Vehicle, Home Office, Tools, Training, Insurance) and detail record-keeping requirements (e.g. keeping receipts for 5 years).\n\nIndustry: [e.g., Mobile Electrician]",
+            followUps: [
+              { label: "Logbook rules summary", text: "Summarize the ATO logbook rules for claiming motor vehicle expenses using the logbook method." },
+              { label: "Write missing receipt declaration draft", text: "Draft a formal declaration letter template for a lost receipt under $82." }
+            ]
+          }
+        ],
+        "Superannuation Compliance": [
+          {
+            title: "Super Guarantee Audit Checklist",
+            when: "Reviewing company compliance with Australian super laws",
+            prompt: "Create a compliance audit checklist for Superannuation Guarantee obligations. Cover employee eligibility (including under 18 rules), current super rate calculation, clearing house details, and record retention compliance.\n\nCompany Type: [e.g., Retail Shop / 5 Staff]",
+            followUps: [
+              { label: "Audit salary sacrifice rules", text: "Add a section clarifying how salary sacrifice contributions affect employer super calculations." },
+              { label: "Write super rate update alert", text: "Draft a notice to send to the bookkeeping team outlining the upcoming legislated super rate increase." }
+            ]
+          },
+          {
+            title: "Super Choice Form Request",
+            when: "Onboarding a new Australian employee",
+            prompt: "Write a clear, friendly email to a new employee requesting their completed Superannuation Standard Choice Form. Explain why it is required, provide links to the ATO choice form, and explain the concept of 'stapled super funds' to protect their super balance.\n\nEmployee Name: [Name]\nStart Date: [Date]",
+            followUps: [
+              { label: "Create default fund disclaimer", text: "Draft a clause explaining what our company's default super fund is if they do not choose their own." },
+              { label: "Draft SMS reminder version", text: "Condense this email into a brief SMS reminder about submitting their tax and super forms." }
+            ]
+          },
+          {
+            title: "Late Super Resolution Steps",
+            when: "Resolving a missed super payment deadline",
+            prompt: "Draft a step-by-step internal action procedure for resolving a missed superannuation deadline. Detail how to calculate the Superannuation Guarantee Charge (SGC), complete the ATO SGC calculator, and submit the SGC statement.\n\nMissed Quarter: [e.g., Q1 July-Sept]",
+            followUps: [
+              { label: "Draft ATO payment plan request", text: "Write a letter to the ATO requesting a payment plan for outstanding SGC liabilities." },
+              { label: "Create compliance reminder task", text: "Draft calendar event reminder text to prevent future late payments." }
+            ]
+          }
+        ],
+        "Cash Flow Framework": [
+          {
+            title: "Monthly Cash Flow Review Outline",
+            when: "Conducting a monthly business health check",
+            prompt: "Create a monthly cash flow review framework. Detail steps for reviewing cash inflows (accounts receivable), cash outflows (creditors, payroll, tax provisions), net cash movement, and projecting cash needs for the next 90 days.\n\nMonthly Revenue Target: [Amount]",
+            followUps: [
+              { label: "Identify cost reduction areas", text: "Suggest 5 common software or operational subscriptions small businesses should audit monthly to cut overheads." },
+              { label: "Write cash flow warning email template", text: "Write a confidential email to business partners flagging an upcoming cash dip and proposing working capital adjustments." }
+            ]
+          },
+          {
+            title: "Cost Reduction Audit Guide",
+            when: "Squeezing operational costs due to margin pressure",
+            prompt: "Draft an audit checklist for reducing business expenses. Cover supplier price negotiation, fuel tax credits, utility audits, and software license checks.\n\nBusiness Area: [e.g., Mobile Cleaning Franchise]",
+            followUps: [
+              { label: "Draft supplier discount request", text: "Write a professional email to a primary materials supplier requesting a 3% prompt-payment discount on invoices." },
+              { label: "Create software subscription audit table", text: "Create a markdown table layout to record software, cost, users, and utility rating." }
+            ]
+          },
+          {
+            title: "Late Paying Customer Strategy",
+            when: "Dealing with clients who consistently pay invoices late",
+            prompt: "Generate a debtor management strategy for a small business. Outline a structured timeline of actions (Day 1: Friendly invoice email, Day 8: Polite email notice, Day 15: Phone call, Day 30: Formal letter, Day 45: Debt collection referral).\n\nTypical Client Profile: [e.g., Residential Construction Builders]",
+            followUps: [
+              { label: "Draft 15-day overdue call script", text: "Write a phone script for the 15-day overdue call, focusing on keeping the client relationship warm while locking in a payment date." },
+              { label: "Write 30-day formal Letter of Demand", text: "Draft a formal Letter of Demand to send on Day 30 warning of legal escalation." }
+            ]
+          }
+        ]
+      },
+      "Business in General": {
+        "Customer Persona": [
+          {
+            title: "Ideal Customer Profile",
+            when: "Planning marketing campaigns or website copywriting",
+            prompt: "Create a detailed Ideal Customer Profile (ICP) for my small business. Cover demographics, psychographics, buying behaviors, pain points, and core objections they might raise.\n\nBusiness Service: [Describe services]\nTarget Market: [e.g., Busy local working mums in suburban Sydney]",
+            followUps: [
+              { label: "Generate marketing hook ideas", text: "Brainstorm 3 tagline hooks that address this customer persona's main time blocker." },
+              { label: "Write a Facebook ad angle", text: "Draft a Facebook ad headline and short primary text tailored to this specific profile." }
+            ]
+          },
+          {
+            title: "Pain Point & Needs Analysis",
+            when: "Refining our service offerings to stand out",
+            prompt: "Conduct a pain point analysis for customers in my industry. Identify what frustrates them about typical competitors (e.g., late arrivals, hidden fees, poor cleanup) and show how we can highlight our solutions.\n\nMy Industry: [Describe industry]",
+            followUps: [
+              { label: "Write service guarantee statements", text: "Draft 3 service guarantee bullet points based on resolving these common pain points." },
+              { label: "Draft about page intro copy", text: "Write a 3-sentence introduction for our website homepage highlighting how we solve these specific issues." }
+            ]
+          },
+          {
+            title: "Competitor Comparison Guide",
+            when: "Preparing sales pitches or staff sales training",
+            prompt: "Create a competitor comparison matrix framework. Help me identify my unique selling proposition (USP) against big franchises vs cheap local operators.\n\nMy Value Proposition: [Describe USP]",
+            followUps: [
+              { label: "Draft customer objection handling script", text: "Write a response script for when a customer says: 'Your competitor quoted $50 cheaper.'" },
+              { label: "Add value-add suggestion checklist", text: "Suggest 3 low-cost 'value-adds' we can bundle with our service to justify a premium price." }
+            ]
+          }
+        ],
+        "30-Day Social Calendar": [
+          {
+            title: "Content Calendar Outline",
+            when: "Planning social media posts for the upcoming month",
+            prompt: "Create a 30-day social media content calendar outline for my business. Mix educational posts (tips, advice), promotional posts (offers, customer reviews), and behind-the-scenes content (before/after photos, crew profiles).\n\nMy Business: [Describe business]\nPlatforms: [e.g., Facebook & Instagram]",
+            followUps: [
+              { label: "Write post caption draft", text: "Choose Day 3 from the calendar and draft the complete post caption, including emojis and call to action." },
+              { label: "Suggest visual assets list", text: "Provide a checklist of photo/video assets I need to shoot on site this week to support this calendar." }
+            ]
+          },
+          {
+            title: "Educational vs Promo Mix",
+            when: "Refining social posts to build expert authority",
+            prompt: "Create a detailed breakdown of 5 educational posts and 5 promotional posts for my local service business. Ensure the educational posts address homeowner problems and position my business as the trusted local expert.\n\nService Area: [Describe services]",
+            followUps: [
+              { label: "Write review showcase post", text: "Write a social media post template that shares a recent 5-star customer review with a local spin." },
+              { label: "Draft seasonal promotion post", text: "Write a seasonal promotional offer post copy with a clear deadline." }
+            ]
+          },
+          {
+            title: "Behind-the-scenes Storytelling",
+            when: "Building a personal brand for a family-owned business",
+            prompt: "Write a brand storytelling post outline. Share the founding story of our business, why we love serving the local community, our values, and introducing the owner/team in a down-to-earth manner.\n\nOwner Name: [Name]\nStarted: [Year]\nLocation: [Suburb / Region]",
+            followUps: [
+              { label: "Draft photo caption script", text: "Write a friendly photo caption to go with a picture of our work vehicle or team." },
+              { label: "Create customer thank you message", text: "Draft a short post thanking the local community for supporting local businesses this year." }
+            ]
+          }
+        ],
+        "Sales Pitch & Outreach": [
+          {
+            title: "Cold Email Pitch to Local Business",
+            when: "Reaching out to local businesses for commercial B2B contracts",
+            prompt: "Write a professional, personalised B2B cold email outreach pitch. Keep it under 200 words, focus on a specific problem we can solve for them, and end with a low-pressure request for a quick chat.\n\nTarget Client: [e.g., Local Real Estate Agency / Property Managers]\nMy Service: [e.g., Turnkey End-of-Lease Cleaning & Repairs]",
+            followUps: [
+              { label: "Draft 4-day follow-up email", text: "Write a quick follow-up email to send 4 days later if they haven't replied to the initial email." },
+              { label: "Create LinkedIn request message", text: "Draft a 150-character LinkedIn connection note to send to the Agency director." }
+            ]
+          },
+          {
+            title: "Phone Sales Script & Hook",
+            when: "Calling warm leads or replying to website callback requests",
+            prompt: "Write a conversational phone sales script for responding to website callbacks. Include a strong opening hook, active listening questions to identify their needs, value presentation, and closing call-to-action.\n\nCaller Role: [Owner / Office Admin]\nProduct/Service: [Describe service]",
+            followUps: [
+              { label: "Create voicemail script", text: "Draft a warm, professional 20-second voicemail script to leave if the client doesn't answer." },
+              { label: "Handle common call blockers", text: "Write responses to common call blockers (e.g. 'I don't have time right now', 'Just email me details')." }
+            ]
+          },
+          {
+            title: "Networking Elevator Pitch",
+            when: "Attending a local business networking breakfast (e.g. BNI)",
+            prompt: "Write a 45-second elevator pitch to present at local business networking events. Keep it memorable, clearly explain who we help, what we do, and mention what a great referral looks like.\n\nCompany Name: [Company]\nUnique Angle: [Describe USP]",
+            followUps: [
+              { label: "Draft follow-up networking email", text: "Write a quick follow-up email to send to someone we met at the networking event, suggesting a coffee chat." },
+              { label: "Create digital business card card text", text: "Draft a short bio text to use on a phone-sharing business card app." }
+            ]
+          }
+        ]
+      }
+    };
+
+    function setProgress(step){
+      currentStep=step;
+      const labels=['AI platform','Business voice','Type of work','Task'];
+      document.querySelectorAll('.progress-item').forEach((item,index)=>{
+        const isResult=step===5;
+        item.classList.toggle('active',!isResult&&index===step-1);
+        item.classList.toggle('done',isResult||index<step-1);
+        item.setAttribute('aria-current',!isResult&&index===step-1?'step':'false');
+      });
+      document.getElementById('step-summary').textContent=step===5?'Result ready':`Question ${step} of 4 - ${labels[step-1]}`;
+      document.getElementById('back-btn').textContent=step===1?'\u2190 Home':'\u2190 Back';
+    }
+
+    function showOnly(sectionId){
+      ['platform-section','experience-section','beginner-section','tone-section','step-industry','step-task','results-section','cta-section'].forEach(id=>{
+        document.getElementById(id).classList.toggle('hidden',id!==sectionId);
+      });
+      if(sectionId==='step-industry'||sectionId==='step-task'||sectionId==='results-section')document.getElementById('prompt-picker').classList.remove('hidden');
+      requestAnimationFrame(()=>document.getElementById(sectionId).scrollIntoView({behavior:scrollBehavior}));
+    }
+
+    function goBack(){
+      if(currentStep===5){showOnly('step-task');setProgress(4);return;}
+      if(currentStep===4){showOnly('step-industry');setProgress(3);return;}
+      if(currentStep===3){document.getElementById('prompt-picker').classList.add('hidden');showOnly('tone-section');setProgress(2);return;}
+      if(currentStep===2){showOnly('platform-section');setProgress(1);return;}
+      builderStarted = false;
+      document.getElementById('main-container').classList.add('hidden');
+      document.getElementById('welcome-section').classList.remove('hidden');
+      window.scrollTo({top:0,behavior:scrollBehavior});
+    }
+
+    function selectCard(group,el){
+      document.querySelectorAll(`${group} .card-option`).forEach(card=>{
+        card.classList.remove('selected');
+        card.setAttribute('aria-pressed','false');
+      });
+      el.classList.add('selected');
+      el.setAttribute('aria-pressed','true');
+    }
+
+    function startGuide(){
+      const resumeBuilder=builderStarted;
+      builderStarted = true;
+      document.getElementById('welcome-section').classList.add('hidden');
+      document.getElementById('main-container').classList.remove('hidden');
+      document.getElementById('voice-container').classList.add('hidden');
+      document.getElementById('kb-container').classList.add('hidden');
+      refreshSavedVoiceOption();
+      if(!resumeBuilder){
+        document.getElementById('prompt-picker').classList.add('hidden');
+        showOnly('platform-section');
+        setProgress(1);
+      }else{
+        window.scrollTo({top:0,behavior:scrollBehavior});
+      }
+    }
+
+    function updatePlatformText(){
+      const tool=aiTools[selectedPlatform]||aiTools.other;
+      document.getElementById('exp-title').textContent=`Have you used ${tool.name} before?`;
+      document.getElementById('beginner-title').textContent=`Do you have a ${tool.name} account?`;
+      document.getElementById('account-setup-step1').textContent=tool.signup;
+      const openLink=document.getElementById('open-tool-link');
+      if(tool.url){
+        openLink.href=tool.url;
+        openLink.style.display='';
+        openLink.textContent=`Open ${tool.name}`;
+      }else{
+        openLink.style.display='none';
+      }
+      document.getElementById('results-title').textContent=`Your ${tool.name} prompts`;
+    }
+
+    function selectPlatform(el){
+      selectCard('#platform-grid',el);
+      selectedPlatform=el.dataset.value;
+      updatePlatformText();
+      document.getElementById('platform-section').classList.add('hidden');
+      showToneSelector();
+    }
+
+    function selectExperience(el){
+      selectCard('#exp-grid',el);
+      selectedExperience=el.dataset.value;
+      if(selectedExperience==='never'){
+        document.getElementById('experience-section').classList.add('hidden');
+        document.getElementById('beginner-section').classList.remove('hidden');
+        document.getElementById('tone-section').classList.add('hidden');
+        setTimeout(()=>document.getElementById('beginner-section').scrollIntoView({behavior:scrollBehavior}),100);
+      }else{
+        document.getElementById('beginner-section').classList.add('hidden');
+        showToneSelector();
+      }
+    }
+
+    function answerAccountQuestion(hasAccount){
+      if(hasAccount){showToneSelector();return;}
+      document.getElementById('account-setup').open=true;
+      document.getElementById('account-setup').scrollIntoView({behavior:scrollBehavior,block:'center'});
+    }
+
+    function showToneSelector(){
+      document.getElementById('experience-section').classList.add('hidden');
+      document.getElementById('beginner-section').classList.add('hidden');
+      document.getElementById('tone-section').classList.remove('hidden');
+      refreshSavedVoiceOption();
+      setProgress(2);
+      setTimeout(()=>document.getElementById('tone-section').scrollIntoView({behavior:scrollBehavior}),100);
+    }
+
+    function selectTone(el){
+      selectCard('#tone-grid',el);
+      selectedTone=el.dataset.value;
+      activeBusinessVoice='';
+      const toolName=(aiTools[selectedPlatform]||aiTools.other).name;
+      const prompt=`BUSINESS VOICE SETUP
+
+Use this as the default voice for my business when I ask you to write, rewrite, explain, summarise or plan work.
+
+Business context:
+- We operate in Australia.
+- Our audience is: [describe customers, staff or stakeholders].
+- We sell or support: [describe product, service or work].
+- We want people to feel: clear, respected and confident about the next step.
+
+Voice:
+- Sound ${selectedTone}.
+- Use Australian English, Australian spelling, Australian dates, AUD where money is mentioned and Australian business context.
+- Be plain, direct and useful. No corporate jargon, fake excitement, over-polished sales language or American assumptions.
+- If the draft is for customers, make the next action obvious.
+- If the draft is for staff training, use short steps, examples and simple language for mixed experience levels.
+- If the topic touches tax, employment, payroll, safety, privacy, legal duties or compliance, flag what needs to be checked against current Australian requirements.
+
+Platform note:
+- In ${toolName}, keep this as custom instructions, project guidance or the first message in a new work thread.`;
+      document.getElementById('tone-prompt-text').textContent=prompt;
+      document.getElementById('tone-prompt-box').classList.remove('hidden');
+    }
+
+    function copyTonePrompt(btn){copyText(btn,document.getElementById('tone-prompt-text').textContent);}
+
+    function showPromptPicker(){
+      if(!selectedTone)return;
+      document.getElementById('prompt-picker').classList.remove('hidden');
+      document.getElementById('beginner-section').classList.add('hidden');
+      document.getElementById('tone-section').classList.add('hidden');
+      document.getElementById('experience-section').classList.add('hidden');
+      document.getElementById('step-industry').classList.remove('hidden');
+      document.getElementById('step-task').classList.add('hidden');
+      setProgress(3);
+      setTimeout(()=>document.getElementById('step-industry').scrollIntoView({behavior:scrollBehavior}),100);
+    }
+
+    function selectIndustry(el){
+      selectCard('#industry-grid',el);
+      selectedIndustry=el.dataset.value;
+      const tasks=industryTasks[selectedIndustry]||industryTasks["Business in General"];
+      const grid=document.getElementById('task-grid');
+      grid.innerHTML='';
+      tasks.forEach((t,i)=>{
+        const btn=document.createElement('button');
+        btn.className=`card-option rounded-xl p-5 text-left fade-in stagger-${i+1}`;
+        btn.style.cssText='background:white;';
+        btn.dataset.value=t.label;
+        btn.type='button';
+        btn.setAttribute('aria-pressed','false');
+        btn.onclick=function(){selectTask(this);};
+        btn.innerHTML=`<span class="font-medium">${t.label}</span>`;
+        grid.appendChild(btn);
+      });
+      document.getElementById('step-task').classList.remove('hidden');
+      document.getElementById('step-industry').classList.add('hidden');
+      document.getElementById('results-section').classList.add('hidden');
+      document.getElementById('cta-section').classList.add('hidden');
+      setProgress(4);
+      setTimeout(()=>document.getElementById('step-task').scrollIntoView({behavior:scrollBehavior}),100);
+    }
+
+    function selectTask(el){
+      selectCard('#task-grid',el);
+      selectedTask=el.dataset.value;
+      document.getElementById('step-task').classList.add('hidden');
+      setProgress(5);
+      generatePrompts();
+    }
+
+    function adaptPrompt(prompt){
+      const australianContext='AUSTRALIAN CONTEXT - IMPORTANT: This is for a business operating in Australia. Use Australian English, spelling, terminology, dates, currency and market context. Do not assume United States laws, pricing or business practices. If the task touches tax, employment, payroll, safety, privacy, consumer law or another regulated area, identify what must be verified against current Australian and relevant state or territory requirements. Do not present general information as professional advice.';
+      const voice=activeBusinessVoice?`BUSINESS VOICE:\n${activeBusinessVoice}`:`BUSINESS VOICE: Use a ${selectedTone||'friendly and professional'} tone. Keep it natural, practical and appropriate for Australian customers, staff or stakeholders. Use plain English, avoid jargon and make the next action obvious.`;
+      const toolName=(aiTools[selectedPlatform]||aiTools.other).name;
+      const level=`EXPERIENCE LEVEL: ${getExperienceGuidance(selectedExperience,toolName)}`;
+      return `${australianContext}\n\n${voice}\n\n${level}\n\nTASK:\n${prompt}`;
+    }
+
+    function generatePrompts(){
+      const prompts=getPrompts(selectedIndustry,selectedTask);
+      const container=document.getElementById('prompts-container');
+      container.innerHTML='';
+      const voiceLabel=activeBusinessVoice?'your saved business voice':`a ${selectedTone} voice`;
+      document.getElementById('results-tip').textContent=`Three prompts using ${voiceLabel} and Australian context, ready to paste into ${(aiTools[selectedPlatform]||aiTools.other).name}. Replace anything inside [brackets] first. ${platformGuidance[selectedPlatform]||platformGuidance.other}`;
+      prompts.forEach((p,i)=>{
+        const adaptedPrompt=adaptPrompt(p.prompt);
+        const card=document.createElement('div');
+        card.className=`p-5 sm:p-6 rounded-xl fade-in stagger-${i+1}`;
+        card.style.cssText='background:white;border:1px solid #d4cfc5;';
+        
+        let followUpsHtml = '';
+        if (p.followUps && p.followUps.length > 0) {
+          followUpsHtml = `
+            <div class="prompt-go-beyond">
+              <h4>Useful next prompts</h4>
+              <div class="go-beyond-list">
+                ${p.followUps.map((f, idx) => `
+                  <div class="go-beyond-item">
+                    <div class="go-beyond-text">
+                      <span>Follow-up Option ${idx + 1} - ${f.label}</span>
+                      ${f.text}
+                    </div>
+                    <button class="go-beyond-copy" onclick="copyFollowUp(this)">Copy Command</button>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        }
+
+        card.innerHTML=`<details class="prompt-disclosure">
+          <summary><span><h3 class="font-antonio text-lg mb-1">${p.title}</h3><small>${p.when}</small></span><b>View prompt</b></summary>
+          <div class="prompt-content">
+           <div class="p-4 rounded-lg mb-4" style="background:var(--warm-cream);"><code class="text-sm whitespace-pre-wrap block">${adaptedPrompt}</code></div>
+           <button onclick="copyText(this,this.closest('details').querySelector('code').textContent)" class="copy-btn font-medium px-5 py-2 rounded-lg text-sm" style="background:var(--sage);color:#ffffff; margin-bottom:12px;">Copy prompt</button>
+           ${followUpsHtml}
+          </div>
+         </details>`;
+        container.appendChild(card);
+      });
+      document.getElementById('results-section').classList.remove('hidden');
+      document.getElementById('cta-section').classList.remove('hidden');
+      setTimeout(()=>document.getElementById('results-section').scrollIntoView({behavior:scrollBehavior}),100);
+    }
+
+    async function copyText(btn,text){
+      try{
+        if(navigator.clipboard&&window.isSecureContext){
+          await navigator.clipboard.writeText(text);
+        }else{
+          const area=document.createElement('textarea');
+          area.value=text;area.setAttribute('readonly','');area.style.position='fixed';area.style.opacity='0';
+          document.body.appendChild(area);area.select();document.execCommand('copy');area.remove();
+        }
+        const orig=btn.textContent;
+        btn.textContent='Copied';btn.classList.add('copied');
+        setTimeout(()=>{btn.textContent=orig;btn.classList.remove('copied');},2000);
+      }catch(error){
+        btn.textContent='Copy failed - select the text';
+      }
+    }
+
+    function copyFollowUp(btn) {
+      const container = btn.closest('.go-beyond-item');
+      const textDiv = container.querySelector('.go-beyond-text');
+      const clone = textDiv.cloneNode(true);
+      const span = clone.querySelector('span');
+      if (span) clone.removeChild(span);
+      copyText(btn, clone.textContent.trim());
+    }
+
+    function copyCheatCode(btn) {
+      const codeText = btn.closest('.cheat-item').querySelector('.cheat-cmd').textContent.trim();
+      copyText(btn, codeText);
+    }
+
+    function renderLucideIcons(){
+      if(window.lucide)window.lucide.createIcons({attrs:{'stroke-width':1.8}});
+    }
+
+    function copyPreviewPrompt(btn){
+      copyText(btn,document.getElementById('example-prompt').textContent.trim());
+    }
+
+    function savePreviewPrompt(btn){
+      try{
+        localStorage.setItem('lsio-ai-example-prompt',document.getElementById('example-prompt').textContent.trim());
+        const original=btn.innerHTML;
+        btn.textContent='Saved';
+        setTimeout(()=>{btn.innerHTML=original;renderLucideIcons();},1800);
+      }catch(error){btn.textContent='Could not save';}
+    }
+
+    function getStoredBusinessVoice(){
+      try{
+        const saved=localStorage.getItem('lsio-business-voice');
+        return saved?JSON.parse(saved):null;
+      }catch(error){return null;}
+    }
+
+    function refreshSavedVoiceOption(){
+      const saved=getStoredBusinessVoice();
+      const option=document.getElementById('saved-voice-option');
+      if(!option)return;
+      option.classList.toggle('hidden',!saved?.text);
+      if(saved?.text){
+        document.getElementById('saved-voice-summary').textContent=`${saved.style||'Saved voice'} for ${saved.audience||'your usual audience'}.`;
+      }
+    }
+
+    function useSavedBusinessVoice(){
+      const saved=getStoredBusinessVoice();
+      if(!saved?.text)return;
+      activeBusinessVoice=saved.text;
+      selectedTone=saved.style||'saved business voice';
+      document.querySelectorAll('#tone-grid .card-option').forEach(card=>{card.classList.remove('selected');card.setAttribute('aria-pressed','false');});
+      document.getElementById('tone-prompt-text').textContent=saved.text;
+      document.getElementById('tone-prompt-box').classList.remove('hidden');
+      showPromptPicker();
+    }
+
+    function startVoiceBuilder(){
+      builderStarted=false;
+      document.getElementById('welcome-section').classList.add('hidden');
+      document.getElementById('main-container').classList.add('hidden');
+      document.getElementById('kb-container').classList.add('hidden');
+      document.getElementById('voice-container').classList.remove('hidden');
+      setVoiceStep(voiceStep||1,false);
+      updateVoicePreview();
+      renderLucideIcons();
+      window.scrollTo({top:0,behavior:scrollBehavior});
+    }
+
+    function setVoiceStep(step,shouldScroll=true){
+      voiceStep=step;
+      document.querySelectorAll('.voice-step').forEach((section,index)=>section.classList.toggle('hidden',index!==step-1));
+      document.getElementById('voice-progress-label').textContent=`Question ${step} of 3`;
+      document.getElementById('voice-progress-bar').style.width=`${step/3*100}%`;
+      if(shouldScroll)document.querySelector('.voice-builder-panel').scrollIntoView({behavior:scrollBehavior,block:'start'});
+    }
+
+    function selectVoiceAudience(btn){
+      document.querySelectorAll('#voice-audience-options button').forEach(item=>item.classList.remove('selected'));
+      btn.classList.add('selected');
+      voiceAudience=btn.dataset.value;
+      updateVoicePreview();
+      setVoiceStep(2);
+    }
+
+    function selectVoiceStyle(btn){
+      document.querySelectorAll('#voice-style-options button').forEach(item=>item.classList.remove('selected'));
+      btn.classList.add('selected');
+      voiceStyle=btn.dataset.value;
+      updateVoicePreview();
+      setVoiceStep(3);
+    }
+
+    function toggleVoiceRule(btn){
+      const selected=btn.getAttribute('aria-pressed')==='true';
+      btn.setAttribute('aria-pressed',String(!selected));
+      btn.classList.toggle('selected',!selected);
+      updateVoicePreview();
+    }
+
+    function getVoiceAvoidRules(){
+      return Array.from(document.querySelectorAll('#voice-avoid-options button.selected')).map(btn=>btn.dataset.value);
+    }
+
+    function buildBusinessVoiceText(){
+      const audience=voiceAudience||'customers, staff and business partners';
+      const avoid=getVoiceAvoidRules();
+      const avoidText=avoid.length?avoid.map(item=>`- ${item}.`).join('\n'):'- anything that makes the message less clear or less honest.';
+      return `BUSINESS VOICE\n\nUse this voice whenever you write, rewrite, summarise or explain work for this business.\n\nAudience:\n- Write for ${audience}.\n\nSound like:\n- ${voiceStyle}.\n- A real Australian person who knows the work and respects the reader's time.\n\nAlways do:\n- Use Australian English, spelling, dates and business context.\n- Lead with the useful answer. Keep sentences and paragraphs easy to scan.\n- Use plain words. Explain any term the reader may not know.\n- Make the next action, owner or deadline obvious when one exists.\n- For training or staff guidance, use short steps and practical examples for mixed experience levels.\n\nAvoid:\n${avoidText}\n\nChecks:\n- Do not invent facts, prices, policies or legal requirements.\n- Flag anything involving tax, employment, payroll, safety, privacy, legal duties or compliance for a current Australian source or qualified person to check.`;
+    }
+
+    function updateVoicePreview(){
+      const avoid=getVoiceAvoidRules();
+      document.getElementById('voice-preview-style').textContent=`${voiceStyle.charAt(0).toUpperCase()+voiceStyle.slice(1)}. Write like a real person.`;
+      document.getElementById('voice-preview-audience').textContent=voiceAudience?`Write for ${voiceAudience}.`:'Your customers, staff or business partners.';
+      document.getElementById('voice-preview-avoid').textContent=avoid.length?`${avoid.join(', ')}.`:'Anything that makes the message less clear or honest.';
+      document.getElementById('business-voice-output').textContent=buildBusinessVoiceText();
+    }
+
+    function finishVoiceBuilder(){
+      updateVoicePreview();
+      document.getElementById('voice-progress-label').textContent='Voice ready';
+      document.getElementById('voice-progress-bar').style.width='100%';
+      document.getElementById('voice-save-status').textContent='Your voice is ready. Copy it now or save it on this device so the Prompt Builder can use it.';
+      document.querySelector('.voice-result-panel').scrollIntoView({behavior:scrollBehavior,block:'start'});
+    }
+
+    function copyBusinessVoice(btn){
+      updateVoicePreview();
+      copyText(btn,document.getElementById('business-voice-output').textContent);
+    }
+
+    function saveBusinessVoice(btn){
+      updateVoicePreview();
+      const voice={text:document.getElementById('business-voice-output').textContent,audience:voiceAudience||'customers, staff and business partners',style:voiceStyle,avoid:getVoiceAvoidRules(),savedAt:new Date().toISOString()};
+      try{
+        localStorage.setItem('lsio-business-voice',JSON.stringify(voice));
+        activeBusinessVoice=voice.text;
+        selectedTone=voice.style;
+        document.getElementById('voice-save-status').textContent='Saved on this device. The Prompt Builder can now use this voice.';
+        const original=btn.innerHTML;
+        btn.textContent='Saved';
+        setTimeout(()=>{btn.innerHTML=original;renderLucideIcons();},1800);
+      }catch(error){document.getElementById('voice-save-status').textContent='This browser could not save the voice. Copy it instead.';}
+    }
+
+    function resetVoiceBuilder(){
+      voiceAudience='';
+      voiceStyle='friendly, professional and down to earth';
+      document.querySelectorAll('#voice-audience-options button,#voice-style-options button').forEach(btn=>btn.classList.remove('selected'));
+      document.querySelectorAll('#voice-avoid-options button').forEach(btn=>{btn.classList.add('selected');btn.setAttribute('aria-pressed','true');});
+      document.getElementById('voice-save-status').textContent='Saved voices stay on this device. Check any legal, workplace, safety, tax or compliance content against a current Australian source.';
+      updateVoicePreview();
+      setVoiceStep(1);
+    }
+
+    function switchTab(tab) {
+      // The builder/knowledge-base tabs are not rendered in the mobile-first
+      // hero, so keep this handler safe when it is called by the hero button.
+      const builderTab = document.getElementById('btn-tab-builder');
+      const knowledgeTab = document.getElementById('btn-tab-kb');
+      if (builderTab) builderTab.classList.toggle('active', tab === 'builder');
+      if (knowledgeTab) knowledgeTab.classList.toggle('active', tab === 'kb');
+      
+      if (tab === 'kb') {
+        document.getElementById('welcome-section').classList.add('hidden');
+        document.getElementById('main-container').classList.add('hidden');
+        document.getElementById('voice-container').classList.add('hidden');
+        document.getElementById('kb-container').classList.remove('hidden');
+        window.scrollTo({top:0, behavior:scrollBehavior});
+      } else {
+        document.getElementById('kb-container').classList.add('hidden');
+        document.getElementById('voice-container').classList.add('hidden');
+        if (builderStarted) {
+          document.getElementById('main-container').classList.remove('hidden');
+          document.getElementById('welcome-section').classList.add('hidden');
+        } else {
+          document.getElementById('welcome-section').classList.remove('hidden');
+          document.getElementById('main-container').classList.add('hidden');
+        }
+        window.scrollTo({top:0, behavior:scrollBehavior});
+      }
+    }
+
+    function resetAll(){
+      selectedIndustry='';selectedTask='';selectedTone='';selectedExperience='sometimes';selectedPlatform='';activeBusinessVoice='';
+      builderStarted=false;
+      document.querySelectorAll('.card-option').forEach(c=>{c.classList.remove('selected');c.setAttribute('aria-pressed','false');});
+      document.querySelectorAll('#main-container details').forEach(details=>details.open=false);
+      ['experience-section','beginner-section','tone-section','prompt-picker','step-task','results-section','cta-section'].forEach(id=>document.getElementById(id).classList.add('hidden'));
+      document.getElementById('tone-prompt-box').classList.add('hidden');
+      document.getElementById('account-setup').open=false;
+      document.getElementById('platform-section').classList.remove('hidden');
+      document.getElementById('main-container').classList.add('hidden');
+      document.getElementById('voice-container').classList.add('hidden');
+      document.getElementById('welcome-section').classList.remove('hidden');
+      document.getElementById('kb-container').classList.add('hidden');
+      const builderTab = document.getElementById('btn-tab-builder');
+      const knowledgeTab = document.getElementById('btn-tab-kb');
+      if (builderTab) builderTab.classList.add('active');
+      if (knowledgeTab) knowledgeTab.classList.remove('active');
+      setProgress(1);
+      window.scrollTo({top:0,behavior:scrollBehavior});
+    }
+
+    function getPrompts(industry,task){
+      if (promptsDb[industry] && promptsDb[industry][task]) {
+        return promptsDb[industry][task];
+      }
+      // Fallback
+      return [
+        {
+          title: "General Business Prompt",
+          when: "For any typical business task",
+          prompt: `Act as a practical business assistant for a ${industry} business in Australia. Help me with: ${task}. Keep it simple and clear.\n\n[describe your situation]`,
+          followUps: [
+            { label: "Request alternative draft", text: "Make the previous output shorter and rewrite in a more casual tone." },
+            { label: "Convert to checklist", text: "Summarize this output into a 5-step checklist I can give to my team." }
+          ]
+        },
+        {
+          title: "Quick Draft Builder",
+          when: "Need something written fast",
+          prompt: `Act as a writing assistant for a ${industry} business in Australia. Write a quick draft for: ${task}. Friendly, professional, Australian English.\n\n[add your details]`,
+          followUps: [
+            { label: "Add call to action", text: "Add a clear call to action at the end asking the customer to confirm by reply." }
+          ]
+        },
+        {
+          title: "Brainstorm Ideas",
+          when: "Need options",
+          prompt: `Act as a business advisor for a ${industry} business in Australia. Give me 5 ideas for: ${task}. Practical and easy to implement.\n\n[describe your situation]`,
+          followUps: [
+            { label: "Develop option 1", text: "Expand on the first idea and detail the exact steps needed to implement it." }
+          ]
+        }
+      ];
+    }
+
+    function toggleSettings() {
+      document.getElementById('settings-dropdown').classList.toggle('hidden');
+    }
+
+    function adjustTextSize(val) {
+      document.documentElement.style.setProperty('--text-scale', val);
+      const valueLabel = document.getElementById('text-size-value');
+      const slider = document.getElementById('text-size-slider');
+      if (valueLabel) valueLabel.textContent = Math.round(val * 100) + '%';
+      if (slider) slider.value = val;
+      localStorage.setItem('sb-text-scale', val);
+    }
+
+    function adjustSpacing(val) {
+      document.documentElement.style.setProperty('--spacing-scale', val);
+      const valueLabel = document.getElementById('spacing-value');
+      const slider = document.getElementById('spacing-slider');
+      if (valueLabel) valueLabel.textContent = Math.round(val * 100) + '%';
+      if (slider) slider.value = val;
+      localStorage.setItem('sb-spacing-scale', val);
+    }
+
+    // Load settings from localStorage or set defaults for mobile
+    window.addEventListener('DOMContentLoaded', () => {
+      // Close dropdown if user clicks outside
+      document.addEventListener('click', (e) => {
+        const dropdown = document.getElementById('settings-dropdown');
+        const toggleBtn = document.getElementById('btn-display-settings');
+        if (dropdown && !dropdown.classList.contains('hidden') && !dropdown.contains(e.target) && e.target !== toggleBtn) {
+          dropdown.classList.add('hidden');
+        }
+      });
+
+      let savedText = localStorage.getItem('sb-text-scale');
+      let savedSpacing = localStorage.getItem('sb-spacing-scale');
+
+      // Auto-detect mobile platform or small screens to set nice defaults
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
+      if (!savedText) {
+        savedText = isMobile ? '1.05' : '1.0'; // Slightly larger text on mobile by default
+      }
+      if (!savedSpacing) {
+        savedSpacing = isMobile ? '0.85' : '1.0'; // Slightly tighter spacing on mobile by default
+      }
+
+      adjustTextSize(parseFloat(savedText));
+      adjustSpacing(parseFloat(savedSpacing));
+      refreshSavedVoiceOption();
+      updateVoicePreview();
+      renderLucideIcons();
+    });
+
+    document.querySelectorAll('.card-option').forEach(card=>card.setAttribute('aria-pressed','false'));
+  </script>
+<script src="../assets/tool-shell.js?v=20260801-nav"></script><script src="/assets/auth.js?v=20260801-auth2" type="module"></script></body></html>

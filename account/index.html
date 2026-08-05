@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="Log in or register to use the Let’s Sort It Out learning hubs and interactive business tools." />
+    <title>Log in or register | Let’s Sort It Out</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="/assets/auth.css?v=20260801-auth" rel="stylesheet" />
+  </head>
+  <body class="auth-page">
+    <header class="auth-page-header">
+      <a href="/">LET’S SORT IT OUT</a>
+    </header>
+    <main class="auth-layout">
+      <section class="auth-intro" aria-labelledby="account-heading">
+        <span class="auth-kicker">Your practical workspace</span>
+        <h1 id="account-heading">Learn it. Use it. Sort it.</h1>
+        <p>The tools are free without an account. Sign in when you want your progress, finished results and newly added resources kept together across devices.</p>
+        <ul class="auth-benefits">
+          <li>Save and reopen your interactive-tool results</li>
+          <li>Pick up unfinished work without starting again</li>
+          <li>See what has been added since your last visit</li>
+        </ul>
+      </section>
+
+      <section class="auth-card" aria-label="Account access">
+        <div data-signed-out>
+          <div class="auth-tabs" role="tablist" aria-label="Account options">
+            <button class="auth-tab" type="button" role="tab" data-auth-tab="login" aria-controls="login-panel">Log in</button>
+            <button class="auth-tab" type="button" role="tab" data-auth-tab="register" aria-controls="register-panel">Register</button>
+          </div>
+
+          <div class="auth-panel" id="login-panel" role="tabpanel" data-auth-panel="login">
+            <h2>Welcome back</h2>
+            <p>Get your saved work back without digging through screenshots or starting the work again.</p>
+            <button class="auth-google" type="button" data-google-login hidden><span aria-hidden="true">G</span> Continue with Google</button>
+            <div class="auth-divider"><span>or use email</span></div>
+            <form class="auth-form" data-login-form>
+              <div class="auth-field">
+                <label for="login-email">Email address</label>
+                <input id="login-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="auth-field">
+                <label for="login-password">Password</label>
+                <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+              </div>
+              <button class="auth-submit" type="submit">Log in</button>
+              <button class="auth-link-button" type="button" data-show-recovery>Forgot your password?</button>
+            </form>
+          </div>
+
+          <div class="auth-panel" id="register-panel" role="tabpanel" data-auth-panel="register" hidden>
+            <h2>Create your account</h2>
+            <p>The account is free. It saves your results and shows you what is new. No mystery newsletter ambush.</p>
+            <button class="auth-google" type="button" data-google-login hidden><span aria-hidden="true">G</span> Continue with Google</button>
+            <div class="auth-divider"><span>or use email</span></div>
+            <form class="auth-form" data-register-form>
+              <div class="auth-field">
+                <label for="register-name">Your name</label>
+                <input id="register-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="auth-field">
+                <label for="register-email">Email address</label>
+                <input id="register-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="auth-field">
+                <label for="register-business">Business name <span class="auth-optional">(optional)</span></label>
+                <input id="register-business" name="business-name" type="text" autocomplete="organization" />
+              </div>
+              <div class="auth-field">
+                <label for="register-industry">Industry <span class="auth-optional">(optional)</span></label>
+                <select id="register-industry" name="industry">
+                  <option value="">Prefer not to say</option>
+                  <option value="Trades &amp; construction">Trades &amp; construction</option>
+                  <option value="Cleaning">Cleaning</option>
+                  <option value="Landscaping &amp; lawn care">Landscaping &amp; lawn care</option>
+                  <option value="Handyman &amp; property maintenance">Handyman &amp; property maintenance</option>
+                  <option value="Mobile services">Mobile services</option>
+                  <option value="Beauty &amp; wellness">Beauty &amp; wellness</option>
+                  <option value="Hospitality &amp; food">Hospitality &amp; food</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Professional services">Professional services</option>
+                  <option value="Other">Other</option>
+                </select>
+                <p class="auth-hint">This helps tailor the free tools and any advice to your industry. Never shared or sold.</p>
+              </div>
+              <div class="auth-field">
+                <label for="register-password">Password</label>
+                <input id="register-password" name="password" type="password" autocomplete="new-password" minlength="6" required />
+              </div>
+              <div class="auth-field">
+                <label for="register-confirm">Confirm password</label>
+                <input id="register-confirm" name="confirm-password" type="password" autocomplete="new-password" minlength="6" required />
+              </div>
+              <button class="auth-submit" type="submit">Create free account</button>
+            </form>
+          </div>
+
+          <div class="auth-panel" id="recovery-panel" role="tabpanel" data-auth-panel="recovery" hidden>
+            <h2>Reset your password</h2>
+            <p>Enter your account email and a secure reset link is sent to you.</p>
+            <form class="auth-form" data-recovery-form>
+              <div class="auth-field">
+                <label for="recovery-email">Email address</label>
+                <input id="recovery-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <button class="auth-submit" type="submit">Send reset link</button>
+              <button class="auth-link-button" type="button" data-show-login>Back to log in</button>
+            </form>
+          </div>
+
+          <div class="auth-panel" id="reset-panel" role="tabpanel" data-auth-panel="reset" hidden>
+            <h2>Choose a new password</h2>
+            <p>Set a new password for your account, then continue to your tools.</p>
+            <form class="auth-form" data-reset-form>
+              <div class="auth-field">
+                <label for="reset-password">New password</label>
+                <input id="reset-password" name="password" type="password" autocomplete="new-password" minlength="6" required />
+              </div>
+              <div class="auth-field">
+                <label for="reset-confirm">Confirm new password</label>
+                <input id="reset-confirm" name="confirm-password" type="password" autocomplete="new-password" minlength="6" required />
+              </div>
+              <button class="auth-submit" type="submit">Update password</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="member-dashboard" data-signed-in hidden>
+          <div class="member-dashboard__head">
+            <div>
+              <span class="auth-kicker">Your sorted-out corner</span>
+              <h2>Pick up where you left off.</h2>
+              <p>Your saved results and useful new additions live here. Nothing added for the sake of it.</p>
+            </div>
+            <div class="member-dashboard__account">
+              <span>Signed in as</span>
+              <strong data-account-email></strong>
+              <button class="auth-link-button" type="button" data-account-logout>Log out</button>
+            </div>
+          </div>
+
+          <div class="member-stats" aria-label="Account summary">
+            <div><strong data-result-count>0</strong><span>saved results</span></div>
+            <div><strong data-complete-count>0</strong><span>finished tools</span></div>
+            <div><strong data-new-count>0</strong><span>new additions</span></div>
+          </div>
+
+          <section class="member-section member-section--next" aria-labelledby="next-move-heading">
+            <div class="member-section__heading">
+              <div><span class="member-eyebrow">Next move</span><h3 id="next-move-heading">Use the account for something useful.</h3></div>
+            </div>
+            <div class="member-next-grid">
+              <a class="member-next-card" href="/learning-hub/">
+                <span>Learn</span>
+                <strong>Choose a learning path</strong>
+                <p>AI, people, process, systems or online setup. Built for different confidence levels.</p>
+              </a>
+              <a class="member-next-card" href="/free-tools/">
+                <span>Use</span>
+                <strong>Open a practical tool</strong>
+                <p>Find what to fix first, save the result and come back when you need it.</p>
+              </a>
+              <a class="member-next-card member-next-card--strong" href="/implementation-support/">
+                <span>Get help</span>
+                <strong>Turn it into action</strong>
+                <p>If the result is useful but the build feels too heavy, see how Jake can help.</p>
+              </a>
+            </div>
+          </section>
+
+          <section class="member-section member-section--saved" aria-labelledby="saved-work-heading">
+            <div class="member-section__heading">
+              <div><span class="member-eyebrow">Your work</span><h3 id="saved-work-heading">Saved tool results</h3></div>
+              <a href="/free-tools/">Open all free tools</a>
+            </div>
+            <div class="member-loading" data-results-loading aria-live="polite">Checking your saved work…</div>
+            <div class="member-result-list" data-results-list></div>
+          </section>
+
+          <section class="member-section member-section--profile" aria-labelledby="profile-heading">
+            <div class="member-section__heading">
+              <div><span class="member-eyebrow">About your business</span><h3 id="profile-heading">Your profile</h3></div>
+            </div>
+            <form class="auth-form member-profile-form" data-profile-form>
+              <div class="auth-field">
+                <label for="profile-business">Business name</label>
+                <input id="profile-business" name="business-name" type="text" autocomplete="organization" />
+              </div>
+              <div class="auth-field">
+                <label for="profile-industry">Industry</label>
+                <select id="profile-industry" name="industry">
+                  <option value="">Prefer not to say</option>
+                  <option value="Trades &amp; construction">Trades &amp; construction</option>
+                  <option value="Cleaning">Cleaning</option>
+                  <option value="Landscaping &amp; lawn care">Landscaping &amp; lawn care</option>
+                  <option value="Handyman &amp; property maintenance">Handyman &amp; property maintenance</option>
+                  <option value="Mobile services">Mobile services</option>
+                  <option value="Beauty &amp; wellness">Beauty &amp; wellness</option>
+                  <option value="Hospitality &amp; food">Hospitality &amp; food</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Professional services">Professional services</option>
+                  <option value="Other">Other</option>
+                </select>
+                <p class="auth-hint">Used to shape tool suggestions. Not shared.</p>
+              </div>
+              <button class="auth-submit" type="submit">Save profile</button>
+            </form>
+          </section>
+
+          <section class="member-section member-section--files" aria-labelledby="files-heading">
+            <div class="member-section__heading">
+              <div><span class="member-eyebrow">Share with Jake</span><h3 id="files-heading">Your files</h3></div>
+            </div>
+            <p class="member-files-note">Upload a document if you want Jake to take a look. PDF, Word, Excel, CSV, text or images. 5MB each.</p>
+            <form class="member-upload-form" data-upload-form>
+              <label class="auth-sr-only" for="file-upload-input">Choose a file</label>
+              <input type="file" id="file-upload-input" name="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.txt,.png,.jpg,.jpeg,.webp" />
+              <label class="auth-sr-only" for="file-upload-note">What is this file about?</label>
+              <input type="text" id="file-upload-note" name="note" placeholder="What's this file about? (optional)" maxlength="300" />
+              <button class="auth-submit" type="submit">Upload file</button>
+            </form>
+            <div class="member-loading" data-files-loading aria-live="polite">Checking your files…</div>
+            <div class="member-file-list" data-files-list></div>
+          </section>
+
+          <section class="member-section member-section--dark member-section--new" aria-labelledby="new-content-heading">
+            <div class="member-section__heading">
+              <div><span class="member-eyebrow">Freshly sorted</span><h3 id="new-content-heading">New and worth a look</h3></div>
+            </div>
+            <div class="member-loading" data-content-loading aria-live="polite">Checking what has changed…</div>
+            <div class="member-content-list" data-content-list></div>
+          </section>
+        </div>
+
+        <p class="auth-message" data-auth-message aria-live="polite"></p>
+      </section>
+    </main>
+    <script type="module" src="/assets/auth.js?v=20260801-auth2"></script>
+    <script type="module" src="/assets/account-dashboard.js?v=20260731-account"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "design_changed": [
+    "what-we-sort-out/index.html"
+  ],
+  "visible_copy_changed": [
+    "what-we-sort-out/index.html only, using the approved preview"
+  ],
+  "seo_updated_pages": 21,
+  "noindex_pages": [
+    "about/",
+    "business-mini-audit/",
+    "connect/thanks/",
+    "faq/",
+    "how-jake-helps/",
+    "more-resources/",
+    "services/",
+    "systems-setup/"
+  ],
+  "social_images": [
+    "assets/social-preview.jpg",
+    "assets/social-preview-tools.jpg",
+    "assets/social-preview-people.jpg",
+    "assets/social-preview-business-box.jpg"
+  ],
+  "technical_files": [
+    "robots.txt",
+    "sitemap.xml",
+    "_redirects",
+    "_headers"
+  ]
+}
