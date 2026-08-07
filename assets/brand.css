@@ -138,11 +138,14 @@ body.jj-site > nav:first-of-type a[href*="#contact"]:hover {
 .jj-tool-nav__links a:hover { color: #fff; }
 .jj-tool-nav__cta { min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; background: var(--jj-rust); color: #fff !important; font-family: "Antonio", "Arial Narrow", sans-serif; font-size: 1rem !important; text-transform: uppercase; }
 .jj-tool-nav__menu { display: none; min-height: 44px; padding: 0 14px; border: 1px solid rgba(255,255,255,.55); border-radius: 5px; background: transparent; color: #fff; font-weight: 700; text-transform: uppercase; }
+.jj-tool-nav__links .jj-tool-nav__save-exit { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 0 14px; border: 1px solid rgba(255,255,255,.4); border-radius: 4px; background: transparent; color: rgba(250,248,245,.85); font: 700 .72rem/1 Inter, Arial, sans-serif; text-transform: uppercase; letter-spacing: .02em; cursor: pointer; }
+.jj-tool-nav__links .jj-tool-nav__save-exit:hover { color: #fff; border-color: #fff; }
 body.jj-site button, body.jj-site a { min-height: 44px; }
 @media (max-width: 850px) {
   .jj-tool-nav__menu { display: block; }
   .jj-tool-nav__links { display: none; position: absolute; top: 74px; left: 0; right: 0; padding: 18px; background: var(--jj-dark-forest); flex-direction: column; align-items: stretch; }
   .jj-tool-nav__links.open { display: flex; }
   .jj-tool-nav__links a { padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .jj-tool-nav__links .jj-tool-nav__save-exit { width: 100%; justify-content: center; margin-top: 8px; }
   .jj-tool-nav__cta { justify-content: center; margin-top: 8px; border-bottom: 0 !important; }
 }
