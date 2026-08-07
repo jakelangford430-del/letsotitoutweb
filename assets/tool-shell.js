@@ -9,15 +9,19 @@
   const prefix=useAbsolute?'/':(depth===0?'./':'../'.repeat(depth));
 
   function buildNav(){
+    // Every page's chrome funnels into one of three shapes: a bare <nav> as
+    // the first thing in body (older Tailwind tool pages), a <header> with no
+    // nested nav (guide-shell's app-header), or a <header> wrapping a nav
+    // (the homepage, marketing pages, People Hub, account, 404). Replace
+    // whichever one is found — this is now the single nav design for the
+    // whole site, not just a fallback for pages that had nothing.
     const oldNav=document.querySelector('body.jj-site > nav:first-of-type, body > nav:first-of-type');
-    const oldHeader=!oldNav?document.querySelector('header.app-header'):null;
+    let oldHeader=null;
+    if(!oldNav){
+      const header=document.querySelector('header');
+      if(header && (header.classList.contains('app-header') || header.querySelector('nav'))) oldHeader=header;
+    }
     const target=oldNav||oldHeader;
-    // Pages like the homepage already have a real nav, just nested inside a
-    // header/div rather than matching the direct-child pattern above — leave
-    // those alone entirely. Only fall back to inserting a fresh nav when the
-    // page has no <nav> anywhere at all (e.g. connect/thanks/, which never had
-    // any site navigation).
-    if(!target && document.querySelector('nav'))return;
 
     const saveExitBtn=oldHeader?oldHeader.querySelector('#save-exit'):null;
 
