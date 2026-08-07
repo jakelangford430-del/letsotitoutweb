@@ -80,6 +80,11 @@
 <div class="ai-tool-choice__copy"><h2>Set my business voice</h2><p>Lock in how your business should sound. Save it and use it in every prompt.</p></div>
 <button class="ai-action-button" onclick="startVoiceBuilder()" type="button">Build my voice <i aria-hidden="true" data-lucide="arrow-right"></i></button>
 </article>
+<article class="ai-tool-choice">
+<div class="ai-tool-choice__icon ai-tool-choice__icon--sage" aria-hidden="true"><i data-lucide="workflow"></i></div>
+<div class="ai-tool-choice__copy"><h2>Turn a task into a workflow</h2><p>Six short answers. Get a repeatable workflow, a starter prompt and a review checklist.</p></div>
+<button class="ai-action-button" onclick="startWorkflowBuilder()" type="button">Build my workflow <i aria-hidden="true" data-lucide="arrow-right"></i></button>
+</article>
 </div>
 <button class="ai-guide-link" onclick="switchTab('kb')" type="button">Need the basics first? Read the AI guide</button>
 </section>
@@ -104,6 +109,7 @@ Keep it plain, practical and suitable for people with mixed experience. Give me 
 <div class="workspace-mode-switch" aria-label="Choose AI tool">
 <button class="active" onclick="startGuide()" type="button"><i aria-hidden="true" data-lucide="file-text"></i> Prompt Builder</button>
 <button onclick="startVoiceBuilder()" type="button"><i aria-hidden="true" data-lucide="messages-square"></i> Business Voice</button>
+<button onclick="startWorkflowBuilder()" type="button"><i aria-hidden="true" data-lucide="workflow"></i> Workflow Builder</button>
 </div>
 <nav aria-label="Guide navigation" class="progress-shell mini-nav">
 <button class="mini-nav-action" id="back-btn" onclick="goBack()" type="button">← Back</button>
@@ -126,7 +132,8 @@ Keep it plain, practical and suitable for people with mixed experience. Give me 
 <button class="card-option rounded-xl p-5 text-left stagger-2 fade-in" data-value="claude" onclick="selectPlatform(this)" style="background:white;"><span class="font-medium">Claude</span><small>Strong for longer documents, policies, training material and careful rewrites.</small></button>
 <button class="card-option rounded-xl p-5 text-left stagger-3 fade-in" data-value="gemini" onclick="selectPlatform(this)" style="background:white;"><span class="font-medium">Gemini</span><small>Useful if your work sits in Google Workspace, Gmail, Docs or Sheets.</small></button>
 <button class="card-option rounded-xl p-5 text-left stagger-4 fade-in" data-value="copilot" onclick="selectPlatform(this)" style="background:white;"><span class="font-medium">Copilot</span><small>Useful if your team works in Microsoft 365, Outlook, Word, Excel or Teams.</small></button>
-<button class="card-option rounded-xl p-5 text-left sm:col-span-2 stagger-5 fade-in" data-value="other" onclick="selectPlatform(this)" style="background:white;"><span class="font-medium">Not sure yet / something else</span><small>Still works. Use the prompts, then test which tool gives the cleanest result.</small></button>
+<button class="card-option rounded-xl p-5 text-left stagger-5 fade-in" data-value="canva" onclick="selectPlatform(this)" style="background:white;"><span class="font-medium">Canva AI</span><small>Good for social posts, flyers and brand assets — not written documents.</small></button>
+<button class="card-option rounded-xl p-5 text-left sm:col-span-2 stagger-6 fade-in" data-value="other" onclick="selectPlatform(this)" style="background:white;"><span class="font-medium">Not sure yet / something else</span><small>Still works. Use the prompts, then test which tool gives the cleanest result.</small></button>
 </div>
 <div class="platform-guidance"><strong>Platform tip</strong><p>Pick the AI tool your team is most likely to use. The best platform is usually the one already closest to your daily work, not the fanciest one on a list.</p></div>
 </section><!-- Experience -->
@@ -220,6 +227,16 @@ Keep it plain, practical and suitable for people with mixed experience. Give me 
 <li><strong>Refine it.</strong> Ask it to make the result shorter or clearer.</li>
 </ol>
 </details>
+<details class="reveal-panel result-help mb-6" id="platform-detail">
+<summary>More about this platform</summary>
+<dl class="platform-detail-list">
+<dt>Best fit</dt><dd id="pd-best-fit"></dd>
+<dt>Good for</dt><dd id="pd-good-for"></dd>
+<dt>Not for</dt><dd id="pd-not-for"></dd>
+<dt>First task to try</dt><dd id="pd-first-task"></dd>
+<dt>Privacy reminder</dt><dd id="pd-privacy"></dd>
+</dl>
+</details>
 <div class="space-y-5" id="prompts-container"></div>
 </section><!-- CTA -->
 <section class="feedback-section hidden fade-in text-center py-10 px-5 sm:px-8 rounded-2xl mb-12" id="cta-section" style="background:var(--warm-cream);">
@@ -238,17 +255,32 @@ Keep it plain, practical and suitable for people with mixed experience. Give me 
 <div class="workspace-mode-switch" aria-label="Choose AI tool">
 <button onclick="startGuide()" type="button"><i aria-hidden="true" data-lucide="file-text"></i> Prompt Builder</button>
 <button class="active" onclick="startVoiceBuilder()" type="button"><i aria-hidden="true" data-lucide="messages-square"></i> Business Voice</button>
+<button onclick="startWorkflowBuilder()" type="button"><i aria-hidden="true" data-lucide="workflow"></i> Workflow Builder</button>
 </div>
 <section class="voice-workspace">
 <div class="voice-builder-panel">
 <div class="voice-builder-heading">
-<div><h1>Build your business voice</h1><p>Answer three short questions. We will turn them into one voice guide you can reuse.</p></div>
+<div><h1>Build your business voice</h1><p>Answer four short questions. We will turn them into one voice guide you can reuse.</p></div>
 <button class="text-action" onclick="resetVoiceBuilder()" type="button">Start again</button>
 </div>
-<div class="voice-progress" aria-live="polite"><span id="voice-progress-label">Question 1 of 3</span><div aria-hidden="true"><i id="voice-progress-bar"></i></div></div>
+<div class="voice-progress" aria-live="polite"><span id="voice-progress-label">Question 1 of 4</span><div aria-hidden="true"><i id="voice-progress-bar"></i></div></div>
 
 <section class="voice-step" id="voice-step-1" aria-labelledby="voice-question-1">
-<h2 id="voice-question-1">Who do you usually write for?</h2>
+<h2 id="voice-question-1">What does your business do?</h2>
+<p>Two short answers, both optional. This is what makes the voice sound like your business, not a generic one.</p>
+<div class="voice-text-grid">
+<label class="voice-text-field">What kind of business is this?
+<input type="text" id="voice-business-type-input" maxlength="80" placeholder="e.g. Residential electrician" oninput="updateVoiceBusinessType(this.value)"/>
+</label>
+<label class="voice-text-field">What do you help people with?
+<input type="text" id="voice-helps-input" maxlength="120" placeholder="e.g. Fixing switchboards and safety upgrades fast" oninput="updateVoiceHelps(this.value)"/>
+</label>
+</div>
+<button class="ai-action-button" onclick="setVoiceStep(2)" type="button">Continue <i aria-hidden="true" data-lucide="arrow-right"></i></button>
+</section>
+
+<section class="voice-step hidden" id="voice-step-2" aria-labelledby="voice-question-2">
+<h2 id="voice-question-2">Who do you usually write for?</h2>
 <p>Pick the group that sees most of your emails, updates, instructions or website copy.</p>
 <div class="voice-choice-list" id="voice-audience-options">
 <button data-value="customers" onclick="selectVoiceAudience(this)" type="button"><span>Customers</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
@@ -256,10 +288,11 @@ Keep it plain, practical and suitable for people with mixed experience. Give me 
 <button data-value="customers and staff" onclick="selectVoiceAudience(this)" type="button"><span>Customers and staff</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
 <button data-value="customers, staff and business partners" onclick="selectVoiceAudience(this)" type="button"><span>A mix of people</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
 </div>
+<button class="voice-back" onclick="setVoiceStep(1)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button>
 </section>
 
-<section class="voice-step hidden" id="voice-step-2" aria-labelledby="voice-question-2">
-<h2 id="voice-question-2">How should the business sound?</h2>
+<section class="voice-step hidden" id="voice-step-3" aria-labelledby="voice-question-3">
+<h2 id="voice-question-3">How should the business sound?</h2>
 <p>Choose the closest fit. The final guide will still keep the writing clear and natural.</p>
 <div class="voice-choice-list" id="voice-style-options">
 <button data-value="direct, clear and no-fuss" onclick="selectVoiceStyle(this)" type="button"><span>Direct and no-fuss</span><small>Short, straight and useful.</small><i aria-hidden="true" data-lucide="chevron-right"></i></button>
@@ -267,19 +300,30 @@ Keep it plain, practical and suitable for people with mixed experience. Give me 
 <button data-value="warm, patient and helpful" onclick="selectVoiceStyle(this)" type="button"><span>Warm and helpful</span><small>Supportive without overdoing it.</small><i aria-hidden="true" data-lucide="chevron-right"></i></button>
 <button data-value="calm, confident and reassuring" onclick="selectVoiceStyle(this)" type="button"><span>Calm and confident</span><small>Steady, clear and credible.</small><i aria-hidden="true" data-lucide="chevron-right"></i></button>
 </div>
-<button class="voice-back" onclick="setVoiceStep(1)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button>
+<div class="voice-formality-row">
+<p class="quick-choice-label">How formal should it be?</p>
+<div class="voice-choice-list voice-choice-list--inline" id="voice-formality-options">
+<button data-value="casual" onclick="selectVoiceFormality(this)" type="button"><span>Casual</span></button>
+<button aria-pressed="true" class="selected" data-value="neutral" onclick="selectVoiceFormality(this)" type="button"><span>Neutral</span></button>
+<button data-value="formal" onclick="selectVoiceFormality(this)" type="button"><span>Formal</span></button>
+</div>
+</div>
+<div class="voice-step-actions"><button class="voice-back" onclick="setVoiceStep(2)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button><button class="ai-action-button" onclick="setVoiceStep(4)" type="button">Continue <i aria-hidden="true" data-lucide="arrow-right"></i></button></div>
 </section>
 
-<section class="voice-step hidden" id="voice-step-3" aria-labelledby="voice-question-3">
-<h2 id="voice-question-3">What should AI leave out?</h2>
+<section class="voice-step hidden" id="voice-step-4" aria-labelledby="voice-question-4">
+<h2 id="voice-question-4">What should AI leave out?</h2>
 <p>The common troublemakers are already selected. Turn off anything that does not suit your business.</p>
+<label class="voice-text-field mb-4">Words you like to use (optional)
+<input type="text" id="voice-words-to-use-input" maxlength="120" placeholder="e.g. sorted, straightforward, no dramas" oninput="updateVoiceWordsToUse(this.value)"/>
+</label>
 <div class="voice-rule-grid" id="voice-avoid-options">
 <button aria-pressed="true" class="selected" data-value="corporate jargon and complicated words" onclick="toggleVoiceRule(this)" type="button"><i aria-hidden="true" data-lucide="check"></i> Corporate jargon</button>
 <button aria-pressed="true" class="selected" data-value="fake excitement, hype and vague claims" onclick="toggleVoiceRule(this)" type="button"><i aria-hidden="true" data-lucide="check"></i> Hype and vague claims</button>
 <button aria-pressed="true" class="selected" data-value="pushy sales language or pressure" onclick="toggleVoiceRule(this)" type="button"><i aria-hidden="true" data-lucide="check"></i> Pushy sales talk</button>
 <button aria-pressed="true" class="selected" data-value="long introductions that delay the useful answer" onclick="toggleVoiceRule(this)" type="button"><i aria-hidden="true" data-lucide="check"></i> Long introductions</button>
 </div>
-<div class="voice-step-actions"><button class="voice-back" onclick="setVoiceStep(2)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button><button class="ai-action-button" onclick="finishVoiceBuilder()" type="button">Build my voice <i aria-hidden="true" data-lucide="arrow-right"></i></button></div>
+<div class="voice-step-actions"><button class="voice-back" onclick="setVoiceStep(3)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button><button class="ai-action-button" onclick="finishVoiceBuilder()" type="button">Build my voice <i aria-hidden="true" data-lucide="arrow-right"></i></button></div>
 </section>
 </div>
 
@@ -287,6 +331,7 @@ Keep it plain, practical and suitable for people with mixed experience. Give me 
 <div class="voice-result-panel__head"><span>What you will get</span><p>Updates as you answer.</p></div>
 <div class="voice-result-sheet">
 <h2 id="voice-result-title">Your business voice</h2>
+<div class="voice-result-row"><i aria-hidden="true" data-lucide="briefcase"></i><div><strong>What we help with</strong><p id="voice-preview-helps">Answer the first question to see this here.</p></div></div>
 <div class="voice-result-row"><i aria-hidden="true" data-lucide="volume-2"></i><div><strong>Sound like</strong><p id="voice-preview-style">Friendly, clear and down to earth.</p></div></div>
 <div class="voice-result-row"><i aria-hidden="true" data-lucide="check"></i><div><strong>Always do</strong><p>Use Australian English. Keep sentences clear. Make the next action obvious.</p></div></div>
 <div class="voice-result-row"><i aria-hidden="true" data-lucide="x"></i><div><strong>Avoid</strong><p id="voice-preview-avoid">Jargon, hype, hard-sell language and long introductions.</p></div></div>
@@ -295,6 +340,99 @@ Keep it plain, practical and suitable for people with mixed experience. Give me 
 </div>
 <p class="voice-result-note" id="voice-save-status">Saved voices stay on this device. Check any legal, workplace, safety, tax or compliance content against a current Australian source.</p>
 <pre class="sr-only" id="business-voice-output"></pre>
+</aside>
+</section>
+</main>
+<main aria-live="polite" class="hidden" id="workflow-container">
+<div class="workspace-mode-switch" aria-label="Choose AI tool">
+<button onclick="startGuide()" type="button"><i aria-hidden="true" data-lucide="file-text"></i> Prompt Builder</button>
+<button onclick="startVoiceBuilder()" type="button"><i aria-hidden="true" data-lucide="messages-square"></i> Business Voice</button>
+<button class="active" onclick="startWorkflowBuilder()" type="button"><i aria-hidden="true" data-lucide="workflow"></i> Workflow Builder</button>
+</div>
+<section class="voice-workspace">
+<div class="voice-builder-panel">
+<div class="voice-builder-heading">
+<div><h1>Build your AI workflow</h1><p>Six short answers. We will turn them into a workflow, a starter prompt and a checklist you can reuse.</p></div>
+<button class="text-action" onclick="resetWorkflowBuilder()" type="button">Start again</button>
+</div>
+<div class="voice-progress" aria-live="polite"><span id="workflow-progress-label">Question 1 of 6</span><div aria-hidden="true"><i id="workflow-progress-bar"></i></div></div>
+
+<section class="voice-step" id="workflow-step-1" aria-labelledby="workflow-question-1">
+<h2 id="workflow-question-1">What task are you trying to improve?</h2>
+<p>Pick the closest fit.</p>
+<div class="voice-choice-list" id="workflow-task-options">
+<button data-value="Customer replies and follow-ups" onclick="selectWorkflowField('task',this,2)" type="button"><span>Customer replies and follow-ups</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="Internal admin and paperwork" onclick="selectWorkflowField('task',this,2)" type="button"><span>Internal admin and paperwork</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="Content and marketing" onclick="selectWorkflowField('task',this,2)" type="button"><span>Content and marketing</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="Reporting and summaries" onclick="selectWorkflowField('task',this,2)" type="button"><span>Reporting and summaries</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+</div>
+</section>
+
+<section class="voice-step hidden" id="workflow-step-2" aria-labelledby="workflow-question-2">
+<h2 id="workflow-question-2">What information goes in?</h2>
+<p>What does AI need to see to do this properly?</p>
+<div class="voice-choice-list" id="workflow-input-options">
+<button data-value="Customer or job details" onclick="selectWorkflowField('input',this,3)" type="button"><span>Customer or job details</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="Notes, transcripts or messages" onclick="selectWorkflowField('input',this,3)" type="button"><span>Notes, transcripts or messages</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="Numbers, dates or a spreadsheet" onclick="selectWorkflowField('input',this,3)" type="button"><span>Numbers, dates or a spreadsheet</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="Nothing extra, just my instruction" onclick="selectWorkflowField('input',this,3)" type="button"><span>Nothing extra — just my instruction</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+</div>
+<button class="voice-back" onclick="setWorkflowStep(1)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button>
+</section>
+
+<section class="voice-step hidden" id="workflow-step-3" aria-labelledby="workflow-question-3">
+<h2 id="workflow-question-3">What should AI produce?</h2>
+<div class="voice-choice-list" id="workflow-output-options">
+<button data-value="A draft I can send or use as-is" onclick="selectWorkflowField('output',this,4)" type="button"><span>A draft I can send or use as-is</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="A checklist or step-by-step plan" onclick="selectWorkflowField('output',this,4)" type="button"><span>A checklist or step-by-step plan</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="A summary or shortened version" onclick="selectWorkflowField('output',this,4)" type="button"><span>A summary or shortened version</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="A first draft I will heavily edit" onclick="selectWorkflowField('output',this,4)" type="button"><span>A first draft I will heavily edit</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+</div>
+<button class="voice-back" onclick="setWorkflowStep(2)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button>
+</section>
+
+<section class="voice-step hidden" id="workflow-step-4" aria-labelledby="workflow-question-4">
+<h2 id="workflow-question-4">Who checks the output?</h2>
+<div class="voice-choice-list" id="workflow-checker-options">
+<button data-value="Me, before it goes anywhere" onclick="selectWorkflowField('checker',this,5)" type="button"><span>Me, before it goes anywhere</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="A teammate or manager" onclick="selectWorkflowField('checker',this,5)" type="button"><span>A teammate or manager</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="No one, it is low-risk" onclick="selectWorkflowField('checker',this,5)" type="button"><span>No one — it is low-risk</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+</div>
+<button class="voice-back" onclick="setWorkflowStep(3)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button>
+</section>
+
+<section class="voice-step hidden" id="workflow-step-5" aria-labelledby="workflow-question-5">
+<h2 id="workflow-question-5">Where does the output go next?</h2>
+<div class="voice-choice-list" id="workflow-destination-options">
+<button data-value="Straight to a customer" onclick="selectWorkflowField('destination',this,6)" type="button"><span>Straight to a customer</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="Internal use only" onclick="selectWorkflowField('destination',this,6)" type="button"><span>Internal use only</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="Into another tool or system" onclick="selectWorkflowField('destination',this,6)" type="button"><span>Into another tool or system</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+</div>
+<button class="voice-back" onclick="setWorkflowStep(4)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button>
+</section>
+
+<section class="voice-step hidden" id="workflow-step-6" aria-labelledby="workflow-question-6">
+<h2 id="workflow-question-6">How often will this be reused?</h2>
+<div class="voice-choice-list" id="workflow-frequency-options">
+<button data-value="One-off, just this time" onclick="selectWorkflowFrequency(this)" type="button"><span>One-off, just this time</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="Weekly or more" onclick="selectWorkflowFrequency(this)" type="button"><span>Weekly or more</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+<button data-value="Every time this task comes up" onclick="selectWorkflowFrequency(this)" type="button"><span>Every time this task comes up</span><i aria-hidden="true" data-lucide="chevron-right"></i></button>
+</div>
+<div class="voice-step-actions"><button class="voice-back" onclick="setWorkflowStep(5)" type="button"><i aria-hidden="true" data-lucide="arrow-left"></i> Back</button><button class="ai-action-button" onclick="finishWorkflowBuilder()" type="button">Build my workflow <i aria-hidden="true" data-lucide="arrow-right"></i></button></div>
+</section>
+</div>
+
+<aside class="voice-result-panel" aria-labelledby="workflow-result-title">
+<div class="voice-result-panel__head"><span>What you will get</span><p>Updates as you answer.</p></div>
+<div class="voice-result-sheet">
+<h2 id="workflow-result-title">Your AI workflow</h2>
+<div class="voice-result-row"><i aria-hidden="true" data-lucide="workflow"></i><div><strong>Suggested workflow</strong><p id="workflow-preview-flow">Answer the questions to see your workflow.</p></div></div>
+<div class="voice-result-row"><i aria-hidden="true" data-lucide="check"></i><div><strong>Review checklist</strong><p id="workflow-preview-checklist">—</p></div></div>
+<div class="voice-result-row"><i aria-hidden="true" data-lucide="x"></i><div><strong>Privacy note</strong><p id="workflow-preview-privacy">—</p></div></div>
+<div class="voice-result-actions"><button onclick="copyWorkflow(this)" type="button"><i aria-hidden="true" data-lucide="copy"></i> Copy workflow</button><button onclick="saveWorkflow(this)" type="button"><i aria-hidden="true" data-lucide="bookmark"></i> Save workflow</button></div>
+</div>
+<p class="voice-result-note" id="workflow-save-status">Saved workflows stay on this device. Log in to also sync them to your account.</p>
+<pre class="sr-only" id="workflow-output"></pre>
 </aside>
 </section>
 </main>
@@ -458,24 +596,99 @@ Keep it plain, practical and suitable for people with mixed experience. Give me 
     const scrollBehavior=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
     let builderStarted=false;
     let activeBusinessVoice='';
+    let voiceBusinessType='';
+    let voiceHelps='';
     let voiceAudience='';
     let voiceStyle='friendly, professional and down to earth';
+    let voiceFormality='neutral';
+    let voiceWordsToUse='';
     let voiceStep=1;
+    let memberSignedIn=false;
+    let workflowTask='';let workflowInput='';let workflowOutput='';let workflowChecker='';let workflowDestination='';let workflowFrequency='';
+    let workflowStep=1;
 
     const aiTools={
       chatgpt:{name:'ChatGPT',url:'https://chatgpt.com',signup:'Open ChatGPT and create a free account.'},
       claude:{name:'Claude',url:'https://claude.ai',signup:'Open Claude and create a free account.'},
       gemini:{name:'Gemini',url:'https://gemini.google.com',signup:'Open Gemini and sign in with your Google account.'},
       copilot:{name:'Copilot',url:'https://copilot.microsoft.com',signup:'Open Copilot and sign in with your Microsoft account.'},
+      canva:{name:'Canva AI',url:'https://www.canva.com/ai-image-generator/',signup:'Open Canva and create a free account.'},
       other:{name:'your AI tool',url:'',signup:'Open your AI tool of choice and sign in or create a free account.'}
     };
     const platformGuidance={
-      chatgpt:'Best for a flexible everyday assistant: drafts, planning, summaries, training notes and reusable prompt workflows.',
-      claude:'Best when the work is longer or more sensitive to wording: guides, policies, process docs and careful rewrites.',
-      gemini:'Best when the work lives in Google Workspace: Gmail, Docs, Sheets, Drive and quick research-style support.',
-      copilot:'Best when the work lives in Microsoft 365: Outlook, Word, Excel, Teams notes and internal admin.',
-      other:'Use the prompt structure anyway. The clearer your context, outcome and voice, the better most AI tools perform.'
+      chatgpt:{
+        summary:'Best for a flexible everyday assistant: drafts, planning, summaries, training notes and reusable prompt workflows.',
+        bestFit:'General business thinking and writing when you want one tool for almost everything.',
+        goodFor:'Drafts, summaries, planning, brainstorming, reusable prompts and custom instructions you reuse often.',
+        notFor:'Anything needing live Australian legal, tax or compliance certainty, or work that must stay inside Google or Microsoft’s ecosystem.',
+        firstTask:'Paste your business voice as a custom instruction, then ask it to draft one real customer reply.',
+        privacy:'Do not paste customer, payroll or financial data you would not want stored. Free accounts may use chats to improve the model unless you turn that off in settings.'
+      },
+      claude:{
+        summary:'Best when the work is longer or more sensitive to wording: guides, policies, process docs and careful rewrites.',
+        bestFit:'Longer, higher-stakes writing where wording, structure and nuance matter.',
+        goodFor:'Policies, SOPs, training material, careful rewrites and working through a messy document.',
+        notFor:'Quick one-line answers, or tasks that need direct access to Google Sheets or Microsoft files.',
+        firstTask:'Paste a rough policy or process doc and ask it to turn that into a clear, numbered SOP.',
+        privacy:'Do not paste full contracts, employee records or client files unless you know your plan’s data-retention settings.'
+      },
+      gemini:{
+        summary:'Best when the work lives in Google Workspace: Gmail, Docs, Sheets, Drive and quick research-style support.',
+        bestFit:'Work that already happens inside Gmail, Docs, Sheets or Drive.',
+        goodFor:'Summarising emails, drafting in Docs, building formulas, quick research-style questions.',
+        notFor:'Long, careful policy writing, or anything outside the Google ecosystem where the built-in access does not help.',
+        firstTask:'Open a messy spreadsheet or inbox and ask Gemini to summarise it or suggest a formula.',
+        privacy:'It can see connected Gmail, Docs and Drive content when you allow it — check what it can access before asking about sensitive files.'
+      },
+      copilot:{
+        summary:'Best when the work lives in Microsoft 365: Outlook, Word, Excel, Teams notes and internal admin.',
+        bestFit:'Work that already happens inside Outlook, Word, Excel or Teams.',
+        goodFor:'Summarising meetings, drafting emails, tidying spreadsheets, internal admin.',
+        notFor:'Public-facing marketing content, or anything outside the Microsoft 365 ecosystem.',
+        firstTask:'Ask Copilot in Outlook or Word to summarise your last few emails on one topic into next actions.',
+        privacy:'Access follows your normal Microsoft 365 permissions — do not assume a chat is private if the underlying file is shared.'
+      },
+      canva:{
+        summary:'Best for turning a plain idea into a finished social post, flyer or brand asset in minutes.',
+        bestFit:'Simple marketing assets, brand content and social creative — not written business documents.',
+        goodFor:'Social media graphics, flyers, presentation slides and on-brand designs built from a short text prompt.',
+        notFor:'Long documents, policies, SOPs, financial work or anything needing careful, factual wording — draft that in a text-based AI tool first, then bring the wording into Canva.',
+        firstTask:'Describe one upcoming social post in a sentence and let Magic Design build three layout options.',
+        privacy:'Do not upload customer photos, addresses or private business documents into brand kit or design uploads without checking who else on the account can see them.'
+      },
+      other:{
+        summary:'Use the prompt structure anyway. The clearer your context, outcome and voice, the better most AI tools perform.',
+        bestFit:'Any AI tool — the prompt structure below works regardless of which one you pick.',
+        goodFor:'Testing which tool gives you the cleanest result for your actual work.',
+        notFor:'Assuming every tool behaves the same way with sensitive data — check each tool’s own privacy settings.',
+        firstTask:'Run the same prompt through two tools and compare which answer needs less editing.',
+        privacy:'Treat every AI tool as public unless you have checked its specific data and privacy settings.'
+      }
     };
+
+    function voiceSaveNote(){
+      return memberSignedIn
+        ? 'Saved voices are stored in your account. Check any legal, workplace, safety, tax or compliance content against a current Australian source.'
+        : 'Saved voices stay on this device. Log in to also sync them to your account. Check any legal, workplace, safety, tax or compliance content against a current Australian source.';
+    }
+
+    function workflowSaveNote(){
+      return memberSignedIn
+        ? 'Saved workflows are stored in your account.'
+        : 'Saved workflows stay on this device. Log in to also sync them to your account.';
+    }
+
+    function refreshMemberSaveNotes(){
+      const voiceStatus=document.getElementById('voice-save-status');
+      if(voiceStatus)voiceStatus.textContent=voiceSaveNote();
+      const workflowStatus=document.getElementById('workflow-save-status');
+      if(workflowStatus)workflowStatus.textContent=workflowSaveNote();
+    }
+
+    document.addEventListener('lsio:auth-ready',(event)=>{
+      memberSignedIn=!!event.detail?.user;
+      refreshMemberSaveNotes();
+    });
 
     function getExperienceGuidance(level,toolName){
       const map={
@@ -1393,6 +1606,7 @@ Keep it plain, practical and suitable for people with mixed experience. Give me 
       document.getElementById('welcome-section').classList.add('hidden');
       document.getElementById('main-container').classList.remove('hidden');
       document.getElementById('voice-container').classList.add('hidden');
+      document.getElementById('workflow-container').classList.add('hidden');
       document.getElementById('kb-container').classList.add('hidden');
       refreshSavedVoiceOption();
       if(!resumeBuilder){
@@ -1546,7 +1760,13 @@ Platform note:
       const container=document.getElementById('prompts-container');
       container.innerHTML='';
       const voiceLabel=activeBusinessVoice?'your saved business voice':`a ${selectedTone} voice`;
-      document.getElementById('results-tip').textContent=`Three prompts using ${voiceLabel} and Australian context, ready to paste into ${(aiTools[selectedPlatform]||aiTools.other).name}. Replace anything inside [brackets] first. ${platformGuidance[selectedPlatform]||platformGuidance.other}`;
+      const guidance=platformGuidance[selectedPlatform]||platformGuidance.other;
+      document.getElementById('results-tip').textContent=`Three prompts using ${voiceLabel} and Australian context, ready to paste into ${(aiTools[selectedPlatform]||aiTools.other).name}. Replace anything inside [brackets] first. ${guidance.summary}`;
+      document.getElementById('pd-best-fit').textContent=guidance.bestFit;
+      document.getElementById('pd-good-for').textContent=guidance.goodFor;
+      document.getElementById('pd-not-for').textContent=guidance.notFor;
+      document.getElementById('pd-first-task').textContent=guidance.firstTask;
+      document.getElementById('pd-privacy').textContent=guidance.privacy;
       prompts.forEach((p,i)=>{
         const adaptedPrompt=adaptPrompt(p.prompt);
         const card=document.createElement('div');
@@ -1585,6 +1805,11 @@ Platform note:
       });
       document.getElementById('results-section').classList.remove('hidden');
       document.getElementById('cta-section').classList.remove('hidden');
+      window.LSIO_MEMBER?.saveResult?.(
+        {industry:selectedIndustry,task:selectedTask,platform:selectedPlatform,tone:selectedTone,usedSavedVoice:!!activeBusinessVoice},
+        {toolSlug:'ai-guide',resultKey:'prompt-builder',title:'AI Prompt Builder',status:'completed',summary:`${selectedIndustry} – ${selectedTask}`}
+      );
+      if(typeof window.trackToolCompletion==='function')window.trackToolCompletion('AI Prompt Builder',{industry:selectedIndustry,task:selectedTask,platform:selectedPlatform});
       setTimeout(()=>document.getElementById('results-section').scrollIntoView({behavior:scrollBehavior}),100);
     }
 
@@ -1669,6 +1894,7 @@ Platform note:
       document.getElementById('welcome-section').classList.add('hidden');
       document.getElementById('main-container').classList.add('hidden');
       document.getElementById('kb-container').classList.add('hidden');
+      document.getElementById('workflow-container').classList.add('hidden');
       document.getElementById('voice-container').classList.remove('hidden');
       setVoiceStep(voiceStep||1,false);
       updateVoicePreview();
@@ -1678,18 +1904,22 @@ Platform note:
 
     function setVoiceStep(step,shouldScroll=true){
       voiceStep=step;
-      document.querySelectorAll('.voice-step').forEach((section,index)=>section.classList.toggle('hidden',index!==step-1));
-      document.getElementById('voice-progress-label').textContent=`Question ${step} of 3`;
-      document.getElementById('voice-progress-bar').style.width=`${step/3*100}%`;
+      document.querySelectorAll('#voice-container .voice-step').forEach((section,index)=>section.classList.toggle('hidden',index!==step-1));
+      document.getElementById('voice-progress-label').textContent=`Question ${step} of 4`;
+      document.getElementById('voice-progress-bar').style.width=`${step/4*100}%`;
       if(shouldScroll)document.querySelector('.voice-builder-panel').scrollIntoView({behavior:scrollBehavior,block:'start'});
     }
+
+    function updateVoiceBusinessType(value){voiceBusinessType=value;updateVoicePreview();}
+    function updateVoiceHelps(value){voiceHelps=value;updateVoicePreview();}
+    function updateVoiceWordsToUse(value){voiceWordsToUse=value;updateVoicePreview();}
 
     function selectVoiceAudience(btn){
       document.querySelectorAll('#voice-audience-options button').forEach(item=>item.classList.remove('selected'));
       btn.classList.add('selected');
       voiceAudience=btn.dataset.value;
       updateVoicePreview();
-      setVoiceStep(2);
+      setVoiceStep(3);
     }
 
     function selectVoiceStyle(btn){
@@ -1697,7 +1927,14 @@ Platform note:
       btn.classList.add('selected');
       voiceStyle=btn.dataset.value;
       updateVoicePreview();
-      setVoiceStep(3);
+    }
+
+    function selectVoiceFormality(btn){
+      document.querySelectorAll('#voice-formality-options button').forEach(item=>{item.classList.remove('selected');item.setAttribute('aria-pressed','false');});
+      btn.classList.add('selected');
+      btn.setAttribute('aria-pressed','true');
+      voiceFormality=btn.dataset.value;
+      updateVoicePreview();
     }
 
     function toggleVoiceRule(btn){
@@ -1711,16 +1948,30 @@ Platform note:
       return Array.from(document.querySelectorAll('#voice-avoid-options button.selected')).map(btn=>btn.dataset.value);
     }
 
+    function formalityLabel(){
+      return {casual:'Casual and relaxed',neutral:'Neutral — not too casual, not too corporate',formal:'More formal and precise'}[voiceFormality]||'Neutral — not too casual, not too corporate';
+    }
+
+    function generateExampleSentence(){
+      const helps=voiceHelps||'get the job done properly';
+      const audience=voiceAudience||'customers';
+      return `We help ${audience} with ${helps.toLowerCase()} — no jargon, no mucking around, just a clear answer.`;
+    }
+
     function buildBusinessVoiceText(){
+      const businessType=voiceBusinessType||'your business';
+      const helps=voiceHelps||'the work you do for your customers';
       const audience=voiceAudience||'customers, staff and business partners';
       const avoid=getVoiceAvoidRules();
       const avoidText=avoid.length?avoid.map(item=>`- ${item}.`).join('\n'):'- anything that makes the message less clear or less honest.';
-      return `BUSINESS VOICE\n\nUse this voice whenever you write, rewrite, summarise or explain work for this business.\n\nAudience:\n- Write for ${audience}.\n\nSound like:\n- ${voiceStyle}.\n- A real Australian person who knows the work and respects the reader's time.\n\nAlways do:\n- Use Australian English, spelling, dates and business context.\n- Lead with the useful answer. Keep sentences and paragraphs easy to scan.\n- Use plain words. Explain any term the reader may not know.\n- Make the next action, owner or deadline obvious when one exists.\n- For training or staff guidance, use short steps and practical examples for mixed experience levels.\n\nAvoid:\n${avoidText}\n\nChecks:\n- Do not invent facts, prices, policies or legal requirements.\n- Flag anything involving tax, employment, payroll, safety, privacy, legal duties or compliance for a current Australian source or qualified person to check.`;
+      const useText=voiceWordsToUse?`\nWords to use:\n- ${voiceWordsToUse}.\n`:'';
+      return `BUSINESS VOICE\n\nUse this voice whenever you write, rewrite, summarise or explain work for this business.\n\nBusiness type:\n- ${businessType}.\n\nAudience:\n- Write for ${audience}.\n\nWhat we help with:\n- ${helps}.\n\nSound like:\n- ${voiceStyle}.\n- ${formalityLabel()}.\n- A real Australian person who knows the work and respects the reader's time.\n${useText}\nAvoid:\n${avoidText}\n\nExample sentence:\n"${generateExampleSentence()}"\n\nAlways do:\n- Use Australian English, spelling, dates and business context.\n- Lead with the useful answer. Keep sentences and paragraphs easy to scan.\n- Use plain words. Explain any term the reader may not know.\n- Make the next action, owner or deadline obvious when one exists.\n- For training or staff guidance, use short steps and practical examples for mixed experience levels.\n\nChecks:\n- Do not invent facts, prices, policies or legal requirements.\n- Flag anything involving tax, employment, payroll, safety, privacy, legal duties or compliance for a current Australian source or qualified person to check.\n\nReusable AI instruction:\nUse this business voice whenever you write, rewrite, summarise or explain work for this business. Treat everything above as a standing instruction, not a one-off request.`;
     }
 
     function updateVoicePreview(){
       const avoid=getVoiceAvoidRules();
-      document.getElementById('voice-preview-style').textContent=`${voiceStyle.charAt(0).toUpperCase()+voiceStyle.slice(1)}. Write like a real person.`;
+      document.getElementById('voice-preview-helps').textContent=voiceHelps?`We help with: ${voiceHelps}.`:'Answer the first question to see this here.';
+      document.getElementById('voice-preview-style').textContent=`${voiceStyle.charAt(0).toUpperCase()+voiceStyle.slice(1)}. ${formalityLabel()}. Write like a real person.`;
       document.getElementById('voice-preview-audience').textContent=voiceAudience?`Write for ${voiceAudience}.`:'Your customers, staff or business partners.';
       document.getElementById('voice-preview-avoid').textContent=avoid.length?`${avoid.join(', ')}.`:'Anything that makes the message less clear or honest.';
       document.getElementById('business-voice-output').textContent=buildBusinessVoiceText();
@@ -1741,12 +1992,24 @@ Platform note:
 
     function saveBusinessVoice(btn){
       updateVoicePreview();
-      const voice={text:document.getElementById('business-voice-output').textContent,audience:voiceAudience||'customers, staff and business partners',style:voiceStyle,avoid:getVoiceAvoidRules(),savedAt:new Date().toISOString()};
+      const voice={
+        text:document.getElementById('business-voice-output').textContent,
+        businessType:voiceBusinessType,
+        helps:voiceHelps,
+        audience:voiceAudience||'customers, staff and business partners',
+        style:voiceStyle,
+        formality:voiceFormality,
+        wordsToUse:voiceWordsToUse,
+        avoid:getVoiceAvoidRules(),
+        savedAt:new Date().toISOString()
+      };
       try{
         localStorage.setItem('lsio-business-voice',JSON.stringify(voice));
         activeBusinessVoice=voice.text;
         selectedTone=voice.style;
-        document.getElementById('voice-save-status').textContent='Saved on this device. The Prompt Builder can now use this voice.';
+        document.getElementById('voice-save-status').textContent=memberSignedIn?'Saved to your account. The Prompt Builder can now use this voice.':'Saved on this device. The Prompt Builder can now use this voice. Log in to also sync it to your account.';
+        window.LSIO_MEMBER?.saveResult?.(voice,{toolSlug:'ai-guide',resultKey:'business-voice',title:'Business Voice',status:'completed'});
+        if(typeof window.trackToolCompletion==='function')window.trackToolCompletion('Business Voice Builder',{audience:voiceAudience,style:voiceStyle,formality:voiceFormality});
         const original=btn.innerHTML;
         btn.textContent='Saved';
         setTimeout(()=>{btn.innerHTML=original;renderLucideIcons();},1800);
@@ -1754,13 +2017,125 @@ Platform note:
     }
 
     function resetVoiceBuilder(){
+      voiceBusinessType='';voiceHelps='';voiceWordsToUse='';
       voiceAudience='';
       voiceStyle='friendly, professional and down to earth';
-      document.querySelectorAll('#voice-audience-options button,#voice-style-options button').forEach(btn=>btn.classList.remove('selected'));
+      voiceFormality='neutral';
+      document.getElementById('voice-business-type-input').value='';
+      document.getElementById('voice-helps-input').value='';
+      document.getElementById('voice-words-to-use-input').value='';
+      document.querySelectorAll('#voice-audience-options button,#voice-style-options button,#voice-formality-options button').forEach(btn=>{btn.classList.remove('selected');btn.setAttribute('aria-pressed','false');});
+      document.querySelector('#voice-formality-options [data-value="neutral"]').classList.add('selected');
+      document.querySelector('#voice-formality-options [data-value="neutral"]').setAttribute('aria-pressed','true');
       document.querySelectorAll('#voice-avoid-options button').forEach(btn=>{btn.classList.add('selected');btn.setAttribute('aria-pressed','true');});
-      document.getElementById('voice-save-status').textContent='Saved voices stay on this device. Check any legal, workplace, safety, tax or compliance content against a current Australian source.';
+      document.getElementById('voice-save-status').textContent=voiceSaveNote();
       updateVoicePreview();
       setVoiceStep(1);
+    }
+
+    function startWorkflowBuilder(){
+      document.getElementById('welcome-section').classList.add('hidden');
+      document.getElementById('main-container').classList.add('hidden');
+      document.getElementById('voice-container').classList.add('hidden');
+      document.getElementById('kb-container').classList.add('hidden');
+      document.getElementById('workflow-container').classList.remove('hidden');
+      setWorkflowStep(workflowStep||1,false);
+      updateWorkflowPreview();
+      renderLucideIcons();
+      window.scrollTo({top:0,behavior:scrollBehavior});
+    }
+
+    function setWorkflowStep(step,shouldScroll=true){
+      workflowStep=step;
+      document.querySelectorAll('#workflow-container .voice-step').forEach((section,index)=>section.classList.toggle('hidden',index!==step-1));
+      document.getElementById('workflow-progress-label').textContent=`Question ${step} of 6`;
+      document.getElementById('workflow-progress-bar').style.width=`${step/6*100}%`;
+      if(shouldScroll)document.querySelector('#workflow-container .voice-builder-panel').scrollIntoView({behavior:scrollBehavior,block:'start'});
+    }
+
+    function selectWorkflowField(field,btn,nextStep){
+      const group=btn.closest('.voice-choice-list');
+      group.querySelectorAll('button').forEach(item=>item.classList.remove('selected'));
+      btn.classList.add('selected');
+      if(field==='task')workflowTask=btn.dataset.value;
+      else if(field==='input')workflowInput=btn.dataset.value;
+      else if(field==='output')workflowOutput=btn.dataset.value;
+      else if(field==='checker')workflowChecker=btn.dataset.value;
+      else if(field==='destination')workflowDestination=btn.dataset.value;
+      updateWorkflowPreview();
+      setWorkflowStep(nextStep);
+    }
+
+    function selectWorkflowFrequency(btn){
+      document.querySelectorAll('#workflow-frequency-options button').forEach(item=>item.classList.remove('selected'));
+      btn.classList.add('selected');
+      workflowFrequency=btn.dataset.value;
+      updateWorkflowPreview();
+    }
+
+    function buildWorkflowText(){
+      const task=workflowTask||'this task';
+      const input=workflowInput||'the relevant information';
+      const output=workflowOutput||'a usable draft';
+      const checker=workflowChecker||'you, before it goes anywhere';
+      const destination=workflowDestination||'internal use';
+      const frequency=workflowFrequency||'one-off';
+      const voiceLine=activeBusinessVoice?'\n\nUse the saved business voice for this business when writing the draft.':'';
+
+      const reviewChecklist = workflowChecker==='No one, it is low-risk'
+        ? '- Even for low-risk output, skim it once before it goes anywhere.\n- Check names, dates, prices and any promise made to a customer.\n- Confirm nothing sensitive slipped into the input.'
+        : `- ${checker} reads the draft before it is used.\n- Check names, dates, prices and any promise made to a customer.\n- Confirm the tone matches how this business actually sounds.`;
+
+      const privacyNote = (workflowInput==='Customer or job details' || workflowDestination==='Straight to a customer')
+        ? 'This workflow touches customer information. Do not paste full names, addresses, payment details or anything private into the AI tool unless you know exactly where that data is stored.'
+        : 'Keep an eye on what goes into the prompt. If in doubt, replace real names and numbers with placeholders like [Customer Name].';
+
+      const automationLine = (workflowFrequency==='Weekly or more' || workflowFrequency==='Every time this task comes up')
+        ? `\n\nNext automation opportunity:\nThis happens often enough to be worth automating properly, not just repeating by hand. Try the Automation Opportunity Finder to check if it is worth building.`
+        : '';
+
+      return `AI WORKFLOW\n\nSuggested workflow:\n1. Gather ${input}.\n2. Ask AI to turn that into ${output}, using the prompt below.\n3. Send the result to ${checker} for a check.\n4. Once approved, it goes to: ${destination}.\n5. Reuse this exact workflow next time ${task.toLowerCase()} comes up (${frequency.toLowerCase()}).\n\nPrompt:\nAct as a practical assistant helping with ${task.toLowerCase()} for a small Australian business. I will give you ${input.toLowerCase()}. Turn it into ${output.toLowerCase()}. Keep it plain, direct and useful. If anything needs checking against a current Australian source (tax, legal, safety, employment), say so instead of guessing.${voiceLine}\n\nReview checklist:\n${reviewChecklist}\n\nPrivacy note:\n${privacyNote}\n\nRepeat-use template:\nSave the prompt above as a reusable snippet in your AI tool. Swap in new details each time, keep the structure the same.${automationLine}`;
+    }
+
+    function updateWorkflowPreview(){
+      document.getElementById('workflow-preview-flow').textContent=workflowTask?`${workflowTask} → ${workflowOutput||'a usable draft'} → ${workflowChecker||'a check'} → ${workflowDestination||'internal use'}.`:'Answer the questions to see your workflow.';
+      document.getElementById('workflow-preview-checklist').textContent=workflowChecker?`${workflowChecker} checks it before it goes anywhere.`:'—';
+      document.getElementById('workflow-preview-privacy').textContent=(workflowInput==='Customer or job details'||workflowDestination==='Straight to a customer')?'Handles customer information — take care with what you paste in.':'Low sensitivity, but stay alert to what goes in.';
+      document.getElementById('workflow-output').textContent=buildWorkflowText();
+    }
+
+    function finishWorkflowBuilder(){
+      updateWorkflowPreview();
+      document.getElementById('workflow-progress-label').textContent='Workflow ready';
+      document.getElementById('workflow-progress-bar').style.width='100%';
+      document.querySelector('#workflow-container .voice-result-panel').scrollIntoView({behavior:scrollBehavior,block:'start'});
+    }
+
+    function copyWorkflow(btn){
+      updateWorkflowPreview();
+      copyText(btn,document.getElementById('workflow-output').textContent);
+    }
+
+    function saveWorkflow(btn){
+      updateWorkflowPreview();
+      const workflow={text:document.getElementById('workflow-output').textContent,task:workflowTask,input:workflowInput,output:workflowOutput,checker:workflowChecker,destination:workflowDestination,frequency:workflowFrequency,savedAt:new Date().toISOString()};
+      try{
+        localStorage.setItem('lsio-ai-workflow',JSON.stringify(workflow));
+        document.getElementById('workflow-save-status').textContent=memberSignedIn?'Saved to your account.':'Saved on this device. Log in to also sync it to your account.';
+        window.LSIO_MEMBER?.saveResult?.(workflow,{toolSlug:'ai-guide',resultKey:'workflow-builder',title:'AI Workflow Builder',status:'completed',summary:workflowTask});
+        if(typeof window.trackToolCompletion==='function')window.trackToolCompletion('AI Workflow Builder',{task:workflowTask,frequency:workflowFrequency});
+        const original=btn.innerHTML;
+        btn.textContent='Saved';
+        setTimeout(()=>{btn.innerHTML=original;renderLucideIcons();},1800);
+      }catch(error){document.getElementById('workflow-save-status').textContent='This browser could not save the workflow. Copy it instead.';}
+    }
+
+    function resetWorkflowBuilder(){
+      workflowTask='';workflowInput='';workflowOutput='';workflowChecker='';workflowDestination='';workflowFrequency='';
+      document.querySelectorAll('#workflow-container .voice-choice-list button').forEach(btn=>btn.classList.remove('selected'));
+      document.getElementById('workflow-save-status').textContent=workflowSaveNote();
+      updateWorkflowPreview();
+      setWorkflowStep(1);
     }
 
     function switchTab(tab) {
@@ -1775,11 +2150,13 @@ Platform note:
         document.getElementById('welcome-section').classList.add('hidden');
         document.getElementById('main-container').classList.add('hidden');
         document.getElementById('voice-container').classList.add('hidden');
+        document.getElementById('workflow-container').classList.add('hidden');
         document.getElementById('kb-container').classList.remove('hidden');
         window.scrollTo({top:0, behavior:scrollBehavior});
       } else {
         document.getElementById('kb-container').classList.add('hidden');
         document.getElementById('voice-container').classList.add('hidden');
+        document.getElementById('workflow-container').classList.add('hidden');
         if (builderStarted) {
           document.getElementById('main-container').classList.remove('hidden');
           document.getElementById('welcome-section').classList.add('hidden');
@@ -1802,6 +2179,7 @@ Platform note:
       document.getElementById('platform-section').classList.remove('hidden');
       document.getElementById('main-container').classList.add('hidden');
       document.getElementById('voice-container').classList.add('hidden');
+      document.getElementById('workflow-container').classList.add('hidden');
       document.getElementById('welcome-section').classList.remove('hidden');
       document.getElementById('kb-container').classList.add('hidden');
       const builderTab = document.getElementById('btn-tab-builder');
@@ -1896,6 +2274,7 @@ Platform note:
       adjustSpacing(parseFloat(savedSpacing));
       refreshSavedVoiceOption();
       updateVoicePreview();
+      updateWorkflowPreview();
       renderLucideIcons();
     });
 
