@@ -242,10 +242,8 @@ h2, h3, .font-antonio { letter-spacing: 0.025em; text-transform: uppercase; }
   padding: 10px 14px;
   border: 1px solid rgba(250, 248, 245, 0.12);
   border-radius: 18px;
-  background: rgba(8, 15, 10, 0.85);
+  background: #080f0a;
   box-shadow: 0 12px 40px rgba(8, 15, 10, 0.3);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
 }
 .mini-nav { display: grid; grid-template-columns: 88px minmax(220px, 1fr) 88px; align-items: center; gap: 18px; }
 .mini-nav-action { border: 0; background: transparent; color: #ffffff; font-size: 0.76rem; font-weight: 700; }

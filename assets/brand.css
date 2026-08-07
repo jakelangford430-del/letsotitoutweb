@@ -149,3 +149,27 @@ body.jj-site button, body.jj-site a { min-height: 44px; }
   .jj-tool-nav__links .jj-tool-nav__save-exit { width: 100%; justify-content: center; margin-top: 8px; }
   .jj-tool-nav__cta { justify-content: center; margin-top: 8px; border-bottom: 0 !important; }
 }
+
+/* Shared footer — the single footer design used on every page. */
+.jj-tool-footer {
+  background: var(--jj-dark-forest);
+  color: rgba(250, 248, 245, .72);
+  border-top: 1px solid rgba(255, 255, 255, .12);
+  padding: 48px 0 24px;
+  font-family: "Inter", Arial, sans-serif;
+}
+.jj-tool-footer__inner { width: min(1180px, calc(100% - 36px)); margin: 0 auto; }
+.jj-tool-footer__links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; padding-bottom: 28px; margin-bottom: 22px; border-bottom: 1px solid rgba(255, 255, 255, .14); }
+.jj-tool-footer__group { display: grid; align-content: start; gap: 9px; }
+.jj-tool-footer__group h3 { margin: 0 0 4px; color: var(--jj-rust); font-size: .68rem; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; }
+.jj-tool-footer__group a { color: rgba(250, 248, 245, .72); font-size: .78rem; text-decoration: none; }
+.jj-tool-footer__group a:hover { color: #fff; }
+.jj-tool-footer__bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: .75rem; }
+.jj-tool-footer__brand { text-decoration: none; color: #fff; font-family: "Antonio", "Arial Narrow", sans-serif; font-size: 1.35rem; font-weight: 700; }
+.jj-tool-footer__bottom span a { color: rgba(250, 248, 245, .72); text-decoration: none; }
+.jj-tool-footer__bottom span a:hover { color: #fff; }
+@media (max-width: 700px) {
+  .jj-tool-footer__links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px; }
+  .jj-tool-footer__group:last-child { grid-column: 1 / -1; }
+  .jj-tool-footer__bottom { flex-direction: column; align-items: flex-start; }
+}
