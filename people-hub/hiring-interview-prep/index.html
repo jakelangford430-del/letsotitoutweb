@@ -27,7 +27,7 @@
 <button class="button secondary hidden" id="resume-guide" type="button">Continue saved guide</button>
 </section>
 <section aria-live="polite" class="panel hidden" id="question-view">
-<div class="progress-row"><span id="progress-label">Question 1 of 9</span><span id="saved-label">Saved on this device</span></div>
+<div class="progress-row"><span id="progress-label">Question 1 of 10</span><span id="saved-label">Saved on this device</span></div>
 <div aria-hidden="true" class="progress-track"><span id="progress-bar"></span></div>
 <div id="context-advice"></div>
 <p class="step-label" id="question-kicker"></p>
@@ -35,6 +35,14 @@
 <p class="question-help" id="question-help"></p>
 <div class="answer-list" id="answer-list"></div>
 <div class="nav-actions"><button class="button secondary" id="back-button" type="button">Back</button><button class="button primary" id="continue-button" type="button">Continue</button></div>
+</section>
+<section class="panel stop-panel hidden" id="stop-view" role="alert">
+<div aria-hidden="true" class="warning-icon">!</div>
+<p class="step-label">Serious workplace matter</p>
+<h2>This needs proper advice.</h2>
+<p>A complaint, dispute or a decision that could be influenced by someone's age, family situation, pregnancy or similar needs the correct workplace process—not an interview question set. This guide won't generate a tailored plan for this.</p>
+<a class="button primary" href="https://humanrights.gov.au/" rel="noopener" target="_blank">Find Human Rights Commission guidance</a>
+<button class="button secondary" id="stop-back" type="button">Go back and change my answer</button>
 </section>
 <section class="panel result-panel hidden" id="result-view">
 <div class="result-heading"><div><p class="step-label">Your personalised result</p><h2>Your interview prep pack</h2></div><button class="quiet-action dark" id="edit-answers" type="button">Edit answers</button></div>
