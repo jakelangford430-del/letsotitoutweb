@@ -51,6 +51,11 @@
       .site-nav { display: flex; align-items: center; gap: 18px; }
       .site-nav a { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; text-decoration: none; color: rgba(250, 248, 245, 0.82); }
       .site-nav a:hover { color: #fff; }
+      .menu-button { display: none; align-items: center; gap: 10px; background: none; border: 0; color: #fff; font: 600 0.8rem Inter, Arial, sans-serif; text-transform: uppercase; padding: 12px; cursor: pointer; }
+      .menu-button i, .menu-button i::before, .menu-button i::after { display: block; width: 22px; height: 2px; background: #fff; position: relative; }
+      .menu-button i::before, .menu-button i::after { content: ""; position: absolute; left: 0; }
+      .menu-button i::before { top: -7px; }
+      .menu-button i::after { top: 7px; }
 
       /* Atmosphere: an off-centre olive glow plus a fixed grain sheet for depth. */
       .glow { position: fixed; inset: 0; pointer-events: none; z-index: 0;
@@ -123,7 +128,10 @@
       @keyframes fade { to { opacity: 1; } }
 
       @media (max-width: 900px) {
-        .site-nav { display: none; }
+        .site-nav { display: none; position: absolute; top: 78px; left: 0; right: 0; z-index: 30; background: var(--nav); padding: 12px 20px 20px; flex-direction: column; align-items: stretch; gap: 0; border-top: 1px solid rgba(255, 255, 255, 0.12); border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+        .site-nav.open { display: flex; }
+        .site-nav a { padding: 13px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+        .menu-button { display: flex; }
         .oops { grid-template-columns: 1fr; align-items: start; gap: 34px; }
         .code-block { order: -1; justify-self: start; text-align: left; }
         .code { font-size: clamp(5.5rem, 30vw, 9rem); }
@@ -152,7 +160,8 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="wordmark" href="/" aria-label="Let’s Sort It Out home">LET’S SORT IT OUT</a>
-        <nav class="site-nav" aria-label="Main navigation">
+        <button class="menu-button" type="button" aria-controls="site-nav" aria-expanded="false"><span>Menu</span><i></i></button>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <a href="/what-we-sort-out/">What We Sort Out</a>
           <a href="/free-tools/">Free Tools</a>
           <a href="/learning-hub/">Learning Hub</a>
@@ -226,6 +235,24 @@
         document.querySelector('[data-error-label]').textContent = label;
         document.querySelector('[data-error-eyebrow]').textContent = 'Error ' + code + ' — ' + label.toLowerCase();
         document.title = 'Oops. Sorry. | Let’s Sort It Out';
+      })();
+    </script>
+    <script>
+      (function () {
+        var menuButton = document.querySelector('.menu-button');
+        var nav = document.querySelector('.site-nav');
+        if (!menuButton || !nav) return;
+        menuButton.addEventListener('click', function () {
+          var open = menuButton.getAttribute('aria-expanded') === 'true';
+          menuButton.setAttribute('aria-expanded', String(!open));
+          nav.classList.toggle('open', !open);
+        });
+        nav.addEventListener('click', function (event) {
+          if (event.target.closest('a')) {
+            nav.classList.remove('open');
+            menuButton.setAttribute('aria-expanded', 'false');
+          }
+        });
       })();
     </script>
     <script type="module" src="/assets/auth.js?v=20260801-auth2"></script>
