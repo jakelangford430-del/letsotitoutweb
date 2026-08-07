@@ -190,6 +190,7 @@ body.jj-site svg { width: 20px; height: 20px; }
 
 #main-container,
 #voice-container,
+#workflow-container,
 #kb-container {
   width: min(1180px, calc(100% - 40px)) !important;
   max-width: none !important;
@@ -286,6 +287,10 @@ body.jj-site svg { width: 20px; height: 20px; }
   background: #fafafa;
 }
 .reveal-panel summary { color: var(--olive); }
+.platform-detail-list { display: grid; grid-template-columns: 140px 1fr; gap: 8px 16px; margin-top: 10px; }
+.platform-detail-list dt { color: var(--olive); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
+.platform-detail-list dd { margin: 0 0 10px; color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
+@media (max-width: 640px) { .platform-detail-list { grid-template-columns: 1fr; } .platform-detail-list dt { margin-top: 8px; } }
 .quick-choice-label { margin: 18px 0 10px; color: var(--muted); font-size: 0.76rem; font-weight: 700; text-transform: uppercase; }
 .saved-voice-option {
   display: flex;
@@ -408,6 +413,24 @@ body.jj-site svg { width: 20px; height: 20px; }
 .voice-choice-list button span { font-weight: 700; }
 .voice-choice-list button small { color: var(--muted); }
 .voice-choice-list button svg { grid-row: 1 / span 2; grid-column: 2; }
+.voice-choice-list--inline { grid-template-columns: repeat(3, 1fr); }
+.voice-choice-list--inline button { min-height: 52px; grid-template-columns: 1fr; justify-items: center; text-align: center; }
+@media (max-width: 640px) { .voice-choice-list--inline { grid-template-columns: 1fr; } }
+.voice-text-grid { display: grid; gap: 14px; margin-bottom: 22px; }
+.voice-text-field { display: grid; gap: 6px; color: var(--charcoal); font-weight: 700; font-size: 0.86rem; }
+.voice-text-field input {
+  min-height: 52px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fff;
+  color: var(--charcoal);
+  font-weight: 400;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+.voice-text-field input:focus { outline: none; border-color: var(--rust); }
+.voice-formality-row { margin: 18px 0 22px; }
 .voice-back { margin-top: 22px; }
 .voice-rule-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .voice-rule-grid button {
@@ -484,6 +507,7 @@ body.jj-site svg { width: 20px; height: 20px; }
   .ai-tools-home,
   #main-container,
   #voice-container,
+  #workflow-container,
   #kb-container { width: calc(100% - 28px) !important; }
   .ai-tools-home { padding-top: 38px; }
   .ai-tools-home__choices h1 { font-size: clamp(3rem, 15vw, 4.4rem) !important; overflow-wrap: anywhere; }
@@ -515,6 +539,18 @@ body.jj-site svg { width: 20px; height: 20px; }
   .voice-step-actions .ai-action-button { width: 100%; }
   .voice-result-actions { grid-template-columns: 1fr; }
   .voice-result-actions button + button { border-top: 1px solid var(--line); border-left: 0; }
+}
+
+@media (max-width: 480px) {
+  .workspace-mode-switch { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .workspace-mode-switch button {
+    flex: 1 0 auto;
+    min-width: 116px;
+    white-space: nowrap;
+    padding: 0 8px;
+    gap: 6px;
+    font-size: 0.72rem !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
