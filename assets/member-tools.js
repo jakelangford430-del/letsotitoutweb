@@ -18,6 +18,13 @@ const storageProfiles = {
   jj_onboarding_plan_v1: { toolSlug: 'people-hub/onboarding-plan', title: 'New Starter Onboarding Plan' },
   jj_toolbox_talk_v1: { toolSlug: 'people-hub/toolbox-talk', title: 'Toolbox Talk & Meeting Agenda' },
   jj_gworkspace_sales_v1: { toolSlug: 'google-workspace-for-sales', title: 'Google Workspace & Sheets for Sales' },
+  jj_brand_colours_v1: { toolSlug: 'brand-colour-picker', title: 'Brand Colour Picker' },
+  // The AI guide writes three separate outputs rather than one state blob, and
+  // each is meant to be reusable later — the business voice in particular is
+  // what future prompts are supposed to be built on.
+  'lsio-business-voice': { toolSlug: 'ai-guide', title: 'Business Voice', resultKey: 'business-voice' },
+  'lsio-ai-workflow': { toolSlug: 'ai-guide', title: 'AI Workflow', resultKey: 'ai-workflow' },
+  'lsio-ai-example-prompt': { toolSlug: 'ai-guide', title: 'AI Prompt', resultKey: 'ai-prompt' },
 };
 
 const storageProfile = (key) => {
@@ -99,7 +106,10 @@ Storage.prototype.setItem = function patchedSetItem(key, value) {
   try {
     payload = JSON.parse(value);
   } catch {}
-  queueResult(payload, { ...profile, resultKey: 'latest' });
+  // Profile last: most tools store one state blob and want the default 'latest'
+  // slot, but a tool storing several distinct outputs sets its own resultKey so
+  // they land in separate slots instead of overwriting each other.
+  queueResult(payload, { resultKey: 'latest', ...profile });
 };
 
 export const configureMemberTools = (user) => {
@@ -114,7 +124,7 @@ export const configureMemberTools = (user) => {
       try {
         payload = JSON.parse(payload);
       } catch {}
-      queueResult(payload, { ...profile, resultKey: 'latest' });
+      queueResult(payload, { resultKey: 'latest', ...profile });
     });
 };
 
