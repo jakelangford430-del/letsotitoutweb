@@ -9,11 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
-    <link href="/assets/auth.css?v=20260801-auth" rel="stylesheet" />
+    <link href="../assets/brand.css" rel="stylesheet" /><link href="/assets/auth.css?v=20260801-auth" rel="stylesheet" />
   </head>
   <body class="auth-page">
     <header class="auth-page-header">
       <a href="/">LET’S SORT IT OUT</a>
+      <nav class="auth-page-nav" aria-label="Main navigation">
+        <a href="/what-we-sort-out/">What We Sort Out</a>
+        <a href="/free-tools/">Free Tools</a>
+        <a href="/learning-hub/">Learning Hub</a>
+        <a href="/people-hub/">People Hub</a>
+        <a href="/implementation-support/">Implementation Support</a>
+      </nav>
     </header>
     <main class="auth-layout">
       <section class="auth-intro" aria-labelledby="account-heading">
@@ -240,6 +247,13 @@
         <p class="auth-message" data-auth-message aria-live="polite"></p>
       </section>
     </main>
+    <footer class="auth-page-footer">
+      <div class="auth-page-footer-inner">
+        <strong>LET’S SORT IT OUT</strong>
+        <span>© 2026 Let’s Sort It Out · <a href="/privacy/">Privacy Policy</a></span>
+      </div>
+    </footer>
+    <script src="../assets/tool-shell.js?v=20260807-nav2"></script>
     <script type="module" src="/assets/auth.js?v=20260801-auth2"></script>
     <script type="module" src="/assets/account-dashboard.js?v=20260731-account"></script>
   </body>

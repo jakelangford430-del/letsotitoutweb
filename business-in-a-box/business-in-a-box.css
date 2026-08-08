@@ -239,7 +239,7 @@
   .bib-final { padding: 70px 0 100px; }
   .bib-final-card { gap: 28px; }
   .bib-section-switch { align-items: flex-start; flex-direction: column; margin-bottom: 32px; }
-  .bib-mobile-cta { position: fixed; z-index: 999; right: 12px; bottom: 12px; left: 12px; display: block; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.13); border-radius: 16px; background: rgba(13, 25, 18, 0.94); box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28); backdrop-filter: blur(12px); }
+  .bib-mobile-cta { position: fixed; z-index: 60; right: 12px; bottom: 12px; left: 12px; display: block; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.13); border-radius: 16px; background: #0d1912; box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28); }
   .bib-mobile-cta .bib-btn { width: 100%; }
 }
 

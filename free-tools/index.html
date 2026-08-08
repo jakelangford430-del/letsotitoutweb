@@ -392,6 +392,47 @@
       .tool-card > .tool-card__link {
         color: var(--white) !important;
       }
+      .coming-soon-band {
+        border-top: 1px solid rgba(44, 62, 45, 0.14);
+      }
+      .coming-soon-head {
+        margin-bottom: 18px;
+      }
+      .coming-soon-head p {
+        margin: 0;
+        color: #59615d;
+        font-weight: 700;
+      }
+      .tool-card--soon {
+        grid-template-rows: auto 1fr auto;
+        min-height: 220px;
+        border-style: dashed;
+        border-color: rgba(44, 62, 45, 0.22);
+        background: rgba(245, 240, 230, 0.45);
+        box-shadow: none;
+      }
+      .tool-card--soon .tool-card__icon {
+        background: rgba(107, 127, 94, 0.16);
+        color: var(--sage);
+      }
+      .tool-card--soon p {
+        margin-bottom: 0;
+      }
+      .tool-card__soon-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        min-height: 30px;
+        margin: 0 18px 18px;
+        padding: 0 14px;
+        border-radius: 20px;
+        background: rgba(107, 127, 94, 0.16);
+        color: var(--sage);
+        font: 700 0.68rem Antonio, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
       .tool-preview-panel {
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
@@ -620,10 +661,9 @@
           z-index: 35;
           margin: 0 -16px 22px;
           padding: 12px 16px 10px;
-          background: rgba(250, 248, 245, 0.96);
+          background: var(--white);
           border-bottom: 1px solid rgba(44, 62, 45, 0.16);
           box-shadow: 0 16px 32px rgba(17, 24, 19, 0.08);
-          backdrop-filter: blur(14px);
         }
         .search-label,
         .filter-heading {
@@ -681,6 +721,12 @@
           min-height: 0;
           border-radius: 8px;
           box-shadow: 0 12px 30px rgba(17, 24, 19, 0.06);
+        }
+        .tool-card--soon {
+          box-shadow: none;
+        }
+        .tool-card__soon-badge {
+          margin: 0 14px 14px;
         }
         .tool-card__body {
           display: grid;
@@ -746,7 +792,7 @@
         }
       }
     </style>
-<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/free-tools/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" property="og:title"/><meta content="Free practical tools for small businesses to choose what to fix first, reduce admin, improve online presence, plan team conversations and use AI properly." property="og:description"/><meta content="https://letsortitout.com.au/free-tools/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" name="twitter:title"/><meta content="Free practical tools for small businesses to choose what to fix first, reduce admin, improve online presence, plan team conversations and use AI properly." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" name="twitter:image"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/free-tools/#webpage","url":"https://letsortitout.com.au/free-tools/","name":"Free Small Business Tools Australia | Let’s Sort It Out","description":"Free practical tools for small businesses to choose what to fix first, reduce admin, improve online presence, plan team conversations and use AI properly.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/free-tools/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"Free Tools","item":"https://letsortitout.com.au/free-tools/"}]}]}</script><link href="/assets/auth.css" rel="stylesheet"/></head>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/free-tools/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" property="og:title"/><meta content="Free practical tools for small businesses to choose what to fix first, reduce admin, improve online presence, plan team conversations and use AI properly." property="og:description"/><meta content="https://letsortitout.com.au/free-tools/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" name="twitter:title"/><meta content="Free practical tools for small businesses to choose what to fix first, reduce admin, improve online presence, plan team conversations and use AI properly." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" name="twitter:image"/><meta content="Free Small Business Tools Australia | Let’s Sort It Out" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/free-tools/#webpage","url":"https://letsortitout.com.au/free-tools/","name":"Free Small Business Tools Australia | Let’s Sort It Out","description":"Free practical tools for small businesses to choose what to fix first, reduce admin, improve online presence, plan team conversations and use AI properly.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/free-tools/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"Free Tools","item":"https://letsortitout.com.au/free-tools/"}]}]}</script><link href="../assets/brand.css" rel="stylesheet"/><link href="/assets/auth.css" rel="stylesheet"/></head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -872,6 +918,34 @@
 </aside>
 </section>
 <div class="empty-results" hidden="" id="empty-results"><strong>No matching tools.</strong><p>Clear the search or choose another category. If the problem is bigger than a tool, start with the business review.</p></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="coming-soon-heading" class="tool-library library-band coming-soon-band" id="ai-coming-soon">
+<div class="container">
+<div class="library-head coming-soon-head">
+<div>
+<h2 id="coming-soon-heading">More AI tools — coming soon</h2>
+<p>Practical AI tools currently being built. Not live yet.</p>
+</div>
+</div>
+<div class="tool-list">
+<article class="tool-card tool-card--soon" data-title="AI Reply Assistant">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">✉</span><h3>AI Reply Assistant</h3><p>Turn a rough note into a client-ready email reply, written in your tone.</p></div>
+<span class="tool-card__soon-badge">Coming soon</span>
+</article>
+<article class="tool-card tool-card--soon" data-title="AI Job Ad Builder">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">JD</span><h3>AI Job Ad Builder</h3><p>Turn a vague role into a clear, honest job ad worth applying to.</p></div>
+<span class="tool-card__soon-badge">Coming soon</span>
+</article>
+<article class="tool-card tool-card--soon" data-title="AI Meeting Notes Tool">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">M</span><h3>AI Meeting Notes Tool</h3><p>Turn messy meeting notes into a clean list of decisions and actions.</p></div>
+<span class="tool-card__soon-badge">Coming soon</span>
+</article>
+<article class="tool-card tool-card--soon" data-title="AI FAQ Builder">
+<div class="tool-card__body"><span aria-hidden="true" class="tool-card__icon">FAQ</span><h3>AI FAQ Builder</h3><p>Turn your most common customer questions into a ready-to-use FAQ page.</p></div>
+<span class="tool-card__soon-badge">Coming soon</span>
+</article>
 </div>
 </div>
 </section>
@@ -1024,7 +1098,7 @@
       };
       const filters = [...document.querySelectorAll(".filter")],
         choices = [...document.querySelectorAll(".choice")],
-        cards = [...document.querySelectorAll(".tool-card")],
+        cards = [...document.querySelectorAll("#tool-list .tool-card")],
         search = document.getElementById("tool-search"),
         resultCopy = document.getElementById("result-copy"),
         empty = document.getElementById("empty-results"),
@@ -1149,5 +1223,5 @@
       renderRecommendation("time");
       applyFilters();
     </script>
-<script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
+<script src="../assets/tool-shell.js?v=20260807-nav2"></script><script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
 </html>

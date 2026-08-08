@@ -108,15 +108,27 @@
       background: rgba(212, 113, 42, 0.13) !important;
     }
 
-    .software-stack-page main input {
+    .software-stack-page main input,
+    .software-stack-page main select,
+    .software-stack-page main textarea {
       background: #fffdf8 !important;
       color: #2d3230 !important;
       border-color: rgba(44, 62, 45, 0.18) !important;
     }
 
-    .software-stack-page main input::placeholder {
+    .software-stack-page main input::placeholder,
+    .software-stack-page main textarea::placeholder {
       color: #788078;
     }
+
+    .software-stack-page main select option {
+      color: #2d3230;
+      background: #fffdf8;
+    }
+
+    .software-stack-page .stack-badge-low { background: rgba(63, 125, 84, 0.14) !important; color: #2f6a44 !important; }
+    .software-stack-page .stack-badge-medium { background: rgba(184, 134, 11, 0.14) !important; color: #8a6208 !important; }
+    .software-stack-page .stack-badge-high { background: rgba(178, 58, 46, 0.14) !important; color: #a1372a !important; }
 
     .software-stack-page main section.border-t {
       border-top-color: rgba(44, 62, 45, 0.14) !important;
@@ -158,7 +170,7 @@
         max-width: 100vw;
       }
 
-      .software-stack-page nav {
+      .software-stack-page nav:not(.jj-tool-nav) {
         overflow-x: hidden;
       }
 
@@ -192,7 +204,7 @@
       }
     }
   </style>
-<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/software-stack/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="Best Software for Australian Small Businesses | Let’s Sort It Out" property="og:title"/><meta content="Compare Australian-friendly small business software with plain-English guidance on what fits, what connects and what to avoid." property="og:description"/><meta content="https://letsortitout.com.au/software-stack/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Best Software for Australian Small Businesses | Let’s Sort It Out" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Best Software for Australian Small Businesses | Let’s Sort It Out" name="twitter:title"/><meta content="Compare Australian-friendly small business software with plain-English guidance on what fits, what connects and what to avoid." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" name="twitter:image"/><meta content="Best Software for Australian Small Businesses | Let’s Sort It Out" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/software-stack/#webpage","url":"https://letsortitout.com.au/software-stack/","name":"Best Software for Australian Small Businesses | Let’s Sort It Out","description":"Compare Australian-friendly small business software with plain-English guidance on what fits, what connects and what to avoid.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/software-stack/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"Software Stack","item":"https://letsortitout.com.au/software-stack/"}]}]}</script><link href="/assets/auth.css" rel="stylesheet"/></head>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/><link href="https://letsortitout.com.au/software-stack/" rel="canonical"/><meta content="en_AU" property="og:locale"/><meta content="website" property="og:type"/><meta content="Let’s Sort It Out" property="og:site_name"/><meta content="Best Software for Australian Small Businesses | Let’s Sort It Out" property="og:title"/><meta content="Compare Australian-friendly small business software with plain-English guidance on what fits, what connects and what to avoid." property="og:description"/><meta content="https://letsortitout.com.au/software-stack/" property="og:url"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Best Software for Australian Small Businesses | Let’s Sort It Out" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Best Software for Australian Small Businesses | Let’s Sort It Out" name="twitter:title"/><meta content="Compare Australian-friendly small business software with plain-English guidance on what fits, what connects and what to avoid." name="twitter:description"/><meta content="https://letsortitout.com.au/assets/social-preview-tools.jpg" name="twitter:image"/><meta content="Best Software for Australian Small Businesses | Let’s Sort It Out" name="twitter:image:alt"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://letsortitout.com.au/#organization","name":"Let’s Sort It Out","url":"https://letsortitout.com.au/","description":"Practical systems, process, automation, AI and operational support for Australian small businesses.","telephone":"+61472544399","image":"https://letsortitout.com.au/assets/social-preview.jpg","areaServed":{"@type":"Country","name":"Australia"}},{"@type":"WebSite","@id":"https://letsortitout.com.au/#website","url":"https://letsortitout.com.au/","name":"Let’s Sort It Out","publisher":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://letsortitout.com.au/software-stack/#webpage","url":"https://letsortitout.com.au/software-stack/","name":"Best Software for Australian Small Businesses | Let’s Sort It Out","description":"Compare Australian-friendly small business software with plain-English guidance on what fits, what connects and what to avoid.","isPartOf":{"@id":"https://letsortitout.com.au/#website"},"about":{"@id":"https://letsortitout.com.au/#organization"},"inLanguage":"en-AU"},{"@type":"BreadcrumbList","@id":"https://letsortitout.com.au/software-stack/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://letsortitout.com.au/"},{"@type":"ListItem","position":2,"name":"Software Stack","item":"https://letsortitout.com.au/software-stack/"}]},{"@type":"SoftwareApplication","name":"Best Software for Australian Small Businesses","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://letsortitout.com.au/software-stack/","description":"Compare Australian-friendly small business software with plain-English guidance on what fits, what connects and what to avoid.","offers":{"@type":"Offer","price":"0","priceCurrency":"AUD"}}]}</script><link href="/assets/auth.css" rel="stylesheet"/></head>
 <body class="software-stack-page w-full min-h-screen flex flex-col bg-[#FAF8F5] text-[#2D3230] antialiased jj-site">
 <!-- Nav Bar (Translucent Dark Block) -->
 <nav class="sticky top-0 z-50 w-full bg-[#142019]/95 text-[#F7F1E5] backdrop-blur-md border-b border-white/10">
@@ -483,6 +495,140 @@
         * Note: This is not a shopping list. The goal is to identify the smallest stack that fixes your biggest problem.
       </p>
 </section>
+<!-- 3B. STACK CHECK -->
+<section class="p-8 rounded-[24px] bg-dark-card border border-dark-border space-y-6" id="stack-check">
+<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold uppercase tracking-widest text-cream">
+<i class="w-3.5 h-3.5 text-rust" data-lucide="layout-grid"></i>
+        Stack Check
+      </span>
+<h2 class="font-antonio text-2xl md:text-3xl text-warm-white font-bold uppercase tracking-tight">
+        WANT A RECOMMENDED STACK INSTEAD OF A SHORTLIST?
+      </h2>
+<div class="w-20 h-[1px] bg-rust"></div>
+<p class="text-sm text-cream/70 leading-relaxed font-light max-w-3xl">
+        Answer a few quick questions about what you already run and get a straight answer on what to keep, what to add and what's probably overlapping. Takes about two minutes.
+      </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="text-[10px] font-bold uppercase tracking-widest text-cream/60 block mb-1.5" for="stack-business">What kind of business is this?</label>
+<select class="w-full bg-dark-card border border-white/10 px-3 py-2.5 rounded-xl text-xs focus:outline-none focus:border-rust transition text-warm-white" id="stack-business">
+<option value="trade">Trade or field service</option>
+<option value="retail">Retail or online store</option>
+<option value="office">Office or professional services</option>
+<option value="hospitality">Hospitality, care or bookings-based service</option>
+<option value="other">Something else</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] font-bold uppercase tracking-widest text-cream/60 block mb-1.5" for="stack-team">How big is the team?</label>
+<select class="w-full bg-dark-card border border-white/10 px-3 py-2.5 rounded-xl text-xs focus:outline-none focus:border-rust transition text-warm-white" id="stack-team">
+<option value="solo">Just me</option>
+<option value="small">2–5 people</option>
+<option value="mid">6–20 people</option>
+<option value="large">More than 20</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] font-bold uppercase tracking-widest text-cream/60 block mb-1.5" for="stack-bookings">Taking bookings or appointments?</label>
+<select class="w-full bg-dark-card border border-white/10 px-3 py-2.5 rounded-xl text-xs focus:outline-none focus:border-rust transition text-warm-white" id="stack-bookings">
+<option value="good">Using a proper booking tool</option>
+<option value="manual">Nothing — it's texts and phone calls</option>
+<option value="multiple">More than one tool doing this</option>
+<option value="na">Not something this business needs</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] font-bold uppercase tracking-widest text-cream/60 block mb-1.5" for="stack-jobs">Tracking jobs or field work?</label>
+<select class="w-full bg-dark-card border border-white/10 px-3 py-2.5 rounded-xl text-xs focus:outline-none focus:border-rust transition text-warm-white" id="stack-jobs">
+<option value="good">Using a real job/field tool</option>
+<option value="manual">Nothing — it lives in someone's head or a notebook</option>
+<option value="multiple">More than one tool tracking jobs</option>
+<option value="na">Not something this business needs</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] font-bold uppercase tracking-widest text-cream/60 block mb-1.5" for="stack-accounting">Doing the books and invoicing?</label>
+<select class="w-full bg-dark-card border border-white/10 px-3 py-2.5 rounded-xl text-xs focus:outline-none focus:border-rust transition text-warm-white" id="stack-accounting">
+<option value="good">Using Xero, MYOB or similar</option>
+<option value="manual">Spreadsheets, paper or nothing formal</option>
+<option value="multiple">More than one system doing the books</option>
+<option value="na">Someone else handles this entirely</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] font-bold uppercase tracking-widest text-cream/60 block mb-1.5" for="stack-leads">Tracking leads and follow-ups?</label>
+<select class="w-full bg-dark-card border border-white/10 px-3 py-2.5 rounded-xl text-xs focus:outline-none focus:border-rust transition text-warm-white" id="stack-leads">
+<option value="good">Using a real CRM</option>
+<option value="manual">Memory, sticky notes or a messy spreadsheet</option>
+<option value="multiple">More than one place leads get tracked</option>
+<option value="na">Not something this business needs</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] font-bold uppercase tracking-widest text-cream/60 block mb-1.5" for="stack-forms">Collecting quote or intake details?</label>
+<select class="w-full bg-dark-card border border-white/10 px-3 py-2.5 rounded-xl text-xs focus:outline-none focus:border-rust transition text-warm-white" id="stack-forms">
+<option value="good">Using Tally, Google Forms, Microsoft Forms or similar</option>
+<option value="manual">Everything comes in by phone, text or email</option>
+<option value="na">Not something this business needs</option>
+</select>
+</div>
+<div>
+<label class="text-[10px] font-bold uppercase tracking-widest text-cream/60 block mb-1.5" for="stack-home">Email and file home base?</label>
+<select class="w-full bg-dark-card border border-white/10 px-3 py-2.5 rounded-xl text-xs focus:outline-none focus:border-rust transition text-warm-white" id="stack-home">
+<option value="google">Google Workspace</option>
+<option value="microsoft">Microsoft 365</option>
+<option value="personal">A personal Gmail or Outlook account</option>
+<option value="other">Something else, or not sure</option>
+</select>
+</div>
+<div class="md:col-span-2">
+<label class="text-[10px] font-bold uppercase tracking-widest text-cream/60 block mb-1.5" for="stack-logins">Roughly how many separate tools does the business log into day to day?</label>
+<select class="w-full bg-dark-card border border-white/10 px-3 py-2.5 rounded-xl text-xs focus:outline-none focus:border-rust transition text-warm-white" id="stack-logins">
+<option value="few">1–3 tools</option>
+<option value="some">4–7 tools</option>
+<option value="many">8 or more tools</option>
+<option value="unsure">Honestly, no idea</option>
+</select>
+</div>
+</div>
+<div>
+<label class="text-[10px] font-bold uppercase tracking-widest text-cream/60 block mb-1.5" for="stack-notes">Anything specific slowing things down? <span class="normal-case font-normal text-cream/40">(optional)</span></label>
+<textarea class="w-full bg-dark-card border border-white/10 px-3 py-2.5 rounded-xl text-xs focus:outline-none focus:border-rust transition text-warm-white" id="stack-notes" placeholder="e.g. quotes take too long, staff double-handle bookings…" rows="2"></textarea>
+</div>
+<button class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-rust text-warm-white hover:bg-cream hover:text-olive transition-all duration-200" id="stack-check-btn" type="button">
+        Check My Stack
+      </button>
+<div class="hidden space-y-5 pt-2 border-t border-white/5" id="stack-result">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-rust block mb-1" id="stack-maturity-label"></span>
+<p class="text-sm text-cream/90 leading-relaxed" id="stack-maturity-text"></p>
+</div>
+<div>
+<h3 class="font-antonio text-lg text-warm-white font-bold uppercase tracking-tight mb-2">Your recommended operating stack</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="stack-plan-list"></div>
+</div>
+<div class="hidden p-4 rounded-xl bg-white/5 border border-white/10" id="stack-use-first">
+<strong class="text-xs font-bold uppercase tracking-wider text-rust block mb-1">Use what you already pay for first</strong>
+<p class="text-xs text-cream/80 leading-relaxed" id="stack-use-first-text"></p>
+</div>
+<div class="hidden p-4 rounded-xl bg-white/5 border border-white/10" id="stack-duplicates">
+<strong class="text-xs font-bold uppercase tracking-wider text-rust block mb-1">Worth resolving before adding anything new</strong>
+<p class="text-xs text-cream/80 leading-relaxed" id="stack-duplicates-text"></p>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-[10px] font-bold uppercase tracking-widest text-cream/60">Integration risk</span>
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider" id="stack-risk-badge"></span>
+</div>
+<p class="text-xs text-cream/70 leading-relaxed" id="stack-risk-text"></p>
+<div class="flex flex-col sm:flex-row gap-3 pt-2">
+<button class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider border border-white/10 text-cream hover:bg-white/5 transition" id="stack-copy-btn" type="button">
+<i class="w-3.5 h-3.5" data-lucide="copy"></i>
+<span>Copy This Result</span>
+</button>
+<a class="inline-flex items-center justify-center px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-cream text-olive hover:bg-rust hover:text-warm-white transition" href="https://tally.so/r/Bz5xN7">Get Help Fixing This →</a>
+</div>
+</div>
+</section>
 <!-- 4. FILTER BUTTONS & SEARCH BAR -->
 <section class="space-y-6 border-t border-white/5 pt-10">
 <div class="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
@@ -569,6 +715,7 @@
             Review My Software Setup
           </a>
 </div>
+<p class="text-xs text-cream/70 leading-relaxed">Already know which tools you're keeping? Try the <a class="underline hover:text-rust" href="../automation-opportunity-finder/">Automation Opportunity Finder</a> to see what they could be doing for you.</p>
 </div>
 </section>
 </main>
@@ -619,7 +766,7 @@
 <div>
 <h2 class="text-xs font-bold uppercase tracking-widest text-[#D4712A] mb-4">More</h2>
 <ul class="space-y-3 text-sm text-white/70">
-<li><a class="hover:text-white transition-colors" href="../more-resources/">More free tools</a></li>
+<li><a class="hover:text-white transition-colors" href="../free-tools/">More free tools</a></li>
 <li><a class="hover:text-white transition-colors" href="../implementation-support/">Implementation support</a></li>
 <li><a class="hover:text-white transition-colors" href="https://tally.so/r/Bz5xN7">Review My Business</a></li>
 </ul>
@@ -1012,6 +1159,190 @@
       }
     ];
 
+    // Stack Check: turns "what do you already run" answers into a recommended
+    // operating stack, a duplicate-tool warning and an integration-risk read,
+    // instead of leaving people with only a browsable shortlist.
+    function toolName(id) {
+      const t = tools.find(x => x.id === id);
+      return t ? t.name : id;
+    }
+
+    const stackCategoryLabels = {
+      bookings: "Bookings",
+      jobs: "Job tracking",
+      accounting: "Accounting",
+      leads: "Leads and follow-up",
+      forms: "Quote and intake forms"
+    };
+
+    function stackPick(category, business, home) {
+      // The tool this category gets recommended when the answer is "manual" or
+      // "multiple" — biased by business type or existing email/file home base.
+      if (category === "bookings") return home === "microsoft" ? "ms-bookings" : "cal-com";
+      if (category === "jobs") return "servicem8";
+      if (category === "accounting") return "xero";
+      if (category === "leads") return (business === "trade" || business === "hospitality") ? "airtable" : "pipedrive";
+      if (category === "forms") return (home === "google" || home === "microsoft") ? "google-ms-forms" : "tally-so";
+      return null;
+    }
+
+    function assessStack() {
+      const answers = {
+        business: document.getElementById("stack-business").value,
+        team: document.getElementById("stack-team").value,
+        bookings: document.getElementById("stack-bookings").value,
+        jobs: document.getElementById("stack-jobs").value,
+        accounting: document.getElementById("stack-accounting").value,
+        leads: document.getElementById("stack-leads").value,
+        forms: document.getElementById("stack-forms").value,
+        home: document.getElementById("stack-home").value,
+        logins: document.getElementById("stack-logins").value,
+        notes: document.getElementById("stack-notes").value.trim()
+      };
+
+      const categories = ["bookings", "jobs", "accounting", "leads", "forms"];
+      const applicable = categories.filter(c => answers[c] !== "na");
+      const sorted = applicable.filter(c => answers[c] === "good");
+      const duplicated = applicable.filter(c => answers[c] === "multiple");
+      const gaps = applicable.filter(c => answers[c] === "manual");
+
+      // Maturity read
+      const ratio = applicable.length ? sorted.length / applicable.length : 0;
+      let maturityLabel, maturityText;
+      if (applicable.length === 0) {
+        maturityLabel = "Not enough to go on";
+        maturityText = "Every category came back “not needed” — worth double-checking that's actually true before assuming the business doesn't need any of this.";
+      } else if (ratio >= 0.75 && duplicated.length === 0) {
+        maturityLabel = "Fairly well set up";
+        maturityText = "The core jobs already have a proper tool behind them. The opportunity now is making sure they talk to each other, not adding more software.";
+      } else if (ratio >= 0.4) {
+        maturityLabel = "Getting there";
+        maturityText = "A few of the core jobs are still running on memory, texts or spreadsheets — that's usually where the real time leak is hiding.";
+      } else {
+        maturityLabel = "Early stage";
+        maturityText = "Most of the core jobs are still manual. Normal at this size, but worth having one deliberate tool per job before the business grows around the gaps.";
+      }
+      if (duplicated.length) {
+        maturityText += " You're also running more than one tool for the same job in at least " + duplicated.length + " " + (duplicated.length === 1 ? "area" : "areas") + " — that adds cost and confusion, not capability.";
+      }
+
+      // Recommended operating stack — keep what's working, name a pick for the rest
+      const planRows = categories
+        .filter(c => answers[c] !== "na")
+        .map(c => {
+          const label = stackCategoryLabels[c];
+          if (answers[c] === "good") {
+            return { label, action: "Keep it", detail: "Already sorted — no need to replace this." };
+          }
+          const pickId = stackPick(c, answers.business, answers.home);
+          const pickName = pickId ? toolName(pickId) : "a dedicated tool";
+          if (answers[c] === "multiple") {
+            return { label, action: "Pick one", detail: "Choose your strongest option (or " + pickName + ") and retire the rest." };
+          }
+          return { label, action: pickName, detail: "Worth adding once this becomes a real time cost, not before." };
+        });
+
+      // Use what you already pay for first
+      const homeIsSuite = answers.home === "google" || answers.home === "microsoft";
+      const freebieGaps = ["bookings", "forms", "leads"].filter(c => answers[c] === "manual" && applicable.includes(c));
+      const useFirstBox = document.getElementById("stack-use-first");
+      if (homeIsSuite && freebieGaps.length) {
+        const suite = answers.home === "google" ? "Google Workspace" : "Microsoft 365";
+        const included = answers.home === "google" ? "Google Forms, Calendar and Sheets" : "Microsoft Forms, Bookings and Excel";
+        document.getElementById("stack-use-first-text").textContent =
+          "You're already paying for " + suite + ". Before buying anything new for " +
+          freebieGaps.map(c => stackCategoryLabels[c].toLowerCase()).join(" or ") +
+          ", check what " + included + " can already do — it's included, and it's one less login for the team to learn.";
+        useFirstBox.classList.remove("hidden");
+      } else {
+        useFirstBox.classList.add("hidden");
+      }
+
+      // Duplicate-tool warning
+      const dupBox = document.getElementById("stack-duplicates");
+      if (duplicated.length) {
+        document.getElementById("stack-duplicates-text").textContent =
+          "More than one tool is doing the same job for: " + duplicated.map(c => stackCategoryLabels[c]).join(", ") +
+          ". That's usually a sign one of them hasn't been trusted yet, not that the business genuinely needs both. Pick one, move everything into it, and switch the other off.";
+        dupBox.classList.remove("hidden");
+      } else {
+        dupBox.classList.add("hidden");
+      }
+
+      // Integration risk
+      let riskLevel = "Low";
+      if (answers.logins === "many") riskLevel = "High";
+      else if (answers.logins === "some" || answers.logins === "unsure") riskLevel = "Medium";
+      if (duplicated.length >= 2 && riskLevel !== "High") riskLevel = "High";
+      else if (duplicated.length === 1 && riskLevel === "Low") riskLevel = "Medium";
+
+      const riskBadge = document.getElementById("stack-risk-badge");
+      riskBadge.textContent = riskLevel;
+      riskBadge.className = "px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider stack-badge-" + riskLevel.toLowerCase();
+
+      const riskTextEl = document.getElementById("stack-risk-text");
+      if (riskLevel === "High") {
+        riskTextEl.textContent = "That many separate tools (or that much overlap) usually means information is being re-typed between systems by hand somewhere. Worth mapping what actually needs to connect before adding anything else — the Automation Opportunity Finder is built for exactly that check.";
+      } else if (riskLevel === "Medium") {
+        riskTextEl.textContent = "Not a mess, but keep an eye on it. If the same customer detail is ever entered twice, that's the moment to look at connecting two of these tools directly.";
+      } else {
+        riskTextEl.textContent = "A small, deliberate toolset. Low risk of things quietly falling out of sync.";
+      }
+
+      // Render
+      document.getElementById("stack-maturity-label").textContent = maturityLabel;
+      document.getElementById("stack-maturity-text").textContent = maturityText;
+      document.getElementById("stack-plan-list").innerHTML = planRows.map(row => `
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10">
+          <div class="flex items-center justify-between gap-2 mb-0.5">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-cream/60">${row.label}</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-rust">${row.action}</span>
+          </div>
+          <p class="text-[11px] text-cream/70 leading-relaxed">${row.detail}</p>
+        </div>
+      `).join("") || `<p class="text-xs text-cream/60">Every category came back "not needed" for this business — nothing to recommend here.</p>`;
+
+      window.jjStackResult = { answers, maturityLabel, maturityText, planRows, riskLevel };
+      document.getElementById("stack-result").classList.remove("hidden");
+      document.getElementById("stack-result").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      window.trackToolCompletion && window.trackToolCompletion("software_stack_check", { maturity: maturityLabel, risk: riskLevel });
+    }
+
+    function copyStackResult() {
+      const r = window.jjStackResult;
+      if (!r) return;
+      const lines = [
+        "SOFTWARE STACK CHECK",
+        "",
+        r.maturityLabel.toUpperCase(),
+        r.maturityText,
+        "",
+        "RECOMMENDED OPERATING STACK",
+        ...r.planRows.map(row => "- " + row.label + ": " + row.action + " — " + row.detail),
+        "",
+        "INTEGRATION RISK: " + r.riskLevel,
+        document.getElementById("stack-risk-text").textContent
+      ];
+      if (!document.getElementById("stack-use-first").classList.contains("hidden")) {
+        lines.push("", "USE WHAT YOU ALREADY PAY FOR FIRST", document.getElementById("stack-use-first-text").textContent);
+      }
+      if (!document.getElementById("stack-duplicates").classList.contains("hidden")) {
+        lines.push("", "WORTH RESOLVING", document.getElementById("stack-duplicates-text").textContent);
+      }
+      if (r.answers.notes) {
+        lines.push("", "NOTES", r.answers.notes);
+      }
+      lines.push("", "Educational guide only — check any tool against your real workflow before committing.");
+
+      const btn = document.getElementById("stack-copy-btn");
+      navigator.clipboard.writeText(lines.join("\n")).then(() => {
+        const span = btn.querySelector("span");
+        const orig = span.textContent;
+        span.textContent = "Copied!";
+        setTimeout(() => { span.textContent = orig; }, 1200);
+      });
+    }
+
     let activeFilter = "all";
     let shortlistedTools = [];
 
@@ -1256,7 +1587,12 @@
       renderFilters();
       applyFilters();
       updateShortlistPanel();
+
+      const checkBtn = document.getElementById("stack-check-btn");
+      if (checkBtn) checkBtn.addEventListener("click", assessStack);
+      const copyBtn = document.getElementById("stack-copy-btn");
+      if (copyBtn) copyBtn.addEventListener("click", copyStackResult);
     });
   </script>
-<script src="../assets/tool-shell.js?v=20260801-nav"></script><script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
+<script src="../assets/tool-shell.js?v=20260807-nav2"></script><script src="/assets/mobile-shell.js"></script><script src="/assets/auth.js" type="module"></script></body>
 </html>
