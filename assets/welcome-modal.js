@@ -98,13 +98,12 @@
       '<div class="lsio-w-inner">' +
         '<p class="lsio-w-eyebrow">First time here?</p>' +
         '<h2 id="lsio-welcome-title">Welcome. Glad you found us.</h2>' +
-        "<p>This is where you work out what's actually making your business harder than it " +
-          "needs to be, then fix it in a sensible order instead of all at once.</p>" +
-        "<p>Everything here is free to use, and nothing asks you to sign up before it gives you " +
-          "something useful. Not sure where to start? The Business Sort-Out Map asks a few plain " +
-          "questions and tells you what to tackle first.</p>" +
+        "<p>This is where you get the digital side of your business sorted: your domain, a " +
+          "proper email address, and a website that actually brings work in.</p>" +
+        "<p>Websites start at $110, and the domain and logins end up in your name, not mine. " +
+          "There are also over twenty free tools and guides if you would rather do it yourself.</p>" +
         '<div class="lsio-w-actions">' +
-          '<a class="lsio-w-btn lsio-w-primary" href="/business-sort-out-map/">Show me where to start</a>' +
+          '<a class="lsio-w-btn lsio-w-primary" href="/what-we-sort-out/">See what I sort out</a>' +
           '<button type="button" class="lsio-w-btn lsio-w-secondary" data-lsio-dismiss>I\'ll have a look around</button>' +
         "</div>" +
         '<p class="lsio-w-note">Fair warning: the site is still being polished, so some wording ' +

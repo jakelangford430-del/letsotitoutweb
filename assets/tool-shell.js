@@ -26,7 +26,7 @@
     const saveExitBtn=oldHeader?oldHeader.querySelector('#save-exit'):null;
 
     const nav=document.createElement('nav');nav.className='jj-tool-nav';nav.setAttribute('aria-label','Main navigation');
-    nav.innerHTML='<div class="jj-tool-nav__inner"><a class="jj-tool-nav__brand" href="'+prefix+'">LET’S SORT IT OUT</a><button class="jj-tool-nav__menu" type="button" aria-expanded="false" aria-controls="jj-tool-links">Menu</button><div id="jj-tool-links" class="jj-tool-nav__links"><a href="'+prefix+'what-we-sort-out/">What We Sort Out</a><a href="'+prefix+'free-tools/">Free Tools</a><a href="'+prefix+'learning-hub/">Learning Hub</a><a href="'+prefix+'people-hub/">People Hub</a><a href="'+prefix+'implementation-support/">Implementation Support</a><a class="jj-tool-nav__cta" href="https://tally.so/r/Bz5xN7">Review My Business</a></div></div>';
+    nav.innerHTML='<div class="jj-tool-nav__inner"><a class="jj-tool-nav__brand" href="'+prefix+'">LET’S SORT IT OUT</a><button class="jj-tool-nav__menu" type="button" aria-expanded="false" aria-controls="jj-tool-links">Menu</button><div id="jj-tool-links" class="jj-tool-nav__links"><a href="'+prefix+'web-design/">Websites</a><a href="'+prefix+'business-email/">Business Email</a><a href="'+prefix+'domains-dns/">Domains &amp; DNS</a><a href="'+prefix+'resources/">Resources</a><a class="jj-tool-nav__cta" href="https://tally.so/r/Bz5xN7">Get My Setup Sorted</a></div></div>';
     if(target) target.replaceWith(nav);
     else document.body.prepend(nav);
 
@@ -48,22 +48,24 @@
     footer.innerHTML=
       '<div class="jj-tool-footer__inner">'+
         '<nav aria-label="Site links" class="jj-tool-footer__links">'+
-          '<div class="jj-tool-footer__group"><h3>Explore</h3>'+
-            '<a href="'+prefix+'learning-hub/">Learning Hub</a>'+
+          '<div class="jj-tool-footer__group"><h3>What I sort out</h3>'+
+            '<a href="'+prefix+'web-design/">Website Design &amp; Build</a>'+
+            '<a href="'+prefix+'business-email/">Business Email</a>'+
+            '<a href="'+prefix+'domains-dns/">Domains, DNS &amp; Hosting</a>'+
+            '<a href="'+prefix+'business-in-a-box/">Business in a Box</a>'+
+            '<a href="'+prefix+'what-we-sort-out/">All Services</a>'+
+          '</div>'+
+          '<div class="jj-tool-footer__group"><h3>Free resources</h3>'+
+            '<a href="'+prefix+'resources/">All Resources</a>'+
             '<a href="'+prefix+'free-tools/">Free Tools</a>'+
             '<a href="'+prefix+'people-hub/">People Hub</a>'+
-            '<a href="'+prefix+'what-we-sort-out/">What We Sort Out</a>'+
-          '</div>'+
-          '<div class="jj-tool-footer__group"><h3>Get things done</h3>'+
-            '<a href="'+prefix+'business-sort-out-map/">Business Sort-Out Map</a>'+
-            '<a href="'+prefix+'stop-doing-it-twice/">Stop Doing It Twice</a>'+
+            '<a href="'+prefix+'learning-hub/">Learning Hub</a>'+
             '<a href="'+prefix+'implementation-support/">Implementation Support</a>'+
-            '<a href="'+prefix+'business-in-a-box/">Business in a Box</a>'+
           '</div>'+
           '<div class="jj-tool-footer__group"><h3>Get in touch</h3>'+
             '<a href="'+prefix+'#jake">Meet Jake</a>'+
             '<a href="'+prefix+'#faqs">FAQs</a>'+
-            '<a href="https://tally.so/r/Bz5xN7">Review My Business</a>'+
+            '<a href="https://tally.so/r/Bz5xN7">Get My Setup Sorted</a>'+
             '<a href="https://wa.me/61472544399?text=Hi%20Jake%2C%20I%20found%20Let%27s%20Sort%20It%20Out%20and%20would%20like%20to%20have%20a%20quick%20chat." rel="noopener noreferrer" target="_blank">Message Jake on WhatsApp</a>'+
           '</div>'+
         '</nav>'+
