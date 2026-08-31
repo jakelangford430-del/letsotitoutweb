@@ -101,32 +101,60 @@
 
         <form class="contact-form" method="POST">
           <div class="form-group">
-            <label for="name">NAME</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <label for="name">CONTACT NAME *</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
           </div>
 
           <div class="form-group">
-            <label for="email">EMAIL</label>
+            <label for="phone">CONTACT NUMBER *</label>
+            <input type="tel" id="phone" name="phone" placeholder="04xx xxx xxx" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">EMAIL *</label>
             <input type="email" id="email" name="email" placeholder="you@business.com.au" required>
           </div>
 
           <div class="form-group">
-            <label for="phone">PHONE</label>
-            <input type="tel" id="phone" name="phone" placeholder="04xx xxx xxx">
+            <label for="location">LOCATION</label>
+            <input type="text" id="location" name="location" placeholder="e.g. Perth, Fremantle...">
+          </div>
+
+          <div class="form-group">
+            <label for="team-size">TEAM SIZE</label>
+            <select id="team-size" name="team-size">
+              <option value="">Select team size...</option>
+              <option value="1-5">1-5 staff</option>
+              <option value="6-10">6-10 staff</option>
+              <option value="11-20">11-20 staff</option>
+              <option value="21-50">21-50 staff</option>
+              <option value="50+">50+ staff</option>
+            </select>
           </div>
 
           <div class="form-group">
             <label for="software">CURRENT SOFTWARE</label>
-            <input type="text" id="software" name="software" placeholder="e.g. PropertyMe, Console...">
+            <input type="text" id="software" name="software" placeholder="e.g. PropertyMe, Console, Buildium...">
           </div>
 
           <div class="form-group full">
-            <label for="message">MESSAGE</label>
-            <textarea id="message" name="message" placeholder="Tell me a bit about what's going on with your systems." required></textarea>
+            <label for="message">TELL US ABOUT YOUR OPERATION</label>
+            <textarea id="message" name="message" placeholder="What's currently getting in the way? What are the main operational challenges you're facing?" required></textarea>
+          </div>
+
+          <div class="form-group full">
+            <label for="service-interest">WHICH SERVICE INTERESTS YOU? (Optional)</label>
+            <select id="service-interest" name="service-interest">
+              <option value="">Select a service...</option>
+              <option value="fractional-hod">Fractional Head of Department</option>
+              <option value="operations-project">Operations & Process Project</option>
+              <option value="offshore-va">Offshore VA Implementation</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
           </div>
 
           <div class="form-submit">
-            <button type="submit">SEND MESSAGE</button>
+            <button type="submit" class="btn-primary">GET IN TOUCH</button>
           </div>
         </form>
       </div>
