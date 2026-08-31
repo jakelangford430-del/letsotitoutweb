@@ -1,0 +1,23 @@
+<svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- PropertyMe text and logo -->
+  <defs>
+    <style>
+      .property-text { font-family: 'Arial', sans-serif; font-size: 48px; font-weight: 300; letter-spacing: 2px; }
+      .me-text { font-family: 'Arial', sans-serif; font-size: 48px; font-weight: 300; }
+    </style>
+  </defs>
+
+  <!-- Main text "property" -->
+  <text x="15" y="70" class="property-text" fill="#00A9CE">property</text>
+
+  <!-- Circle with "me" -->
+  <g transform="translate(245, 45)">
+    <!-- Cyan circle background -->
+    <circle cx="0" cy="0" r="35" fill="#00A9CE"/>
+    <!-- "me" text -->
+    <text x="0" y="15" class="me-text" fill="white" text-anchor="middle" font-weight="bold">me</text>
+  </g>
+
+  <!-- Trademark -->
+  <text x="280" y="25" font-family="Arial, sans-serif" font-size="10" fill="#00A9CE">™</text>
+</svg>
