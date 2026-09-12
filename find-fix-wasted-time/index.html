@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find & Fix Your Wasted Time | Just Jake</title>
+    <meta name="description" content="Identify repetitive work costing you hours and create a prioritized action plan to fix it.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2d3230;
+            background: #faf8f5;
+        }
+        h1, h2, h3 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; font-weight: 800; }
+        .container { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+
+        /* HEADER */
+        .site-header {
+            background: #111813;
+            color: white;
+            padding: 32px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .wordmark {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+        .site-nav {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .site-nav a {
+            color: rgba(250,248,245,0.82);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .site-nav a:hover { color: white; }
+        .button {
+            background: #d4712a;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: background 0.2s;
+        }
+        .button:hover { background: #b85c20; }
+
+        /* BREADCRUMB */
+        .breadcrumb {
+            background: #f5f0e6;
+            padding: 16px 0;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(44,62,45,0.1);
+        }
+        .breadcrumb a {
+            color: #d4712a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        /* HERO */
+        .hero {
+            background: white;
+            padding: 80px 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 28px;
+            color: #111813;
+            font-weight: 900;
+        }
+        .hero-copy {
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin-bottom: 32px;
+            color: #59615d;
+            line-height: 1.8;
+        }
+
+        /* CONTENT SECTION */
+        .content-section {
+            background: white;
+            padding: 60px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .content-section h2 {
+            font-size: 2rem;
+            color: #111813;
+            margin-bottom: 24px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .content-section p {
+            font-size: 1rem;
+            color: #59615d;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+        .content-section li {
+            padding: 12px 0 12px 28px;
+            position: relative;
+            color: #59615d;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        .content-section li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #d4712a;
+            font-weight: 900;
+        }
+
+        /* WORKFLOW SECTION */
+        .workflow {
+            background: #f5f0e6;
+            padding: 60px 0;
+        }
+        .workflow h2 {
+            font-size: 2rem;
+            color: #111813;
+            margin-bottom: 40px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .workflow-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        .step {
+            background: white;
+            padding: 36px;
+            border-radius: 10px;
+            border: 1px solid rgba(44,62,45,0.15);
+        }
+        .step-number {
+            font-size: 2.5rem;
+            color: #d4712a;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+        .step h3 {
+            font-size: 1.2rem;
+            color: #111813;
+            margin-bottom: 14px;
+            font-weight: 800;
+        }
+        .step p {
+            font-size: 0.95rem;
+            color: #59615d;
+            line-height: 1.7;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: #111813;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 800;
+        }
+        .cta-section p {
+            font-size: 1.1rem;
+            color: rgba(250,248,245,0.8);
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #d4712a;
+            color: white;
+            padding: 18px 44px;
+            font-size: 1.05rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.2s;
+            letter-spacing: 0.05em;
+        }
+        .cta-button:hover { background: #b85c20; }
+
+        /* FOOTER */
+        footer {
+            background: #0d120e;
+            color: rgba(250,248,245,0.72);
+            padding: 44px 0;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+        .footer-links a {
+            color: rgba(250,248,245,0.72);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: white; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .site-nav a:not(.button) { display: none; }
+            .hero { padding: 60px 0; }
+            .hero h1 { font-size: 2rem; margin-bottom: 20px; }
+            .hero-copy { font-size: 1rem; }
+            .content-section, .workflow { padding: 40px 0; }
+            .content-section h2, .workflow h2 { font-size: 1.6rem; margin-bottom: 24px; }
+            .workflow-steps { grid-template-columns: 1fr; gap: 24px; }
+            .step { padding: 28px; }
+            .cta-section { padding: 60px 0; }
+            .cta-section h2 { font-size: 2rem; }
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 0 20px; }
+            .hero { padding: 40px 0; }
+            .hero h1 { font-size: 1.6rem; margin-bottom: 16px; }
+            .hero-copy { font-size: 0.95rem; }
+            .content-section, .workflow { padding: 40px 0; }
+            .content-section h2, .workflow h2 { font-size: 1.4rem; }
+            .content-section p, .step p { font-size: 0.9rem; }
+            .workflow-steps { gap: 16px; }
+            .step { padding: 20px; }
+            .step-number { font-size: 2rem; }
+            .step h3 { font-size: 1rem; }
+            .cta-section { padding: 40px 0; }
+            .cta-section h2 { font-size: 1.6rem; margin-bottom: 16px; }
+            .cta-section p { font-size: 1rem; margin-bottom: 24px; }
+            .cta-button { padding: 14px 28px; font-size: 0.9rem; }
+            .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+            .footer-links { flex-direction: column; gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="wordmark" href="/">JUST JAKE</a>
+            <nav class="site-nav">
+                <a href="/#services">Services</a>
+                <a href="/#about">About</a>
+                <a href="/#tools">Free Tools</a>
+                <a href="https://tally.so/r/Bz5xN7" class="button">Let's Talk</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a> / <a href="/#tools">Free Tools</a> / Find & Fix Your Wasted Time
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <h1>Find & Fix Your Wasted Time</h1>
+                <p class="hero-copy">
+                    Most businesses have work getting done twice, data being entered multiple times, or processes that rely on memory instead of logic. It costs real hours and real money. This tool helps you find it, quantify it, and figure out what's worth fixing first.
+                </p>
+            </div>
+        </section>
+
+        <!-- WHAT YOU'LL FIND -->
+        <section class="content-section">
+            <div class="container">
+                <h2>What You'll Discover</h2>
+                <p>Work through a simple series of questions about your team's daily tasks, common frustrations, and recurring admin work. You'll get back:</p>
+                <ul>
+                    <li>What you're doing twice (and where the time is really going)</li>
+                    <li>Rough cost estimate in hours per week</li>
+                    <li>What's worth fixing first based on impact vs effort</li>
+                    <li>A prioritized action plan for next steps</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="workflow">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="workflow-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Answer Questions</h3>
+                        <p>Tell us about your business, team size, and where the manual work happens. No technical knowledge needed.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Get Your Report</h3>
+                        <p>See exactly what's costing you hours each week, ranked by real impact. Instant downloadable PDF.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Build Your Plan</h3>
+                        <p>Get a prioritized action plan. Fix what matters first, automate, or pass off to someone specialized.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready To Find Your Wasted Hours?</h2>
+                <p>No credit card. No email wall. Just practical output you can use straight away.</p>
+                <a href="#" class="cta-button">Start The Tool</a>
+            </div>
+        </section>
+
+        <!-- NEXT STEPS -->
+        <section class="content-section">
+            <div class="container">
+                <h2>What's Next?</h2>
+                <p>Once you've got your report, you have a few options:</p>
+                <ul>
+                    <li><strong>Implement yourself</strong> — Use the action plan to set up automation or processes on your own</li>
+                    <li><strong>Get help</strong> — <a href="https://tally.so/r/Bz5xN7" style="color: #d4712a; font-weight: 600;">Book a call</a> with Jake to discuss what's worth building together</li>
+                    <li><strong>Explore more tools</strong> — Check out other free resources for specific problems</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-inner">
+            <div>&copy; 2025 Just Jake. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="/privacy/">Privacy</a>
+                <a href="/connect/">Contact</a>
+                <a href="/people-hub/">Team Resources</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
