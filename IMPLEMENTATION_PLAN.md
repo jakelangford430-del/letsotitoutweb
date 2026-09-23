@@ -1,4 +1,4 @@
-# Let's Sort It Out Tool Improvement Plan
+# Just Jakey Tool Improvement Plan
 
 ## Quick Summary
 
@@ -430,7 +430,7 @@ This makes the AI section more advanced without turning it into vague AI strateg
 
 ### 8. Keep People Hub Similar But Clearly Separate
 
-Goal: People Hub should feel connected to Let's Sort It Out, but not mixed with general operations, systems or AI tools.
+Goal: People Hub should feel connected to Just Jakey, but not mixed with general operations, systems or AI tools.
 
 Keep similar:
 
