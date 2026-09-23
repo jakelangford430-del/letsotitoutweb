@@ -26,7 +26,7 @@
     const saveExitBtn=oldHeader?oldHeader.querySelector('#save-exit'):null;
 
     const nav=document.createElement('nav');nav.className='jj-tool-nav';nav.setAttribute('aria-label','Main navigation');
-    nav.innerHTML='<div class="jj-tool-nav__inner"><a class="jj-tool-nav__brand" href="'+prefix+'">LET’S SORT IT OUT</a><button class="jj-tool-nav__menu" type="button" aria-expanded="false" aria-controls="jj-tool-links">Menu</button><div id="jj-tool-links" class="jj-tool-nav__links"><a href="'+prefix+'what-we-sort-out/">What We Sort Out</a><a href="'+prefix+'free-tools/">Free Tools</a><a href="'+prefix+'learning-hub/">Learning Hub</a><a href="'+prefix+'people-hub/">People Hub</a><a href="'+prefix+'implementation-support/">Implementation Support</a><a class="jj-tool-nav__cta" href="https://tally.so/r/Bz5xN7">Review My Business</a></div></div>';
+    nav.innerHTML='<div class="jj-tool-nav__inner"><a class="jj-tool-nav__brand" href="'+prefix+'">JUST JAKEY</a><button class="jj-tool-nav__menu" type="button" aria-expanded="false" aria-controls="jj-tool-links">Menu</button><div id="jj-tool-links" class="jj-tool-nav__links"><a href="'+prefix+'what-we-sort-out/">What We Sort Out</a><a href="'+prefix+'free-tools/">Free Tools</a><a href="'+prefix+'learning-hub/">Learning Hub</a><a href="'+prefix+'people-hub/">People Hub</a><a href="'+prefix+'implementation-support/">Implementation Support</a><a class="jj-tool-nav__cta" href="https://tally.so/r/Bz5xN7">Review My Business</a></div></div>';
     if(target) target.replaceWith(nav);
     else document.body.prepend(nav);
 
@@ -68,8 +68,8 @@
           '</div>'+
         '</nav>'+
         '<div class="jj-tool-footer__bottom">'+
-          '<a class="jj-tool-footer__brand" href="'+prefix+'">LET’S SORT IT OUT</a>'+
-          '<span>© 2026 Let’s Sort It Out · <a href="'+prefix+'privacy/">Privacy Policy</a></span>'+
+          '<a class="jj-tool-footer__brand" href="'+prefix+'">JUST JAKEY</a>'+
+          '<span>© 2026 Just Jakey · <a href="'+prefix+'privacy/">Privacy Policy</a></span>'+
         '</div>'+
       '</div>';
     if(oldFooter) oldFooter.replaceWith(footer);
